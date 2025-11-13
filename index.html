@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szybki Quiz</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Sprawdź zapisany motyw natychmiast po załadowaniu DOM
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            // Użyj 'document.documentElement' (tag <html>) zamiast 'body'
+            // dla natychmiastowego zastosowania przed renderowaniem body
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+<body>
+
+    <button id="theme-toggle-btn" aria-label="Zmień motyw">🌙</button>
+
+    <div class="quiz-container" id="quiz-container">
+        
+        <div id="question-wrapper">
+            <div class="quiz-header">
+                <h2 id="question-text">Ładowanie pytania...</h2>
+                <div id="progress-bar">
+                    <div id="progress-bar-fill"></div>
+                </div>
+            </div>
+            
+            <div id="options-container">
+                </div>
+            
+            <button id="submit-btn">Następne pytanie</button>
+        </div>
+
+        <div id="results-wrapper" class="hide">
+            <h2>Quiz zakończony!</h2>
+            <p id="score-text">Twój wynik: 0 / 0</p>
+            <p id="details-text"></p>
+            <button id="restart-btn">Powtórz quiz</button>
+        </div>
+
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
