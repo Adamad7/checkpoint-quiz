@@ -20,7 +20,8 @@ html.dark-mode {
     --text-color: #e0e0e0;
     --text-color-light: #aaa;
     --border-color: #444;
-    --primary-color: #007bff; /* Można zostawić ten sam lub zmienić */
+    --primary-color: #007bff;
+    /* Można zostawić ten sam lub zmienić */
     --primary-color-hover: #0056b3;
     --option-hover-bg: #2c2c2c;
     --custom-input-border: #777;
@@ -58,11 +59,16 @@ body {
     padding: 20px 25px;
 }
 
+.text-center {
+    text-align: center;
+}
+
 #question-text {
     font-size: 1.25rem;
     margin: 0;
     line-height: 1.4;
-    color: var(--text-color); /* Dodane dla pewności */
+    color: var(--text-color);
+    /* Dodane dla pewności */
 }
 
 #progress-bar {
@@ -119,38 +125,39 @@ body {
     transition: border-color 0.2s, background-color 0.2s;
 }
 
-.option-label input[type="radio"] + .custom-input {
+.option-label input[type="radio"]+.custom-input {
     border-radius: 50%;
 }
 
-.option-label input[type="checkbox"] + .custom-input {
+.option-label input[type="checkbox"]+.custom-input {
     border-radius: 4px;
 }
 
-.option-label input:checked + .custom-input {
+.option-label input:checked+.custom-input {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
 }
 
-.option-label input:checked + .custom-input::after {
+.option-label input:checked+.custom-input::after {
     color: white;
     font-weight: bold;
 }
 
-.option-label input[type="radio"]:checked + .custom-input::after {
+.option-label input[type="radio"]:checked+.custom-input::after {
     content: '•';
     font-size: 24px;
     line-height: 18px;
 }
 
-.option-label input[type="checkbox"]:checked + .custom-input::after {
+.option-label input[type="checkbox"]:checked+.custom-input::after {
     content: '✔';
     font-size: 14px;
     line-height: 18px;
 }
 
 /* --- Przyciski i Wyniki --- */
-#submit-btn, #restart-btn {
+#submit-btn,
+#restart-btn {
     display: block;
     width: 100%;
     padding: 15px;
@@ -168,8 +175,50 @@ body {
     border-bottom-right-radius: 12px;
 }
 
-#submit-btn:hover, #restart-btn:hover {
+#submit-btn:hover,
+#restart-btn:hover,
+.exam-btn:hover,
+#menu-btn:hover {
     background-color: var(--primary-color-hover);
+}
+
+.exam-btn {
+    display: block;
+    width: 90%;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#menu-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    border-radius: 50px;
+    /* Pill shape */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#menu-btn:hover {
+    transform: translateY(-2px);
 }
 
 #results-wrapper {
@@ -209,9 +258,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
-    z-index: 1000; /* Aby był na wierzchu */
+    z-index: 1000;
+    /* Aby był na wierzchu */
 }
 
 #theme-toggle-btn:hover {

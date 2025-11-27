@@ -10,12 +10,18 @@ const resultsWrapper = document.getElementById('results-wrapper');
 const scoreText = document.getElementById('score-text');
 const detailsText = document.getElementById('details-text');
 const restartBtn = document.getElementById('restart-btn');
+const menuBtn = document.getElementById('menu-btn');
+
+// NOWE ELEMENTY
+const examSelection = document.getElementById('exam-selection');
+const examList = document.getElementById('exam-list');
 
 // NOWE ELEMENTY
 const themeToggleBtn = document.getElementById('theme-toggle-btn');
 const rootHtmlElement = document.documentElement; // Tag <html>
 
 // --- Stan quizu ---
+let currentExamQuestions = [];
 let shuffledQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
@@ -28,12 +34,39 @@ function shuffleArray(array) {
     }
 }
 
+
+// --- Funkcja inicjalizująca wybór egzaminu ---
+function initExamSelection() {
+    examList.innerHTML = '';
+    examsData.forEach(exam => {
+        const btn = document.createElement('button');
+        btn.textContent = exam.title;
+        btn.className = 'exam-btn'; // Możesz dodać style w CSS
+        btn.addEventListener('click', () => selectExam(exam));
+        examList.appendChild(btn);
+    });
+
+    examSelection.classList.remove('hide');
+    quizContainer.classList.add('hide');
+    resultsWrapper.classList.add('hide');
+    menuBtn.classList.add('hide'); // Ukryj przycisk menu na ekranie wyboru
+}
+
+function selectExam(exam) {
+    currentExamQuestions = exam.questions;
+    examSelection.classList.add('hide');
+    quizContainer.classList.remove('hide');
+    menuBtn.classList.remove('hide'); // Pokaż przycisk menu po wybraniu egzaminu
+    startQuiz();
+}
 // --- Funkcja rozpoczynająca quiz ---
 function startQuiz() {
     score = 0;
     currentQuestionIndex = 0;
-    
-    shuffledQuestions = [...quizData];
+
+    currentQuestionIndex = 0;
+
+    shuffledQuestions = [...currentExamQuestions];
     shuffleArray(shuffledQuestions);
 
     resultsWrapper.classList.add('hide');
@@ -46,7 +79,7 @@ function startQuiz() {
 // --- Funkcja wyświetlająca pytanie ---
 function showNextQuestion() {
     optionsContainer.innerHTML = '';
-    
+
     const question = shuffledQuestions[currentQuestionIndex];
     questionText.textContent = question.pytanie;
 
@@ -71,7 +104,7 @@ function showNextQuestion() {
         input.id = optionId;
         input.name = 'option';
         input.value = option;
-        
+
         const customInput = document.createElement('span');
         customInput.className = 'custom-input';
 
@@ -91,7 +124,7 @@ function showNextQuestion() {
 // --- Funkcja sprawdzająca odpowiedź ---
 function checkAnswer() {
     const question = shuffledQuestions[currentQuestionIndex];
-    
+
     const selectedInputs = document.querySelectorAll('input[name="option"]:checked');
     if (selectedInputs.length === 0) {
         alert("Musisz wybrać przynajmniej jedną odpowiedź!");
@@ -99,15 +132,15 @@ function checkAnswer() {
     }
 
     const userAnswers = Array.from(selectedInputs).map(input => input.value);
-    
-    const correctAnswers = Array.isArray(question.poprawna) ? 
-                           question.poprawna : 
-                           [question.poprawna];
+
+    const correctAnswers = Array.isArray(question.poprawna) ?
+        question.poprawna :
+        [question.poprawna];
 
     const isCorrect = userAnswers.length === correctAnswers.length &&
-                      userAnswers.sort().every((answer, index) => 
-                         answer === correctAnswers.sort()[index]
-                      );
+        userAnswers.sort().every((answer, index) =>
+            answer === correctAnswers.sort()[index]
+        );
 
     if (isCorrect) {
         score++;
@@ -162,10 +195,11 @@ function toggleTheme() {
 
 // --- Nasłuchiwanie na zdarzenia ---
 document.addEventListener('DOMContentLoaded', () => {
-    startQuiz();
+    initExamSelection();
     updateThemeButtonIcon(); // Ustaw poprawną ikonę przycisku przy starcie
 });
 
 submitBtn.addEventListener('click', checkAnswer);
 restartBtn.addEventListener('click', startQuiz);
+menuBtn.addEventListener('click', initExamSelection);
 themeToggleBtn.addEventListener('click', toggleTheme); // NOWY LISTENER
