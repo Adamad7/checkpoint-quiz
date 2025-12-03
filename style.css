@@ -182,6 +182,17 @@ body {
     background-color: var(--primary-color-hover);
 }
 
+.question-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 15px 0;
+    display: block;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .exam-btn {
     display: block;
     width: 90%;

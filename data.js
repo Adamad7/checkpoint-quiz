@@ -15,7 +15,8 @@ const examsData = [
         "poprawna": [
           "Recon-ng",
           "Dig"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "When performing passive reconnaissance, which Linux command can be used to identify the technical and administrative contacts of a given domain?",
@@ -25,7 +26,8 @@ const examsData = [
           "whois",
           "nmap"
         ],
-        "poprawna": "whois"
+        "poprawna": "whois",
+        "image": ""
       },
       {
         "pytanie": "Which specification defines the format used by image and sound files to capture metadata?",
@@ -35,7 +37,8 @@ const examsData = [
           "Exchangeable File Format (EFF)",
           "Interchangeable File Format (IFF)"
         ],
-        "poprawna": "Exchangeable Image File Format (Exif)"
+        "poprawna": "Exchangeable Image File Format (Exif)",
+        "image": ""
       },
       {
         "pytanie": "Why would a penetration tester perform a passive reconnaissance scan instead of an active one?",
@@ -45,7 +48,8 @@ const examsData = [
           "because the root-level SSH credentials to a target have been compromised",
           "to test whether specific services or protocols are available on the network"
         ],
-        "poprawna": "to collect information about a network without being detected"
+        "poprawna": "to collect information about a network without being detected",
+        "image": ""
       },
       {
         "pytanie": "What type of server is a penetration tester enumerating when they enter the nmap -sU command?",
@@ -55,7 +59,8 @@ const examsData = [
           "POP3, IMAP, or SMTP server",
           "FTP server"
         ],
-        "poprawna": "DNS, SNMP, or DHCP server"
+        "poprawna": "DNS, SNMP, or DHCP server",
+        "image": ""
       },
       {
         "pytanie": "What is the disadvantage of conducting an unauthenticated scan of a target when performing a penetration test?",
@@ -65,7 +70,8 @@ const examsData = [
           "Unauthenticated scans are more likely to provide a lower rate of false positives than authenticated scans.",
           "Unauthenticated scans are a form of passive reconnaissance that return little useful information."
         ],
-        "poprawna": "Vulnerability of services running inside the target may not be detected."
+        "poprawna": "Vulnerability of services running inside the target may not be detected.",
+        "image": ""
       },
       {
         "pytanie": "What is required for a penetration tester to conduct a comprehensive authenticated scan against a Linux host?",
@@ -76,7 +82,8 @@ const examsData = [
           "unauthenticated scans are a form of passive reconnaissance that return little useful information.",
           "backdoor access to the target system"
         ],
-        "poprawna": "user credentials with root-level access to the target system"
+        "poprawna": "user credentials with root-level access to the target system",
+        "image": ""
       },
       {
         "pytanie": "In which circumstance would a penetration tester perform an unauthenticated scan of a target?",
@@ -86,7 +93,8 @@ const examsData = [
           "when time is limited and faster scans are required",
           "when only targets with UDP services are to be scanned"
         ],
-        "poprawna": "when user credentials were not provided"
+        "poprawna": "when user credentials were not provided",
+        "image": ""
       },
       {
         "pytanie": "Why would a penetration tester use the nmap -sF command?",
@@ -96,7 +104,8 @@ const examsData = [
           "when a TCP SYN scan reports more than one open port",
           "when the tester needs to time stamp the scan"
         ],
-        "poprawna": "when a TCP SYN scan is detected by a network filter or firewall"
+        "poprawna": "when a TCP SYN scan is detected by a network filter or firewall",
+        "image": ""
       },
       {
         "pytanie": "What is the purpose of host enumeration when beginning a penetration test?",
@@ -106,7 +115,8 @@ const examsData = [
           "to identify all vulnerable hosts within the scope of the test",
           "to count the total number of vulnerable hosts within the scope of the test"
         ],
-        "poprawna": "to identify all active IP addresses within the scope of the test"
+        "poprawna": "to identify all active IP addresses within the scope of the test",
+        "image": ""
       },
       {
         "pytanie": "What can be deduced when a tester enters the nmap -sF command to perform a TCP FIN scan and the target host port does not respond?",
@@ -116,7 +126,8 @@ const examsData = [
           "that the port is open",
           "that the port is not ready to close the TCP connection"
         ],
-        "poprawna": "that the port is open"
+        "poprawna": "that the port is open",
+        "image": ""
       },
       {
         "pytanie": "What is the disadvantage of running a TCP Connect scan compared to running a TCP SYN scan during a penetration test?",
@@ -126,7 +137,8 @@ const examsData = [
           "Hosts and addresses outside the scope of the test may be scanned.",
           "The extra packets required may trigger an IDS alarm."
         ],
-        "poprawna": "The extra packets required may trigger an IDS alarm."
+        "poprawna": "The extra packets required may trigger an IDS alarm.",
+        "image": ""
       },
       {
         "pytanie": "When a penetration test identifies a vulnerability, how should the vulnerability be further verified?",
@@ -136,7 +148,8 @@ const examsData = [
           "assess the business risk associated with the vulnerability",
           "mitigate the vulnerability"
         ],
-        "poprawna": "determine if the vulnerability is exploitable"
+        "poprawna": "determine if the vulnerability is exploitable",
+        "image": ""
       },
       {
         "pytanie": "Why is the Common Vulnerabilities and Exposures (CVE) resource useful when investigating vulnerabilities detected by a penetration test?",
@@ -146,7 +159,8 @@ const examsData = [
           "It has three vulnerability score components.",
           "It is a dictionary of known attacks."
         ],
-        "poprawna": "It is an international consolidation of cybersecurity tools and databases."
+        "poprawna": "It is an international consolidation of cybersecurity tools and databases.",
+        "image": ""
       },
       {
         "pytanie": "What is the purpose of applying the Common Vulnerability Scoring System (CVSS) to a vulnerability detected by a penetration test?",
@@ -156,7 +170,8 @@ const examsData = [
           "to accurately record how the vulnerability was detected",
           "to calculate the severity of the vulnerability"
         ],
-        "poprawna": "to calculate the severity of the vulnerability"
+        "poprawna": "to calculate the severity of the vulnerability",
+        "image": ""
       },
       {
         "pytanie": "A threat actor is looking at the IT and technical job postings of a target organization. What would be the most beneficial information to capture from these postings?",
@@ -166,7 +181,8 @@ const examsData = [
           "the hours of work required by the roles listed",
           "the employment benefits offered by the company"
         ],
-        "poprawna": "the type of hardware and software used"
+        "poprawna": "the type of hardware and software used",
+        "image": ""
       },
       {
         "pytanie": "How is open-source intelligence (OSINT) gathering typically implemented during a penetration test?",
@@ -176,7 +192,8 @@ const examsData = [
           "by sending phishing emails",
           "by using nmap for web page and web application enumerations"
         ],
-        "poprawna": "by using public internet searches"
+        "poprawna": "by using public internet searches",
+        "image": ""
       },
       {
         "pytanie": "What initial information can be obtained when performing user enumeration in a penetration test?",
@@ -186,7 +203,8 @@ const examsData = [
           "the credentials of a specified user",
           "access to the target internal network"
         ],
-        "poprawna": "a valid list of users"
+        "poprawna": "a valid list of users",
+        "image": ""
       },
       {
         "pytanie": "What useful information can be obtained by running a network share enumeration scan during a penetration test?",
@@ -196,7 +214,8 @@ const examsData = [
           "all vulnerable hosts on the network",
           "lists of the attack vectors that can exploit the network"
         ],
-        "poprawna": "systems on a network that are sharing files, folders, and printers"
+        "poprawna": "systems on a network that are sharing files, folders, and printers",
+        "image": ""
       },
       {
         "pytanie": "A penetration tester must run a vulnerability scan against a target. What is the benefit of running an authenticated scan instead of an unauthenticated scan?",
@@ -206,7 +225,8 @@ const examsData = [
           "Authenticated scans are performed without user credentials.",
           "Authenticated scans are less complex and are quicker than unauthenticated scans."
         ],
-        "poprawna": "Authenticated scans can provide a more detailed picture of the target attack surface."
+        "poprawna": "Authenticated scans can provide a more detailed picture of the target attack surface.",
+        "image": ""
       },
       {
         "pytanie": "What are three considerations when planning a vulnerability scan on a target production network during a penetration test? (Choose three.)",
@@ -223,7 +243,8 @@ const examsData = [
           "the timing of the scan",
           "the available network bandwidth",
           "the network topology"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "When performing a vulnerability scan of a target, how can adverse impacts on traversed devices be minimized?",
@@ -233,7 +254,8 @@ const examsData = [
           "The scan should be performed as close to the target as possible.",
           "Scanning policy options should include query throttling."
         ],
-        "poprawna": "The scan should be performed as close to the target as possible."
+        "poprawna": "The scan should be performed as close to the target as possible.",
+        "image": ""
       },
       {
         "pytanie": "A company hires a cybersecurity consultant to conduct a penetration test to assess vulnerabilities in network systems. The consultant is preparing the final report to send to the company. What is an important feature of a final penetration test report?",
@@ -243,7 +265,8 @@ const examsData = [
           "It is a summary of general information so non-technical managers can understand it.",
           "It is made publicly available to all interested parties."
         ],
-        "poprawna": "It gives an accurate presentation of vulnerabilities."
+        "poprawna": "It gives an accurate presentation of vulnerabilities.",
+        "image": ""
       },
       {
         "pytanie": "What is the advantage of using the target Wi-Fi network for reconnaissance packet inspection?",
@@ -253,17 +276,19 @@ const examsData = [
           "Fewer false positive vulnerabilities are detected.",
           "Physical access to the building may not be required."
         ],
-        "poprawna": "Physical access to the building may not be required."
+        "poprawna": "Physical access to the building may not be required.",
+        "image": ""
       },
       {
-        "pytanie": "What guidance does the NIST Cybersecurity Framework provide to help improve an organization’s cybersecurity posture?",
+        "pytanie": "What guidance does the NIST Cybersecurity Framework provide to help improve an organization\u2019s cybersecurity posture?",
         "opcje": [
           "The framework provides a global consolidation of cybersecurity tools and databases.",
           "The framework lists cyber attacks that have been seen in the real world.",
           "The framework provides a vulnerability scoring system.",
           "The framework outlines standards and industry best practices."
         ],
-        "poprawna": "The framework outlines standards and industry best practices."
+        "poprawna": "The framework outlines standards and industry best practices.",
+        "image": ""
       }
     ]
   },
@@ -279,7 +304,8 @@ const examsData = [
           "whaling",
           "malvertising"
         ],
-        "poprawna": "malvertising"
+        "poprawna": "malvertising",
+        "image": ""
       },
       {
         "pytanie": "What is a watering hole attack?",
@@ -289,7 +315,8 @@ const examsData = [
           "an attack that exploits a website that is commonly accessed by members of a targeted organization",
           "an attack performed by an unauthorized person who tags along with an authorized person to gain entry to a restricted area"
         ],
-        "poprawna": "an attack that exploits a website that is commonly accessed by members of a targeted organization"
+        "poprawna": "an attack that exploits a website that is commonly accessed by members of a targeted organization",
+        "image": ""
       },
       {
         "pytanie": "What is the act of gaining knowledge or information from a victim without directly asking for that particular information?",
@@ -299,7 +326,8 @@ const examsData = [
           "interrogation",
           "impersonation"
         ],
-        "poprawna": "elicitation"
+        "poprawna": "elicitation",
+        "image": ""
       },
       {
         "pytanie": "A threat actor has altered the host file for a commonly accessed website on the computer of a victim. Now when the user clicks on the website link, they are redirected to a malicious website. What type of attack has the threat actor accomplished?",
@@ -309,7 +337,8 @@ const examsData = [
           "pharming",
           "tailgating"
         ],
-        "poprawna": "pharming"
+        "poprawna": "pharming",
+        "image": ""
       },
       {
         "pytanie": "Why would a threat actor use the Social-Engineering Toolkit (SET)?",
@@ -319,7 +348,8 @@ const examsData = [
           "to manipulate users by leveraging XSS vulnerabilities",
           "to practice social engineering elicitation, interrogation, and pretexting skills"
         ],
-        "poprawna": "to send a spear phishing email"
+        "poprawna": "to send a spear phishing email",
+        "image": ""
       },
       {
         "pytanie": "Which option is a voice over IP management tool that can be used to impersonate caller ID?",
@@ -329,7 +359,8 @@ const examsData = [
           "SpoofApp",
           "Nikto"
         ],
-        "poprawna": "Asterisk"
+        "poprawna": "Asterisk",
+        "image": ""
       },
       {
         "pytanie": "A salesperson is attempting to convince a customer to buy a product because limited supplies are available. Which social engineering method of influence is being used by the salesperson?",
@@ -339,7 +370,8 @@ const examsData = [
           "likeness",
           "scarcity"
         ],
-        "poprawna": "scarcity"
+        "poprawna": "scarcity",
+        "image": ""
       },
       {
         "pytanie": "What method of influence is characterized when a celebrity endorses a product on social media?",
@@ -349,7 +381,8 @@ const examsData = [
           "authority",
           "fear"
         ],
-        "poprawna": "social proof"
+        "poprawna": "social proof",
+        "image": ""
       },
       {
         "pytanie": "Apple is a company constantly working towards making its products and processes more environmentally friendly. Therefore, the Apple brand is associated with ideals and values that customers can relate to and support. What method of influence is being used by Apple?",
@@ -359,7 +392,8 @@ const examsData = [
           "authority",
           "likeness"
         ],
-        "poprawna": "likeness"
+        "poprawna": "likeness",
+        "image": ""
       },
       {
         "pytanie": "A threat actor has sent a phishing email to a victim stating that suspicious activity has been detected on their bank account and that they must immediately click on a provided link to change their password. What method of influence is being used by the threat actor?",
@@ -369,17 +403,19 @@ const examsData = [
           "likeness",
           "urgency"
         ],
-        "poprawna": "urgency"
+        "poprawna": "urgency",
+        "image": ""
       },
       {
         "pytanie": "Which social engineering physical attack statement is correct?",
         "opcje": [
-          "In the tailgating attack, an unauthorized person tags along with an authorized person to gain entry to a restricted area with the person’s consent.",
-          "In the piggybacking attack, an unauthorized person tags along with an authorized person to gain entry to a restricted area without the person’s consent.",
+          "In the tailgating attack, an unauthorized person tags along with an authorized person to gain entry to a restricted area with the person\u2019s consent.",
+          "In the piggybacking attack, an unauthorized person tags along with an authorized person to gain entry to a restricted area without the person\u2019s consent.",
           "Badge cloning attacks cannot be performed by software.",
           "Shoulder surfing can be prevented by using special screen filters for computer displays."
         ],
-        "poprawna": "Shoulder surfing can be prevented by using special screen filters for computer displays."
+        "poprawna": "Shoulder surfing can be prevented by using special screen filters for computer displays.",
+        "image": ""
       },
       {
         "pytanie": "Which tool provides a threat actor a web console to manipulate users who are victims of cross-site scripting (XSS) attacks?",
@@ -389,7 +425,8 @@ const examsData = [
           "BeEF",
           "Nikto"
         ],
-        "poprawna": "BeEF"
+        "poprawna": "BeEF",
+        "image": ""
       },
       {
         "pytanie": "Which Apple iOS and Android tool can be used to spoof a phone number?",
@@ -399,7 +436,8 @@ const examsData = [
           "Asterisk",
           "BeEF"
         ],
-        "poprawna": "SpoofApp"
+        "poprawna": "SpoofApp",
+        "image": ""
       },
       {
         "pytanie": "What two physical attacks are mitigated by using access control vestibules? (Choose two.)",
@@ -413,7 +451,8 @@ const examsData = [
         "poprawna": [
           "tailgating",
           "piggybacking"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "Which two access control options are commonly used in conjunction with access control vestibules? (Choose two.)",
@@ -427,17 +466,19 @@ const examsData = [
         "poprawna": [
           "proximity card and PIN",
           "biometric scan"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "Which resource would mitigate piggybacking and tailgating?",
         "opcje": [
           "security guard",
           "camera",
-          "“no trespassing” warnings",
+          "\u201cno trespassing\u201d warnings",
           "badge/card access"
         ],
-        "poprawna": "security guard"
+        "poprawna": "security guard",
+        "image": ""
       },
       {
         "pytanie": "Which tool can launch social engineering attacks and be integrated with third-party tools and frameworks such as Metasploit?",
@@ -447,7 +488,8 @@ const examsData = [
           "SET",
           "Asterisk"
         ],
-        "poprawna": "SET"
+        "poprawna": "SET",
+        "image": ""
       },
       {
         "pytanie": "Who is the target of a whaling attack?",
@@ -457,7 +499,8 @@ const examsData = [
           "user groups of social networks such as Facebook and Twitter",
           "companies that use animals in product testing"
         ],
-        "poprawna": "upper managers such as the CEO or key individuals in an organization"
+        "poprawna": "upper managers such as the CEO or key individuals in an organization",
+        "image": ""
       },
       {
         "pytanie": "What is the purpose of a vishing attack?",
@@ -467,7 +510,8 @@ const examsData = [
           "to use text messages to send malware or malicious links to mobile devices of users",
           "to use USB sticks to compromise the systems of victims"
         ],
-        "poprawna": "to convince a victim on a phone call to disclose private or financial information"
+        "poprawna": "to convince a victim on a phone call to disclose private or financial information",
+        "image": ""
       },
       {
         "pytanie": "Which Apple iOS and Android tools can spoof a phone number, record calls, and generate different background noises?",
@@ -477,7 +521,8 @@ const examsData = [
           "SpoofCard",
           "BeEF"
         ],
-        "poprawna": "SpoofCard"
+        "poprawna": "SpoofCard",
+        "image": ""
       },
       {
         "pytanie": "A threat actor has sent a text message to a victim stating that they have won bitcoins in a bank contest. To claim their prize, the victim must click the provided link and enter their bank account information. What social engineering attack can be accomplished if the user enters their banking information?",
@@ -487,7 +532,8 @@ const examsData = [
           "whaling",
           "watering hole"
         ],
-        "poprawna": "SMS phishing"
+        "poprawna": "SMS phishing",
+        "image": ""
       },
       {
         "pytanie": "Which tool permits post-exploitation activities, such as Windows reverse VNC DLL and reverse TCP shell?",
@@ -497,7 +543,8 @@ const examsData = [
           "Nessus",
           "Nikto"
         ],
-        "poprawna": "SET"
+        "poprawna": "SET",
+        "image": ""
       },
       {
         "pytanie": "Which tool can send fake notifications to the browser of a victim?",
@@ -507,7 +554,8 @@ const examsData = [
           "Nikto",
           "Asterisk"
         ],
-        "poprawna": "BeEF"
+        "poprawna": "BeEF",
+        "image": ""
       },
       {
         "pytanie": "A new employee is celebrating their position with a large company by posting a picture of their access identification on social media. What kind of physical attack has the new employee unknowingly enabled?",
@@ -517,7 +565,8 @@ const examsData = [
           "badge cloning",
           "shoulder surfing"
         ],
-        "poprawna": "badge cloning"
+        "poprawna": "badge cloning",
+        "image": ""
       },
       {
         "pytanie": "A user has found a USB pen drive in the corporate parking lot. What should the user do with this pen drive?",
@@ -527,15 +576,15 @@ const examsData = [
           "plug the pen drive into a computer of the company, try to delete all the files, and use the pen drive for personal use",
           "plug the pen drive into a computer of the company, try to access the files to identify who the pen drive belongs to"
         ],
-        "poprawna": "deliver the pen drive to the security sector of the company"
+        "poprawna": "deliver the pen drive to the security sector of the company",
+        "image": ""
       }
     ]
   },
   {
     "id": "checkpoint5-7",
     "title": "Checkpoint 5-7",
-    "questions": 
-    [
+    "questions": [
       {
         "pytanie": "Which privilege level is predefined for the privileged EXEC mode?",
         "opcje": [
@@ -544,7 +593,8 @@ const examsData = [
           "level 15",
           "level 16"
         ],
-        "poprawna": "level 15"
+        "poprawna": "level 15",
+        "image": ""
       },
       {
         "pytanie": "What is a requirement to use the Secure Copy Protocol feature?",
@@ -554,7 +604,8 @@ const examsData = [
           "A transfer can only originate from SCP clients that are routers.",
           "The Telnet protocol has to be configured on the SCP server side."
         ],
-        "poprawna": "A command must be issued to enable the SCP server side functionality."
+        "poprawna": "A command must be issued to enable the SCP server side functionality.",
+        "image": ""
       },
       {
         "pytanie": "Which three items are prompted for a user response during interactive AutoSecure setup? (Choose three.)",
@@ -570,7 +621,8 @@ const examsData = [
           "content of a security banner",
           "enable secret password",
           "enable password"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "Which syslog message type is accessible only to an administrator and only via the Cisco CLI?",
@@ -580,7 +632,8 @@ const examsData = [
           "debugging",
           "emergency"
         ],
-        "poprawna": "debugging"
+        "poprawna": "debugging",
+        "image": ""
       },
       {
         "pytanie": "Refer to the exhibit. What two statements describe the NTP status of the router? (Choose two.)",
@@ -594,7 +647,8 @@ const examsData = [
         "poprawna": [
           "The router is attached to a stratum 2 device.",
           "The IP address of the time source for the router is 192.168.1.1."
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "An administrator needs to create a user account with custom access to most privileged EXEC commands. Which privilege command is used to create this custom account?",
@@ -604,7 +658,8 @@ const examsData = [
           "privilege exec level 1",
           "privilege exec level 2"
         ],
-        "poprawna": "privilege exec level 2"
+        "poprawna": "privilege exec level 2",
+        "image": ""
       },
       {
         "pytanie": "A network administrator is analyzing the features supported by the multiple versions of SNMP. What are two features that are supported by SNMPv3 but not by SNMPv1 or SNMPv2c? (Choose two.)",
@@ -618,7 +673,8 @@ const examsData = [
         "poprawna": [
           "message encryption",
           "message source validation"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "A network administrator is configuring an AAA server to manage TACACS+ authentication. What are two attributes of TACACS+ authentication? (Choose two.)",
@@ -633,7 +689,8 @@ const examsData = [
         "poprawna": [
           "encryption for all communication",
           "separate processes for authentication and authorization"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "What are two characteristics of the RADIUS protocol? (Choose two.)",
@@ -647,7 +704,8 @@ const examsData = [
         "poprawna": [
           "encryption of the password only",
           "the use of UDP ports for authentication and accounting"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "What is the one major difference between local AAA authentication and using the login local command when configuring device access authentication?",
@@ -657,7 +715,8 @@ const examsData = [
           "Local AAA authentication provides a way to configure backup methods of authentication, but login local does not.",
           "The login local command uses local usernames and passwords stored on the router, but local AAA authentication does not."
         ],
-        "poprawna": "Local AAA authentication provides a way to configure backup methods of authentication, but login local does not."
+        "poprawna": "Local AAA authentication provides a way to configure backup methods of authentication, but login local does not.",
+        "image": ""
       },
       {
         "pytanie": "Which two UDP port numbers may be used for server-based AAA RADIUS authentication? (Choose two.)",
@@ -671,7 +730,8 @@ const examsData = [
         "poprawna": [
           "1812",
           "1645"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "Which command will move the show access-lists command to privilege level 14?",
@@ -681,7 +741,8 @@ const examsData = [
           "router(config)# set privilege level 14 show access-lists",
           "router(config)# show access-lists privilege level 14"
         ],
-        "poprawna": "router(config)# privilege exec level 14 show access-lists"
+        "poprawna": "router(config)# privilege exec level 14 show access-lists",
+        "image": ""
       },
       {
         "pytanie": "Which authentication method stores usernames and passwords in the router and is ideal for small networks?",
@@ -693,7 +754,8 @@ const examsData = [
           "local AAA",
           "server-based AAA over RADIUS"
         ],
-        "poprawna": "local AAA"
+        "poprawna": "local AAA",
+        "image": ""
       },
       {
         "pytanie": "What are three characteristics of superviews in the Cisco role-based CLI access feature? (Choose three.)",
@@ -709,7 +771,8 @@ const examsData = [
           "Commands cannot be configured for a superview.",
           "Deleting a superview does not delete the associated CLI views.",
           "A single CLI view can be shared within multiple superviews."
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "A student is learning about role-based views and role-based view configurations. The student enters the Router(config)# parser view TECH-view command. What is the purpose of this command?",
@@ -719,7 +782,8 @@ const examsData = [
           "to check the current setup of the CLI view named TECH-view",
           "to enter the CLI view named TECH-view"
         ],
-        "poprawna": "to create a CLI view named TECH-view"
+        "poprawna": "to create a CLI view named TECH-view",
+        "image": ""
       },
       {
         "pytanie": "Refer to the exhibit. A student uses the show parser view all command to see a summary of all views configured on router R1. What is indicated by the symbol * next to JR-ADMIN?",
@@ -729,7 +793,8 @@ const examsData = [
           "It is a superview.",
           "It is a CLI view."
         ],
-        "poprawna": "It is a superview."
+        "poprawna": "It is a superview.",
+        "image": ""
       },
       {
         "pytanie": "What are two characteristics of the Cisco IOS Resilient Configuration feature? (Choose two.)",
@@ -743,7 +808,8 @@ const examsData = [
         "poprawna": [
           "It saves a secure copy of the primary image and device configuration that cannot be removed by a user.",
           "It minimizes the downtime of a device that has had the image and configuration deleted."
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "What IOS privilege levels are available to assign for custom user-level privileges?",
@@ -753,7 +819,8 @@ const examsData = [
           "levels 2 through 14",
           "levels 0 and 1"
         ],
-        "poprawna": "levels 2 through 14"
+        "poprawna": "levels 2 through 14",
+        "image": ""
       },
       {
         "pytanie": "Refer to the exhibit. What information in the syslog message identifies the facility?",
@@ -763,7 +830,8 @@ const examsData = [
           "OSPF",
           "level 5"
         ],
-        "poprawna": "OSPF"
+        "poprawna": "OSPF",
+        "image": ""
       },
       {
         "pytanie": "What is the biggest issue with local implementation of AAA?",
@@ -773,7 +841,8 @@ const examsData = [
           "Local implementation does not scale well.",
           "Local implementation supports only RADIUS servers."
         ],
-        "poprawna": "Local implementation does not scale well."
+        "poprawna": "Local implementation does not scale well.",
+        "image": ""
       },
       {
         "pytanie": "Which task is necessary to encrypt the transfer of data between the ACS server and the AAA-enabled router?",
@@ -783,7 +852,8 @@ const examsData = [
           "Create a VPN tunnel between the server and the router.",
           "Use identical reserved ports on the server and the router."
         ],
-        "poprawna": "Configure the key exactly the same way on the server and the router."
+        "poprawna": "Configure the key exactly the same way on the server and the router.",
+        "image": ""
       },
       {
         "pytanie": "Refer to the exhibit. Based on the output of the show running-config command, which type of view is SUPPORT?",
@@ -793,7 +863,8 @@ const examsData = [
           "secret view, with a level 5 encrypted password",
           "root view, with a level 5 encrypted secret password"
         ],
-        "poprawna": "superview, containing SHOWVIEW and VERIFYVIEW views"
+        "poprawna": "superview, containing SHOWVIEW and VERIFYVIEW views",
+        "image": ""
       },
       {
         "pytanie": "A student is learning role-based CLI access and CLI view configurations. The student opens Packet Tracer and adds a router. Which command should be used first for creating a CLI view named TECH-View?",
@@ -803,7 +874,8 @@ const examsData = [
           "Router# enable view TECH-view",
           "Router(config)# parser view TECH-view"
         ],
-        "poprawna": "Router(config)# aaa new-model"
+        "poprawna": "Router(config)# aaa new-model",
+        "image": ""
       },
       {
         "pytanie": "A network engineer is implementing security on all company routers. Which two commands must be issued to force authentication via the password 1A2b3C for all OSPF-enabled interfaces in the backbone area of the company network? (Choose two.)",
@@ -817,7 +889,8 @@ const examsData = [
         "poprawna": [
           "area 0 authentication message-digest",
           "ip ospf message-digest-key 1 md5 1A2b3C"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "Because of implemented security controls, a user can only access a server with FTP. Which AAA component accomplishes this?",
@@ -828,7 +901,8 @@ const examsData = [
           "authentication",
           "authorization"
         ],
-        "poprawna": "authorization"
+        "poprawna": "authorization",
+        "image": ""
       },
       {
         "pytanie": "Which AAA component can be established using token cards?",
@@ -838,7 +912,8 @@ const examsData = [
           "auditing",
           "authentication"
         ],
-        "poprawna": "authentication"
+        "poprawna": "authentication",
+        "image": ""
       },
       {
         "pytanie": "What is the primary function of the aaa authorization command?",
@@ -848,15 +923,15 @@ const examsData = [
           "permit authenticated user access to AAA client services",
           "limit AAA server access to AAA client services"
         ],
-        "poprawna": "limit authenticated user access to AAA client services"
+        "poprawna": "limit authenticated user access to AAA client services",
+        "image": ""
       }
     ]
   },
   {
-    id: "checkpoint8-10",
-    title: "Checkpoint 8-10",
-    questions:
-    [
+    "id": "checkpoint8-10",
+    "title": "Checkpoint 8-10",
+    "questions": [
       {
         "pytanie": "When creating an ACL, which keyword should be used to document and interpret the purpose of the ACL statement on a Cisco device?",
         "opcje": [
@@ -865,7 +940,8 @@ const examsData = [
           "established",
           "eq"
         ],
-        "poprawna": "remark"
+        "poprawna": "remark",
+        "image": ""
       },
       {
         "pytanie": "Which two pieces of information are required when creating a standard access control list? (Choose two.)",
@@ -879,7 +955,8 @@ const examsData = [
         "poprawna": [
           "access list number between 1 and 99",
           "source address and wildcard mask"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "What two steps provide the quickest way to completely remove an ACL from a router? (Choose two.)",
@@ -894,7 +971,8 @@ const examsData = [
         "poprawna": [
           "Remove the inbound/outbound reference to the ACL from the interface.",
           "Use the no access-list command to remove the entire ACL."
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "Which two types of addresses should be denied inbound on a router interface that attaches to the Internet? (Choose two.)",
@@ -908,7 +986,8 @@ const examsData = [
         "poprawna": [
           "private IP addresses",
           "any IP address that starts with the number 127"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "In the creation of an IPv6 ACL, what is the purpose of the implicit final command entries, permit icmp any any nd-na and permit icmp any any nd-ns ?",
@@ -918,7 +997,8 @@ const examsData = [
           "to allow IPv6 to MAC address resolution",
           "to allow forwarding of IPv6 multicast packets"
         ],
-        "poprawna": "to allow IPv6 to MAC address resolution"
+        "poprawna": "to allow IPv6 to MAC address resolution",
+        "image": ""
       },
       {
         "pytanie": "What two statements describe characteristics of IPv6 access control lists? (Choose two.)",
@@ -932,7 +1012,8 @@ const examsData = [
         "poprawna": [
           "They include two implicit permit statements by default.",
           "They use prefix lengths to indicate how much of an address to match."
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "Refer to the exhibit. A network administrator created an IPv6 ACL to block the Telnet traffic from the 2001:DB8:CAFE:10::/64 network to the 2001:DB8:CAFE:30::/64 network. What is a command the administrator could use to allow only a single host 2001:DB8:CAFE:10::A/64 to telnet to the 2001:DB8:CAFE:30::/64 network?",
@@ -942,7 +1023,8 @@ const examsData = [
           "permit tcp host 2001:DB8:CAFE:10::A eq 23 2001:DB8:CAFE:30::/64",
           "permit tcp host 2001:DB8:CAFE:10::A 2001:DB8:CAFE:30::/64 eq 23 sequence 5"
         ],
-        "poprawna": "permit tcp host 2001:DB8:CAFE:10::A 2001:DB8:CAFE:30::/64 eq 23 sequence 5"
+        "poprawna": "permit tcp host 2001:DB8:CAFE:10::A 2001:DB8:CAFE:30::/64 eq 23 sequence 5",
+        "image": ""
       },
       {
         "pytanie": "When implementing components into an enterprise network, what is the purpose of a firewall?",
@@ -952,7 +1034,8 @@ const examsData = [
           "A firewall is a system that stores vast quantities of sensitive and business-critical information.",
           "A firewall is a system that enforces an access control policy between internal corporate networks and external networks."
         ],
-        "poprawna": "A firewall is a system that enforces an access control policy between internal corporate networks and external networks."
+        "poprawna": "A firewall is a system that enforces an access control policy between internal corporate networks and external networks.",
+        "image": ""
       },
       {
         "pytanie": "What are two possible limitations of using a firewall in a network? (Choose two.)",
@@ -966,7 +1049,8 @@ const examsData = [
         "poprawna": [
           "A misconfigured firewall can create a single point of failure.",
           "Network performance can slow down."
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "Which type of firewall makes use of a proxy server to connect to remote servers on behalf of clients?",
@@ -976,7 +1060,8 @@ const examsData = [
           "packet filtering firewall",
           "application gateway firewall"
         ],
-        "poprawna": "application gateway firewall"
+        "poprawna": "application gateway firewall",
+        "image": ""
       },
       {
         "pytanie": "How does a firewall handle traffic when it is originating from the public network and traveling to the private network?",
@@ -986,7 +1071,8 @@ const examsData = [
           "Traffic that is originating from the public network is usually permitted with little or no restrictions when traveling to the private network.",
           "Traffic that is originating from the public network is selectively permitted when traveling to the private network."
         ],
-        "poprawna": "Traffic that is originating from the public network is usually blocked when traveling to the private network."
+        "poprawna": "Traffic that is originating from the public network is usually blocked when traveling to the private network.",
+        "image": ""
       },
       {
         "pytanie": "Which two statements describe the two configuration models for Cisco IOS firewalls? (Choose two.)",
@@ -1000,7 +1086,8 @@ const examsData = [
         "poprawna": [
           "The IOS Classic Firewall and ZPF cannot be combined on a single interface.",
           "IOS Classic Firewalls and ZPF models can be enabled on a router concurrently."
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "Designing a ZPF requires several steps. Which step involves dictating the number of devices between most-secure and least-secure zones and determining redundant devices?",
@@ -1010,7 +1097,8 @@ const examsData = [
           "establish policies between zones",
           "identify subsets within zones and merge traffic requirements"
         ],
-        "poprawna": "design the physical infrastructure"
+        "poprawna": "design the physical infrastructure",
+        "image": ""
       },
       {
         "pytanie": "When a Cisco IOS zone-based policy firewall is being configured, which three actions can be applied to a traffic class? (Choose three.)",
@@ -1026,7 +1114,8 @@ const examsData = [
           "pass",
           "inspect",
           "drop"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "When using Cisco IOS zone-based policy firewall, where is the inspection policy applied?",
@@ -1036,7 +1125,8 @@ const examsData = [
           "to an interface",
           "to a zone pair"
         ],
-        "poprawna": "to a zone pair"
+        "poprawna": "to a zone pair",
+        "image": ""
       },
       {
         "pytanie": "What is the first step in configuring a Cisco IOS zone-based policy firewall via the CLI?",
@@ -1047,7 +1137,8 @@ const examsData = [
           "Assign policy maps to zone pairs.",
           "Create zones."
         ],
-        "poprawna": "Create zones."
+        "poprawna": "Create zones.",
+        "image": ""
       },
       {
         "pytanie": "What is one benefit of using a stateful firewall instead of a proxy server?",
@@ -1057,7 +1148,8 @@ const examsData = [
           "ability to perform packet filtering",
           "prevention of Layer 7 attacks"
         ],
-        "poprawna": "better performance"
+        "poprawna": "better performance",
+        "image": ""
       },
       {
         "pytanie": "Which statement describes a typical security policy for a DMZ firewall configuration?",
@@ -1068,7 +1160,8 @@ const examsData = [
           "Traffic that originates from the inside interface is generally blocked entirely or very selectively permitted to the outside interface.",
           "Traffic that originates from the outside interface is permitted to traverse the firewall to the inside interface with few or no restrictions."
         ],
-        "poprawna": "Traffic that originates from the DMZ interface is selectively permitted to the outside interface."
+        "poprawna": "Traffic that originates from the DMZ interface is selectively permitted to the outside interface.",
+        "image": ""
       },
       {
         "pytanie": "What is one limitation of a stateful firewall?",
@@ -1078,7 +1171,8 @@ const examsData = [
           "not as effective with UDP- or ICMP-based traffic",
           "poor log information"
         ],
-        "poprawna": "not as effective with UDP- or ICMP-based traffic"
+        "poprawna": "not as effective with UDP- or ICMP-based traffic",
+        "image": ""
       },
       {
         "pytanie": "Which statement describes Cisco IOS Zone-Based Policy Firewall operation?",
@@ -1088,7 +1182,8 @@ const examsData = [
           "A router interface can belong to multiple zones.",
           "Service policies are applied in interface configuration mode."
         ],
-        "poprawna": "The pass action works in only one direction."
+        "poprawna": "The pass action works in only one direction.",
+        "image": ""
       },
       {
         "pytanie": "What is the result in the self zone if a router is the source or destination of traffic?",
@@ -1098,7 +1193,8 @@ const examsData = [
           "Only traffic that originates in the router is permitted.",
           "Only traffic that is destined for the router is permitted."
         ],
-        "poprawna": "All traffic is permitted."
+        "poprawna": "All traffic is permitted.",
+        "image": ""
       },
       {
         "pytanie": "What are two characteristics of ACLs? (Choose two.)",
@@ -1112,7 +1208,8 @@ const examsData = [
         "poprawna": [
           "Extended ACLs can filter on destination TCP and UDP ports.",
           "Extended ACLs can filter on source and destination IP addresses."
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "Which three statements describe ACL processing of packets? (Choose three.)",
@@ -1128,7 +1225,8 @@ const examsData = [
           "An implicit deny any rejects any packet that does not match any ACE.",
           "A packet can either be rejected or forwarded as directed by the ACE that is matched.",
           "Each statement is checked only until a match is detected or until the end of the ACE list."
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "A network administrator configures an ACL with the command R1(config)# access-list 1 permit 172.16.0.0 0.0.15.255. Which two IP addresses will match this ACL statement? (Choose two.)",
@@ -1142,7 +1240,8 @@ const examsData = [
         "poprawna": [
           "172.16.0.255",
           "172.16.15.36"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "What single access list statement matches all of the following networks?",
@@ -1152,7 +1251,8 @@ const examsData = [
           "access-list 10 permit 192.168.16.0 0.0.15.255",
           "access-list 10 permit 192.168.0.0 0.0.15.255"
         ],
-        "poprawna": "access-list 10 permit 192.168.16.0 0.0.3.255"
+        "poprawna": "access-list 10 permit 192.168.16.0 0.0.3.255",
+        "image": ""
       },
       {
         "pytanie": "Which two characteristics are shared by both standard and extended ACLs? (Choose two.)",
@@ -1166,7 +1266,8 @@ const examsData = [
         "poprawna": [
           "Both include an implicit deny as a final statement.",
           "Both can be created by using either a descriptive name or number."
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "Refer to the exhibit. What is the result of adding the established argument to the end of the ACE?",
@@ -1176,7 +1277,8 @@ const examsData = [
           "192.168.254.0 /23 traffic is allowed to reach any network.",
           "Any TCP traffic is allowed to reach the 192.168.254.0 255.255.254.0 network if it is in response to an originated request."
         ],
-        "poprawna": "Any TCP traffic is allowed to reach the 192.168.254.0 255.255.254.0 network if it is in response to an originated request."
+        "poprawna": "Any TCP traffic is allowed to reach the 192.168.254.0 255.255.254.0 network if it is in response to an originated request.",
+        "image": ""
       },
       {
         "pytanie": "Which two keywords can be used in an access control list to replace a wildcard mask or address and wildcard mask pair? (Choose two.)",
@@ -1191,7 +1293,8 @@ const examsData = [
         "poprawna": [
           "host",
           "any"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "If the provided ACEs are in the same ACL, which ACE should be listed first in the ACL according to best practice?",
@@ -1203,7 +1306,8 @@ const examsData = [
           "deny udp any host 172.16.1.5 eq snmptrap",
           "deny tcp any any eq telnet"
         ],
-        "poprawna": "permit udp 172.16.0.0 0.0.255.255 host 172.16.1.5 eq snmptrap"
+        "poprawna": "permit udp 172.16.0.0 0.0.255.255 host 172.16.1.5 eq snmptrap",
+        "image": ""
       },
       {
         "pytanie": "To facilitate the troubleshooting process, which inbound ICMP message should be permitted on an outside interface?",
@@ -1214,7 +1318,8 @@ const examsData = [
           "time-stamp reply",
           "router advertisement"
         ],
-        "poprawna": "echo reply"
+        "poprawna": "echo reply",
+        "image": ""
       },
       {
         "pytanie": "A security specialist designs an ACL to deny access to a web server from all sales staff. The sales staff are assigned addressing from the IPv6 subnet 2001:db8:48:2c::/64. The web server is assigned the address 2001:db8:48:1c::50/64. Configuring the WebFilter ACL on the LAN interface for the sales staff will require which three commands? (Choose three.)",
@@ -1231,7 +1336,8 @@ const examsData = [
           "deny tcp any host 2001:db8:48:1c::50 eq 80",
           "permit ipv6 any any",
           "ipv6 traffic-filter WebFilter in"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "What are two characteristics of a stateful firewall? (Choose two.)",
@@ -1245,7 +1351,8 @@ const examsData = [
         "poprawna": [
           "uses connection information maintained in a state table",
           "analyzes traffic at Layers 3, 4 and 5 of the OSI model"
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "What are two differences between stateful and stateless firewalls? (Choose two.)",
@@ -1259,7 +1366,8 @@ const examsData = [
         "poprawna": [
           "A stateless firewall will examine each packet individually while a stateful firewall observes the state of a connection.",
           "A stateful firewall will prevent spoofing by determining whether packets belong to an existing connection or are from an unauthorized source."
-        ]
+        ],
+        "image": ""
       },
       {
         "pytanie": "When implementing a ZPF, what is the default security setting when forwarding traffic between two interfaces in the same zone?",
@@ -1269,7 +1377,8 @@ const examsData = [
           "Traffic between interfaces in the same zone is blocked.",
           "Traffic between interfaces in the same zone is selectively forwarded based on the default policy restrictions."
         ],
-        "poprawna": "Traffic between interfaces in the same zone is not subject to any policy and passes freely."
+        "poprawna": "Traffic between interfaces in the same zone is not subject to any policy and passes freely.",
+        "image": ""
       },
       {
         "pytanie": "Which two rules about interfaces are valid when implementing a Zone-Based Policy Firewall? (Choose two.)",
@@ -1283,7 +1392,291 @@ const examsData = [
         "poprawna": [
           "If neither interface is a zone member, then the action is to pass traffic.",
           "If both interfaces are members of the same zone, all traffic will be passed."
-        ]
+        ],
+        "image": ""
+      }
+    ]
+  },
+  {
+    "id": "checkpoint5-3-3",
+    "title": "Checkpoint 5.3.3",
+    "questions": [
+      {
+        "pytanie": "Which NetBIOS service is used for connection-oriented communication?",
+        "opcje": [
+          "NetBIOS-NS",
+          "NetBIOS-DGM",
+          "NetBIOS-SSN",
+          "LLMNR"
+        ],
+        "poprawna": "NetBIOS-SSN",
+        "image": ""
+      },
+      {
+        "pytanie": "Match the port type and number with the respective NetBIOS protocol service.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-10_160101.jpg"
+      },
+      {
+        "pytanie": "What two features are present on DNS servers using BIND 9.5.0 and higher that help mitigate DNS cache\n        poisoning attacks? (Choose two.)",
+        "opcje": [
+          "randomization of ports",
+          "provision of cryptographically secure DNS transaction identifiers",
+          "exclusion of any trust relationships between DNS servers",
+          "secure DNS data authentication",
+          "prevention of any recursive DNS queries"
+        ],
+        "poprawna": [
+          "randomization of ports",
+          "provision of cryptographically secure DNS transaction identifiers"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "What UDP port number is used by SNMP protocol?",
+        "opcje": [
+          "161",
+          "182",
+          "128",
+          "176"
+        ],
+        "poprawna": "161",
+        "image": ""
+      },
+      {
+        "pytanie": "Which is a characteristic of a DNS poisoning attack?",
+        "opcje": [
+          "The DNS server forward lookup zone is cleared.",
+          "The DNS server reverse lookup zone is cleared.",
+          "The DNS resolver cache is manipulated.",
+          "The DNS server IP address is changed."
+        ],
+        "poprawna": "The DNS resolver cache is manipulated.",
+        "image": ""
+      },
+      {
+        "pytanie": "Which Kali Linux tool or script can gather information on devices configured for SNMP?",
+        "opcje": [
+          "snmp-check",
+          "nslookup",
+          "snmp-brute.nse",
+          "snmp-netstat.nse"
+        ],
+        "poprawna": "snmp-check",
+        "image": ""
+      },
+      {
+        "pytanie": "Match the SMTP command with the respective description.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-10_160121.jpg"
+      },
+      {
+        "pytanie": "Which two best practices would help mitigate FTP server abuse and attacks? (Choose two.)",
+        "opcje": [
+          "limit anonymous logins to a select group of people",
+          "edit the hosts file to limit the number of authorized DNS servers",
+          "use encryption at rest",
+          "consolidate all back-end databases on the FTP server",
+          "require re-authentication of inactive sessions"
+        ],
+        "poprawna": [
+          "use encryption at rest",
+          "require re-authentication of inactive sessions"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "Which is a characteristic of the pass-the-hash attack?",
+        "opcje": [
+          "capture of a password hash (as opposed to the password characters) and using the same\n        hashed value for authentication and lateral access to other networked systems",
+          "reverse engineering of the captured hash password and using the unencrypted password for authentication and\n        lateral access to other networked systems",
+          "compromise of a SAM file and extraction of the password characters to use for authentication and lateral access\n        to other networked systems",
+          "capture of the Windows password before the Kerberos hashing function and use of the unencrypted password for\n        authentication and lateral access to other networked systems"
+        ],
+        "poprawna": "capture of a password hash (as opposed to the password characters) and using the same\n        hashed value for authentication and lateral access to other networked systems",
+        "image": ""
+      },
+      {
+        "pytanie": "What is a Kerberoasting attack?",
+        "opcje": [
+          "It is an attempt to steal the hash value of a user credential and use it to create a new user session on the\n        same network.",
+          "It attempts to manipulate Kerberos tickets based on available hashes by compromising a vulnerable system and\n        obtaining the local user credentials and password hashes.",
+          "It is a post-exploitation attempt that is used to extract service account credential\n        hashes from Active Directory for offline cracking.",
+          "It attempts to manipulate data being transferred by performing data corruption or modification."
+        ],
+        "poprawna": "It is a post-exploitation attempt that is used to extract service account credential\n        hashes from Active Directory for offline cracking.",
+        "image": ""
+      },
+      {
+        "pytanie": "Match the attack type with the respective description.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-10_160139.jpg"
+      },
+      {
+        "pytanie": "Match the attack type with the respective description.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-10_160159.jpg"
+      },
+      {
+        "pytanie": "Which tool can be used to perform a Disassociation attack?",
+        "opcje": [
+          "Airmon-ng",
+          "nmap",
+          "POODLE",
+          "EMPIRE"
+        ],
+        "poprawna": "Airmon-ng",
+        "image": ""
+      },
+      {
+        "pytanie": "Which is a characteristic of a Bluesnarfing attack?",
+        "opcje": [
+          "An attack that is launched using common social engineering attacks, such as phishing attacks, can be performed\n        by impersonating a wireless AP or a captive portal to convince a user to enter the user credentials.",
+          "An attack that can be performed using Bluetooth with vulnerable devices in range. It is commonly performed as\n        spam over Bluetooth connections using the OBEX protocol.",
+          "An attack that can be performed using Bluetooth with vulnerable devices in range. This\n        attack actually steals information from the device of the victim.",
+          "An attack involves modifying BLE messages between systems that would lead them to believe that they are\n        communicating with legitimate systems."
+        ],
+        "poprawna": "An attack that can be performed using Bluetooth with vulnerable devices in range. This\n        attack actually steals information from the device of the victim.",
+        "image": ""
+      },
+      {
+        "pytanie": "Which Wi-Fi protocol is most vulnerable to a brute-force attack during a Wi-Fi network\n        deployment?",
+        "opcje": [
+          "WPA2-EAP",
+          "WPS",
+          "WPA3",
+          "WPA2-TKIP"
+        ],
+        "poprawna": "WPS",
+        "image": ""
+      },
+      {
+        "pytanie": "What does the MFP feature in the 802.11w standard do to protect against wireless attacks?",
+        "opcje": [
+          "It uses a PNL to maintain a list of trusted or preferred wireless networks.",
+          "It uses a captive portal for all wireless associations.",
+          "It inserts the 802.1q tag to protect the wireless frame.",
+          "It helps defend against deauthentication attacks."
+        ],
+        "poprawna": "It helps defend against deauthentication attacks.",
+        "image": ""
+      },
+      {
+        "pytanie": "What is a DNS resolver cache on a Windows system?",
+        "opcje": [
+          "It is a database of all WINS records.",
+          "It is a static database entry of all forward and reverse lookup zones.",
+          "It is a temporary database that contains records of all the recent visits and attempted\n        visits to websites and other internet domains.",
+          "It is a collective database of all Domain Name Service records of static and cached entries."
+        ],
+        "poprawna": "It is a temporary database that contains records of all the recent visits and attempted\n        visits to websites and other internet domains.",
+        "image": ""
+      },
+      {
+        "pytanie": "Match the TCP port number with the respective email protocol that uses it.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-10_160219-768x355.jpg"
+      },
+      {
+        "pytanie": "Which is the default TCP port used in SMTP for non-encrypted communications?",
+        "opcje": [
+          "25",
+          "110",
+          "143",
+          "993"
+        ],
+        "poprawna": "25",
+        "image": ""
+      },
+      {
+        "pytanie": "What is a characteristic of a Kerberos silver ticket attack?",
+        "opcje": [
+          "It uses forged service tickets for a given service on a particular server.",
+          "It mimics the authentication hash on a particular server.",
+          "It acts as the LDAP directory for authentication on a target server.",
+          "It coverts the hashed value to the unencrypted value for an authentication attack on a particular server."
+        ],
+        "poprawna": "It uses forged service tickets for a given service on a particular server.",
+        "image": ""
+      },
+      {
+        "pytanie": "Which attack is a post-exploitation activity that an attacker uses to extract service account credential\n        hashes from Active Directory for offline cracking?",
+        "opcje": [
+          "MITM",
+          "On-Path attack",
+          "MAC spoofing",
+          "Kerberoasting"
+        ],
+        "poprawna": "Kerberoasting",
+        "image": ""
+      },
+      {
+        "pytanie": "Which four items are needed by an attacker to create a silver ticket for a Kerberos silver ticket attack?\n        (Choose four.)",
+        "opcje": [
+          "hash value",
+          "system account",
+          "SID",
+          "FQDN",
+          "target service",
+          "DNS forward lookup zone",
+          "DNS resolver cache",
+          "DNS reverse lookup zone"
+        ],
+        "poprawna": [
+          "system account",
+          "SID",
+          "FQDN",
+          "target service"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "Which kind of attack is an IP spoofing attack?",
+        "opcje": [
+          "On-path",
+          "DDoS",
+          "Pass-the-Hash",
+          "Evil-Twin"
+        ],
+        "poprawna": "On-path",
+        "image": ""
+      },
+      {
+        "pytanie": "What is a common mitigation practice for ARP cache poisoning attacks on switches to prevent spoofing of\n        Layer 2 addresses?",
+        "opcje": [
+          "DHCP snooping",
+          "DNSSEC",
+          "DAI",
+          "BIND 9.5"
+        ],
+        "poprawna": "DAI",
+        "image": ""
+      },
+      {
+        "pytanie": "An attacker is launching a reflected DDoS attack in which the response traffic is made up of packets that\n        are much larger than those that the attacker initially sent. Which type of attack is this?",
+        "opcje": [
+          "downgrade",
+          "amplification",
+          "on-path",
+          "DNS cache poisoning"
+        ],
+        "poprawna": "amplification",
+        "image": ""
       }
     ]
   }

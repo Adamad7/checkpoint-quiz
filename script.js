@@ -83,6 +83,16 @@ function showNextQuestion() {
     const question = shuffledQuestions[currentQuestionIndex];
     questionText.textContent = question.pytanie;
 
+    // --- Obsługa obrazka ---
+    const questionImage = document.getElementById('question-image');
+    if (question.image && question.image.trim() !== "") {
+        questionImage.src = question.image;
+        questionImage.classList.remove('hide');
+    } else {
+        questionImage.classList.add('hide');
+        questionImage.src = ""; // Wyczyść src
+    }
+
     const progressPercent = ((currentQuestionIndex + 1) / shuffledQuestions.length) * 100;
     progressBarFill.style.width = `${progressPercent}%`;
 
