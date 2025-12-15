@@ -2,12 +2,22 @@ import json
 import os
 
 # Read the new questions
-with open('new_exam.json', 'r', encoding='utf-8') as f:
+print("Enter the new questions JSON file name:")
+new_questions_file_name = input().strip()
+if not os.path.isfile(new_questions_file_name):
+    print(f"File '{new_questions_file_name}' does not exist.")
+    exit(1)
+with open(new_questions_file_name, 'r', encoding='utf-8') as f:
     questions = json.load(f)
 
+
+print("Enter the new exam ID:")
+new_exam_id = input().strip()
+print("Enter the new exam title:")
+new_exam_title = input().strip()
 new_exam = {
-    "id": "checkpoint5-3-3",
-    "title": "Checkpoint 5.3.3",
+    "id": new_exam_id,
+    "title": new_exam_title,
     "questions": questions
 }
 

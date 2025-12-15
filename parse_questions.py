@@ -1,10 +1,16 @@
+import os
 from bs4 import BeautifulSoup
 import json
 
-with open('checkpoint_5_3_3.html', 'r', encoding='utf-8') as f:
-    html_content = f.read()
+print("Enter the HTML file name:")
+file_name  = input().strip();
 
-soup = BeautifulSoup(html_content, 'html.parser')
+if not os.path.isfile(file_name):
+    print(f"File '{file_name}' does not exist.")
+    exit(1)
+
+with open(file_name, 'r', encoding='utf-8') as f:
+    html_content = f.read()
 
 soup = BeautifulSoup(html_content, 'html.parser')
 
@@ -70,7 +76,11 @@ for p in soup.find_all('p'):
             questions.append({
                 "pytanie": question_text,
                 "opcje": options,
-                "poprawna": correct
+                "poprawna": correct,
+                "image": ""
             })
 
-print(json.dumps(questions, indent=2))
+print("Enter the output JSON file name:")
+output_file_name  = input().strip();
+with open(output_file_name, 'w', encoding='utf-8') as f:
+    json.dump(questions, f, ensure_ascii=False, indent=2)

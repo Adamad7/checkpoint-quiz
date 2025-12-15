@@ -1680,4 +1680,672 @@ const examsData = [
       }
     ]
   }
-];
+,
+  {
+    "id": "Endpoint Security Final Exam",
+    "title": "endpoint_security_final_exam",
+    "questions": [
+      {
+        "pytanie": "Which two commands could be used to check if DNS name resolution is working properly on a Windows PC? (Choose two.)",
+        "opcje": [
+          "ping cisco.com",
+          "net cisco.com",
+          "ipconfig /flushdns",
+          "nslookup cisco.com",
+          "nbtstat cisco.com"
+        ],
+        "poprawna": [
+          "ping cisco.com",
+          "nslookup cisco.com"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "A technician notices that an application is not responding to commands and that the computer seems to respond slowly when applications are opened. What is the best administrative tool to force the release of system resources from the unresponsive application?",
+        "opcje": [
+          "Event Viewer",
+          "Add or Remove Programs",
+          "System Restore",
+          "Task Manager"
+        ],
+        "poprawna": "Task Manager",
+        "image": ""
+      },
+      {
+        "pytanie": "What is required in order to connect a Wi-Fi enabled laptop to a WPA secured wireless network?",
+        "opcje": [
+          "a MAC address",
+          "a username and password",
+          "a security encryption key",
+          "an updated wireless driver"
+        ],
+        "poprawna": "a security encryption key",
+        "image": ""
+      },
+      {
+        "pytanie": "Why would an attacker want to spoof a MAC address?",
+        "opcje": [
+          "so that the attacker can launch another type of attack in order to gain access to the switch",
+          "so that the attacker can capture traffic from multiple VLANs rather than from just the VLAN that is assigned to the port to which the attacker device is attached",
+          "so that a switch on the LAN will start forwarding frames to the attacker instead of to the legitimate host",
+          "so that a switch on the LAN will start forwarding all frames toward the device that is under control of the attacker (that can then capture the LAN traffic)"
+        ],
+        "poprawna": "so that a switch on the LAN will start forwarding frames to the attacker instead of to the legitimate host",
+        "image": ""
+      },
+      {
+        "pytanie": "What is a wireless security mode that requires a RADIUS server to authenticate wireless users?",
+        "opcje": [
+          "personal",
+          "enterprise",
+          "shared key",
+          "WEP"
+        ],
+        "poprawna": "enterprise",
+        "image": ""
+      },
+      {
+        "pytanie": "What are three functions provided by the syslog service? (Choose three.)",
+        "opcje": [
+          "to select the type of logging information that is captured",
+          "to provide traffic analysis",
+          "to specify the destinations of captured messages",
+          "to provide statistics on packets that are flowing through a Cisco device",
+          "to gather logging information for monitoring and troubleshooting",
+          "to periodically poll agents for data"
+        ],
+        "poprawna": [
+          "to select the type of logging information that is captured",
+          "to specify the destinations of captured messages",
+          "to gather logging information for monitoring and troubleshooting"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "A network administrator is checking the system logs and notices unusual connectivity tests to multiple well-known ports on a server. What kind of potential network attack could this indicate?",
+        "opcje": [
+          "access",
+          "denial of service",
+          "reconnaissance",
+          "information theft"
+        ],
+        "poprawna": "reconnaissance",
+        "image": ""
+      },
+      {
+        "pytanie": "A technician has installed a third party utility that is used to manage a Windows 7 computer. However, the utility does not automatically start whenever the computer is started. What can the technician do to resolve this problem?",
+        "opcje": [
+          "Set the application registry key value to one.",
+          "Use the Add or Remove Programs utility to set program access and defaults.",
+          "Change the startup type for the utility to Automatic in Services.",
+          "Uninstall the program and then choose Add New Programs in the Add or Remove Programs utility to install the application."
+        ],
+        "poprawna": "Change the startup type for the utility to Automatic in Services.",
+        "image": ""
+      },
+      {
+        "pytanie": "What is the motivation of a white hat attacker?",
+        "opcje": [
+          "discovering weaknesses of networks and systems to improve the security level of these systems",
+          "studying operating systems of various platforms to develop a new system",
+          "fine tuning network devices to improve their performance and efficiency",
+          "taking advantage of any vulnerability for illegal personal gain"
+        ],
+        "poprawna": "discovering weaknesses of networks and systems to improve the security level of these systems",
+        "image": ""
+      },
+      {
+        "pytanie": "Which two types of hackers are typically classified as grey hat hackers? (Choose two.)",
+        "opcje": [
+          "hacktivists",
+          "cyber criminals",
+          "state-sponsored hackers",
+          "script kiddies",
+          "vulnerability brokers"
+        ],
+        "poprawna": [
+          "hacktivists",
+          "vulnerability brokers"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "What are two shared characteristics of the IDS and the IPS? (Choose two.)",
+        "opcje": [
+          "Both have minimal impact on network performance.",
+          "Both analyze copies of network traffic.",
+          "Both are deployed as sensors.",
+          "Both rely on an additional network device to respond to malicious traffic.",
+          "Both use signatures to detect malicious traffic."
+        ],
+        "poprawna": [
+          "Both are deployed as sensors.",
+          "Both use signatures to detect malicious traffic."
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "An attacker is sitting in front of a store and wirelessly copies emails and contact lists from nearby unsuspecting user devices. What type of attack is this?",
+        "opcje": [
+          "bluejacking",
+          "RF jamming",
+          "bluesnarfing",
+          "smishing"
+        ],
+        "poprawna": "bluesnarfing",
+        "image": ""
+      },
+      {
+        "pytanie": "An organization allows employees to work from home two days a week. Which technology should be implemented to ensure data confidentiality as data is transmitted?",
+        "opcje": [
+          "SHS",
+          "VLANS",
+          "RAID",
+          "VPN"
+        ],
+        "poprawna": "VPN",
+        "image": ""
+      },
+      {
+        "pytanie": "A new PC is taken out of the box, started up and connected to the Internet. Patches were downloaded and installed. Antivirus was updated. In order to further harden the operating system what can be done?",
+        "opcje": [
+          "Turn off the firewall.",
+          "Remove unnecessary programs and services.",
+          "Disconnect the computer from the network.",
+          "Give the computer a nonroutable address.",
+          "Install a hardware firewall.",
+          "Remove the administrator account."
+        ],
+        "poprawna": "Remove unnecessary programs and services.",
+        "image": ""
+      },
+      {
+        "pytanie": "Which type of networks poses increasing challenges to cybersecurity specialists due to the growth of BYOD on campus?",
+        "opcje": [
+          "wired networks",
+          "virtual networks",
+          "wireless networks",
+          "sneaker net"
+        ],
+        "poprawna": "wireless networks",
+        "image": ""
+      },
+      {
+        "pytanie": "What are two types of attacks used on DNS open resolvers? (Choose two.)",
+        "opcje": [
+          "ARP poisoning",
+          "resource utilization",
+          "cushioning",
+          "amplification and reflection",
+          "fast flux"
+        ],
+        "poprawna": [
+          "resource utilization",
+          "amplification and reflection"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "What would be the target of an SQL injection attack?",
+        "opcje": [
+          "database",
+          "email",
+          "DHCP",
+          "DNS"
+        ],
+        "poprawna": "database",
+        "image": ""
+      },
+      {
+        "pytanie": "A security specialist is asked for advice on a security measure to prevent unauthorized hosts from accessing the home network of employees. Which measure would be most effective?",
+        "opcje": [
+          "Implement a VLAN.",
+          "Implement intrusion detection systems.",
+          "Implement RAID.",
+          "Implement a firewall."
+        ],
+        "poprawna": "Implement a firewall.",
+        "image": ""
+      },
+      {
+        "pytanie": "Match the network service with the description.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2022/07/2024-09-26_104808-768x282.jpg"
+      },
+      {
+        "pytanie": "Which method can be used to harden a device?",
+        "opcje": [
+          "allow USB auto-detection",
+          "use SSH and disable the root account access over SSH",
+          "allow default services to remain enabled",
+          "maintain use of the same passwords"
+        ],
+        "poprawna": "use SSH and disable the root account access over SSH",
+        "image": ""
+      },
+      {
+        "pytanie": "Which user can override file permissions on a Linux computer?",
+        "opcje": [
+          "root user",
+          "any user that has \u2018group\u2019 permission to the file",
+          "only the creator of the file",
+          "any user that has \u2018other\u2019 permission to the file"
+        ],
+        "poprawna": "root user",
+        "image": ""
+      },
+      {
+        "pytanie": "Which wireless parameter is used by an access point to broadcast frames that include the SSID?",
+        "opcje": [
+          "passive mode",
+          "channel setting",
+          "active mode",
+          "security mode"
+        ],
+        "poprawna": "passive mode",
+        "image": ""
+      },
+      {
+        "pytanie": "What is the outcome when a Linux administrator enters the man man command?",
+        "opcje": [
+          "The man man command provides documentation about the man command",
+          "The man man command provides a list of commands available at the current prompt",
+          "The man man command opens the most recent log file",
+          "The man man command configures the network interface with a manual address"
+        ],
+        "poprawna": "The man man command provides documentation about the man command",
+        "image": ""
+      },
+      {
+        "pytanie": "Which technique could be used by security personnel to analyze a suspicious file in a safe environment?",
+        "opcje": [
+          "whitelisting",
+          "baselining",
+          "blacklisting",
+          "sandboxing"
+        ],
+        "poprawna": "sandboxing",
+        "image": ""
+      },
+      {
+        "pytanie": "What are three benefits of using symbolic links over hard links in Linux? (Choose three.)",
+        "opcje": [
+          "Symbolic links can be exported.",
+          "They can be compressed.",
+          "They can link to a file in a different file system.",
+          "They can link to a directory.",
+          "They can be encrypted.",
+          "They can show the location of the original file."
+        ],
+        "poprawna": [
+          "They can link to a file in a different file system.",
+          "They can link to a directory.",
+          "They can show the location of the original file."
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "Which field in the IPv6 header points to optional network layer information that is carried in the IPv6 packet?",
+        "opcje": [
+          "traffic class",
+          "version",
+          "flow label",
+          "next header"
+        ],
+        "poprawna": "next header",
+        "image": ""
+      },
+      {
+        "pytanie": "What is the term used when a malicious party sends a fraudulent email disguised as being from a legitimate, trusted source?",
+        "opcje": [
+          "phishing",
+          "backdoor",
+          "Trojan",
+          "vishing"
+        ],
+        "poprawna": "phishing",
+        "image": ""
+      },
+      {
+        "pytanie": "Which technology is used by Cisco Advanced Malware Protection (AMP) in defending and protecting against known and emerging threats?",
+        "opcje": [
+          "website filtering and blacklisting",
+          "threat intelligence",
+          "network admission control",
+          "network profiling"
+        ],
+        "poprawna": "threat intelligence",
+        "image": ""
+      },
+      {
+        "pytanie": "After host A receives a web page from server B, host A terminates the connection with server B. Match each option to its correct step in the normal termination proccess for a TCP connection.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2024/09/2024-09-26_150333-768x226.jpg"
+      },
+      {
+        "pytanie": "A flood of packets with invalid source IP addresses requests a connection on the network. The server busily tries to respond, resulting in valid requests being ignored. What type of attack has occurred?",
+        "opcje": [
+          "TCP session hijacking",
+          "TCP reset",
+          "TCP SYN flood",
+          "UDP flood"
+        ],
+        "poprawna": "TCP SYN flood",
+        "image": ""
+      },
+      {
+        "pytanie": "Which Windows tool can be used by a cybersecurity administrator to secure stand-alone computers that are not part of an active directory domain?",
+        "opcje": [
+          "Windows Defender",
+          "Local Security Policy",
+          "Windows Firewall",
+          "PowerShell"
+        ],
+        "poprawna": "Local Security Policy",
+        "image": ""
+      },
+      {
+        "pytanie": "Match the correct sequence of steps typically taken by a threat actor carrying out a domain shadowing attack.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2022/07/2024-09-26_111311-768x331.jpg"
+      },
+      {
+        "pytanie": "What is a feature of distributed firewalls?",
+        "opcje": [
+          "They combine the feature of host-based firewalls with centralized management.",
+          "They all use an open sharing standard platform.",
+          "They use only TCP wrappers to configure rule-based access control and logging systems.",
+          "They use only iptables to configure network rules."
+        ],
+        "poprawna": "They combine the feature of host-based firewalls with centralized management.",
+        "image": ""
+      },
+      {
+        "pytanie": "What does the telemetry function provide in host-based security software?",
+        "opcje": [
+          "It updates the heuristic antivirus signature database.",
+          "It enables host-based security programs to have comprehensive logging functions.",
+          "It blocks the passage of zero-day attacks.",
+          "It enables updates of malware signatures."
+        ],
+        "poprawna": "It enables host-based security programs to have comprehensive logging functions.",
+        "image": ""
+      },
+      {
+        "pytanie": "What is an attack vector as it relates to network security?",
+        "opcje": [
+          "a path by which a threat actor can gain access to an internal network device",
+          "a defense-in-depth approach to security",
+          "a particular section of a network design where security is applied",
+          "a method of reverse engineering binary files"
+        ],
+        "poprawna": "a path by which a threat actor can gain access to an internal network device",
+        "image": ""
+      },
+      {
+        "pytanie": "What occurs when a rogue access point is added to a WLAN?",
+        "opcje": [
+          "Authorized access points can transmit excess traffic to rogue access points to help alleviate congestion.",
+          "Unauthorized users can gain access to internal servers, thus causing a security hole.",
+          "All traffic that uses the same channel as the rogue access point will be encrypted.",
+          "All traffic that uses the same channel as the rogue access point will be required to authenticate."
+        ],
+        "poprawna": "Unauthorized users can gain access to internal servers, thus causing a security hole.",
+        "image": ""
+      },
+      {
+        "pytanie": "What is the reason for disabling SSID broadcasting and changing the default SSID on a wireless access point?",
+        "opcje": [
+          "The access point stops broadcasting its own MAC address, thus preventing unauthorized wireless clients from connecting to the network.",
+          "Anyone with the default SSID can gain access to the access point and change the configuration.",
+          "Disabling SSID broadcasting frees up radio frequency bandwidth and increases the data throughput of the access point.",
+          "Wireless clients must then have the SSID manually configured to connect to the wireless network."
+        ],
+        "poprawna": "Wireless clients must then have the SSID manually configured to connect to the wireless network.",
+        "image": ""
+      },
+      {
+        "pytanie": "Which two options can limit the information discovered from port scanning? (Choose two.)",
+        "opcje": [
+          "encryption",
+          "firewall",
+          "authentication",
+          "intrusion prevention system",
+          "passwords"
+        ],
+        "poprawna": [
+          "firewall",
+          "intrusion prevention system"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "What does a rootkit modify?",
+        "opcje": [
+          "Microsoft Word",
+          "operating system",
+          "programs",
+          "Notepad",
+          "screen savers"
+        ],
+        "poprawna": "operating system",
+        "image": ""
+      },
+      {
+        "pytanie": "What is a nontechnical method that a cybercriminal would use to gather sensitive information from an organization?",
+        "opcje": [
+          "pharming",
+          "man-in-the-middle",
+          "social engineering",
+          "ransomeware"
+        ],
+        "poprawna": "social engineering",
+        "image": ""
+      },
+      {
+        "pytanie": "Match the commonly used ports on a Linux server with the corresponding service.\n\nExplanation: Place the options in the following order:\n\n\n\nSMTP\n25\n\n\nDNS\n53\n\n\nHTTPS\n443\n\n\nTelnet\n23",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2022/07/2024-04-12_105814-768x271.jpg"
+      },
+      {
+        "pytanie": "Which statement describes the anomaly-based intrusion detection approach?",
+        "opcje": [
+          "It compares the antivirus definition file to a cloud based repository for latest updates.",
+          "It compares the signatures of incoming traffic to a known intrusion database.",
+          "It compares the operations of a host against a well-defined security policy.",
+          "It compares the behavior of a host to an established baseline to identify potential intrusions."
+        ],
+        "poprawna": "It compares the behavior of a host to an established baseline to identify potential intrusions.",
+        "image": ""
+      },
+      {
+        "pytanie": "Match the security service with the description.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2022/07/2025-05-26_154330-768x455.jpg"
+      },
+      {
+        "pytanie": "What is an example of a local exploit?",
+        "opcje": [
+          "A threat actor tries to gain the user password of a remote host by using a keyboard capture software installed on it by a Trojan.",
+          "A buffer overflow attack is launched against an online shopping website and causes the server crash.",
+          "Port scanning is used to determine if the Telnet service is running on a remote server.",
+          "A threat actor performs a brute force attack on an enterprise edge router to gain illegal access."
+        ],
+        "poprawna": "A threat actor tries to gain the user password of a remote host by using a keyboard capture software installed on it by a Trojan.",
+        "image": ""
+      },
+      {
+        "pytanie": "Match the tabs of the Windows 10 Task Manager to their functions.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2022/07/2024-09-26_105716-768x281.jpg"
+      },
+      {
+        "pytanie": "In an attempt to prevent network attacks, cyber analysts share unique identifiable attributes of known attacks with colleagues. What three types of attributes or indicators of compromise are helpful to share? (Choose three.)",
+        "opcje": [
+          "netbios names of compromised firewalls",
+          "BIOS of attacking systems",
+          "features of malware files",
+          "IP addresses of attack servers",
+          "changes made to end system software",
+          "system ID of compromised systems"
+        ],
+        "poprawna": [
+          "features of malware files",
+          "IP addresses of attack servers",
+          "changes made to end system software"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "Which data state is maintained in NAS and SAN services?",
+        "opcje": [
+          "data in-process",
+          "stored data",
+          "data in-transit",
+          "encrypted data"
+        ],
+        "poprawna": "stored data",
+        "image": ""
+      },
+      {
+        "pytanie": "What is the result of a passive ARP poisoning attack?",
+        "opcje": [
+          "Network clients experience a denial of service.",
+          "Multiple subdomains are created.",
+          "Data is modified in transit or malicious data is inserted in transit.",
+          "Confidential information is stolen."
+        ],
+        "poprawna": "Confidential information is stolen.",
+        "image": ""
+      },
+      {
+        "pytanie": "The entrepreneur is concerned about company employees having uninterrupted access to important resources and data. Which of the CIA triad components would address the concern?",
+        "opcje": [
+          "integrity",
+          "availability",
+          "authentication",
+          "confidentiality"
+        ],
+        "poprawna": "availability",
+        "image": ""
+      },
+      {
+        "pytanie": "Users report that a database file on the main server cannot be accessed. A database administrator verifies the issue and notices that the database file is now encrypted. The organization receives a threatening email demanding payment for the decryption of the database file. What type of attack has the organization experienced?",
+        "opcje": [
+          "Trojan horse",
+          "ransomware",
+          "DoS attack",
+          "man-in-the-middle attack"
+        ],
+        "poprawna": "ransomware",
+        "image": ""
+      },
+      {
+        "pytanie": "Which is a Windows 10 feature that encrypts removable drives?",
+        "opcje": [
+          "BitLocker To Go",
+          "MRT",
+          "LeafPad",
+          "XProtect"
+        ],
+        "poprawna": "BitLocker To Go",
+        "image": ""
+      },
+      {
+        "pytanie": "What is the function provided by the Burpsuite tool in Kali Linux?",
+        "opcje": [
+          "managing",
+          "logging",
+          "scanning",
+          "penetration test"
+        ],
+        "poprawna": "penetration test",
+        "image": ""
+      },
+      {
+        "pytanie": "Which file system is for MAC OS X computers, and Windows users may use third-party software to open and save files from this file system?",
+        "opcje": [
+          "EXT",
+          "exFAT",
+          "HFS+",
+          "NTFS"
+        ],
+        "poprawna": "HFS+",
+        "image": ""
+      },
+      {
+        "pytanie": "A student is learning about authentication protocols and how they are used to communicate with AAA servers. Which statement describes a characteristic of such protocols?",
+        "opcje": [
+          "TACACS+ is a standard mostly Cisco equipment support, while RADIUS is an open standard.",
+          "TACACS+ combines authentication and authorization, while RADIUS separates AAA according to the AAA architecture.",
+          "RADIUS is considered the more secure protocol because all RADIUS protocol exchanges are encrypted.",
+          "RADIUS uses a bidirectional challenge and response (CHAP), while TACACS+ uses a unidirectional challenge."
+        ],
+        "poprawna": "TACACS+ is a standard mostly Cisco equipment support, while RADIUS is an open standard.",
+        "image": ""
+      },
+      {
+        "pytanie": "Which statement describes a characteristic on WLANs?",
+        "opcje": [
+          "IEEE 802.11 prescribes CSMA/CD for media access to proactively avoid collisions within the media.",
+          "An attacker may not have to physically enter the workplace to gain access to a WLAN.",
+          "Tethering is a variation of infrastructure mode",
+          "The 5GHz band is more prone to interference than the 2.4 GHz."
+        ],
+        "poprawna": "An attacker may not have to physically enter the workplace to gain access to a WLAN.",
+        "image": ""
+      },
+      {
+        "pytanie": "What kind of attack is performed by a threat actor that places non-DNS traffic in DNS records?",
+        "opcje": [
+          "DNS resource utilization",
+          "DNS cache poisoning",
+          "DNS tunneling",
+          "DNS amplification and reflection"
+        ],
+        "poprawna": "DNS tunneling",
+        "image": ""
+      },
+      {
+        "pytanie": "What are the characteristics of IPv4 and IPv6 protocols?",
+        "opcje": [
+          "IPv6 packets are not fragmented by routers, unlike IPv4 packets",
+          "Both IP versions use the same checksum calculation",
+          "Only IPv4 has a counter field to limit the lifetime of a packet on a network",
+          "Both IP versions have the same size of header, but with different fields"
+        ],
+        "poprawna": "IPv6 packets are not fragmented by routers, unlike IPv4 packets",
+        "image": ""
+      },
+      {
+        "pytanie": "Which type of cyber threat would cause electrical power outages?",
+        "opcje": [
+          "Utility interruption",
+          "Human error",
+          "Sabotage",
+          "Hardware failure"
+        ],
+        "poprawna": "Sabotage",
+        "image": ""
+      }
+    ]
+  }
+]
