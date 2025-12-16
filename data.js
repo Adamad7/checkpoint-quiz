@@ -2345,6 +2345,68 @@ const examsData = [
         ],
         "poprawna": "Sabotage",
         "image": ""
+      },
+      {
+        "pytanie": "Which statement describes a DNS stealth attack using threat actors’ double IP flux technique?",
+        "opcje": ["They gather domain account credentials to silently create multiple sub-domains to be used during the attacks.",
+          "They use it in malware to randomly generate domain names that can then be used as rendezvous points to command and control servers.",
+          "They rapidly change the hostname to IP address mappings and to also change the authoritative name server to be difficult to identify the source of the attack.",
+          "They hide phishing and malware delivery sites behind a quickly-changing network of compromised DNS hosts."
+        ],
+        "poprawna": "They rapidly change the hostname to IP address mappings and to also change the authoritative name server to be difficult to identify the source of the attack.",
+        "image": ""
+      },
+      {
+        "pytanie": "Which type of device provides an Internet connection through the use of a phone jack?",
+        "opcje": ["cable modem","Wi-Fi AP","satellite modem", "DSL modem"],
+        "poprawna": "DSL modem",
+        "image": ""
+      },
+      {
+        "pytanie": "Which three steps must be completed to manually connect an Android or IOS device to a secured wireless network? (Choose three.)",
+        "opcje": ["Change the MAC address.",
+          "Choose the correct security type.",
+          "Activate the Bluetooth antenna.",
+          "Input the authentication password.",
+          "Set the IP address.",
+          "Enter the network SSID."
+        ],
+        "poprawna": [
+          "Choose the correct security type.",
+          "Input the authentication password.",
+          "Enter the network SSID."
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "A network technician attempts to ping http://www.example.net from a customer computer, but the ping fails. Access to mapped network drives and a shared printer are working correctly. What are two potential causes for this problem? (Choose two.)",
+        "opcje": ["The HTTP protocol is not working properly on the target server.",
+          "The target web server is down.",
+          "The computer has been assigned a static IP address.",
+          "The Windows domain or workgroup name that is configured on the computer is incorrect.",
+          "DNS service is unavailable on the customer network."
+        ],
+        "poprawna": [
+          "The target web server is down.",
+          "DNS service is unavailable on the customer network."
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "What layer is responsible for routing messages through an internetwork in the TCP/IP model?",
+        "opcje": ["session", "internet", "network access", "transport"],
+        "poprawna": "internet",
+        "image": ""
+      },
+      {
+        "pytanie": "An employee is having connectivity issues. Why might a network technician try to ping the default gateway from the employee laptop?",
+        "opcje": ["to verify that the SVI interface on the switch is configured correctly",
+          "to determine if the laptop address is included in the DNS server",
+          "to verify that an IP address was provided by the DHCP server",
+          "to verify connectivity with the device that provides access to remote networks"
+        ],
+        "poprawna": "to verify connectivity with the device that provides access to remote networks",
+        "image": ""
       }
     ]
   }
