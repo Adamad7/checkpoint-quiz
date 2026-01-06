@@ -81,6 +81,6 @@ for p in soup.find_all('p'):
             })
 
 print("Enter the output JSON file name:")
-output_file_name  = input().strip();
+output_file_name  = input().strip()
 with open(output_file_name, 'w', encoding='utf-8') as f:
     json.dump(questions, f, ensure_ascii=False, indent=2)

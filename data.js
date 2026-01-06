@@ -2410,4 +2410,287 @@ const examsData = [
       }
     ]
   }
+,
+  {
+    "id": "ethical-hacker-quiz-7",
+    "title": "Ethical Hacker Quiz 7",
+    "questions": [
+      {
+        "pytanie": "Which term is an essential characteristic of cloud computing as defined in NIST SP 800-145?",
+        "opcje": [
+          "centralized storage",
+          "resource pooling",
+          "reduced bandwidth requirements",
+          "slow elasticity"
+        ],
+        "poprawna": "resource pooling",
+        "image": ""
+      },
+      {
+        "pytanie": "Which cloud technology attack method involves breaching the infrastructure to gather and steal information such as valid usernames, passwords, tokens, and PINs?",
+        "opcje": [
+          "account takeover",
+          "credential harvesting",
+          "privilege escalation",
+          "side-channel attacks"
+        ],
+        "poprawna": "credential harvesting",
+        "image": ""
+      },
+      {
+        "pytanie": "Which cloud technology attack method could exploit a bug in a software application to gain access to resources that normally would not be accessible to a user?",
+        "opcje": [
+          "account takeover",
+          "credential harvesting",
+          "privilege escalation",
+          "side-channel attacks"
+        ],
+        "poprawna": "privilege escalation",
+        "image": ""
+      },
+      {
+        "pytanie": "Which term describes when a lower-privileged user accesses functions reserved for higher-privileged users?",
+        "opcje": [
+          "vertical privilege escalation",
+          "horizontal privilege escalation",
+          "credential harvesting",
+          "metadata service attacks"
+        ],
+        "poprawna": "vertical privilege escalation",
+        "image": ""
+      },
+      {
+        "pytanie": "Which cloud technology attack method could a threat actor use to access a user or application account that allows access to more accounts and information?",
+        "opcje": [
+          "account takeover",
+          "metadata service attacks",
+          "resource exhaustion and DoS attacks",
+          "side-channel attacks"
+        ],
+        "poprawna": "account takeover",
+        "image": ""
+      },
+      {
+        "pytanie": "Which tool could be used to find vulnerabilities that could lead to metadata service attacks?",
+        "opcje": [
+          "Nimbostratus",
+          "Clair",
+          "Falco",
+          "Dagda"
+        ],
+        "poprawna": "Nimbostratus",
+        "image": ""
+      },
+      {
+        "pytanie": "Which cloud technology attack method could generate crafted packets to cause a cloud application to crash?",
+        "opcje": [
+          "resource exhaustion attack",
+          "account takeover",
+          "metadata service attack",
+          "side-channel attack"
+        ],
+        "poprawna": "resource exhaustion attack",
+        "image": ""
+      },
+      {
+        "pytanie": "Which cloud technology attack method would require the threat actor to create a malicious application and install it into a SaaS, PaaS, or IaaS environment?",
+        "opcje": [
+          "resource exhaustion attack",
+          "account takeover",
+          "metadata service attack",
+          "cloud malware injection attack"
+        ],
+        "poprawna": "cloud malware injection attack",
+        "image": ""
+      },
+      {
+        "pytanie": "What is a common cause of data breaches in attacks against misconfigured cloud assets?",
+        "opcje": [
+          "using insecure permission configurations for cloud object storage services",
+          "using hard-coded credentials to access different services",
+          "implementing metadata service to get a set of temporary access credentials",
+          "adding sensitive information in user startup scripts"
+        ],
+        "poprawna": "using insecure permission configurations for cloud object storage services",
+        "image": ""
+      },
+      {
+        "pytanie": "A threat actor has compromised a VM in a cloud environment that shares the same physical hardware as non-compromised VMs. Which cloud technology attack method could now be used to exfiltrate credentials, cryptographic keys, and other sensitive information?",
+        "opcje": [
+          "side-channel attack",
+          "cloud malware injection attack",
+          "resource exhaustion attack",
+          "account takeover"
+        ],
+        "poprawna": "side-channel attack",
+        "image": ""
+      },
+      {
+        "pytanie": "Which tool helps software developers and cloud consumers deploy applications in the cloud and use the resources that the cloud provider offers?",
+        "opcje": [
+          "Software development kits (SDKs)",
+          "Cloud development kits (CDKs)",
+          "Identity and access management (IAM)",
+          "Nimbostratus"
+        ],
+        "poprawna": "Cloud development kits (CDKs)",
+        "image": ""
+      },
+      {
+        "pytanie": "Which mobile device vulnerability is targeted when a threat actor reverse engineers a mobile app to see how it creates and stores keys in the iOS Keychain?",
+        "opcje": [
+          "insecure storage",
+          "passcode vulnerabilities and biometric integrations",
+          "certificate pinning",
+          "using known vulnerable components"
+        ],
+        "poprawna": "insecure storage",
+        "image": ""
+      },
+      {
+        "pytanie": "Which tool is an open-source framework used to test the security of iOS applications?",
+        "opcje": [
+          "Needle",
+          "Drozer",
+          "APK Studio",
+          "ApkX"
+        ],
+        "poprawna": "Needle",
+        "image": ""
+      },
+      {
+        "pytanie": "Match the Bluetooth Low Energy (BLE) phase to the description.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-10_143930-768x161.jpg"
+      },
+      {
+        "pytanie": "Which option is a security vulnerability that affects IoT implementations?",
+        "opcje": [
+          "plaintext communication and data leakage",
+          "VM escape vulnerabilities",
+          "certificate pinning",
+          "hyperjacking"
+        ],
+        "poprawna": "plaintext communication and data leakage",
+        "image": ""
+      },
+      {
+        "pytanie": "Which two IoT systems should never be exposed to the Internet? (Choose two.)",
+        "opcje": [
+          "turbines in a power plant",
+          "robots in a factory",
+          "refrigerators in a restaurant",
+          "thermostat in a home",
+          "carbon monoxide detectors in a home"
+        ],
+        "poprawna": [
+          "turbines in a power plant",
+          "robots in a factory"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "Which option is a collection of compute interface specifications designed to offer management and monitoring capabilities independently of the CPU, firmware, and operating system of the host?",
+        "opcje": [
+          "Intelligent Platform Management Interface (IPMI)",
+          "Shodan",
+          "Supervisory control and data acquisition (SCADA)",
+          "Mobile Security Framework (MobSF)"
+        ],
+        "poprawna": "Intelligent Platform Management Interface (IPMI)",
+        "image": ""
+      },
+      {
+        "pytanie": "A threat actor uploaded a VM with malicious software to the VMware Marketplace. When an organization deploys the VM, the threat actor can manipulate the systems, applications, and user data. What type of VM vulnerability has been enabled?",
+        "opcje": [
+          "VM repository vulnerability",
+          "Hypervisor vulnerability",
+          "Hyperjacking",
+          "VM escape vulnerability"
+        ],
+        "poprawna": "VM repository vulnerability",
+        "image": ""
+      },
+      {
+        "pytanie": "Which tool is a set of open-source analysis tools that uses the ClamAV antivirus engine to help detect vulnerabilities, Trojans, backdoors, and malware in Docker images and containers?",
+        "opcje": [
+          "Anchore\u2019s Grype",
+          "Clair",
+          "Dagda",
+          "Falco"
+        ],
+        "poprawna": "Dagda",
+        "image": ""
+      },
+      {
+        "pytanie": "Which credential harvesting tool could be used to send a spear phishing email with a link to a malicious site to a target victim?",
+        "opcje": [
+          "Social-Engineer Toolkit (SET)",
+          "Searchsploit",
+          "Drozer",
+          "Dagda"
+        ],
+        "poprawna": "Social-Engineer Toolkit (SET)",
+        "image": ""
+      },
+      {
+        "pytanie": "Why do cloud architectures help minimize the impact of DoS or DDoS attacks compared to hosting services on-premise?",
+        "opcje": [
+          "cloud providers use a distributed architecture",
+          "cloud providers provide sandbox analysis",
+          "cloud providers limit network exposure to the internet",
+          "cloud providers use Intelligent Platform Management Interfaces (IPMI)"
+        ],
+        "poprawna": "cloud providers use a distributed architecture",
+        "image": ""
+      },
+      {
+        "pytanie": "Which option is a characteristic of a VM hypervisor?",
+        "opcje": [
+          "Type 1 hypervisors are also known as native or bare-metal hypervisors.",
+          "Type 1 hypervisors run on top of other operating systems.",
+          "Type 2 hypervisors include VMware ESXi and Microsoft Hyper-V.",
+          "Type 2 hypervisors run directly on the physical (bare-metal) system."
+        ],
+        "poprawna": "Type 1 hypervisors are also known as native or bare-metal hypervisors.",
+        "image": ""
+      },
+      {
+        "pytanie": "A threat actor has compromised a VM in a data center and discovered a vulnerability that provides access to data in another VM. What type of VM vulnerability has been discovered?",
+        "opcje": [
+          "VM escape vulnerability",
+          "VM repository vulnerability",
+          "Hypervisor vulnerability",
+          "Hyperjacking"
+        ],
+        "poprawna": "VM escape vulnerability",
+        "image": ""
+      },
+      {
+        "pytanie": "Which tool can be used to perform on-path attacks in BLE implementations?",
+        "opcje": [
+          "GATTacker",
+          "Social-Engineer Toolkit (SET)",
+          "Nimbostratus",
+          "Dagda"
+        ],
+        "poprawna": "GATTacker",
+        "image": ""
+      },
+      {
+        "pytanie": "Which tool is an open-source container vulnerability scanner that can be used to find vulnerabilities in a Docker image?",
+        "opcje": [
+          "Anchore\u2019s Grype",
+          "GATTacker",
+          "Social-Engineer Toolkit (SET)",
+          "Nimbostratus"
+        ],
+        "poprawna": "Anchore\u2019s Grype",
+        "image": ""
+      }
+    ]
+  }
 ]
