@@ -1,0 +1,299 @@
+[
+  {
+    "pytanie": "Which industry-standard method has created a catalog of known vulnerabilities that provides a score indicating the severity of a vulnerability?",
+    "opcje": [
+      "CVSS",
+      "CVE",
+      "OWASP WSTG",
+      "NIST SP 800-115"
+    ],
+    "poprawna": "CVSS",
+    "image": ""
+  },
+  {
+    "pytanie": "Which vulnerability catalog creates a list of publicly known vulnerabilities, each assigned an ID number, description, and reference?",
+    "opcje": [
+      "CVE",
+      "CVSS",
+      "OWASP WSTG",
+      "NIST SP 800-115"
+    ],
+    "poprawna": "CVE",
+    "image": ""
+  },
+  {
+    "pytanie": "Match the CVSS metric group with the respective information.",
+    "opcje": [
+      "Next"
+    ],
+    "poprawna": [
+      "Next"
+    ],
+    "image": "https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-10_101852-768x186.jpg"
+  },
+  {
+    "pytanie": "Explanation: Place the options in the following order:\n\n\n\nEnvironmental metric group\nincludes modified base metrics, confidentiality, integrity, and availability requirements\n\n\nBase metric group\nincludes exploitability metrics and impact metrics\n\n\nTemporal metric group\nincludes exploit code maturity, remediation level, and report confidence",
+    "opcje": [
+      "attack complexity",
+      "integrity impact",
+      "modified base metrics",
+      "user interaction",
+      "availability requirements",
+      "remediation level"
+    ],
+    "poprawna": [
+      "attack complexity",
+      "integrity impact",
+      "user interaction"
+    ],
+    "image": ""
+  },
+  {
+    "pytanie": "Which three items are included in the base metric group used by CVSS? (Choose three.)",
+    "opcje": [
+      "attack complexity",
+      "integrity impact",
+      "modified base metrics",
+      "user interaction",
+      "availability requirements",
+      "remediation level"
+    ],
+    "poprawna": [
+      "attack complexity",
+      "integrity impact",
+      "user interaction"
+    ],
+    "image": ""
+  },
+  {
+    "pytanie": "Which item is included in the environmental metric group used by CVSS?",
+    "opcje": [
+      "privileges required",
+      "confidentiality requirements",
+      "report confidence",
+      "availability impact"
+    ],
+    "poprawna": "confidentiality requirements",
+    "image": ""
+  },
+  {
+    "pytanie": "Which item is included in the temporal metric group used by CVSS?",
+    "opcje": [
+      "exploit code maturity",
+      "integrity impact",
+      "modified base metrics",
+      "attack vector"
+    ],
+    "poprawna": "exploit code maturity",
+    "image": ""
+  },
+  {
+    "pytanie": "Which tool can ingest the results from many penetration testing tools a cybersecurity analyst uses and help this professional produce reports in formats such as CSV, HTML, and PDF?",
+    "opcje": [
+      "Dradis",
+      "Mimikatz",
+      "Nessus",
+      "PowerSploit"
+    ],
+    "poprawna": "Dradis",
+    "image": ""
+  },
+  {
+    "pytanie": "Match the description to the respective control category.\n\nKey rotation: Technical control\nInput sanitization: Technical control\nSecure software development life cycle: Administrative control\nRole-based access control: Administrative control\nTime-of-day restrictions: Operational control\nJob rotation: Operational control\nVideo surveillance: Physical control\nBiometric controls: Physical control",
+    "opcje": [
+      "Next"
+    ],
+    "poprawna": [
+      "Next"
+    ],
+    "image": ""
+  },
+  {
+    "pytanie": "Which two items are examples of technical controls that can be recommended as mitigations and remediation of the vulnerabilities found during a pen test? (Choose two.)",
+    "opcje": [
+      "multifactor authentication",
+      "certificate management",
+      "RBAC",
+      "mandatory vacations",
+      "access control vestibule"
+    ],
+    "poprawna": [
+      "multifactor authentication",
+      "certificate management"
+    ],
+    "image": ""
+  },
+  {
+    "pytanie": "A recent pen-test results in a cybersecurity analyst report, including information on process-level remediation, patch management, and secrets management solutions. Which control category is represented by this example?",
+    "opcje": [
+      "technical",
+      "administrative",
+      "operational",
+      "physical"
+    ],
+    "poprawna": "technical",
+    "image": ""
+  },
+  {
+    "pytanie": "Which document provides several cheat sheets and detailed guidance on preventing vulnerabilities such as cross-site scripting, SQL injection, and command injection?",
+    "opcje": [
+      "OWASP",
+      "CVE",
+      "GDPR",
+      "CVSS"
+    ],
+    "poprawna": "OWASP",
+    "image": ""
+  },
+  {
+    "pytanie": "A cybersecurity analyst report should contain minimum password requirements and policies and procedures. These are examples that are included in which control category?",
+    "opcje": [
+      "technical",
+      "administrative",
+      "operational",
+      "physical"
+    ],
+    "poprawna": "administrative",
+    "image": ""
+  },
+  {
+    "pytanie": "Which control category includes information on mandatory vacations and user training in the cybersecurity analyst report?",
+    "opcje": [
+      "technical",
+      "administrative",
+      "operational",
+      "physical"
+    ],
+    "poprawna": "operational",
+    "image": ""
+  },
+  {
+    "pytanie": "When creating a cybersecurity analyst report, which control category includes information concerning the access control vestibule?",
+    "opcje": [
+      "technical",
+      "administrative",
+      "operational",
+      "physical"
+    ],
+    "poprawna": "physical",
+    "image": ""
+  },
+  {
+    "pytanie": "Match the term to the respective description.",
+    "opcje": [
+      "Next"
+    ],
+    "poprawna": "Next",
+    "image": "https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-10_102008-768x272.jpg"
+  },
+  {
+    "pytanie": "Which kind of event is also called a “benign trigger”?",
+    "opcje": [
+      "false positive",
+      "false negative",
+      "true positive",
+      "true negative"
+    ],
+    "poprawna": "false positive",
+    "image": ""
+  },
+  {
+    "pytanie": "What kind of events diminishes the value and urgency of real alerts?",
+    "opcje": [
+      "false positives",
+      "false negatives",
+      "true negatives",
+      "true positives"
+    ],
+    "poprawna": "false positives",
+    "image": ""
+  },
+  {
+    "pytanie": "Which kinds of events are malicious activities not detected by a network security device?",
+    "opcje": [
+      "false positives",
+      "false negatives",
+      "true negatives",
+      "true positives"
+    ],
+    "poprawna": "false negatives",
+    "image": ""
+  },
+  {
+    "pytanie": "Which kind of event occurs when an intrusion detection device identifies an activity as acceptable behavior and the activity is acceptable?",
+    "opcje": [
+      "false positives",
+      "false negatives",
+      "true negatives",
+      "true positives"
+    ],
+    "poprawna": "true negatives",
+    "image": ""
+  },
+  {
+    "pytanie": "Which kind of event is a successful identification of a security attack?",
+    "opcje": [
+      "false negative",
+      "false positive",
+      "true positive",
+      "true negative"
+    ],
+    "poprawna": "true positive",
+    "image": ""
+  },
+  {
+    "pytanie": "Which example of technical control is recommended to mitigate and prevent vulnerabilities such as cross-site scripting, cross-site request forgery, SQL injection, and command injection?",
+    "opcje": [
+      "user input sanitization",
+      "process-level remediation",
+      "secrets management solution",
+      "certificate management"
+    ],
+    "poprawna": "user input sanitization",
+    "image": ""
+  },
+  {
+    "pytanie": "Which example of administrative controls enables administrators to control what users can do at both broad and granular levels?",
+    "opcje": [
+      "RBAC",
+      "secure software development life cycle",
+      "policies and procedures",
+      "minimum password requirements"
+    ],
+    "poprawna": "RBAC",
+    "image": ""
+  },
+  {
+    "pytanie": "A document entitled “Building an Information Technology Security Awareness and Training Program” succinctly defines why security education and training are so important for users. The document defines ways to improve the security operations of an organization. Which document is being described?",
+    "opcje": [
+      "NIST SP 800-50",
+      "NIST SP 800-115",
+      "OWASP WSTG",
+      "CVSS"
+    ],
+    "poprawna": "NIST SP 800-50",
+    "image": ""
+  },
+  {
+    "pytanie": "How is the score that CVSS provides interpreted?",
+    "opcje": [
+      "scores are rated from 0 to 100, with 100 being the most severe",
+      "scores are rated from 0 to 100, with 0 being the most severe",
+      "scores are rated from 0 to 10, with 10 being the most severe",
+      "scores are rated from 0 to 10, with 0 being the most severe"
+    ],
+    "poprawna": "scores are rated from 0 to 10, with 10 being the most severe",
+    "image": ""
+  },
+  {
+    "pytanie": "What control category does system hardening belong to?",
+    "opcje": [
+      "technical",
+      "administrative",
+      "operational",
+      "physical"
+    ],
+    "poprawna": "technical",
+    "image": ""
+  }
+]
