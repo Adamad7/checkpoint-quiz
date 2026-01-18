@@ -1,0 +1,571 @@
+<p><strong>1. Which are two best practices used to secure APIs? (Choose two.)</strong></p>
+<ul>
+<li class="correct_answer">use reputable and standard libraries to create the APIs</li>
+<li class="correct_answer">make internal API documentation mandatory</li>
+<li>discussing company API development (or any other application development) on public forums</li>
+<li>secure API services to provide HTTP endpoints only</li>
+<li>keep API implementation and API security into one tier allowing the API developer to work on both facets simultaneously</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> The following are several general best practices and recommendations for securing APIs:<br />
+&#8211; Secure API services to provide HTTPS endpoints with only a strong version of TLS.<br />
+&#8211; Validate parameters in the application and sanitize incoming data from API clients.<br />
+&#8211; Explicitly scan for common attack signatures; injection attacks often betray themselves by following common patterns.<br />
+&#8211; Use strong authentication and authorization standards.<br />
+&#8211; Use reputable and standard libraries to create the APIs.<br />
+&#8211; Segment API implementation and API security into distinct tiers; doing so frees up the API developer to focus completely on the application domain.<br />
+&#8211; Identify what data should be publicly available and what information is sensitive.<br />
+&#8211; If possible, have a security expert do the API code verification.<br />
+&#8211; Make internal API documentation mandatory.<br />
+&#8211; Avoid discussing company API development (or any other application development) on a public forum.</p></div>
+<p><strong>2. Which type of threat actors use cybercrime attacks to promote what they believe in?</strong></p><div class="92f2483bb651eed307c93e619d752c78" data-index="2" style="float: none; margin:10px 0 10px 0; text-align:center;">
+<div id="adngin-incontent_auto_large-0"></div>
+</div>
+
+<ul>
+<li>state-sponsored</li>
+<li class="correct_answer">hacktivists</li>
+<li>organized crime</li>
+<li>insider threats</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Hacktivists are types of threat actors not motivated by money. Hacktivists are looking to make a point or to promote what they believe, using cybercrime as a method of attack. These types of attacks are often carried out by stealing sensitive data and then revealing it to the public to embarrass or financially affect a target.</p></div>
+<p><strong>3. A company conducted a penetration test 6 months ago. However, they have acquired new firewalls and servers to strengthen the network and increase capacity. Why would an administrator request a new penetration test?</strong></p>
+<ul>
+<li class="correct_answer">The attack surface has changed with the new equipment added.</li>
+<li>The servers require independent performance evaluation.</li>
+<li>The core data has been moved to the cloud infrastructure.</li>
+<li>New cloud-based applications have been implemented.</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Implementing a firewall, an IPS, anti-malware, a VPN, a web application firewall (WAF), and other modern security defenses is not enough. The validity of these defensive techniques needs to be tested regularly. As networks and systems change, the attack surface can vary as well, and when it does, the reevaluation of the security posture must be conducted by way of a penetration test.</p></div>
+<p><strong>4. A network administrator performs a penetration test for a company that sells computer parts through an online storefront. The first step is to discover who owns the domain name that the company is using. Which penetration testing tool can be used to do this?</strong></p>
+<ul>
+<li>h8mail</li>
+<li>Maltego</li>
+<li class="correct_answer">WHOIS</li>
+<li>Exif</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> The whois command can gather information about who owns a particular domain from public records.</p></div>
+<p><strong>5. A penetration tester wants to quickly discover all the live hosts on the 192.168.0.0/24 network. Which command can do the ping sweep using the nmap tool?</strong></p>
+<ul>
+<li>nmap 192.168.1.0/24 -open</li>
+<li>nmap -sP 192.168.0.0/24</li>
+<li>nmap -sV 192.168.0.255</li>
+<li class="correct_answer">nmap -sn 192.168.0.0/24</li>
+<li>nmap -p 1-65535 localhost</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> The command <b>nmap -sn 192.168.0.0/24</b> is used to do a ping sweep of the 192.168.0.0/24 network for active hosts. This basic host discovery scan can be performed to determine what devices on a network are live. Such a scan for host discovery of an entire subnet is sometimes called a ping sweep.</p></div>
+<p><strong>6. A penetration tester runs the command nmap -sF -p 80 192.168.1.1 against a Windows host and receives a response RST packet. What conclusion can be drawn on the status of port 80?</strong></p>
+<ul>
+<li class="correct_answer">undetermined as this is a default response on a Windows system</li>
+<li>port 80 is open</li>
+<li>port 80 is closed</li>
+<li>port 80 is open/filtered</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> A TCP FIN scan is not useful when scanning Windows-based systems, as they respond with RST packets, regardless of the port state. The normal implication of an RST message would indicate a closed port. Since this is a Windows-based system, it will always respond with an RST message regardless of the port state.</p></div>
+<p><strong>7. Which common tool is used by penetration testers to craft packets?</strong></p>
+<ul>
+<li>h8mail</li>
+<li>pip3</li>
+<li>nmap</li>
+<li>Recon-ng</li>
+<li class="correct_answer">scapy</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Scapy is a very comprehensive Python-based framework or ecosystem for packet generation. Scapy must be run with root permissions to be able to modify packets.</p></div>
+<p><strong>8. Why should a tester use query throttling techniques when running an authorized penetration test on a live network?</strong></p>
+<ul>
+<li>to limit bandwidth on resource heavy applications</li>
+<li class="correct_answer">to reduce the number of attack threads that are being sent to the target at the same time</li>
+<li>to limit bandwidth on real-time antivirus and malware scanners</li>
+<li>to create a larger attack surface on the target</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> To work around the issue of bandwidth limitations and vulnerability scanning, slowing down the traffic created by the scanner can help. This is often referred to as query throttling, and it can typically be achieved by modifying the options of the scanning policy. One way to do this is to reduce the number of attack threads being sent to the target simultaneously.</p></div>
+<p><strong>9. Why would an organization hire a red team?</strong></p>
+<ul>
+<li>to install equipment to protect against physical intrusion</li>
+<li class="correct_answer">to play the role of a threat actor by exposing vulnerabilities regarding technology</li>
+<li>to defend the organization against cybersecurity threats</li>
+<li>to evaluate the work of the security team of the organization</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> A read team is a group of cybersecurity experts and penetration testers hired by an organization to mimic a real threat actor by exposing vulnerabilities and risks regarding technology, people, and physical security.</p></div>
+<p><strong>10. Match the healthcare sector term to the respective description.</strong></p>
+<p><img fetchpriority="low" decoding="async" class="aligncenter size-full wp-image-96004" src="https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172138.jpg" alt="" width="1145" height="403" srcset="https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172138.jpg 1145w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172138-300x106.jpg 300w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172138-1024x360.jpg 1024w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172138-768x270.jpg 768w" sizes="auto"  loading="lazy"/></p>
+<p>Place the options in the following order:</p>
+<table>
+<tbody style="content-visibility: auto;contain-intrinsic-size: auto 242px;">
+<tr>
+<td>Healthcare provider</td>
+<td>a person or an organization that provides patient or medical services</td>
+</tr>
+<tr>
+<td>Health plan</td>
+<td>a government program that pays for healthcare</td>
+</tr>
+<tr>
+<td>Business associates</td>
+<td>a person or organization that performs certain functions involving the use of PHI on behalf of, or provides services to, a covered entity</td>
+</tr>
+<tr>
+<td>Healthcare clearinghouse</td>
+<td>an entity that processes nonstandard health information it receives from another entity into a standard format</td>
+</tr>
+</tbody>
+</table>
+<p><strong>11. Which two elements are typically on the front of a credit card? (Choose two.)</strong></p>
+<ul>
+<li>date of birth</li>
+<li class="correct_answer">embedded microchip</li>
+<li>magnetic stripe</li>
+<li class="correct_answer">primary account number</li>
+<li>card security code</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> The typical elements on the front of a credit card are an embedded microchip, PAN (primary account number), expiration date, and cardholder name. The typical elements on the back of a credit card are magnetic stripe and CAV2/CID/CVC2/CVV2, abbreviations for card security codes for the different payment brands.</p></div>
+<p><strong>12. What can be used to document the testing timeline in a rules of engagement document?</strong></p>
+<ul>
+<li>OWASP ZAP</li>
+<li class="correct_answer">Gantt charts and work breakdown structures</li>
+<li>Recon-ng</li>
+<li>Burp Suite</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Gantt charts and work breakdown structures (WBS) can be used to demonstrate and document the testing timeline, an element of a rules of engagement document. Burp Suite and OWASP ZAP are tools to intercept communications between a browser and a web server. Recon-ng is a tool for passive reconnaissance.</p></div>
+<p><strong>13. A cybersecurity firm has been hired by an organization to perform penetration tests. The tests require a secure method of transferring data over a network. Which two protocols could be used to accomplish this task? (Choose two.)</strong></p>
+<ul>
+<li class="correct_answer">SFTP</li>
+<li>PGP</li>
+<li class="correct_answer">SCP</li>
+<li>S/MIME</li>
+<li>HTTPS</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Protocols such as Secure Copy Protocol (SCP) or Secure File Transfer Protocol (SFTP) can be used by penetration testers to transfer files securely over the network. Pretty Good Privacy (PGP) keys or Secure/Multipurpose Internet Mail Extensions (S/MIME) keys can be used for encrypted email exchanges. Hypertext Transfer Protocol Secure (HTTPS) is the secure version of HTTP that provides secure communication between web browsers and web servers.</p></div>
+<p><strong>14. Match penetration testing methodology and standard with the respective description.</strong></p>
+<p><img decoding="async" class="aligncenter size-full wp-image-96003" src="https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172207.jpg" alt="" width="1144" height="669" srcset="https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172207.jpg 1144w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172207-300x175.jpg 300w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172207-1024x599.jpg 1024w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172207-768x449.jpg 768w" sizes="auto"  loading="lazy" fetchpriority="low"/>Place the options in the following order:</p>
+<table>
+<tbody style="content-visibility: auto;contain-intrinsic-size: auto 476px;">
+<tr>
+<td>OWASP WSTG</td>
+<td>this is a compilation of high-level phases of web application security testing and digs deeper into the testing methods used. This is primarily used by penetration testers from the web application security testing perspective.</td>
+</tr>
+<tr>
+<td>OSSTMM</td>
+<td>this is a peer-reviewed security testing methodology maintained by the Institute for Security and Open Methodologies (ISECOM). It is an open security research community providing original resources, tools, and certifications in the security field. It uses a document that lays out repeatable and consistent security testing.</td>
+</tr>
+<tr>
+<td>MITRE ATT&amp;CK</td>
+<td>this is a resource for learning about the tactics of an adversary, techniques, and procedures (TTPs). This framework is a collection of different matrices of tactics, techniques, and sub-techniques used by penetration testers for both offensive and defensive purposes.</td>
+</tr>
+<tr>
+<td>NIST</td>
+<td>this is a document created to provide organizations with guidelines on planning and conducting information security testing. It is considered an industry standard for penetration testing guidance and is called out in many other industry standards and documents.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>15. Which three practices are commonly adopted when setting up a penetration testing lab environment? (Choose three.)</strong></p>
+<ul>
+<li>use a honeypot for all tests run from the physical attack platforms</li>
+<li class="correct_answer">ensure that when something crashes, it can be determined how and why it happened</li>
+<li class="correct_answer">create the penetration testing environment using virtual machines and virtual switches</li>
+<li>use an open environment to allow for free passage of attack packets to the target machines</li>
+<li>create the penetration testing environment using physical equipment and switches in order to route the packets freely</li>
+<li class="correct_answer">use a closed environment for all testing purposes</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> The following is a list of requirements for a typical penetration testing environment:<br />
+&#8211; Closed network: Ensure controlled access to and from the lab environment and restricted access to the Internet.<br />
+&#8211; Virtualized computing environment: This allows for easy deployment and recovery of devices being tested.<br />
+&#8211; Realistic environment: Using a staging testing environment should match the real environment as closely as possible.<br />
+&#8211; Health monitoring: When something crashes, ensure the ability to determine how and why it happened.<br />
+&#8211; Sufficient hardware resources: Ensure that a lack of resources does not cause false results.<br />
+&#8211; Multiple operating systems: Test or validate a finding from another system. Testing from different operating systems is always good to see if the results differ.<br />
+&#8211; Duplicate tools: A great way to validate a finding is to run the same test with a different tool to see if the results are the same.<br />
+&#8211; Practice targets: Practice the penetration tools constantly. To do this, practice on targets that are known to be vulnerable.</p></div>
+<p><strong>16. An organization wants to test its vulnerability to an employee with network privileges accessing the network maliciously. Which type of penetration test should be used to test this vulnerability?</strong></p>
+<ul>
+<li>white-box</li>
+<li>black-box</li>
+<li>blue-box</li>
+<li class="correct_answer">gray-box</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Gray-box penetration testing is when the test is run from within the internal network. Because most compromises start at the client and work their way throughout the network, a good approach would be a scope where the testers start inside the network and have access to a client machine. Then they could pivot throughout the network to determine the impact of a compromise. Gray-box testing is done in a partially known environment.<br />
+In black-box penetration testing, the tester is typically provided only limited information. (Unknown-environment testing.)<br />
+In white-box penetration testing, the tester starts with significant information about the organization and its infrastructure. (Totally known environment.)<br />
+The blue-box penetration testing is a box containing equipment for field quality testing and screening, with visual and written instructions for the users. CYBRI developed its own penetration testing services technology, called Blue-Box, which helps businesses and experts stay on the same page when it comes to testing, security controls, and security services.</p></div>
+<p><strong>17. Refer to the exhibit. A penetration is being prepared to run the EternalBlue exploit using Metasploit against a target with an IP address of 10.0.0.1/8 from the source PC with an IP address of 10.0.0.111/8. What two commands must be entered before the exploit command can be run? (Choose two.)<br />
+</strong></p>
+<p><strong><img decoding="async" class="aligncenter size-full wp-image-96007" src="https://itexamanswers.net/wp-content/uploads/2023/10/i414207v2n1_exploit.png" alt="" width="528" height="493" srcset="https://itexamanswers.net/wp-content/uploads/2023/10/i414207v2n1_exploit.png 528w, https://itexamanswers.net/wp-content/uploads/2023/10/i414207v2n1_exploit-300x280.png 300w" sizes="auto"  loading="lazy" fetchpriority="low"/></strong></p>
+<ul>
+<li>set LHOST 10.0.0.1</li>
+<li>set TARGET 10.0.0.111</li>
+<li class="correct_answer">set LHOST 10.0.0.111</li>
+<li class="correct_answer">set RHOST 10.0.0.1</li>
+<li>set RHOST 10.0.0.111</li>
+<li>set TARGET 10.0.0.1</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> The following commands have to be entered to identify the local host and the remote host before the exploit command can be executed:<br />
+msf exploit(windows/smb/ms17_010_eternalblue) &gt; <b>set RHOST 10.0.0.1</b><br />
+msf exploit(windows/smb/ms17_010_eternalblue) &gt; <b>set LHOST 10.0.0.111</b><br />
+msf exploit(ms17_010_eternalblue) &gt; <b>exploit</b></p></div>
+<p><strong>18. A penetration tester runs the Nmap NSE script nmap &#8211;script smtp-open-relay.nse 10.0.0.1 command on a Kali Linux PC. What is the purpose of running this script?</strong></p>
+<ul>
+<li>to check whether the smtp authentication is compromised on the target server</li>
+<li class="correct_answer">to check open relay configurations on the target server</li>
+<li>to compromise any snmp community strings on the target PC</li>
+<li>to compromise any open relays on the target server</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> SMTP open relay is the term used for an email server that accepts and relays (that is, sends) emails from any user. The script <b>nmap &#8211;script smtp-open-relay.nse 10.0.0.1</b> is an Nmap NSEscript to test for open relay configurations on the target server.</p></div>
+<p><strong>19. Refer to the exhibit. What is the penetration tester trying to achieve by running this exploit?</strong></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-96008" src="https://itexamanswers.net/wp-content/uploads/2023/10/i414214v2n1_exploit1.png" alt="" width="532" height="176" srcset="https://itexamanswers.net/wp-content/uploads/2023/10/i414214v2n1_exploit1.png 532w, https://itexamanswers.net/wp-content/uploads/2023/10/i414214v2n1_exploit1-300x99.png 300w" sizes="auto"  fetchpriority="low"/></p>
+<ul>
+<li>to enumerate FTP login on the target system</li>
+<li class="correct_answer">to check if the target system will allow FTP anonymous login</li>
+<li>to compromise the target system for a remote session</li>
+<li>to launch 220 packets of fragmented data to the FTP port on the target system</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> FTP Anonymous Login Verification can be done using the Metasploit script command:<br />
+<b>use auxiliary/scanner/ftp/anonymous</b>. The output displays that the FTP server is configured for anonymous login.</p></div>
+<p><strong>20. A penetration tester deploys a rogue AP in the target wireless infrastructure. What is the first step that has to be taken to force wireless clients to connect to the rogue AP?</strong></p>
+<ul>
+<li>send out false DNS beacons</li>
+<li>spoof the MAC address of the rogue AP</li>
+<li>set the PSK key to match the clients</li>
+<li class="correct_answer">send de-authentication frames to the clients</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> An attacker can cause legitimate wireless clients to deauthenticate from legitimate wireless APs or wireless routers to try to make those clients connect to the rogue AP by reassociating.</p></div>
+<p><strong>21. A cybersecurity student is learning about the Social-Engineer Toolkit (SET), and the student has discovered that this tool can be used to launch various social engineering attacks. Which two social engineering attacks can be launched using SET?</strong></p>
+<ul>
+<li class="correct_answer">Create a payload and listener</li>
+<li>Google phishing</li>
+<li>Simple hijacker</li>
+<li>Fake flash update</li>
+<li class="correct_answer">Infectious media generator</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> The Social-Engineer Toolkit (SET) is a tool that can be used to launch numerous social engineering attacks, such as infectious media generators, and create a payload and listener. Google phishing, simple hijacker, and fake flash update are social engineering attacks performed by Browser Exploitation Framework (BeEF) tool. BeEF is a tool that can manipulate users by leveraging XSX vulnerabilities.</p></div>
+<p><strong>22. A threat actor spoofed the phone number of the director of HR and called the IT help desk with a login problem. The threat actor claims to be the director and wants the help desk to change the password. What method of influence is this cybercriminal using?</strong></p>
+<ul>
+<li>scarcity</li>
+<li>social proof</li>
+<li>fear</li>
+<li class="correct_answer">authority</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Social engineers use several motivation techniques/methods of influence. In this scenario, a social engineer explores the principle that a person tends to comply with people in positions of authority, such as doctors, lawyers, and experts in different fields. This is the authority method of influence.</p></div>
+<p><strong>23. Which statement correctly describes a type of physical social engineering attack?</strong></p>
+<ul>
+<li>Dumpster phishing refers to a threat actor who scavenges for victims&#8217; private information in garbage and recycling containers.</li>
+<li class="correct_answer">Social engineering techniques, software, and hardware can perform badge cloning attacks.</li>
+<li>Tailgating and piggybacking attacks can only be defeated through the use of control vestibules in conjunction with multifactor authentication.</li>
+<li>Shoulder surfing attacks are performed only by a short distance between the threat actor and the victim.</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> There are various types of physical attacks. Both piggybacking and tailgating can be defeated through the use of access control vestibules, and it is often used in conjunction with multifactor authentication. Turnstiles, double entry doors, and security guards can also eliminate piggybacking and tailgating. With dumpster diving, a person (threat actor) scavenges for victims&#8217; private information in garbage and recycling containers. In badge cloning attacks, specialized software, hardware, and social engineering techniques can be used to perform such attacks. With shoulder surfing, someone obtains information such as personally identifiable information, passwords, and other confidential data by looking not only over the shoulder of the victim. It is also possible to carry out this type of attack from far away using binoculars or even a telescope.</p></div>
+<p><strong>24. What is a characteristic of a pharming attack?</strong></p><div class="92f2483bb651eed307c93e619d752c78" data-index="1" style="float: none; margin:10px 0 10px 0; text-align:center;">
+<div id="adngin-incontent_auto-0"></div>
+</div>
+
+<ul>
+<li class="correct_answer">a threat actor redirects a victim from a valid website to a malicious legitimate looking site</li>
+<li>a type of attack in which a social engineer impersonates another person to have physical access to systems in an organization</li>
+<li>a social engineering attack carried out in a phone conversation</li>
+<li>a type of attack where the threat actor obtains confidential data of the victim using binoculars or even a telescope</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Pharming is an impersonation attack in which a threat actor redirects a victim from a valid website or resource to a malicious one that could be made to appear as a valid site to the user. From there, an attempt is made to extract confidential information from the user or install malware on the system of the victim.</p></div>
+<p><strong>25. What kind of social engineering attack can be prevented by developing policies such as updating anti-malware applications regularly and using secure virtual browsers with little connectivity to the rest of the system and the rest of the network?</strong></p>
+<ul>
+<li>tailgating</li>
+<li class="correct_answer">watering hole</li>
+<li>vishing</li>
+<li>SMS phishing</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> A watering hole attack is a targeted attack that occurs when an attacker profiles websites that the intended victim accesses. The attacker then scans those websites for possible vulnerabilities. Organizations should therefore develop policies to prevent these attacks. Such a policy requires updating anti-malware applications regularly and using secure virtual browsers with little connectivity to the rest of the system and the rest of the network.</p></div>
+<p><strong>26. An attacker enters the string ‘John’ or ‘1=1’ on a web form that is connected to a back-end SQL server causing the server to display all records in the database table. Which type of SQL injection attack was used in this scenario?</strong></p>
+<ul>
+<li>error-based SQL injection</li>
+<li>inferential SQL injection</li>
+<li class="correct_answer">boolean SQL injection</li>
+<li>out-of-band SQL injection</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Since the string ‘1=1’ is always true, the search string serves as a Boolean value of TRUE, causing the database system to display all records.</p></div>
+<p><strong>27. What are two examples of immutable queries that should be used as mitigation for SQL injection vulnerabilities? (Choose two.)</strong></p>
+<ul>
+<li class="correct_answer">static queries</li>
+<li>time-delay queries</li>
+<li class="correct_answer">parameterized queries</li>
+<li>in-band queries</li>
+<li>stacked queries</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> The best mitigation for SQL injection vulnerabilities is to use immutable queries, including:<br />
+&#8211; Static queries<br />
+&#8211; Parameterized queries<br />
+&#8211; Stored procedures (if they do not generate dynamic SQL)</p></div>
+<p><strong>28. An attacker enters the string 192.168.78.6;cat /etc/httpd/httpd.conf on a web application hosted on a Linux server. Which type of attack occurred?</strong></p>
+<ul>
+<li>session hijacking</li>
+<li>redirect attack</li>
+<li>SQL injection</li>
+<li class="correct_answer">command injection</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> A command injection is an attack in which an attacker tries to execute OS commands that the attacker is not supposed to be able to execute on a system. In this case, the attacker tries to view the web server (httpd) configuration information.</p></div>
+<p><strong>29. Which two misconfigured cloud authentication methods could leverage a cloud asset? (Choose two.)</strong></p>
+<ul>
+<li class="correct_answer">federated authentication</li>
+<li>biometric authentication</li>
+<li class="correct_answer">identity and access management (IAM) implementations</li>
+<li>Intelligent Platform Management Interface (IPMI)</li>
+<li>local authentication</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Attackers can leverage misconfigured cloud assets in several ways, including the following:<br />
+&#8211; Misconfigured identity and access management (IAM) implementations<br />
+&#8211; Federation misconfigurations</p></div>
+<p><strong>30. Match the cloud attack to the description.</strong></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-96002" src="https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172246.jpg" alt="" width="1144" height="380" srcset="https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172246.jpg 1144w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172246-300x100.jpg 300w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172246-1024x340.jpg 1024w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172246-768x255.jpg 768w" sizes="auto"  fetchpriority="low"/></p>
+<p>Place the options in the following order:</p>
+<table>
+<tbody>
+<tr>
+<td>Credential Harvesting</td>
+<td>act of gathering and stealing valid usernames, passwords, tokens, PINs, and any other types of credentials through infrastructure breaches</td>
+</tr>
+<tr>
+<td>Privilege Escalation</td>
+<td>act of exploiting a bug or design flaw in a software or firmware application to gain access to resources that normally would have been protected from an application or a user</td>
+</tr>
+<tr>
+<td>Account Takeover</td>
+<td>when a threat actor gains access to a user or application account and uses it to then gain access to more accounts and information</td>
+</tr>
+</tbody>
+</table>
+<p><strong>31. What is the purpose of using the smtp-user-enum -M VRFY -u snp -t 10.0.0.1 command in Kali Linux?</strong></p>
+<ul>
+<li>to initiate an SMTP conversation with an email server 10.0.0.1</li>
+<li>to start a Transport Layer Security (TLS) connection to an email server 10.0.0.1</li>
+<li class="correct_answer">to verify if a certain user exists on the SMTP server 10.0.0.1</li>
+<li>to compromise SMTP open relay server 10.0.0.1</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> The smtp-user-enum -M VRFY -u snp -t 10.0.0.1 command is used to verify whether the user snp exists on the smtp server 10.0.0.1.</p></div>
+<p><strong>32. Match the mobile device security testing tool to the description.</strong></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-96001" src="https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172311.jpg" alt="" width="1143" height="421" srcset="https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172311.jpg 1143w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172311-300x110.jpg 300w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172311-1024x377.jpg 1024w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172311-768x283.jpg 768w" sizes="auto"  fetchpriority="low"/></p>
+<p>Place the options in the following order:</p>
+<table>
+<tbody style="content-visibility: auto;contain-intrinsic-size: auto 216px;">
+<tr>
+<td>Burp Suite</td>
+<td>this can test mobile applications and determine how they communicate with web services and APIs.</td>
+</tr>
+<tr>
+<td>Drozer</td>
+<td>this Android testing platform and framework provides access to numerous exploits that can be used to attack Android platforms.</td>
+</tr>
+<tr>
+<td>Needle</td>
+<td>this open-source framework is used to test the security of iOS applications.</td>
+</tr>
+<tr>
+<td>ApkX</td>
+<td>this tool enables you to decompile Android application package files.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>33. Match the mobile device attack to the description.</strong></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-96000" src="https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172327.jpg" alt="" width="1143" height="379" srcset="https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172327.jpg 1143w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172327-300x99.jpg 300w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172327-1024x340.jpg 1024w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172327-768x255.jpg 768w" sizes="auto"  fetchpriority="low"/></p>
+<p>Place the options in the following order:</p>
+<table>
+<tbody>
+<tr>
+<td>Sandbox analysis</td>
+<td>this can enable a threat actor to bypass the access control mechanisms implemented by Android, Apple iOS, and mobile app developers.</td>
+</tr>
+<tr>
+<td>Spamming</td>
+<td>this presents users with links to redirect them to malicious sites to steal sensitive information or install malware.</td>
+</tr>
+<tr>
+<td>Reverse engineering</td>
+<td>this is the process of analyzing a mobile app to extract information about the source code to understand the underlying architecture of a mobile application and potentially manipulate the mobile device.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>34. Which two Bluetooth Low Energy (BLE) statements are true? (Choose two.)</strong></p>
+<ul>
+<li>All BLE-enabled devices implement cryptographic functions.</li>
+<li>BLE involves a five-phase process to establish a connection.</li>
+<li class="correct_answer">Threat actors can listen to BLE advertisements and leverage misconfigurations.</li>
+<li class="correct_answer">BLE advertisement can be intercepted using specialized antennas and equipment.</li>
+<li>BLE pairing is done by mobile apps.</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Threat actors can listen to BLE advertisements and leverage misconfigurations. You can analyze protocols such as BLE by using specialized antennas and equipment. Many devices that support BLE do not even implement BLE-layer encryption. BLE involves a three-phase process to establish a connection. BLE pairing is done at the operating system level.</p></div>
+<p><strong>35. Match the insecure code practice to the description.</strong></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-95999" src="https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172403.jpg" alt="" width="1146" height="482" srcset="https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172403.jpg 1146w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172403-300x126.jpg 300w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172403-1024x431.jpg 1024w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172403-768x323.jpg 768w" sizes="auto"  fetchpriority="low"/></p>
+<p>Place the options in the following order:</p>
+<table>
+<tbody style="content-visibility: auto;contain-intrinsic-size: auto 372px;">
+<tr>
+<td>Hard-coded credentials</td>
+<td>a catastrophic flaw that an attacker can leverage to completely compromise an application or the underlying system.</td>
+</tr>
+<tr>
+<td>Comments in source code</td>
+<td>developers include information in source code that could provide too much information and might be leveraged by an attacker.</td>
+</tr>
+<tr>
+<td>Lack of error handling and overly verbose error handling</td>
+<td>a type of weakness and security malpractice that can provide information to help an attacker perform additional attacks on the targeted system.</td>
+</tr>
+<tr>
+<td>Unprotected APIs</td>
+<td>many APIs lack adequate controls and are difficult to monitor. The breadth and complexity of APIs also make it difficult to automate effective security testing.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>36. Which C2 utility can be used to create multiple reverse shells?</strong></p>
+<ul>
+<li>WMImplant</li>
+<li>TrevorC2</li>
+<li class="correct_answer">Socat</li>
+<li>Wsc2</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Many different techniques and utilities can be used to create a C2. Some examples are the following:</p>
+<p>&#8211; socat &#8211; a C2 utility that can be used to create multiple reverse shells<br />
+&#8211; wsc2 &#8211; a Python-based C2 utility that uses WebSockets<br />
+&#8211; WMImplant &#8211; a PowerShell-based tool that leverages WMI to create a C2 channel<br />
+&#8211; TrevorC2 &#8211; a Python-based C2 utility</p></div>
+<p><strong>37. Refer to the exhibit. The attacking system has a listener (port open), and the victim initiates a connection back to the attacking system. Which two resources can create this type of malicious activity? (Choose two.)<br />
+</strong></p>
+<p><strong><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-96009" src="https://itexamanswers.net/wp-content/uploads/2023/10/i414391v5n1_Image-Final-EH-Chapter8-414391.png" alt="" width="1077" height="318" srcset="https://itexamanswers.net/wp-content/uploads/2023/10/i414391v5n1_Image-Final-EH-Chapter8-414391.png 1077w, https://itexamanswers.net/wp-content/uploads/2023/10/i414391v5n1_Image-Final-EH-Chapter8-414391-300x89.png 300w, https://itexamanswers.net/wp-content/uploads/2023/10/i414391v5n1_Image-Final-EH-Chapter8-414391-1024x302.png 1024w, https://itexamanswers.net/wp-content/uploads/2023/10/i414391v5n1_Image-Final-EH-Chapter8-414391-768x227.png 768w" sizes="auto"  fetchpriority="low"/></strong></p>
+<ul>
+<li class="correct_answer">Empire</li>
+<li>Sysinternals</li>
+<li>BloodHound</li>
+<li>Steghide</li>
+<li class="correct_answer">Netcat</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> The malicious activity described in the scenario is a reverse shell. Many tools allow the creation of reverse shells from a compromised host. Some of the most popular ones are the Meterpreter module in Metasploit and Netcat. Empire is an open-source framework with PowerShell Windows and Python Linux agents that allows rapid deployment of post-exploitation modules, including keyloggers, bind shells, reverse shells, Mimikatz, and adaptable communication to evade detection.</p></div>
+<p><strong>38. Match the PowerSploit module/script to the respective description.</strong></p>
+<p><img loading="lazy" decoding="async" class="aligncenter size-full wp-image-95998" src="https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172431.jpg" alt="" width="1143" height="506" srcset="https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172431.jpg 1143w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172431-300x133.jpg 300w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172431-1024x453.jpg 1024w, https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172431-768x340.jpg 768w" sizes="auto"  fetchpriority="low"/></p>
+<p>Place the options in the following order:</p>
+<table>
+<tbody style="content-visibility: auto;contain-intrinsic-size: auto 309px;">
+<tr>
+<td>Invoke-Portscan</td>
+<td>does a simple TCP port scan using regular sockets, based rather loosely on Nmap</td>
+</tr>
+<tr>
+<td>PowerUp</td>
+<td>acts as clearinghouse of common privilege escalation checks, along with some weaponization vectors</td>
+</tr>
+<tr>
+<td>PowerView</td>
+<td>performs network and Windows domain enumeration and exploitation</td>
+</tr>
+<tr>
+<td>Get-VaultCredential</td>
+<td>displays Windows vault credential objects, including plaintext web credentials</td>
+</tr>
+<tr>
+<td>Set-CriticalProcess</td>
+<td>causes the machine to blue screen upon exiting PowerShell</td>
+</tr>
+</tbody>
+</table>
+<p><strong>39. Which two tools can create a remote connection with a compromised system? (Choose two.)</strong></p>
+<ul>
+<li>Nmap</li>
+<li>Mimikatz</li>
+<li class="correct_answer">Metasploit</li>
+<li>BloodHound</li>
+<li class="correct_answer">Sysinternals</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> After a system is compromised, basic port scans can identify systems or services of interest that can be further attacked to compromise valuable information. Remote access protocols can be used to communicate with a compromised system. Metasploit can be used to create an RDP connection. Using the Metasploit RDP Post-Exploitation Module enables RDP. It provides options to create and configure an account as a member of the Local Administrators and Remote Desktop Users group. Sysinternals is a suite of tools that can also communicate with a compromised system. It allows administrators to control Windows-based computers from a remote terminal.</p></div>
+<p><strong>40. Which two options are PowerSploit modules/scripts? (Choose two.)</strong></p>
+<ul>
+<li>Get-ChildItem</li>
+<li class="correct_answer">Get-Keystrokes</li>
+<li>Get-HotFix</li>
+<li>Get-Process</li>
+<li class="correct_answer">Get-SecurityPackages</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> PowerSploit is a collection of PowerShell modules that can be used for post-exploitation and other phases of an assessment. Some popular PowerSploit modules and scripts are Get-SecurityPackages (enumerates all loaded security packages) and Get-Keystrokes (logs keys pressed, time, and the active window). PowerShell can be used for post-exploitation tasks, such as getting directory listings, copying and moving files, getting a list of running processes, and performing administrative tasks. Some of the most useful PowerShell commands are GetChildItem (list directories), GetProcess (gets a process listing), and Get-HotFix (obtains a list of all installed hotfixes).</p></div>
+<p><strong>41. Why is it important to use Common Vulnerability Scoring System (CVSS) to reference the ratings of vulnerabilities identified when preparing the final penetration testing report?</strong></p>
+<ul>
+<li>It is authorized by governments around the world.</li>
+<li>It is an international standard for listing publicly known vulnerabilities.</li>
+<li>It is easy to use.</li>
+<li class="correct_answer">It has been adopted by many tools, vendors, and organizations.</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> In a typical final report, the section Findings should document technical details about whether or how the system under testing and related components may be exploited based on each vulnerability found. Using industry-accepted risk ratings for each vulnerability is a good idea, such as the Common Vulnerability Scoring System (CVSS). CVSS has been adopted by many tools, vendors, and organizations. Using an industry standard such as CVSS will increase the value of the final report.</p></div>
+<p><strong>42. A company hires a professional to perform penetration testing. The tester has identified and verified that one web application is vulnerable to SQL injection and cross-site scripting attacks. Which technical control measure should the tester recommend to the company?</strong></p>
+<ul>
+<li>process-level remediation</li>
+<li>role-based access control (RBAC)</li>
+<li>multifactor authentication</li>
+<li class="correct_answer">user input sanitization</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Parameterized queries best prevent SQL injection. Using input validation (sanitizing user input) best practices is recommended to mitigate and prevent vulnerabilities such as cross-site scripting, cross-site request forgery, SQL injection, command injection, XML external entities, and other vulnerabilities.</p></div>
+<p><strong>43. The IT security department of a company has developed an access policy for the datacenter. The policy specifies that the datacenter is locked between 5:30 pm through 7:45 am daily except for emergency access approved by the IT manager. What is the operational control implemented?</strong></p>
+<ul>
+<li>mandatory vacations</li>
+<li>job rotation</li>
+<li class="correct_answer">time-of-day restrictions</li>
+<li>user training</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> With the time-of-day restrictions policy, the company can restrict user access based on the time of the day.</p></div>
+<p><strong>44. A security audit for a company recommends that the company implement multifactor authentication for the datacenter access. Which solution would achieve the goal?</strong></p>
+<ul>
+<li>access control vestibule</li>
+<li class="correct_answer">biometric controls</li>
+<li>video surveillance</li>
+<li>minimum password requirements</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Biometric controls include fingerprint scanning, retinal scanning, and face recognition. Together with a strong password, biometric control can provide effective multifactor authentication.</p></div>
+<p><strong>45. What are three examples of the items a penetration tester must clean from systems as part of the post-engagement cleanup process? (Choose three.)</strong></p>
+<ul>
+<li>given passwords</li>
+<li>network diagrams</li>
+<li class="correct_answer">shells</li>
+<li class="correct_answer">tools</li>
+<li>system patches</li>
+<li class="correct_answer">tester-created credentials</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> When a tester has completed all the testing phases for a penetration test, It is very important to perform the post-engagement cleanup. Having the client or system owner validate that the cleanup efforts are sufficient is also very important. This is not always easy to accomplish, but providing a comprehensive list of activities performed on any systems under test will help.</p>
+<p>Examples of the items that a tester will want to be sure to clean from systems include:<br />
+&#8211; <b>Tester-created credentials</b>: Remove any user accounts you created to maintain persistent access or for any other post-exploitation activity.<br />
+&#8211; <b>Shells</b>: Remove shells spawned on exploited systems.<br />
+&#8211; <b>Tools</b>: Remove any tools installed or run from the systems under test.</p></div>
+<p><strong>46. Refer to the exhibit. Which Python data structure is used?</strong><br />
+<img loading="lazy" decoding="async" class="size-full wp-image-96011 alignnone" src="https://itexamanswers.net/wp-content/uploads/2023/10/Which_Python_data_structure_is_used.png" alt="" width="241" height="170"  fetchpriority="low"/></p>
+<ul>
+<li class="correct_answer">dictionary</li>
+<li>array</li>
+<li>list</li>
+<li>tree</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> A dictionary is a collection of data values that are ordered using a key/value pair.</p></div>
+<p><strong>47. Which statement describes the concept of Bash shell in operating systems?</strong></p>
+<ul>
+<li>Bash shell is a command shell that supports interactive command execution only.</li>
+<li>Bash shell is a Linux GUI.</li>
+<li>Bash shell is a GUI that can be used in operating systems.</li>
+<li class="correct_answer">Bash shell is a command shell and language interpreter for an operating system.</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Bash shell is a command shell and language interpreter available for operating systems such as Linux, macOS, and Windows. It allows for interactive or non-interactive command execution.</p></div>
+<p><strong>48. Which three tools can be used to perform passive reconnaissance? (Choose three.)</strong></p>
+<ul>
+<li>Nmap</li>
+<li class="correct_answer">Dig</li>
+<li>Enum4linux</li>
+<li>Zenmap</li>
+<li class="correct_answer">Host</li>
+<li class="correct_answer">Nslookup</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Nslookup, Host, and Dig are DNS-based tools that can be used to perform passive reconnaissance. Nmap, Zenmap, and Enum4linux are active reconnaissance tools.</p></div>
+<p><strong>49. An attacker uses John the Ripper to crack a password file. The attacker issued the ~$ john &#8211;list=formats command in Kali Linux. Which information is the attacker trying to find?</strong></p>
+<ul>
+<li>the command line format to crack a password file</li>
+<li>the password file format</li>
+<li class="correct_answer">the ciphertext formats supported by the current version</li>
+<li>the output format supported by the current version</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> John the Ripper is a popular tool for offline password cracking. John the Ripper can use search patterns and password files (or wordlists) to crack passwords. It supports different cracking modes and understands many ciphertext formats. To list the supported formats, the attacker can use the <b>john &#8211;list=formats</b> command.</p></div>
+<p><strong>50. What are two exploitation frameworks? (Choose two.)</strong></p>
+<ul>
+<li class="correct_answer">BeEF</li>
+<li>Proxychains</li>
+<li>Tor</li>
+<li class="correct_answer">Metasploit</li>
+<li>Encryption</li>
+</ul>
+<div class="message_box success"><p><b>Explanation:</b> Metasploit is a popular exploitation framework. Metasploit is installed in /usr/share/metasploit-framework by default in Kali Linux. BeEF is an exploitation framework for web application testing. Tor, Proxychains, and Encryption are tools for evasion.</p></div>

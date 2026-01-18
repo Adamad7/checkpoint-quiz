@@ -2980,4 +2980,613 @@ const examsData = [
       }
     ]
   }
+,
+  {
+    "id": "ethical-hacker-final",
+    "title": "Ethical Hacker Final",
+    "questions": [
+      {
+        "pytanie": "Which are two best practices used to secure APIs? (Choose two.)",
+        "opcje": [
+          "use reputable and standard libraries to create the APIs",
+          "make internal API documentation mandatory",
+          "discussing company API development (or any other application development) on public forums",
+          "secure API services to provide HTTP endpoints only",
+          "keep API implementation and API security into one tier allowing the API developer to work on both facets simultaneously"
+        ],
+        "poprawna": [
+          "use reputable and standard libraries to create the APIs",
+          "make internal API documentation mandatory"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "Which type of threat actors use cybercrime attacks to promote what they believe in?",
+        "opcje": [
+          "state-sponsored",
+          "hacktivists",
+          "organized crime",
+          "insider threats"
+        ],
+        "poprawna": "hacktivists",
+        "image": ""
+      },
+      {
+        "pytanie": "A company conducted a penetration test 6 months ago. However, they have acquired new firewalls and servers to strengthen the network and increase capacity. Why would an administrator request a new penetration test?",
+        "opcje": [
+          "The attack surface has changed with the new equipment added.",
+          "The servers require independent performance evaluation.",
+          "The core data has been moved to the cloud infrastructure.",
+          "New cloud-based applications have been implemented."
+        ],
+        "poprawna": "The attack surface has changed with the new equipment added.",
+        "image": ""
+      },
+      {
+        "pytanie": "A network administrator performs a penetration test for a company that sells computer parts through an online storefront. The first step is to discover who owns the domain name that the company is using. Which penetration testing tool can be used to do this?",
+        "opcje": [
+          "h8mail",
+          "Maltego",
+          "WHOIS",
+          "Exif"
+        ],
+        "poprawna": "WHOIS",
+        "image": ""
+      },
+      {
+        "pytanie": "A penetration tester wants to quickly discover all the live hosts on the 192.168.0.0/24 network. Which command can do the ping sweep using the nmap tool?",
+        "opcje": [
+          "nmap 192.168.1.0/24 -open",
+          "nmap -sP 192.168.0.0/24",
+          "nmap -sV 192.168.0.255",
+          "nmap -sn 192.168.0.0/24",
+          "nmap -p 1-65535 localhost"
+        ],
+        "poprawna": "nmap -sn 192.168.0.0/24",
+        "image": ""
+      },
+      {
+        "pytanie": "A penetration tester runs the command nmap -sF -p 80 192.168.1.1 against a Windows host and receives a response RST packet. What conclusion can be drawn on the status of port 80?",
+        "opcje": [
+          "undetermined as this is a default response on a Windows system",
+          "port 80 is open",
+          "port 80 is closed",
+          "port 80 is open/filtered"
+        ],
+        "poprawna": "undetermined as this is a default response on a Windows system",
+        "image": ""
+      },
+      {
+        "pytanie": "Which common tool is used by penetration testers to craft packets?",
+        "opcje": [
+          "h8mail",
+          "pip3",
+          "nmap",
+          "Recon-ng",
+          "scapy"
+        ],
+        "poprawna": "scapy",
+        "image": ""
+      },
+      {
+        "pytanie": "Why should a tester use query throttling techniques when running an authorized penetration test on a live network?",
+        "opcje": [
+          "to limit bandwidth on resource heavy applications",
+          "to reduce the number of attack threads that are being sent to the target at the same time",
+          "to limit bandwidth on real-time antivirus and malware scanners",
+          "to create a larger attack surface on the target"
+        ],
+        "poprawna": "to reduce the number of attack threads that are being sent to the target at the same time",
+        "image": ""
+      },
+      {
+        "pytanie": "Why would an organization hire a red team?",
+        "opcje": [
+          "to install equipment to protect against physical intrusion",
+          "to play the role of a threat actor by exposing vulnerabilities regarding technology",
+          "to defend the organization against cybersecurity threats",
+          "to evaluate the work of the security team of the organization"
+        ],
+        "poprawna": "to play the role of a threat actor by exposing vulnerabilities regarding technology",
+        "image": ""
+      },
+      {
+        "pytanie": "Match the healthcare sector term to the respective description.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": [
+          "Next"
+        ],
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172138-768x270.jpg"
+      },
+      {
+        "pytanie": "Which two elements are typically on the front of a credit card? (Choose two.)",
+        "opcje": [
+          "date of birth",
+          "embedded microchip",
+          "magnetic stripe",
+          "primary account number",
+          "card security code"
+        ],
+        "poprawna": [
+          "embedded microchip",
+          "primary account number"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "What can be used to document the testing timeline in a rules of engagement document?",
+        "opcje": [
+          "OWASP ZAP",
+          "Gantt charts and work breakdown structures",
+          "Recon-ng",
+          "Burp Suite"
+        ],
+        "poprawna": "Gantt charts and work breakdown structures",
+        "image": ""
+      },
+      {
+        "pytanie": "A cybersecurity firm has been hired by an organization to perform penetration tests. The tests require a secure method of transferring data over a network. Which two protocols could be used to accomplish this task? (Choose two.)",
+        "opcje": [
+          "SFTP",
+          "PGP",
+          "SCP",
+          "S/MIME",
+          "HTTPS"
+        ],
+        "poprawna": [
+          "SFTP",
+          "SCP"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "Match penetration testing methodology and standard with the respective description.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": [
+          "Next"
+        ],
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172207-768x449.jpg"
+      },
+      {
+        "pytanie": "Which three practices are commonly adopted when setting up a penetration testing lab environment? (Choose three.)",
+        "opcje": [
+          "use a honeypot for all tests run from the physical attack platforms",
+          "ensure that when something crashes, it can be determined how and why it happened",
+          "create the penetration testing environment using virtual machines and virtual switches",
+          "use an open environment to allow for free passage of attack packets to the target machines",
+          "create the penetration testing environment using physical equipment and switches in order to route the packets freely",
+          "use a closed environment for all testing purposes"
+        ],
+        "poprawna": [
+          "ensure that when something crashes, it can be determined how and why it happened",
+          "create the penetration testing environment using virtual machines and virtual switches",
+          "use a closed environment for all testing purposes"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "An organization wants to test its vulnerability to an employee with network privileges accessing the network maliciously. Which type of penetration test should be used to test this vulnerability?",
+        "opcje": [
+          "white-box",
+          "black-box",
+          "blue-box",
+          "gray-box"
+        ],
+        "poprawna": "gray-box",
+        "image": ""
+      },
+      {
+        "pytanie": "Refer to the exhibit. A penetration is being prepared to run the EternalBlue exploit using Metasploit against a target with an IP address of 10.0.0.1/8 from the source PC with an IP address of 10.0.0.111/8. What two commands must be entered before the exploit command can be run? (Choose two.)",
+        "opcje": [
+          "set LHOST 10.0.0.1",
+          "set TARGET 10.0.0.111",
+          "set LHOST 10.0.0.111",
+          "set RHOST 10.0.0.1",
+          "set RHOST 10.0.0.111",
+          "set TARGET 10.0.0.1"
+        ],
+        "poprawna": [
+          "set LHOST 10.0.0.111",
+          "set RHOST 10.0.0.1"
+        ],
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/i414207v2n1_exploit.png"
+      },
+      {
+        "pytanie": "A penetration tester runs the Nmap NSE script nmap \u2013script smtp-open-relay.nse 10.0.0.1 command on a Kali Linux PC. What is the purpose of running this script?",
+        "opcje": [
+          "to check whether the smtp authentication is compromised on the target server",
+          "to check open relay configurations on the target server",
+          "to compromise any snmp community strings on the target PC",
+          "to compromise any open relays on the target server"
+        ],
+        "poprawna": "to check open relay configurations on the target server",
+        "image": ""
+      },
+      {
+        "pytanie": "Refer to the exhibit. What is the penetration tester trying to achieve by running this exploit?",
+        "opcje": [
+          "to enumerate FTP login on the target system",
+          "to check if the target system will allow FTP anonymous login",
+          "to compromise the target system for a remote session",
+          "to launch 220 packets of fragmented data to the FTP port on the target system"
+        ],
+        "poprawna": "to check if the target system will allow FTP anonymous login",
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/i414214v2n1_exploit1.png"
+      },
+      {
+        "pytanie": "A penetration tester deploys a rogue AP in the target wireless infrastructure. What is the first step that has to be taken to force wireless clients to connect to the rogue AP?",
+        "opcje": [
+          "send out false DNS beacons",
+          "spoof the MAC address of the rogue AP",
+          "set the PSK key to match the clients",
+          "send de-authentication frames to the clients"
+        ],
+        "poprawna": "send de-authentication frames to the clients",
+        "image": ""
+      },
+      {
+        "pytanie": "A cybersecurity student is learning about the Social-Engineer Toolkit (SET), and the student has discovered that this tool can be used to launch various social engineering attacks. Which two social engineering attacks can be launched using SET?",
+        "opcje": [
+          "Create a payload and listener",
+          "Google phishing",
+          "Simple hijacker",
+          "Fake flash update",
+          "Infectious media generator"
+        ],
+        "poprawna": [
+          "Create a payload and listener",
+          "Infectious media generator"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "A threat actor spoofed the phone number of the director of HR and called the IT help desk with a login problem. The threat actor claims to be the director and wants the help desk to change the password. What method of influence is this cybercriminal using?",
+        "opcje": [
+          "scarcity",
+          "social proof",
+          "fear",
+          "authority"
+        ],
+        "poprawna": "authority",
+        "image": ""
+      },
+      {
+        "pytanie": "Which statement correctly describes a type of physical social engineering attack?",
+        "opcje": [
+          "Dumpster phishing refers to a threat actor who scavenges for victims\u2019 private information in garbage and recycling containers.",
+          "Social engineering techniques, software, and hardware can perform badge cloning attacks.",
+          "Tailgating and piggybacking attacks can only be defeated through the use of control vestibules in conjunction with multifactor authentication.",
+          "Shoulder surfing attacks are performed only by a short distance between the threat actor and the victim."
+        ],
+        "poprawna": "Social engineering techniques, software, and hardware can perform badge cloning attacks.",
+        "image": ""
+      },
+      {
+        "pytanie": "What is a characteristic of a pharming attack?",
+        "opcje": [
+          "a threat actor redirects a victim from a valid website to a malicious legitimate looking site",
+          "a type of attack in which a social engineer impersonates another person to have physical access to systems in an organization",
+          "a social engineering attack carried out in a phone conversation",
+          "a type of attack where the threat actor obtains confidential data of the victim using binoculars or even a telescope"
+        ],
+        "poprawna": "a threat actor redirects a victim from a valid website to a malicious legitimate looking site",
+        "image": ""
+      },
+      {
+        "pytanie": "What kind of social engineering attack can be prevented by developing policies such as updating anti-malware applications regularly and using secure virtual browsers with little connectivity to the rest of the system and the rest of the network?",
+        "opcje": [
+          "tailgating",
+          "watering hole",
+          "vishing",
+          "SMS phishing"
+        ],
+        "poprawna": "watering hole",
+        "image": ""
+      },
+      {
+        "pytanie": "An attacker enters the string \u2018John\u2019 or \u20181=1\u2019 on a web form that is connected to a back-end SQL server causing the server to display all records in the database table. Which type of SQL injection attack was used in this scenario?",
+        "opcje": [
+          "error-based SQL injection",
+          "inferential SQL injection",
+          "boolean SQL injection",
+          "out-of-band SQL injection"
+        ],
+        "poprawna": "boolean SQL injection",
+        "image": ""
+      },
+      {
+        "pytanie": "What are two examples of immutable queries that should be used as mitigation for SQL injection vulnerabilities? (Choose two.)",
+        "opcje": [
+          "static queries",
+          "time-delay queries",
+          "parameterized queries",
+          "in-band queries",
+          "stacked queries"
+        ],
+        "poprawna": [
+          "static queries",
+          "parameterized queries"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "An attacker enters the string 192.168.78.6;cat /etc/httpd/httpd.conf on a web application hosted on a Linux server. Which type of attack occurred?",
+        "opcje": [
+          "session hijacking",
+          "redirect attack",
+          "SQL injection",
+          "command injection"
+        ],
+        "poprawna": "command injection",
+        "image": ""
+      },
+      {
+        "pytanie": "Which two misconfigured cloud authentication methods could leverage a cloud asset? (Choose two.)",
+        "opcje": [
+          "federated authentication",
+          "biometric authentication",
+          "identity and access management (IAM) implementations",
+          "Intelligent Platform Management Interface (IPMI)",
+          "local authentication"
+        ],
+        "poprawna": [
+          "federated authentication",
+          "identity and access management (IAM) implementations"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "Match the cloud attack to the description.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172246-768x255.jpg"
+      },
+      {
+        "pytanie": "What is the purpose of using the smtp-user-enum -M VRFY -u snp -t 10.0.0.1 command in Kali Linux?",
+        "opcje": [
+          "to initiate an SMTP conversation with an email server 10.0.0.1",
+          "to start a Transport Layer Security (TLS) connection to an email server 10.0.0.1",
+          "to verify if a certain user exists on the SMTP server 10.0.0.1",
+          "to compromise SMTP open relay server 10.0.0.1"
+        ],
+        "poprawna": "to verify if a certain user exists on the SMTP server 10.0.0.1",
+        "image": ""
+      },
+      {
+        "pytanie": "Match the mobile device security testing tool to the description.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172311-768x283.jpg"
+      },
+      {
+        "pytanie": "Match the mobile device attack to the description.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172327-768x255.jpg"
+      },
+      {
+        "pytanie": "Which two Bluetooth Low Energy (BLE) statements are true? (Choose two.)",
+        "opcje": [
+          "All BLE-enabled devices implement cryptographic functions.",
+          "BLE involves a five-phase process to establish a connection.",
+          "Threat actors can listen to BLE advertisements and leverage misconfigurations.",
+          "BLE advertisement can be intercepted using specialized antennas and equipment.",
+          "BLE pairing is done by mobile apps."
+        ],
+        "poprawna": [
+          "Threat actors can listen to BLE advertisements and leverage misconfigurations.",
+          "BLE advertisement can be intercepted using specialized antennas and equipment."
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "Match the insecure code practice to the description.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172403-768x323.jpg"
+      },
+      {
+        "pytanie": "Which C2 utility can be used to create multiple reverse shells?",
+        "opcje": [
+          "WMImplant",
+          "TrevorC2",
+          "Socat",
+          "Wsc2"
+        ],
+        "poprawna": "Socat",
+        "image": ""
+      },
+      {
+        "pytanie": "Refer to the exhibit. The attacking system has a listener (port open), and the victim initiates a connection back to the attacking system. Which two resources can create this type of malicious activity? (Choose two.)",
+        "opcje": [
+          "Empire",
+          "Sysinternals",
+          "BloodHound",
+          "Steghide",
+          "Netcat"
+        ],
+        "poprawna": [
+          "Empire",
+          "Netcat"
+        ],
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/i414391v5n1_Image-Final-EH-Chapter8-414391-768x227.png"
+      },
+      {
+        "pytanie": "Match the PowerSploit module/script to the respective description.",
+        "opcje": [
+          "Next"
+        ],
+        "poprawna": "Next",
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/2023-10-09_172431-768x340.jpg"
+      },
+      {
+        "pytanie": "Which two tools can create a remote connection with a compromised system? (Choose two.)",
+        "opcje": [
+          "Nmap",
+          "Mimikatz",
+          "Metasploit",
+          "BloodHound",
+          "Sysinternals"
+        ],
+        "poprawna": [
+          "Metasploit",
+          "Sysinternals"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "Which two options are PowerSploit modules/scripts? (Choose two.)",
+        "opcje": [
+          "Get-ChildItem",
+          "Get-Keystrokes",
+          "Get-HotFix",
+          "Get-Process",
+          "Get-SecurityPackages"
+        ],
+        "poprawna": [
+          "Get-Keystrokes",
+          "Get-SecurityPackages"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "Why is it important to use Common Vulnerability Scoring System (CVSS) to reference the ratings of vulnerabilities identified when preparing the final penetration testing report?",
+        "opcje": [
+          "It is authorized by governments around the world.",
+          "It is an international standard for listing publicly known vulnerabilities.",
+          "It is easy to use.",
+          "It has been adopted by many tools, vendors, and organizations."
+        ],
+        "poprawna": "It has been adopted by many tools, vendors, and organizations.",
+        "image": ""
+      },
+      {
+        "pytanie": "A company hires a professional to perform penetration testing. The tester has identified and verified that one web application is vulnerable to SQL injection and cross-site scripting attacks. Which technical control measure should the tester recommend to the company?",
+        "opcje": [
+          "process-level remediation",
+          "role-based access control (RBAC)",
+          "multifactor authentication",
+          "user input sanitization"
+        ],
+        "poprawna": "user input sanitization",
+        "image": ""
+      },
+      {
+        "pytanie": "The IT security department of a company has developed an access policy for the datacenter. The policy specifies that the datacenter is locked between 5:30 pm through 7:45 am daily except for emergency access approved by the IT manager. What is the operational control implemented?",
+        "opcje": [
+          "mandatory vacations",
+          "job rotation",
+          "time-of-day restrictions",
+          "user training"
+        ],
+        "poprawna": "time-of-day restrictions",
+        "image": ""
+      },
+      {
+        "pytanie": "A security audit for a company recommends that the company implement multifactor authentication for the datacenter access. Which solution would achieve the goal?",
+        "opcje": [
+          "access control vestibule",
+          "biometric controls",
+          "video surveillance",
+          "minimum password requirements"
+        ],
+        "poprawna": "biometric controls",
+        "image": ""
+      },
+      {
+        "pytanie": "What are three examples of the items a penetration tester must clean from systems as part of the post-engagement cleanup process? (Choose three.)",
+        "opcje": [
+          "given passwords",
+          "network diagrams",
+          "shells",
+          "tools",
+          "system patches",
+          "tester-created credentials"
+        ],
+        "poprawna": [
+          "shells",
+          "tools",
+          "tester-created credentials"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "Refer to the exhibit. Which Python data structure is used?",
+        "opcje": [
+          "dictionary",
+          "array",
+          "list",
+          "tree"
+        ],
+        "poprawna": "dictionary",
+        "image": "https://itexamanswers.net/wp-content/uploads/2023/10/Which_Python_data_structure_is_used.png"
+      },
+      {
+        "pytanie": "Which statement describes the concept of Bash shell in operating systems?",
+        "opcje": [
+          "Bash shell is a command shell that supports interactive command execution only.",
+          "Bash shell is a Linux GUI.",
+          "Bash shell is a GUI that can be used in operating systems.",
+          "Bash shell is a command shell and language interpreter for an operating system."
+        ],
+        "poprawna": "Bash shell is a command shell and language interpreter for an operating system.",
+        "image": ""
+      },
+      {
+        "pytanie": "Which three tools can be used to perform passive reconnaissance? (Choose three.)",
+        "opcje": [
+          "Nmap",
+          "Dig",
+          "Enum4linux",
+          "Zenmap",
+          "Host",
+          "Nslookup"
+        ],
+        "poprawna": [
+          "Dig",
+          "Host",
+          "Nslookup"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "An attacker uses John the Ripper to crack a password file. The attacker issued the ~$ john \u2013list=formats command in Kali Linux. Which information is the attacker trying to find?",
+        "opcje": [
+          "the command line format to crack a password file",
+          "the password file format",
+          "the ciphertext formats supported by the current version",
+          "the output format supported by the current version"
+        ],
+        "poprawna": "the ciphertext formats supported by the current version",
+        "image": ""
+      },
+      {
+        "pytanie": "What are two exploitation frameworks? (Choose two.)",
+        "opcje": [
+          "BeEF",
+          "Proxychains",
+          "Tor",
+          "Metasploit",
+          "Encryption"
+        ],
+        "poprawna": [
+          "BeEF",
+          "Metasploit"
+        ],
+        "image": ""
+      }
+    ]
+  }
 ]
