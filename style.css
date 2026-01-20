@@ -283,3 +283,89 @@ body {
 .hide {
     display: none;
 }
+
+/* --- Licznik pytań --- */
+#question-counter {
+    text-align: right;
+    font-size: 0.9rem;
+    color: var(--text-color-light);
+    margin-bottom: 5px;
+}
+
+/* --- Feedback i Animacje --- */
+.option-label.correct {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    animation: pop 0.3s ease;
+}
+
+.option-label.incorrect {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    animation: shake 0.4s ease;
+}
+
+.option-label.correct-answer {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    box-shadow: 0 0 5px #28a745;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* --- Dark Mode dla Feedbacku --- */
+html.dark-mode .option-label.correct {
+    background-color: #1e4620;
+    border-color: #28a745;
+    color: #d4edda;
+}
+
+html.dark-mode .option-label.incorrect {
+    background-color: #4c1e1e;
+    border-color: #dc3545;
+    color: #f8d7da;
+}
+
+html.dark-mode .option-label.correct-answer {
+    background-color: #1e4620;
+    border-color: #28a745;
+    color: #d4edda;
+    box-shadow: 0 0 5px #28a745;
+}

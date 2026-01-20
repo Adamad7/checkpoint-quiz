@@ -25,6 +25,8 @@ let currentExamQuestions = [];
 let shuffledQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
+let isAnswerChecked = false;
+
 
 // --- Funkcja pomocnicza: Tasowanie tablicy (Fisher-Yates) ---
 function shuffleArray(array) {
@@ -60,18 +62,23 @@ function selectExam(exam) {
     startQuiz();
 }
 // --- Funkcja rozpoczynająca quiz ---
+
+
+// --- Funkcja wyświetlająca pytanie ---
+// --- NOWY ELEMENT ---
+const questionCounter = document.getElementById('question-counter');
+
+
 function startQuiz() {
     score = 0;
     currentQuestionIndex = 0;
-
-    currentQuestionIndex = 0;
+    isAnswerChecked = false;
 
     shuffledQuestions = [...currentExamQuestions];
     shuffleArray(shuffledQuestions);
 
     resultsWrapper.classList.add('hide');
     questionWrapper.classList.remove('hide');
-    submitBtn.textContent = "Następne pytanie";
 
     showNextQuestion();
 }
@@ -81,7 +88,20 @@ function showNextQuestion() {
     optionsContainer.innerHTML = '';
 
     const question = shuffledQuestions[currentQuestionIndex];
+
+    // Obsługa pytań z jedną opcją (np. slajdy informacyjne)
+    if (question.opcje.length === 1) {
+        isAnswerChecked = true;
+        submitBtn.textContent = (currentQuestionIndex === shuffledQuestions.length - 1) ? "Zobacz wyniki" : "Następne pytanie";
+    } else {
+        isAnswerChecked = false;
+        submitBtn.textContent = "Sprawdź odpowiedź"; // Domyślny tekst
+    }
+
     questionText.textContent = question.pytanie;
+
+    // Aktualizacja licznika
+    questionCounter.textContent = `Pytanie ${currentQuestionIndex + 1} z ${shuffledQuestions.length}`;
 
     // --- Obsługa obrazka ---
     const questionImage = document.getElementById('question-image');
@@ -90,10 +110,10 @@ function showNextQuestion() {
         questionImage.classList.remove('hide');
     } else {
         questionImage.classList.add('hide');
-        questionImage.src = ""; // Wyczyść src
+        questionImage.src = "";
     }
 
-    const progressPercent = ((currentQuestionIndex + 1) / shuffledQuestions.length) * 100;
+    const progressPercent = ((currentQuestionIndex) / shuffledQuestions.length) * 100; // Pasek postępu
     progressBarFill.style.width = `${progressPercent}%`;
 
     const isMultipleChoice = Array.isArray(question.poprawna);
@@ -102,51 +122,69 @@ function showNextQuestion() {
     const shuffledOptions = [...question.opcje];
     shuffleArray(shuffledOptions);
 
-    shuffledOptions.forEach(option => {
-        const optionId = `option-${currentQuestionIndex}-${option.replace(/\s+/g, '')}`;
+    // Jeśli jest tylko jedna opcja, nie wyświetlamy jej (slajd informacyjny)
+    if (question.opcje.length > 1) {
+        shuffledOptions.forEach(option => {
+            const optionId = `option-${currentQuestionIndex}-${option.replace(/\s+/g, '')}`;
 
-        const label = document.createElement('label');
-        label.className = 'option-label';
-        label.htmlFor = optionId;
+            const label = document.createElement('label');
+            label.className = 'option-label';
+            label.htmlFor = optionId;
 
-        const input = document.createElement('input');
-        input.type = inputType;
-        input.id = optionId;
-        input.name = 'option';
-        input.value = option;
+            const input = document.createElement('input');
+            input.type = inputType;
+            input.id = optionId;
+            input.name = 'option';
+            input.value = option;
 
-        const customInput = document.createElement('span');
-        customInput.className = 'custom-input';
+            // Blokada zmiany odpowiedzi po sprawdzeniu (opcjonalne, ale dobre dla UX)
+            input.addEventListener('change', () => {
+                if (isAnswerChecked) input.checked = !input.checked;
+            });
 
-        const optionText = document.createTextNode(option);
 
-        label.appendChild(input);
-        label.appendChild(customInput);
-        label.appendChild(optionText);
-        optionsContainer.appendChild(label);
-    });
+            const customInput = document.createElement('span');
+            customInput.className = 'custom-input';
 
-    if (currentQuestionIndex === shuffledQuestions.length - 1) {
-        submitBtn.textContent = "Zobacz wyniki";
+            const optionText = document.createTextNode(option);
+
+            label.appendChild(input);
+            label.appendChild(customInput);
+            label.appendChild(optionText);
+            optionsContainer.appendChild(label);
+        });
     }
 }
 
 // --- Funkcja sprawdzająca odpowiedź ---
 function checkAnswer() {
-    const question = shuffledQuestions[currentQuestionIndex];
+    if (isAnswerChecked) {
+        // Jeśli odpowiedź już sprawdzona, przejdź do następnego pytania
+        currentQuestionIndex++;
+        if (currentQuestionIndex < shuffledQuestions.length) {
+            showNextQuestion();
+        } else {
+            showResults();
+        }
+        return;
+    }
 
+    // SPRAWDZANIE ODPOWIEDZI
+    const question = shuffledQuestions[currentQuestionIndex];
     const selectedInputs = document.querySelectorAll('input[name="option"]:checked');
+
     if (selectedInputs.length === 0) {
         alert("Musisz wybrać przynajmniej jedną odpowiedź!");
         return;
     }
 
+    isAnswerChecked = true; // Oznacz jako sprawdzoną
+    submitBtn.textContent = (currentQuestionIndex === shuffledQuestions.length - 1) ? "Zobacz wyniki" : "Następne pytanie";
+
     const userAnswers = Array.from(selectedInputs).map(input => input.value);
+    const correctAnswers = Array.isArray(question.poprawna) ? question.poprawna : [question.poprawna];
 
-    const correctAnswers = Array.isArray(question.poprawna) ?
-        question.poprawna :
-        [question.poprawna];
-
+    // Logika poprawności
     const isCorrect = userAnswers.length === correctAnswers.length &&
         userAnswers.sort().every((answer, index) =>
             answer === correctAnswers.sort()[index]
@@ -156,12 +194,37 @@ function checkAnswer() {
         score++;
     }
 
-    currentQuestionIndex++;
-    if (currentQuestionIndex < shuffledQuestions.length) {
-        showNextQuestion();
-    } else {
-        showResults();
-    }
+    // Wyświetlanie feedbacku
+    const allLabels = document.querySelectorAll('.option-label');
+    allLabels.forEach(label => {
+        const input = label.querySelector('input');
+        const isSelected = input.checked;
+        const isAnswerCorrect = correctAnswers.includes(input.value);
+
+        // Reset klas
+        label.classList.remove('correct', 'incorrect', 'correct-answer');
+
+        if (isSelected) {
+            if (isAnswerCorrect) {
+                label.classList.add('correct');
+            } else {
+                label.classList.add('incorrect');
+            }
+        }
+
+        // Zawsze podświetl poprawną odpowiedź (jeśli nie została wybrana lub zaznaczona źle)
+        if (isAnswerCorrect && !isSelected) {
+            label.classList.add('correct-answer');
+        }
+
+        // Zablokuj inputy
+        input.disabled = true;
+        label.style.cursor = 'default';
+    });
+
+    // Aktualizacja paska postępu na koniec pytania (opcjonalnie)
+    const progressPercent = ((currentQuestionIndex + 1) / shuffledQuestions.length) * 100;
+    progressBarFill.style.width = `${progressPercent}%`;
 }
 
 // --- Funkcja pokazująca wyniki ---
