@@ -154,6 +154,9 @@ function showNextQuestion() {
             optionsContainer.appendChild(label);
         });
     }
+    else {
+        score += 1;
+    }
 }
 
 // --- Funkcja sprawdzająca odpowiedź ---
