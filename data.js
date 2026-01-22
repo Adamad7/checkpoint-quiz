@@ -3912,4 +3912,264 @@ const examsData = [
       }
     ]
   }
+  ,
+  {
+    "id": "ethical-hacker-final-3",
+    "title": "Ethical Hacker Final (Spoza bazy)",
+    "questions": [
+      {
+        "pytanie": "What is a common security vulnerability of IoT Implementation?",
+        "opcje": [
+          "plaintext communication and data leakage",
+          "certificate pinning",
+          "spamming",
+          "passcode vulnerabilities and blometrics integrations"
+        ],
+        "poprawna": "plaintext communication and data leakage",
+        "image": ""
+      },
+      {
+        "pytanie": "In what type of attack would a threat actor try to bypass different anti-DDoS mitigations by revealing the origin network or IP address of a content delivery network?",
+        "opcje": [
+          "direct-to-origin (D20)",
+          "metadata services",
+          "side-channel",
+          "account-takeover"
+        ],
+        "poprawna": "direct-to-origin (D20)",
+        "image": ""
+      },
+      {
+        "pytanie": "Which tool uses precomputed tables to derive a password by looking at the hashed value?",
+        "opcje": [
+          "W3af",
+          "DirBuster",
+          "RainbowCrack",
+          "CeWL"
+        ],
+        "poprawna": "RainbowCrack",
+        "image": ""
+      },
+      {
+        "pytanie": "The IT department of a company is developing a standard operating policy (SOP) for the IT asset inventory management that covers asset inventory process and maintenance. Which type of cybersecurity control is being applied? [cite: 20, 21]",
+        "opcje": [
+          "physical",
+          "operational",
+          "technical",
+          "administrative"
+        ],
+        "poprawna": "administrative",
+        "image": ""
+      },
+      {
+        "pytanie": "A penetration tester is asked to scan both secure and non-secure ports on a target web server. Which nmap command can be used to achieve the task? [cite: 27, 28]",
+        "opcje": [
+          "nmap -http s) [address]",
+          "nmap -p 80,81 [address]",
+          "nmap -p http [address]",
+          "nmap -s 80,81 [address]"
+        ],
+        "poprawna": "nmap -p 80,81 [address]",
+        "image": ""
+      },
+      {
+        "pytanie": "A penetration tester has been hired to test the security posture of an organization. The organization has provided the penetration tester with some credentials but not full documentation of the network infrastructure. The aim is to circumvent security measures and gain unauthorized access to the data server. What kind of penetration test will the tester conduct? [cite: 34, 35, 36, 37]",
+        "opcje": [
+          "black-box",
+          "white-box",
+          "red-box",
+          "gray-box"
+        ],
+        "poprawna": "gray-box",
+        "image": ""
+      },
+      {
+        "pytanie": "A cybercriminal mapped out all locations in an application where user input is used to reference objects directly. The cybercriminal found out that the application uses the value of the customerID parameter as an index... The cybercriminal then changes the value... and retrieves another customer record. What kind of vulnerability is being exploited? [cite: 43, 44, 46, 47]",
+        "opcje": [
+          "parameter pollution",
+          "kerberos",
+          "insecure direct object reference",
+          "default credentials"
+        ],
+        "poprawna": "insecure direct object reference",
+        "image": ""
+      },
+      {
+        "pytanie": "An attacker exploits a common vulnerability in LLMNR by spoofing an authoritative source for name resolution on a victim system... Which two tools could be used to conduct this type of attack? [cite: 53, 54, 55]",
+        "opcje": [
+          "Metasploit",
+          "Responder",
+          "Burp Suite",
+          "Kismet",
+          "Pacu"
+        ],
+        "poprawna": "Metasploit, Responder",
+        "image": ""
+      },
+      {
+        "pytanie": "What are the three key elements that a penetration tester should pay attention to and verify during assessment to make sure the organization is PCI DSS compliant?",
+        "opcje": [
+          "prior internal penetration conducted in the last three months",
+          "prior external penetration test conducted in the last three months",
+          "network isolation",
+          "solid password management and configuration system",
+          "data servers holding the credit card information located in the DMZ",
+          "key management system compliant to NIST SP 800-57"
+        ],
+        "poprawna": "prior internal penetration conducted in the last three months, prior external penetration test conducted in the last three months, network isolation",
+        "image": ""
+      },
+      {
+        "pytanie": "Which metric group in the Common Vulnerability Scoring System (CVSS) catalog includes exploit code maturity, remediation level, and report confidence?",
+        "opcje": [
+          "Base metric group",
+          "Impact metric group",
+          "Temporal metric group",
+          "Environmental metric group"
+        ],
+        "poprawna": "Temporal metric group",
+        "image": ""
+      },
+      {
+        "pytanie": "Which Linux distribution is based on Debian and focuses on penetration testing, digital forensics, and privacy protection?",
+        "opcje": [
+          "PowerShell",
+          "Parrot OS",
+          "BlackArch Linux",
+          "WHoppiX"
+        ],
+        "poprawna": "Parrot OS",
+        "image": ""
+      },
+      {
+        "pytanie": "Which option is a government agency that provides guidance on how organizations should manage cryptographic keys in accordance with the federal key management policies?",
+        "opcje": [
+          "NIST",
+          "CVE",
+          "CWE",
+          "US-CERT"
+        ],
+        "poprawna": "NIST",
+        "image": ""
+      },
+      {
+        "pytanie": "What is the main objective of a social engineering penetration test?",
+        "opcje": [
+          "to identify individuals who fail the test",
+          "to test the network protocols in place",
+          "to identify vulnerabilities in the physical access controls",
+          "to assess the security awareness program for the purposes of enhancing it"
+        ],
+        "poprawna": "to assess the security awareness program for the purposes of enhancing it",
+        "image": ""
+      },
+      {
+        "pytanie": "Which interpreted programming language can be used to automate repetitive tasks and create sophisticated applications in penetration testing?",
+        "opcje": [
+          "C++",
+          "Python",
+          "Bash",
+          "JSON"
+        ],
+        "poprawna": "Python",
+        "image": ""
+      },
+      {
+        "pytanie": "After a physical breach of the datacenter occurred, a company determines to enhance the secure access... by preventing unauthorized persons from overlooking and learning passcode when employees enter the datacenter. What is the best solution to achieve the goal? [cite: 103, 104]",
+        "opcje": [
+          "biometric controls",
+          "video surveillance",
+          "access control vestibule",
+          "multifactor authentication"
+        ],
+        "poprawna": "biometric controls",
+        "image": ""
+      },
+      {
+        "pytanie": "Which two tools are PowerShell-based post-exploitation frameworks?",
+        "opcje": [
+          "Empire",
+          "PowerSploit",
+          "BloodHound",
+          "Netcat",
+          "Sysinternals"
+        ],
+        "poprawna": "Empire, PowerSploit",
+        "image": ""
+      },
+      {
+        "pytanie": "An attacker enters the following URL... /vulnerabilities/fi/?page=......tc/passwd. In addition to the directory traversal vulnerability, what other type of vulnerability did the attacker try to exploit? [cite: 117, 118, 119]",
+        "opcje": [
+          "clickjacking",
+          "local file inclusion",
+          "cookie manipulation",
+          "remote file inclusion"
+        ],
+        "poprawna": "local file inclusion",
+        "image": ""
+      },
+      {
+        "pytanie": "Database management is deploying a production web application system to reduce the impact of SQL injection attacks. What is a configuration consideration? [cite: 125, 126]",
+        "opcje": [
+          "Ensure that the web application is enabled by HTTPS.",
+          "Stop the error messages sent by the database system.",
+          "Control the error messages sent by the database system.",
+          "Enable secure communications between the web application and the database system."
+        ],
+        "poprawna": "Control the error messages sent by the database system.",
+        "image": ""
+      },
+      {
+        "pytanie": "What kind of attack may be prevented by keeping software up to date, running regular anti-malware checks, and changing the default passwords in network infrastructure devices such as home routers?",
+        "opcje": [
+          "Vishing",
+          "Pharming",
+          "Piggybacking",
+          "SMS phishing"
+        ],
+        "poprawna": "Pharming",
+        "image": ""
+      },
+      {
+        "pytanie": "A cybercriminal group successfully exfiltrated data from a large organization. They have now demanded that a large ransom be paid within 24 hours, or they will publicly release the sensitive information. What method of influence are these cybercriminals using? [cite: 138, 139, 140]",
+        "opcje": [
+          "scarcity",
+          "fear",
+          "social proof",
+          "authority"
+        ],
+        "poprawna": "fear",
+        "image": ""
+      },
+      {
+        "pytanie": "A penetration tester wants to harvest user credentials on a Windows host target 192.168.1.1/24. Which of the following commands can do this using the tool nmap? [cite: 176, 177]",
+        "opcje": [
+          "nmap-script smb-enum-users.nse 192.168.1.1",
+          "nmap-sn 192.168.1.1/24",
+          "nmap-sP 192.168.1.1/24",
+          "nmap-sV 192.168.1.1/24",
+          "nmap-p 1-65535 localhost"
+        ],
+        "poprawna": "nmap-script smb-enum-users.nse 192.168.1.1",
+        "image": ""
+      },
+      {
+        "pytanie": "Which penetration testing methodology provides attack vectors and mitigation procedures for cross-site scripting (XSS), XML external entity (XXE) attacks, cross-site request forgery (CSRF), and SQL injection attacks?",
+        "opcje": [
+          "OWASP",
+          "MITRE",
+          "OSSTMM",
+          "PTES"
+        ],
+        "poprawna": "OWASP",
+        "image": ""
+      },
+      {
+        "pytanie": "Match",
+        "opcje": [],
+        "poprawna": "",
+        "image": "img/eh_match_1.png"
+      }
+    ]
+  }
 ]

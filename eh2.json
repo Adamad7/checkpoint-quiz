@@ -34,7 +34,7 @@
       "Risk assessment includes the steps to reduce the risk.",
       "Risk mitigation is the process of determining an acceptable risk level."
     ],
-    "poprawna": "Risk acceptance is the risk level that an organization is willing to take.",
+    "poprawna": [],
     "image": ""
   },
   {
@@ -46,7 +46,7 @@
       "to manipulate Kerberos tickets based on available hashes by compromising a\n                vulnerable system and obtaining the local user credentials and password hashes"
     ],
     "poprawna": "to manipulate Kerberos tickets based on available hashes by compromising a\n                vulnerable system and obtaining the local user credentials and password hashes",
-    "image": "https://infraexam.com/wp-content/uploads/2025/10/Ethical-Hacker-Course-Final-Exam-Answers-07.png"
+    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20638%20269'%3E%3C/svg%3E"
   },
   {
     "pytanie": "A black-box penetration testing is being performed on the network of a client. The penetration tester does not\n        have physical access to the client network but is parked outside. Which Kali Linux tool can the penetration\n        tester use to compromise the Wi-Fi network and break the encryption keys?",
@@ -182,7 +182,7 @@
       "green, blue, red, black, yellow"
     ],
     "poprawna": "green, blue, red, black, yellow",
-    "image": "https://infraexam.com/wp-content/uploads/2025/10/Ethical-Hacker-Course-Final-Exam-Answers-06.png"
+    "image": "data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20971%20535'%3E%3C/svg%3E"
   },
   {
     "pytanie": "A security management system is preparing to push a new configuration to a firewall that involves rebuilding\n        access control lists and security rules. An attacker has a very small time window to bypass the firewall\n        security controls until the new firewall rules take effect. What kind of vulnerability is being exploited by the\n        attacker?",
@@ -303,16 +303,5 @@
     ],
     "poprawna": "error messages and debug handling",
     "image": ""
-  },
-  {
-    "pytanie": "Refer to the exhibit. What is the advantage of setting up a penetration environment, as displayed in the exhibit?",
-    "opcje": [
-      "It is an open environment that permits packets to flow freely between devices",
-      "It is a closed environment that routes the packets over a physical switch.",
-      "It is a closed environment that allows you to perform different attacks and send IP packets between VMs without those packets leaving the physical system.",
-      "It is an open environment that allows for deployment and recovery of devices being tested through quick backup recovery methods."
-    ],
-    "poprawna": "It is a closed environment that allows you to perform different attacks and send IP packets between VMs without those packets leaving the physical system.",
-    "image": "https://infraexam.com/wp-content/uploads/2025/10/Ethical-Hacker-Course-Final-Exam-Answers-05.png"
   }
 ]
