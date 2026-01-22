@@ -1682,8 +1682,8 @@ const examsData = [
   }
   ,
   {
-    "id": "Endpoint Security Final Exam",
-    "title": "endpoint_security_final_exam",
+    "id": "endpoint-security-final",
+    "title": "Endpoint Security Final",
     "questions": [
       {
         "pytanie": "Which two commands could be used to check if DNS name resolution is working properly on a Windows PC? (Choose two.)",
