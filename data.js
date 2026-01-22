@@ -4172,4 +4172,455 @@ const examsData = [
       }
     ]
   }
+  ,
+  {
+    "id": "ethical-hacker-final-4",
+    "title": "Ethical Hacker Final (Spoza bazy wszystkie)",
+    "questions": [
+  {
+    "pytanie": "What is a common security vulnerability of IoT Implementation?",
+    "opcje": [
+      "plaintext communication and data leakage",
+      "certificate pinning",
+      "spamming",
+      "passcode vulnerabilities and biometrics integrations"
+    ],
+    "poprawna": "plaintext communication and data leakage",
+    "image": ""
+  },
+  {
+    "pytanie": "In what type of attack would a threat actor try to bypass different anti-DDoS mitigations by revealing the origin network or IP address of a content delivery network?",
+    "opcje": [
+      "direct-to-origin (D20)",
+      "metadata services",
+      "side-channel",
+      "account-takeover"
+    ],
+    "poprawna": "direct-to-origin (D20)",
+    "image": ""
+  },
+  {
+    "pytanie": "Which tool uses precomputed tables to derive a password by looking at the hashed value?",
+    "opcje": [
+      "W3af",
+      "DirBuster",
+      "RainbowCrack",
+      "CeWL"
+    ],
+    "poprawna": "RainbowCrack",
+    "image": ""
+  },
+  {
+    "pytanie": "The IT department of a company is developing a standard operating policy (SOP) for the IT asset inventory management that covers asset inventory process and maintenance. Which type of cybersecurity control is being applied?",
+    "opcje": [
+      "physical",
+      "operational",
+      "technical",
+      "administrative"
+    ],
+    "poprawna": "administrative",
+    "image": ""
+  },
+  {
+    "pytanie": "A penetration tester is asked to scan both secure and non-secure ports on a target web server. Which nmap command can be used to achieve the task?",
+    "opcje": [
+      "nmap -http s) [address]",
+      "nmap -p 80,81 [address]",
+      "nmap -p http [address]",
+      "nmap -s 80,81 [address]"
+    ],
+    "poprawna": "nmap -p 80,81 [address]",
+    "image": ""
+  },
+  {
+    "pytanie": "A penetration tester has been hired to test the security posture of an organization. The organization has provided the penetration tester with some credentials but not full documentation of the network infrastructure. The aim is to circumvent security measures and gain unauthorized access to the data server. What kind of penetration test will the tester conduct?",
+    "opcje": [
+      "black-box",
+      "white-box",
+      "red-box",
+      "gray-box"
+    ],
+    "poprawna": "gray-box",
+    "image": ""
+  },
+  {
+    "pytanie": "A cybercriminal mapped out all locations in an application where user input is used to reference objects directly. The cybercriminal found out that the application uses the value of the customerID parameter as an index... The cybercriminal then changes the value 1188 to another value and retrieves another customer record. What kind of vulnerability is being exploited?",
+    "opcje": [
+      "parameter pollution",
+      "kerberos",
+      "insecure direct object reference (IDOR)",
+      "default credentials"
+    ],
+    "poprawna": "insecure direct object reference (IDOR)",
+    "image": ""
+  },
+  {
+    "pytanie": "An attacker exploits a common vulnerability in LLMNR by spoofing an authoritative source for name resolution on a victim system... Which two tools could be used to conduct this type of attack? (Choose two.)",
+    "opcje": [
+      "Metasploit",
+      "Responder",
+      "Burp Suite",
+      "Kismet",
+      "Pacu"
+    ],
+    "poprawna": [
+      "Metasploit",
+      "Responder"
+    ],
+    "image": ""
+  },
+  {
+    "pytanie": "What are the three key elements that a penetration tester should pay attention to and verify during assessment to make sure the organization is PCI DSS compliant? (Choose three.)",
+    "opcje": [
+      "prior internal penetration conducted in the last three months",
+      "prior external penetration test conducted in the last three months",
+      "network isolation",
+      "solid password management and configuration system",
+      "data servers holding the credit card information located in the DMZ",
+      "key management system compliant to NIST SP 800-57"
+    ],
+    "poprawna": [
+      "network isolation",
+      "solid password management and configuration system",
+      "key management system compliant to NIST SP 800-57"
+    ],
+    "image": ""
+  },
+  {
+    "pytanie": "Which metric group in the Common Vulnerability Scoring System (CVSS) catalog includes exploit code maturity, remediation level, and report confidence?",
+    "opcje": [
+      "Base metric group",
+      "Impact metric group",
+      "Temporal metric group",
+      "Environmental metric group"
+    ],
+    "poprawna": "Temporal metric group",
+    "image": ""
+  },
+  {
+    "pytanie": "Which Linux distribution is based on Debian and focuses on penetration testing, digital forensics, and privacy protection?",
+    "opcje": [
+      "PowerShell",
+      "Parrot OS",
+      "BlackArch Linux",
+      "WHoppiX"
+    ],
+    "poprawna": "Parrot OS",
+    "image": ""
+  },
+  {
+    "pytanie": "Which option is a government agency that provides guidance on how organizations should manage cryptographic keys in accordance with the federal key management policies?",
+    "opcje": [
+      "NIST",
+      "CVE",
+      "CWE",
+      "US-CERT"
+    ],
+    "poprawna": "NIST",
+    "image": ""
+  },
+  {
+    "pytanie": "What is the main objective of a social engineering penetration test?",
+    "opcje": [
+      "to identify individuals who fail the test",
+      "to test the network protocols in place",
+      "to identify vulnerabilities in the physical access controls",
+      "to assess the security awareness program for the purposes of enhancing it"
+    ],
+    "poprawna": "to assess the security awareness program for the purposes of enhancing it",
+    "image": ""
+  },
+  {
+    "pytanie": "Which interpreted programming language can be used to automate repetitive tasks and create sophisticated applications in penetration testing?",
+    "opcje": [
+      "C++",
+      "Python",
+      "Bash",
+      "JSON"
+    ],
+    "poprawna": "Python",
+    "image": ""
+  },
+  {
+    "pytanie": "After a physical breach of the datacenter occurred, a company determines to enhance the secure access to the datacenter by preventing unauthorized persons from overlooking and learning passcode when employees enter the datacenter. What is the best solution to achieve the goal?",
+    "opcje": [
+      "biometric controls",
+      "video surveillance",
+      "access control vestibule",
+      "multifactor authentication"
+    ],
+    "poprawna": "biometric controls",
+    "image": ""
+  },
+  {
+    "pytanie": "Which two tools are PowerShell-based post-exploitation frameworks? (Choose two.)",
+    "opcje": [
+      "Empire",
+      "PowerSploit",
+      "BloodHound",
+      "Netcat",
+      "Sysinternals"
+    ],
+    "poprawna": [
+      "Empire",
+      "PowerSploit"
+    ],
+    "image": ""
+  },
+  {
+    "pytanie": "An attacker enters the following URL to exploit vulnerabilities in a web application: .../vulnerabilities/fi/?page=../../../../../etc/passwd. In addition to the directory traversal vulnerability, what other type of vulnerability did the attacker try to exploit?",
+    "opcje": [
+      "clickjacking",
+      "local file inclusion (LFI)",
+      "cookie manipulation",
+      "remote file inclusion"
+    ],
+    "poprawna": "local file inclusion (LFI)",
+    "image": ""
+  },
+  {
+    "pytanie": "Database management is deploying a production web application system to reduce the impact of SQL injection attacks. What is a configuration consideration?",
+    "opcje": [
+      "Ensure that the web application is enabled by HTTPS.",
+      "Stop the error messages sent by the database system.",
+      "Control the error messages sent by the database system.",
+      "Enable secure communications between the web application and the database system."
+    ],
+    "poprawna": "Control the error messages sent by the database system.",
+    "image": ""
+  },
+  {
+    "pytanie": "What kind of attack may be prevented by keeping software up to date, running regular anti-malware checks, and changing the default passwords in network infrastructure devices such as home routers?",
+    "opcje": [
+      "Vishing",
+      "Pharming",
+      "Piggybacking",
+      "SMS phishing"
+    ],
+    "poprawna": "Pharming",
+    "image": ""
+  },
+  {
+    "pytanie": "A cybercriminal group successfully exfiltrated data from a large organization. They have now demanded that a large ransom be paid within 24 hours, or they will publicly release the sensitive information. What method of influence are these cybercriminals using?",
+    "opcje": [
+      "scarcity",
+      "fear",
+      "social proof",
+      "authority"
+    ],
+    "poprawna": "fear",
+    "image": ""
+  },
+  {
+    "pytanie": "Match the key term defined by the Payment Card Industry Security Standards Council to the description.",
+    "opcje": [
+      "PCI forensic investigator",
+      "Acquirer",
+      "Qualified security assessor",
+      "Merchant",
+      "Approved scanning vendor",
+      "Service provider"
+    ],
+    "poprawna": [
+      "PCI forensic investigator -> A person trained and certified to investigate and contain information cybersecurity incidents...",
+      "Acquirer -> An entity that initiates and maintains relationships with merchants...",
+      "Qualified security assessor -> An individual trained and certified to carry out PCI DSS compliance assessments.",
+      "Merchant -> An entity that accepts payment cards...",
+      "Approved scanning vendor -> An organization approved by the PCI SSC to conduct external vulnerability scanning services.",
+      "Service provider -> A business entity that is not a payment brand and that is directly involved in the processing..."
+    ],
+    "image": "image_715ab4.png"
+  },
+  {
+    "pytanie": "A penetration tester wants to harvest user credentials on a Windows host target 192.168.1.1/24. Which of the following commands can do this using the tool nmap?",
+    "opcje": [
+      "nmap --script smb-enum-users.nse 192.168.1.1",
+      "nmap -sn 192.168.1.1/24",
+      "nmap -sP 192.168.1.1/24",
+      "nmap -sV 192.168.1.1/24"
+    ],
+    "poprawna": "nmap --script smb-enum-users.nse 192.168.1.1",
+    "image": ""
+  },
+  {
+    "pytanie": "Which penetration testing methodology provides attack vectors and mitigation procedures for cross-site scripting (XSS), XML external entity (XXE) attacks, cross-site request forgery (CSRF), and SQL injection attacks?",
+    "opcje": [
+      "OWASP",
+      "MITRE",
+      "OSSTMM",
+      "PTES"
+    ],
+    "poprawna": "OWASP",
+    "image": ""
+  },
+  {
+    "pytanie": "A tester is preparing to perform penetration testing requiring minimal client network operations disruption. Which two tools are considered passive reconnaissance tools? (Choose two.)",
+    "opcje": [
+      "Domain enumeration",
+      "Host enumeration",
+      "Recon-ng",
+      "Network share enumeration",
+      "Packet crafting"
+    ],
+    "poprawna": [
+      "Domain enumeration",
+      "Recon-ng"
+    ],
+    "image": ""
+  },
+  {
+    "pytanie": "A penetration tester runs the nmap -sS 192.168.0.2 -T1 command. What is the desired effect of running this command?",
+    "opcje": [
+      "It launches attacks against host 192.168.0.2 while trying to trigger as few alarms and countermeasures as possible.",
+      "It tries to enumerate all the services running on host 192.168.0.2.",
+      "It tries to verify the operating system running on host 192.168.0.1 with a time out period of 1 minute.",
+      "It tries to enumerate the operating system and services on host 192.168.0.2 with a time-out period of 1 minute."
+    ],
+    "poprawna": "It launches attacks against host 192.168.0.2 while trying to trigger as few alarms and countermeasures as possible.",
+    "image": ""
+  },
+  {
+    "pytanie": "An administrator checks a Windows 10 PC registry and notices that the key HKLM\\Software\\Policies\\Microsoft\\Windows NT\\DNSClient is set to DWORD zero (0). What type of attack is being mitigated by setting this value?",
+    "opcje": [
+      "LLMNR poisoning",
+      "SMB attack",
+      "DDOS",
+      "DNS poisoning"
+    ],
+    "poprawna": "LLMNR poisoning",
+    "image": ""
+  },
+  {
+    "pytanie": "Match the programming logic constructs to the description.",
+    "opcje": [
+      "Next"
+    ],
+    "poprawna": "Next",
+    "image": "img/eh4_match3.png"
+  },
+  {
+    "pytanie": "Match the programming language data structures to the description.",
+    "opcje": [
+      "Next"
+    ],
+    "poprawna": "Next",
+    "image": "img/eh4_match2.png"
+  },
+  {
+    "pytanie": "A penetration tester is preparing the final report after completing tests. In which section of a typical final report should the tester document technical details about whether or how the system and related components, under testing, may be exploited based on each vulnerability found?",
+    "opcje": [
+      "Findings",
+      "Methodology",
+      "Scope details",
+      "Executive summary"
+    ],
+    "poprawna": "Findings",
+    "image": ""
+  },
+  {
+    "pytanie": "Refer to the exhibit. A threat actor discovered that Paul and Steven are sharing materials... The threat actor impersonated Paul and sent Steven the email... When Steven opened the spreadsheet, malware was installed. What type of attack was perpetrated by this threat actor?",
+    "opcje": [
+      "pharming",
+      "vishing",
+      "spear phishing",
+      "whaling"
+    ],
+    "poprawna": "spear phishing",
+    "image": "img/eh4_match1.png"
+  },
+  {
+    "pytanie": "A threat actor wants to create a QR code redirecting users to a malicious website and send it to a target victim host. What tool can be used to launch this type of attack?",
+    "opcje": [
+      "Hydra",
+      "SET (Social-Engineer Toolkit)",
+      "Maltego",
+      "BeEF"
+    ],
+    "poprawna": "SET (Social-Engineer Toolkit)",
+    "image": ""
+  },
+  {
+    "pytanie": "What following three technical and/or none technical safeguards must be complied with in order for an entity to be HIPAA Security Rule compliant? (Choose three.)",
+    "opcje": [
+      "ensure the confidentiality, integrity, and availability of all e-PHI they create, receive, maintain or transmit",
+      "identify and protect against reasonably anticipated threats to the security or integrity of the information",
+      "apply HIPAA Security Rule to cover medical entities only and not business associates",
+      "protect against all anticipated, unanticipated, impermissible uses or disclosures",
+      "ensure compliance by their workforce"
+    ],
+    "poprawna": [
+      "ensure the confidentiality, integrity, and availability of all e-PHI they create, receive, maintain or transmit",
+      "identify and protect against reasonably anticipated threats to the security or integrity of the information",
+      "ensure compliance by their workforce"
+    ],
+    "image": ""
+  },
+  {
+    "pytanie": "A penetration tester discovers that a data server within the scope of the engagement has already been compromised. What is the first thing the penetration tester should do?",
+    "opcje": [
+      "inform the client immediately about the compromise",
+      "document the breach",
+      "setup tracking measures to identify the attacker",
+      "isolate the data server from the network"
+    ],
+    "poprawna": "inform the client immediately about the compromise",
+    "image": ""
+  },
+  {
+    "pytanie": "Which statement describes an example of operational control in an organization?",
+    "opcje": [
+      "The organization reviews and adopts a hosted multifactor authentication solution.",
+      "The IT department develops and implements a Wireless Access Policy for the organization.",
+      "The IT department develops training material for the Acceptable Use Policy for all new employees.",
+      "The organization adopts the new user credential policy that specifies the minimum length and complexity of passwords."
+    ],
+    "poprawna": "The IT department develops training material for the Acceptable Use Policy for all new employees.",
+    "image": ""
+  },
+  {
+    "pytanie": "A penetration tester is hired by a company to perform compliance tests. The tester is reviewing the assignment details. What situation would require the tester to immediately report the discovery to the stakeholder?",
+    "opcje": [
+      "scope change",
+      "status report",
+      "different tools used",
+      "indicators of prior compromise"
+    ],
+    "poprawna": "indicators of prior compromise",
+    "image": ""
+  },
+  {
+    "pytanie": "The mobile device of a user keeps getting messages containing links from unknown sources. What type of attack is the device being subjected to?",
+    "opcje": [
+      "spamming",
+      "DoS",
+      "sandbox analysis",
+      "account takeover"
+    ],
+    "poprawna": "spamming",
+    "image": ""
+  },
+  {
+    "pytanie": "Which term describes when threat actors use legitimate existing tools such as Windows PowerShell and Python to perform post-exploitation activities?",
+    "opcje": [
+      "living-off-the-land",
+      "pivoting",
+      "lateral movement",
+      "backporting"
+    ],
+    "poprawna": "living-off-the-land",
+    "image": ""
+  },
+  {
+    "pytanie": "Which tool is a collection of PowerShell modules that can be used for post-exploitation and other phases of an assessment?",
+    "opcje": [
+      "PowerSploit",
+      "PsFile",
+      "PsExec",
+      "Sysinternals"
+    ],
+    "poprawna": "PowerSploit",
+    "image": ""
+  }
+]
+  }
 ]
