@@ -27,6 +27,12 @@ let currentQuestionIndex = 0;
 let score = 0;
 let isAnswerChecked = false;
 
+// --- Zmienne dla pytań typu "matching" ---
+let matchingLeftItems = [];
+let matchingRightItems = [];
+let userMatches = new Map(); // Map<leftItemId, rightItemId>
+let selectedLeftItemId = null;
+
 
 // --- Funkcja pomocnicza: Tasowanie tablicy (Fisher-Yates) ---
 function shuffleArray(array) {
@@ -86,17 +92,16 @@ function startQuiz() {
 // --- Funkcja wyświetlająca pytanie ---
 function showNextQuestion() {
     optionsContainer.innerHTML = '';
+    userMatches.clear();
+    selectedLeftItemId = null;
+    matchingLeftItems = [];
+    matchingRightItems = [];
 
     const question = shuffledQuestions[currentQuestionIndex];
 
-    // Obsługa pytań z jedną opcją (np. slajdy informacyjne)
-    if (question.opcje.length === 1) {
-        isAnswerChecked = true;
-        submitBtn.textContent = (currentQuestionIndex === shuffledQuestions.length - 1) ? "Zobacz wyniki" : "Następne pytanie";
-    } else {
-        isAnswerChecked = false;
-        submitBtn.textContent = "Sprawdź odpowiedź"; // Domyślny tekst
-    }
+    // Reset button text
+    isAnswerChecked = false;
+    submitBtn.textContent = "Sprawdź odpowiedź";
 
     questionText.textContent = question.pytanie;
 
@@ -116,7 +121,32 @@ function showNextQuestion() {
     const progressPercent = ((currentQuestionIndex) / shuffledQuestions.length) * 100; // Pasek postępu
     progressBarFill.style.width = `${progressPercent}%`;
 
-    const isMultipleChoice = Array.isArray(question.poprawna);
+    // --- LOGIKA RENDEROWANIA ---
+
+    // Typ "matching"
+    if (question.type === 'matching' && question.match_pairs) {
+        renderMatchingQuestion(question);
+        return;
+    }
+
+    // Typy standardowe (choice / multi-choice)
+    let isMultipleChoice = false;
+
+    if (question.type === 'multi-choice') {
+        isMultipleChoice = true;
+    } else if (question.type === 'choice') {
+        isMultipleChoice = false;
+    } else {
+        // Fallback dla starego formatu
+        isMultipleChoice = Array.isArray(question.poprawna);
+    }
+
+    // Obsługa pytań z jedną opcją (np. slajdy informacyjne)
+    if (question.opcje && question.opcje.length === 1) {
+        isAnswerChecked = true;
+        submitBtn.textContent = (currentQuestionIndex === shuffledQuestions.length - 1) ? "Zobacz wyniki" : "Następne pytanie";
+    }
+
     const inputType = isMultipleChoice ? 'checkbox' : 'radio';
 
     const shuffledOptions = [...question.opcje];
@@ -155,9 +185,206 @@ function showNextQuestion() {
         });
     }
     else {
+        // Dla slajdów informacyjnych
         score += 1;
     }
 }
+
+function renderMatchingQuestion(question) {
+    const pairs = question.match_pairs;
+
+    // Prepare items with IDs
+    matchingLeftItems = pairs.map((pair, index) => ({ id: `L${index}`, text: pair.left, originalIndex: index }));
+    matchingRightItems = pairs.map((pair, index) => ({ id: `R${index}`, text: pair.right, originalIndex: index }));
+
+    // Shuffle independently
+    shuffleArray(matchingLeftItems);
+    shuffleArray(matchingRightItems);
+
+    const container = document.createElement('div');
+    container.className = 'matching-container';
+
+    // Left Column
+    const leftCol = document.createElement('div');
+    leftCol.className = 'matching-column';
+
+    matchingLeftItems.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'matching-item left';
+        div.dataset.id = item.id;
+        div.textContent = item.text;
+
+        // Badge container
+        const badge = document.createElement('span');
+        badge.className = 'match-badge';
+        div.appendChild(badge);
+
+        div.addEventListener('click', () => handleLeftItemClick(item.id, div));
+        leftCol.appendChild(div);
+    });
+
+    // Right Column
+    const rightCol = document.createElement('div');
+    rightCol.className = 'matching-column';
+
+    matchingRightItems.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'matching-item right';
+        div.dataset.id = item.id;
+        div.textContent = item.text;
+
+        // Badge container
+        const badge = document.createElement('span');
+        badge.className = 'match-badge';
+        div.appendChild(badge);
+
+        div.addEventListener('click', () => handleRightItemClick(item.id, div));
+        rightCol.appendChild(div);
+    });
+
+    container.appendChild(leftCol);
+    container.appendChild(rightCol);
+    optionsContainer.appendChild(container);
+}
+
+function handleLeftItemClick(id, element) {
+    if (isAnswerChecked) return;
+
+    // Deselect previous
+    if (selectedLeftItemId) {
+        const prev = document.querySelector(`.matching-item.left[data-id="${selectedLeftItemId}"]`);
+        if (prev) prev.classList.remove('selected');
+    }
+
+    // Select new (allow toggle off if clicking same?? No, user asked for: select left, then select right)
+    // If clicking same, just keep selected or deselect? Let's just select.
+    selectedLeftItemId = id;
+    element.classList.add('selected');
+}
+
+function handleRightItemClick(rightId, element) {
+    if (isAnswerChecked) return;
+
+    if (!selectedLeftItemId) {
+        // Animacja shake lub alert?
+        element.classList.add('incorrect');
+        setTimeout(() => element.classList.remove('incorrect'), 400);
+        return;
+    }
+
+    // Check if this right item is already matched with SOMEONE ELSE
+    // If so, verify if we want to steal it?
+    // User logic: "User can change his decission".
+    // So yes, we just update the map.
+
+    // Remove match for the current Left Item if it existed (re-pairing)
+    // Also remove match if any other Left Item was pointing to THIS Right Item?
+    // Yes, a right item can only be matched to ONE left item.
+
+    // 1. Remove any existing match pointing to 'rightId'
+    for (let [l, r] of userMatches.entries()) {
+        if (r === rightId) {
+            userMatches.delete(l);
+            // Updating UI for that left item
+            updateMatchingUI(l);
+        }
+    }
+
+    // 2. Set new match
+    userMatches.set(selectedLeftItemId, rightId);
+
+    // 3. Update UI
+    updateMatchingUI(selectedLeftItemId);
+    updateMatchingUI(); // Refresh all badges just in case
+
+    // 4. Deselect Left
+    const leftElem = document.querySelector(`.matching-item.left[data-id="${selectedLeftItemId}"]`);
+    if (leftElem) leftElem.classList.remove('selected');
+    selectedLeftItemId = null;
+}
+
+// --- Paleta kolorów dla par ---
+const pairColors = [
+    { bg: '#e3f2fd', border: '#90caf9', text: '#212529' }, // Blue
+    { bg: '#e8f5e9', border: '#a5d6a7', text: '#212529' }, // Green
+    { bg: '#fff3e0', border: '#ffcc80', text: '#212529' }, // Orange
+    { bg: '#f3e5f5', border: '#ce93d8', text: '#212529' }, // Purple
+    { bg: '#ffebee', border: '#ef9a9a', text: '#212529' }, // Red
+    { bg: '#e0f2f1', border: '#80cbc4', text: '#212529' }, // Teal
+    { bg: '#fffde7', border: '#fff59d', text: '#212529' }, // Yellow
+    { bg: '#e8eaf6', border: '#9fa8da', text: '#212529' }, // Indigo
+    { bg: '#fbe9e7', border: '#ffab91', text: '#212529' }, // Deep Orange
+    { bg: '#f9fbe7', border: '#e6ee9c', text: '#212529' }  // Lime
+];
+
+// --- Paleta kolorów dla par (Tryb Ciemny) ---
+const pairColorsDark = [
+    { bg: '#1565c0', border: '#90caf9', text: '#e0e0e0' }, // Dark Blue
+    { bg: '#2e7d32', border: '#a5d6a7', text: '#e0e0e0' }, // Dark Green
+    { bg: '#ef6c00', border: '#ffcc80', text: '#e0e0e0' }, // Dark Orange
+    { bg: '#7b1fa2', border: '#ce93d8', text: '#e0e0e0' }, // Dark Purple
+    { bg: '#c62828', border: '#ef9a9a', text: '#e0e0e0' }, // Dark Red
+    { bg: '#00695c', border: '#80cbc4', text: '#e0e0e0' }, // Dark Teal
+    { bg: '#f9a825', border: '#fff59d', text: '#121212' }, // Dark Yellow (Keep dark text here)
+    { bg: '#283593', border: '#9fa8da', text: '#e0e0e0' }, // Dark Indigo
+    { bg: '#d84315', border: '#ffab91', text: '#e0e0e0' }, // Dark Deep Orange
+    { bg: '#9e9d24', border: '#e6ee9c', text: '#121212' }  // Dark Lime (Keep dark text here)
+];
+
+
+function updateMatchingUI() {
+    // Determine current theme
+    const isDarkMode = rootHtmlElement.classList.contains('dark-mode');
+    const colors = isDarkMode ? pairColorsDark : pairColors;
+    // Helper to get pair number. 
+    // We can assign a number (1, 2, 3...) based on the Left Item's position in the rendered list?
+    // Or just iterate userMatches.
+
+    // Reset all items paired status and styles
+    const resetItem = (el) => {
+        el.classList.remove('paired');
+        el.querySelector('.match-badge').textContent = '';
+        el.style.backgroundColor = '';
+        el.style.borderColor = '';
+        el.style.color = '';
+    };
+
+    document.querySelectorAll('.matching-item.right').forEach(resetItem);
+    document.querySelectorAll('.matching-item.left').forEach(resetItem);
+
+    // Assign Pair Numbers based on Left Column order (render order) to keep it clean
+    let pairCounter = 0;
+    const leftElements = document.querySelectorAll('.matching-item.left');
+
+    leftElements.forEach(leftEl => {
+        const leftId = leftEl.dataset.id;
+        if (userMatches.has(leftId)) {
+            const rightId = userMatches.get(leftId);
+            const rightEl = document.querySelector(`.matching-item.right[data-id="${rightId}"]`);
+
+            if (rightEl) {
+                const colorSet = colors[pairCounter % colors.length];
+
+                // Apply styles to Left Item
+                leftEl.classList.add('paired');
+                leftEl.querySelector('.match-badge').textContent = pairCounter + 1;
+                leftEl.style.backgroundColor = colorSet.bg;
+                leftEl.style.borderColor = colorSet.border;
+                leftEl.style.color = colorSet.text;
+
+                // Apply styles to Right Item
+                rightEl.classList.add('paired');
+                rightEl.querySelector('.match-badge').textContent = pairCounter + 1;
+                rightEl.style.backgroundColor = colorSet.bg;
+                rightEl.style.borderColor = colorSet.border;
+                rightEl.style.color = colorSet.text;
+
+                pairCounter++;
+            }
+        }
+    });
+}
+
 
 // --- Funkcja sprawdzająca odpowiedź ---
 function checkAnswer() {
@@ -172,8 +399,72 @@ function checkAnswer() {
         return;
     }
 
-    // SPRAWDZANIE ODPOWIEDZI
     const question = shuffledQuestions[currentQuestionIndex];
+
+    // --- VALIDATION FOR MATCHING ---
+    if (question.type === 'matching') {
+        // Validate
+        // Check if all left items are matched
+        if (userMatches.size < matchingLeftItems.length) {
+            alert("Połącz wszystkie elementy!");
+            return;
+        }
+
+        isAnswerChecked = true;
+        submitBtn.textContent = (currentQuestionIndex === shuffledQuestions.length - 1) ? "Zobacz wyniki" : "Następne pytanie";
+
+        let allCorrect = true;
+
+        matchingLeftItems.forEach(leftItem => {
+            const userRightId = userMatches.get(leftItem.id);
+            const rightItem = matchingRightItems.find(r => r.id === userRightId);
+
+            // Validation
+            const leftEl = document.querySelector(`.matching-item.left[data-id="${leftItem.id}"]`);
+            const rightEl = document.querySelector(`.matching-item.right[data-id="${userRightId}"]`);
+
+            const isPairCorrect = rightItem && leftItem.originalIndex === rightItem.originalIndex;
+
+            if (isPairCorrect) {
+                leftEl.classList.add('correct');
+                // rightEl.classList.add('correct'); // Optional handling for right side
+            } else {
+                allCorrect = false;
+                leftEl.classList.add('incorrect');
+                // rightEl.classList.add('incorrect');
+            }
+        });
+
+        // Handling right side coloring (needs care because right side doesn't know WHO matched to it easily without map)
+        matchingRightItems.forEach(rightItem => {
+            // Find who matched to this right item
+            let matchedLeftId = null;
+            for (let [l, r] of userMatches.entries()) {
+                if (r === rightItem.id) matchedLeftId = l;
+            }
+
+            if (matchedLeftId) {
+                const leftItem = matchingLeftItems.find(l => l.id === matchedLeftId);
+                const isPairCorrect = leftItem.originalIndex === rightItem.originalIndex;
+                const rightEl = document.querySelector(`.matching-item.right[data-id="${rightItem.id}"]`);
+
+                if (isPairCorrect) {
+                    rightEl.classList.add('correct');
+                } else {
+                    rightEl.classList.add('incorrect');
+                }
+            }
+        });
+
+        if (allCorrect) {
+            score++;
+        }
+
+        return;
+    }
+
+    // --- EXISTING VALIDATION FOR CHOICE ---
+
     const selectedInputs = document.querySelectorAll('input[name="option"]:checked');
 
     if (selectedInputs.length === 0) {
@@ -267,6 +558,11 @@ function toggleTheme() {
 
     // 3. Zaktualizuj ikonę przycisku
     updateThemeButtonIcon();
+
+    // 4. Odśwież kolory dopasowania (jeśli jesteśmy w pytaniu typu matching)
+    if (typeof updateMatchingUI === 'function') {
+        updateMatchingUI();
+    }
 }
 
 // --- Nasłuchiwanie na zdarzenia ---
