@@ -1,0 +1,307 @@
+[
+  {
+    "pytanie": "A customer uses Infrastructure as a Service (IaaS) as a cloud implementation. Therefore, the cloud customer is\n        responsible for data, applications, runtime, middleware, virtual machines (VMs), containers, and operating\n        systems\n        in VMs hosted in the cloud. What should the cloud customer do before testing the security of the hosted cloud\n        services?",
+    "opcje": [
+      "run the penetration test in off-peak hours and report the results to the cloud provider",
+      "run the stress test prior to the penetration test and report the results to the cloud provider",
+      "obtain detailed guidelines on how to perform security assessments and\n                penetration\n                testing from the cloud provider",
+      "disable end-to-end encryption in order to conduct the penetration test"
+    ],
+    "poprawna": "obtain detailed guidelines on how to perform security assessments and\n                penetration\n                testing from the cloud provider",
+    "image": ""
+  },
+  {
+    "pytanie": "A penetration tester wants to stealthily scan a firewall for open ports. Which two nmap commands are the best\n        approaches for the task? (Choose two.)",
+    "opcje": [
+      "nmap 192.168.1.1 -f",
+      "nmap 192.168.1.1 -O",
+      "nmap 192.168.1.1 -A",
+      "nmap 192.168.1.1 -F",
+      "nmap 192.168.1.1 -n",
+      "nmap 192.168.1.1 mtu 32"
+    ],
+    "poprawna": [
+      "nmap 192.168.1.1 -f",
+      "nmap 192.168.1.1 mtu 32"
+    ],
+    "image": ""
+  },
+  {
+    "pytanie": "Risk management involves risk appetite and tolerance, risk assessment, risk acceptance, and risk mitigation.\n        Which statement correctly describes the risk management term?",
+    "opcje": [
+      "Risk appetite and tolerance is the calculation of the current risk level.",
+      "Risk acceptance is the risk level that an organization is willing to take.",
+      "Risk assessment includes the steps to reduce the risk.",
+      "Risk mitigation is the process of determining an acceptable risk level."
+    ],
+    "poprawna": "Risk acceptance is the risk level that an organization is willing to take.",
+    "image": ""
+  },
+  {
+    "pytanie": "Refer to the exhibit. What is the penetration tester trying to achieve?",
+    "opcje": [
+      "to steal the hash value of a user credential and use it to create a new user session on the same network",
+      "to manipulate the data being transferred by performing data corruption or data modification",
+      "to spoof an authorized MAC address and bypass a NAC configuration",
+      "to manipulate Kerberos tickets based on available hashes by compromising a\n                vulnerable system and obtaining the local user credentials and password hashes"
+    ],
+    "poprawna": "to manipulate Kerberos tickets based on available hashes by compromising a\n                vulnerable system and obtaining the local user credentials and password hashes",
+    "image": "https://infraexam.com/wp-content/uploads/2025/10/Ethical-Hacker-Course-Final-Exam-Answers-07.png"
+  },
+  {
+    "pytanie": "A black-box penetration testing is being performed on the network of a client. The penetration tester does not\n        have physical access to the client network but is parked outside. Which Kali Linux tool can the penetration\n        tester use to compromise the Wi-Fi network and break the encryption keys?",
+    "opcje": [
+      "aircrack-ng",
+      "scapy",
+      "wireshark",
+      "nmap"
+    ],
+    "poprawna": "aircrack-ng",
+    "image": ""
+  },
+  {
+    "pytanie": "Which three tools can be used in a vishing attack? (Choose three.)",
+    "opcje": [
+      "BeEF",
+      "Asterisk",
+      "Nikto",
+      "SET",
+      "SpoofApp",
+      "Nessus",
+      "SpoofCard"
+    ],
+    "poprawna": [
+      "Asterisk",
+      "SpoofApp",
+      "SpoofCard"
+    ],
+    "image": ""
+  },
+  {
+    "pytanie": "Which method of influence is a psychological phenomenon in which an individual cannot determine the appropriate\n        mode of behavior?",
+    "opcje": [
+      "likeness",
+      "authority",
+      "fear",
+      "social proof"
+    ],
+    "poprawna": "social proof",
+    "image": ""
+  },
+  {
+    "pytanie": "Why is it important to validate and filter out invalid session ID values in a web application?",
+    "opcje": [
+      "to prevent on-path attacks",
+      "to prevent session sniffing by attackers",
+      "to prevent predicting session IDs by attackers",
+      "to prevent further exploitation of other web application\n                vulnerabilities"
+    ],
+    "poprawna": "to prevent further exploitation of other web application\n                vulnerabilities",
+    "image": ""
+  },
+  {
+    "pytanie": "Which two items can be investigated to help detect a cloud account takeover attack? (Choose two.)",
+    "opcje": [
+      "login location",
+      "failed login attempts",
+      "user emails",
+      "normal file sharing patterns",
+      "incoming VPN connections"
+    ],
+    "poprawna": [
+      "login location",
+      "failed login attempts"
+    ],
+    "image": ""
+  },
+  {
+    "pytanie": "Which C2 utility is Python-based and uses WebSockets?",
+    "opcje": [
+      "WMImplant",
+      "Socat",
+      "Wsc2",
+      "Twittor"
+    ],
+    "poprawna": "Wsc2",
+    "image": ""
+  },
+  {
+    "pytanie": "Which two options are PowerShell commands? (Choose two.)",
+    "opcje": [
+      "Get-Location",
+      "Get-Service",
+      "Get-TimedScreenshot",
+      "Get-GPPPassword",
+      "Get-VolumeShadowCopy"
+    ],
+    "poprawna": [
+      "Get-Location",
+      "Get-Service"
+    ],
+    "image": ""
+  },
+  {
+    "pytanie": "What Windows-based command-line interface suite of tools can run commands to reveal information about running\n        processes and kill or stop services?",
+    "opcje": [
+      "Sysinternals",
+      "BloodHound",
+      "Empire",
+      "WinRM"
+    ],
+    "poprawna": "Sysinternals",
+    "image": ""
+  },
+  {
+    "pytanie": "Which tool can be used to enumerate SMB shares and vulnerable Samba implementations?",
+    "opcje": [
+      "Dig",
+      "Censys",
+      "Recon-ng",
+      "Enum4linux"
+    ],
+    "poprawna": "Enum4linux",
+    "image": ""
+  },
+  {
+    "pytanie": "A cybercriminal uses a valid user account and launches an attack to extract service account credential hashes\n        without sending additional IP packets to the victim and without having domain admin credentials. Which\n        post-exploit attack is being launched?",
+    "opcje": [
+      "On-path",
+      "MAC spoofing",
+      "Kerberoasting",
+      "ARP cache poisoning"
+    ],
+    "poprawna": "Kerberoasting",
+    "image": ""
+  },
+  {
+    "pytanie": "Refer to the exhibit. A Reflected XSS attack is being conducted by an attacker on a vulnerable server. Each\n        colored arrow is a step of this attack. What color order represents this attack in progress?",
+    "opcje": [
+      "green, black, yellow, blue, red",
+      "red, black, yellow, blue, green",
+      "blue, red, black, yellow, green",
+      "green, blue, red, black, yellow"
+    ],
+    "poprawna": "green, blue, red, black, yellow",
+    "image": "https://infraexam.com/wp-content/uploads/2025/10/Ethical-Hacker-Course-Final-Exam-Answers-06.png"
+  },
+  {
+    "pytanie": "A security management system is preparing to push a new configuration to a firewall that involves rebuilding\n        access control lists and security rules. An attacker has a very small time window to bypass the firewall\n        security controls until the new firewall rules take effect. What kind of vulnerability is being exploited by the\n        attacker?",
+    "opcje": [
+      "hard-coded credentials",
+      "improper error handling",
+      "remote file inclusion",
+      "race condition"
+    ],
+    "poprawna": "race condition",
+    "image": ""
+  },
+  {
+    "pytanie": "Which two social engineering attacks can be launched using BeEF? (Choose two.)",
+    "opcje": [
+      "Fake notification bar",
+      "Arduino-based attack vector",
+      "Create a payload and listener",
+      "Powershell attack vectors",
+      "Google phishing"
+    ],
+    "poprawna": [
+      "Fake notification bar",
+      "Google phishing"
+    ],
+    "image": ""
+  },
+  {
+    "pytanie": "A penetration tester is preparing the final report after the tests are completed. One remediation recommended by\n        the tester is to close unnecessary open ports and services, remove unnecessary software, and disable unused\n        ports. Which type of cybersecurity control is being recommended?",
+    "opcje": [
+      "physical control",
+      "technical control",
+      "operational control",
+      "administrative control"
+    ],
+    "poprawna": "technical control",
+    "image": ""
+  },
+  {
+    "pytanie": "A penetration tester is hired by a company to evaluate the security posture of the IT service department. In the\n        final report, the tester recommends that the company implement role-based access control for the data center\n        systems. Which type of control is recommended?",
+    "opcje": [
+      "physical",
+      "operational",
+      "technical",
+      "administrative"
+    ],
+    "poprawna": "administrative",
+    "image": ""
+  },
+  {
+    "pytanie": "A penetration tester is hired by a company to perform web application vulnerability assessment. The tester has\n        completed the required tests and cleaned the target systems. What next step should be done before closing the\n        assignment?",
+    "opcje": [
+      "Disable all testing tools.",
+      "Remove shells spawned on exploited systems.",
+      "Remove any user accounts that were created during tests.",
+      "Ask the company personnel to validate that the cleanup efforts are\n                sufficient."
+    ],
+    "poprawna": "Ask the company personnel to validate that the cleanup efforts are\n                sufficient.",
+    "image": ""
+  },
+  {
+    "pytanie": "Which three applications are used for cracking passwords? (Choose three.)",
+    "opcje": [
+      "Recon-ng",
+      "Cain",
+      "Shodan",
+      "CeWL",
+      "Hashcat",
+      "John the Ripper"
+    ],
+    "poprawna": [
+      "Cain",
+      "Hashcat",
+      "John the Ripper"
+    ],
+    "image": ""
+  },
+  {
+    "pytanie": "A penetration tester is conducting a gray box penetration test for an organization. The tester wishes to assess\n        vulnerabilities of an IoT device by sending an invalid packet to a proprietary service listening on TCP port\n        2984. What tool can the tester use in order to send a packet with customized fields to observe the response from\n        the IoT device?",
+    "opcje": [
+      "Scapy",
+      "Recon-NG",
+      "Shodan",
+      "Nmap"
+    ],
+    "poprawna": "Scapy",
+    "image": ""
+  },
+  {
+    "pytanie": "A penetration tester is searching for a framework that provides a matrix of common tactics and techniques used\n        by attackers, along with recommended mitigations. Which framework will be best suited to provide the requisite\n        information?",
+    "opcje": [
+      "MITRE",
+      "OWASP WSTG",
+      "NIST SP 800-15",
+      "ISSAF"
+    ],
+    "poprawna": "MITRE",
+    "image": ""
+  },
+  {
+    "pytanie": "A threat actor has stolen an iPhone and is attempting to jailbreak it to gain access to resources that normally\n        would have been protected. Which type of attack is the threat actor performing?",
+    "opcje": [
+      "privilege escalation",
+      "metadata service attacks",
+      "side-channel attacks",
+      "credential harvesting"
+    ],
+    "poprawna": "privilege escalation",
+    "image": ""
+  },
+  {
+    "pytanie": "Which misconfiguration in IoT would allow threat actors to obtain sensitive information from the system and\n        underlying network on IoT devices?",
+    "opcje": [
+      "error messages and debug handling",
+      "digital certificates",
+      "misconfigured metadata service",
+      "side-channels"
+    ],
+    "poprawna": "error messages and debug handling",
+    "image": ""
+  }
+]
