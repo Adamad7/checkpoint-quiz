@@ -303,5 +303,16 @@
     ],
     "poprawna": "error messages and debug handling",
     "image": ""
+  },
+  {
+    "pytanie": "Refer to the exhibit. What is the advantage of setting up a penetration environment, as displayed in the exhibit?",
+    "opcje": [
+      "It is an open environment that permits packets to flow freely between devices",
+      "It is a closed environment that routes the packets over a physical switch.",
+      "It is a closed environment that allows you to perform different attacks and send IP packets between VMs without those packets leaving the physical system.",
+      "It is an open environment that allows for deployment and recovery of devices being tested through quick backup recovery methods."
+    ],
+    "poprawna": "It is a closed environment that allows you to perform different attacks and send IP packets between VMs without those packets leaving the physical system.",
+    "image": "https://infraexam.com/wp-content/uploads/2025/10/Ethical-Hacker-Course-Final-Exam-Answers-05.png"
   }
 ]
