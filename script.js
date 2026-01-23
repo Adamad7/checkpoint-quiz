@@ -319,16 +319,16 @@ const pairColors = [
 
 // --- Paleta kolorów dla par (Tryb Ciemny) ---
 const pairColorsDark = [
-    { bg: '#1565c0', border: '#90caf9', text: '#e0e0e0' }, // Dark Blue
-    { bg: '#2e7d32', border: '#a5d6a7', text: '#e0e0e0' }, // Dark Green
-    { bg: '#ef6c00', border: '#ffcc80', text: '#e0e0e0' }, // Dark Orange
-    { bg: '#7b1fa2', border: '#ce93d8', text: '#e0e0e0' }, // Dark Purple
-    { bg: '#c62828', border: '#ef9a9a', text: '#e0e0e0' }, // Dark Red
-    { bg: '#00695c', border: '#80cbc4', text: '#e0e0e0' }, // Dark Teal
-    { bg: '#f9a825', border: '#fff59d', text: '#121212' }, // Dark Yellow (Keep dark text here)
-    { bg: '#283593', border: '#9fa8da', text: '#e0e0e0' }, // Dark Indigo
-    { bg: '#d84315', border: '#ffab91', text: '#e0e0e0' }, // Dark Deep Orange
-    { bg: '#9e9d24', border: '#e6ee9c', text: '#121212' }  // Dark Lime (Keep dark text here)
+    { bg: '#1565c0', border: '#0159a1ff', text: '#e0e0e0' }, // Dark Blue
+    { bg: '#2e7d32', border: '#018b05ff', text: '#e0e0e0' }, // Dark Green
+    { bg: '#fd780bff', border: '#cc7b03ff', text: '#e0e0e0' }, // Dark Orange
+    { bg: '#7b1fa2', border: '#8b00a3ff', text: '#e0e0e0' }, // Dark Purple
+    { bg: '#c62828', border: '#910000ff', text: '#e0e0e0' }, // Dark Red
+    { bg: '#00695c', border: '#018b05ff', text: '#e0e0e0' }, // Dark Teal
+    { bg: '#f9a825', border: '#cc7b03ff', text: '#121212' }, // Dark Yellow (Keep dark text here)
+    { bg: '#283593', border: '#8b00a3ff', text: '#e0e0e0' }, // Dark Indigo
+    { bg: '#d84315', border: '#cc7b03ff', text: '#e0e0e0' }, // Dark Deep Orange
+    { bg: '#9e9d24', border: '#aec200ff', text: '#121212' }  // Dark Lime (Keep dark text here)
 ];
 
 
@@ -352,34 +352,33 @@ function updateMatchingUI() {
     document.querySelectorAll('.matching-item.right').forEach(resetItem);
     document.querySelectorAll('.matching-item.left').forEach(resetItem);
 
-    // Assign Pair Numbers based on Left Column order (render order) to keep it clean
-    let pairCounter = 0;
+    // Assign Pair Numbers based on Left Column order (visual order) to keep it clean and stable
     const leftElements = document.querySelectorAll('.matching-item.left');
 
-    leftElements.forEach(leftEl => {
+    leftElements.forEach((leftEl, index) => {
         const leftId = leftEl.dataset.id;
         if (userMatches.has(leftId)) {
             const rightId = userMatches.get(leftId);
             const rightEl = document.querySelector(`.matching-item.right[data-id="${rightId}"]`);
 
             if (rightEl) {
-                const colorSet = colors[pairCounter % colors.length];
+                // Use index directly for stable colors and numbers
+                const colorSet = colors[index % colors.length];
+                const badgeNumber = index + 1;
 
                 // Apply styles to Left Item
                 leftEl.classList.add('paired');
-                leftEl.querySelector('.match-badge').textContent = pairCounter + 1;
+                leftEl.querySelector('.match-badge').textContent = badgeNumber;
                 leftEl.style.backgroundColor = colorSet.bg;
                 leftEl.style.borderColor = colorSet.border;
                 leftEl.style.color = colorSet.text;
 
                 // Apply styles to Right Item
                 rightEl.classList.add('paired');
-                rightEl.querySelector('.match-badge').textContent = pairCounter + 1;
+                rightEl.querySelector('.match-badge').textContent = badgeNumber;
                 rightEl.style.backgroundColor = colorSet.bg;
                 rightEl.style.borderColor = colorSet.border;
                 rightEl.style.color = colorSet.text;
-
-                pairCounter++;
             }
         }
     });
