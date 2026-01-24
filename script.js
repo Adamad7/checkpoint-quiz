@@ -16,6 +16,11 @@ const menuBtn = document.getElementById('menu-btn');
 const examSelection = document.getElementById('exam-selection');
 const examList = document.getElementById('exam-list');
 
+// NOWE ELEMENTY - Wyjaśnienie
+const explanationContainer = document.getElementById('explanation-container');
+const explanationToggle = document.getElementById('explanation-toggle');
+const explanationContent = document.getElementById('explanation-content');
+
 // NOWE ELEMENTY
 const themeToggleBtn = document.getElementById('theme-toggle-btn');
 const rootHtmlElement = document.documentElement; // Tag <html>
@@ -120,6 +125,18 @@ function showNextQuestion() {
 
     const progressPercent = ((currentQuestionIndex) / shuffledQuestions.length) * 100; // Pasek postępu
     progressBarFill.style.width = `${progressPercent}%`;
+
+    // --- OBSŁUGA WYJAŚNIENIA ---
+    if (question.explanation && question.explanation.trim() !== "") {
+        explanationContainer.classList.remove('hide');
+        explanationContent.textContent = question.explanation;
+        // Domyślnie ukryte
+        explanationContent.classList.add('hide');
+        explanationToggle.textContent = 'Pokaż wyjaśnienie ▼';
+    } else {
+        explanationContainer.classList.add('hide');
+        explanationContent.textContent = "";
+    }
 
     // --- LOGIKA RENDEROWANIA ---
 
@@ -574,3 +591,12 @@ submitBtn.addEventListener('click', checkAnswer);
 restartBtn.addEventListener('click', startQuiz);
 menuBtn.addEventListener('click', initExamSelection);
 themeToggleBtn.addEventListener('click', toggleTheme); // NOWY LISTENER
+
+explanationToggle.addEventListener('click', () => {
+    explanationContent.classList.toggle('hide');
+    if (explanationContent.classList.contains('hide')) {
+        explanationToggle.textContent = 'Pokaż wyjaśnienie ▼';
+    } else {
+        explanationToggle.textContent = 'Ukryj wyjaśnienie ▲';
+    }
+});

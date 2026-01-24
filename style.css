@@ -11,6 +11,7 @@
     --option-hover-bg: #f8f9fa;
     --custom-input-border: #adb5bd;
     --progress-bar-bg: #e0e0e0;
+    --secondary-color: #6c757d;
 }
 
 html.dark-mode {
@@ -21,11 +22,11 @@ html.dark-mode {
     --text-color-light: #aaa;
     --border-color: #444;
     --primary-color: #007bff;
-    /* Można zostawić ten sam lub zmienić */
     --primary-color-hover: #0056b3;
     --option-hover-bg: #2c2c2c;
     --custom-input-border: #777;
     --progress-bar-bg: #333;
+    --secondary-color: #6c757d;
 }
 
 
@@ -485,4 +486,54 @@ html.dark-mode .matching-item.incorrect {
     background-color: #4c1e1e;
     border-color: #dc3545;
     color: #f8d7da;
+}
+
+/* --- Explanation Section --- */
+#explanation-container {
+    margin: 0px 25px 10px 25px;
+    border-top: 1px solid var(--border-color);
+    /* padding-top: 15px; */
+}
+
+#explanation-toggle {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+#explanation-toggle:hover {
+    background-color: var(--primary-color-hover);
+    text-decoration: none;
+}
+
+#explanation-content {
+    background-color: #ffffcc;
+    /* Light yellow for note/explanation */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e6e600;
+    color: #333;
+    font-size: 0.97rem;
+    line-height: 1.5;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Dark mode for explanation */
+html.dark-mode #explanation-content {
+    background-color: var(--secondary-color);
+    border-color: var(--border-color);
+    color: #ffffff;
 }

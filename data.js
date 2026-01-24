@@ -1,5 +1,27 @@
 const examsData = [
   {
+    "id": "test-exam",
+    "title": "Test exam",
+    "questions": [
+      {
+        "pytanie": "Which are two best practices used to secure APIs? (Choose two.)",
+        "opcje": [
+          "use reputable and standard libraries to create the APIs",
+          "make internal API documentation mandatory",
+          "discussing company API development (or any other application development) on public forums",
+          "secure API services to provide HTTP endpoints only",
+          "keep API implementation and API security into one tier allowing the API developer to work on both facets simultaneously"
+        ],
+        "poprawna": [
+          "use reputable and standard libraries to create the APIs",
+          "make internal API documentation mandatory"
+        ],
+        "explanation": "Using reputable and standard libraries helps ensure that well-tested security implementations are used. Making internal API documentation mandatory aids in consistent security practices and maintenance.",
+        "image": ""
+      }
+    ]
+  },
+  {
     "id": "ethical-hacker-final",
     "title": "Ethical Hacker Final",
     "questions": [
@@ -16,6 +38,7 @@ const examsData = [
           "use reputable and standard libraries to create the APIs",
           "make internal API documentation mandatory"
         ],
+        "explanation": "Using reputable and standard libraries helps ensure that well-tested security implementations are used. Making internal API documentation mandatory aids in consistent security practices and maintenance.",
         "image": ""
       },
       {
