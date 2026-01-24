@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 import json
 
 print("Enter the HTML file name:")
-file_name  = input().strip();
-
+file_name  = input().strip()
+file_name = "data-html/" + file_name
 if not os.path.isfile(file_name):
     print(f"File '{file_name}' does not exist.")
     exit(1)
@@ -130,6 +130,7 @@ for p in soup.find_all('p'):
 
 print("Enter the output JSON file name:")
 output_file_name  = input().strip()
+output_file_name = "data-json/" + output_file_name
 with open(output_file_name, 'w', encoding='utf-8') as f:
     json.dump(questions, f, ensure_ascii=False, indent=2)
 
