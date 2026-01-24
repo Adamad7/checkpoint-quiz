@@ -127,6 +127,39 @@ for p in soup.find_all('p'):
             
             q_obj["opcje"] = options
             questions.append(q_obj)
+            
+        # --- Explanation Parsing ---
+        explanation_text = ""
+        explanation_search_node = None
+        
+        if target_table:
+             explanation_search_node = target_table.find_next_sibling()
+        elif target_ul:
+             explanation_search_node = target_ul.find_next_sibling()
+        
+        while explanation_search_node:
+            # Check for explanation div or p (sometimes separate)
+            if explanation_search_node.name == 'div' and explanation_search_node.get('class') and 'message_box' in explanation_search_node.get('class') and 'success' in explanation_search_node.get('class'):
+                 explanation_text = explanation_search_node.get_text().strip()
+                 break
+            
+            # Stop if we hit the next question
+            if explanation_search_node.name == 'p':
+                 if explanation_search_node.find('strong') or explanation_search_node.find('b'):
+                     break
+
+            explanation_search_node = explanation_search_node.find_next_sibling()
+
+        # Clean up "Explanation:" prefix
+        if explanation_text:
+            # Common prefixes to remove
+            prefixes = ["Explanation:", "Explanation"]
+            for prefix in prefixes:
+                if explanation_text.lower().startswith(prefix.lower()):
+                    explanation_text = explanation_text[len(prefix):].strip()
+                    break
+        
+        q_obj["explanation"] = explanation_text
 
 print("Enter the output JSON file name:")
 output_file_name  = input().strip()

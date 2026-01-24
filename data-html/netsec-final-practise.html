@@ -1,0 +1,967 @@
+<h3>Network Security (Version 1.0) Practice Final Answers</h3>
+<p><strong>1. Which two statements are true about ASA standard ACLs? (Choose two.)​</strong></p>
+<div class="92f2483bb651eed307c93e619d752c78" data-index="2"
+    style="float: none; margin:10px 0 10px 0; text-align:center;">
+    <div id="adngin-incontent_auto_large-0"></div>
+</div>
+
+<ul>
+    <li><strong><span style="color: #ff0000;">They identify only the destination IP address. </span></strong></li>
+    <li>They are the most common type of ACL.</li>
+    <li>They are applied to interfaces to control traffic.</li>
+    <li>They specify both the source and destination MAC address.</li>
+    <li><strong><span style="color: #ff0000;">They are typically only used for OSPF routes. </span></strong></li>
+</ul>
+<div class="message_box success">
+    <p><strong>Explanation:</strong> ASA standard ACLs are used to identify the destination IP addresses, unlike IOS
+        ACLs where a standard ACL identifies the source host/network. They are typically only used for OSPF routes and
+        can be used in a route map for OSPF redistribution. Standard access lists cannot be applied to interfaces to
+        control traffic.</p>
+</div>
+<p><strong>2. When dynamic NAT on an ASA is being configured, what two parameters must be specified by network objects?
+        (Choose two.)</strong></p>
+<ul>
+    <li>the inside NAT interface</li>
+    <li>the interface security level</li>
+    <li>the outside NAT interface</li>
+    <li><strong><span style="color: #ff0000;"> a range of private addresses that will be translated </span></strong>
+    </li>
+    <li><strong><span style="color: #ff0000;">the pool of public global addresses </span></strong></li>
+</ul>
+<div class="message_box success">
+    <p><strong>Explanation:</strong> On an ASA, both the pool of addresses that will be used as inside global address
+        and the range of internal private addresses that should be translated are configured through network objects.
+    </p>
+</div>
+<p><strong>3. Which protocol uses X.509 certificates to support mail protection performed by mail agents?</strong></p>
+<ul>
+    <li>IPsec</li>
+    <li>SSL</li>
+    <li><strong><span style="color: #ff0000;"> S/MIME </span></strong></li>
+    <li>EAP-TLS</li>
+</ul>
+<div class="message_box success">
+    <p><strong>Explanation:</strong> Many applications use the X.509 standard format of digital certificates to
+        authenticate websites, public key distribution, and end devices connected to switch ports. User email agents use
+        the S/MIME protocol to support email protection. S/MIME uses X.509 certificates.</p>
+</div>
+<p><strong>4. What are two security features commonly found in a WAN design? (Choose two.)</strong></p>
+<ul>
+    <li>WPA2 for data encryption of all data between sites</li>
+    <li><span style="color: #ff0000;"><strong>firewalls protecting the main and remote sites</strong></span></li>
+    <li>outside perimeter security including continuous video surveillance</li>
+    <li>port security on all user-facing ports</li>
+    <li><span style="color: #ff0000;"><strong>VPNs used by mobile workers between sites</strong></span></li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> WANs span a wide area and commonly have connections from a main site to remote sites
+        including a branch office, regional site, SOHO sites, and mobile workers. WANs typically connect over a public
+        internet connection. Each site commonly has a firewall and VPNs used by remote workers between sites.</p>
+</div>
+<p><strong>5. What is an appropriate use for class 5 digital certificates?</strong></p>
+<ul>
+    <li>used for online business transactions between companies</li>
+    <li><strong><span style="color: #ff0000;">used for private organizations or government security </span></strong>
+    </li>
+    <li>used by organizations for which proof of identity is required</li>
+    <li>used for testing in situations in which no checks have been performed</li>
+</ul>
+<div class="message_box success">
+    <p><strong>Explanation:</strong> The CA class number determines how rigorous the procedure was that verified the
+        identity of the holder when the certificate was issued. The higher the class number, the more trusted the
+        certificate. Class numbers range from 0 to 5. A class 5 certificate is the most trusted, and class 0 the least
+        trusted. Class 5 is used for private organizations or government security.</p>
+</div>
+<p><strong>6. Which two statements are characteristics of a virus? (Choose two.)</strong></p>
+<ul>
+    <li><span style="color: #ff0000;"><strong>A virus typically requires end-user activation.</strong></span></li>
+    <li>A virus has an enabling vulnerability, a propagation mechanism, and a payload.</li>
+    <li>A virus replicates itself by independently exploiting vulnerabilities in networks.</li>
+    <li>A virus provides the attacker with sensitive data, such as passwords.</li>
+    <li><span style="color: #ff0000;"><strong>A virus can be dormant and then activate at a specific time or
+                date.</strong></span></li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> The type of end user interaction required to launch a virus is typically opening an
+        application, opening a web page, or powering on the computer. Once activated, a virus may infect other files
+        located on the computer or other computers on the same network.</p>
+</div>
+<p><strong>7. Match the information security component with the description.</strong></p>
+<div id="attachment_71397" style="width: 734px" class="wp-caption aligncenter"><img fetchpriority="low" decoding="async"
+        aria-describedby="caption-attachment-71397" class="size-full wp-image-71397"
+        src="https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_101208.jpg"
+        alt="Match the information security component with the description." width="724" height="491"
+        srcset="https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_101208.jpg 724w, https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_101208-300x203.jpg 300w"
+        sizes="auto" loading="lazy" />
+    <p id="caption-attachment-71397" class="wp-caption-text">Match the information security component with the
+        description.</p>
+</div>
+<p><strong>8. Match the security policy with the description. (Not all options are used.)</strong></p>
+<div id="attachment_71398" style="width: 735px" class="wp-caption aligncenter"><img decoding="async"
+        aria-describedby="caption-attachment-71398" class="size-full wp-image-71398"
+        src="https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_101455.jpg"
+        alt="Match the security policy with the description. (Not all options are used.)" width="725" height="842"
+        srcset="https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_101455.jpg 725w, https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_101455-258x300.jpg 258w"
+        sizes="auto" loading="lazy" fetchpriority="low" />
+    <p id="caption-attachment-71398" class="wp-caption-text">Match the security policy with the description. (Not all
+        options are used.)</p>
+</div>
+<table>
+    <tbody style="content-visibility: auto;contain-intrinsic-size: auto 268px;">
+        <tr>
+            <td>identifies network applications and uses that are acceptable to the organization</td>
+            <td>acceptable use policy (AUP)</td>
+        </tr>
+        <tr>
+            <td>identifies how remote users can access a network and what is accessible via remote connectivity</td>
+            <td>remote access policy</td>
+        </tr>
+        <tr>
+            <td>specifies authorized persons that can have access to network resources and identity verification
+                procedures</td>
+            <td>identification and authentication policy</td>
+        </tr>
+        <tr>
+            <td>specifies network device operating systems and end user application update procedures</td>
+            <td>network maintenance policy</td>
+        </tr>
+    </tbody>
+</table>
+<p><strong>9. How does the service password-encryption command enhance password security on Cisco routers and
+        switches?</strong></p>
+<ul>
+    <li>It encrypts passwords as they are sent across the network.</li>
+    <li><span style="color: #ff0000;"><strong>It encrypts passwords that are stored in router or switch configuration
+                files.</strong></span></li>
+    <li>It requires that a user type encrypted passwords to gain console access to a router or switch.</li>
+    <li>It requires encrypted passwords to be used when connecting remotely to a router or switch with Telnet.</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> The service password-encryption command encrypts plaintext passwords in the configuration
+        file so that they cannot be viewed by unauthorized users.</p>
+</div>
+<p><strong>10. Which benefit does SSH offer over Telnet for remotely managing a router?</strong></p>
+<ul>
+    <li><span style="color: #ff0000;"><strong>encryption</strong></span></li>
+    <li>TCP usage</li>
+    <li>authorization</li>
+    <li>connections via multiple VTY lines</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> SSH provides secure access to a network device for remote management. It uses a stronger
+        password authorization than Telnet does and encrypts any data that is transported during the session.</p>
+</div>
+<p><strong>11. Refer to the exhibit. Which statement about the JR-Admin account is true?</strong><br />
+    <img decoding="async" class="aligncenter size-full wp-image-67477"
+        src="https://itexamanswers.net/wp-content/uploads/2021/05/Which-statement-about-the-JR-Admin-account-is-true.jpg"
+        alt="" width="492" height="90"
+        srcset="https://itexamanswers.net/wp-content/uploads/2021/05/Which-statement-about-the-JR-Admin-account-is-true.jpg 492w, https://itexamanswers.net/wp-content/uploads/2021/05/Which-statement-about-the-JR-Admin-account-is-true-300x55.jpg 300w"
+        sizes="auto" loading="lazy" fetchpriority="low" />
+</p>
+<ul>
+    <li>JR-Admin can issue show , ping , and reload commands.</li>
+    <li><span style="color: #ff0000;"><strong>JR-Admin can issue ping and reload commands.</strong></span></li>
+    <li>JR-Admin can issue only ping commands.</li>
+    <li>JR-Admin can issue debug and reload commands.</li>
+    <li>JR-Admin cannot issue any command because the privilege level does not match one of those defined.</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> When the username name privilege 10 command is issued, access to commands with a privilege
+        level of 10 or less (0-10) is permitted to the user.</p>
+</div>
+<p><strong>12. What protocol is used by SCP for secure transport?</strong></p>
+<ul>
+    <li>IPSec</li>
+    <li>HTTPS</li>
+    <li><span style="color: #ff0000;"><strong>SSH</strong></span></li>
+    <li>Telnet</li>
+    <li>TFTP</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> The Secure Copy (SCP) feature provides a secure and authenticated method for copying and
+        saving router configuration files by using SSH.</p>
+</div>
+<p><strong>13. Refer to the exhibit. What type of syslog message is displayed?</strong><br />
+    <img loading="lazy" decoding="async" class="aligncenter size-full wp-image-67478"
+        src="https://itexamanswers.net/wp-content/uploads/2021/05/Refer-to-the-exhibit.-What-type-of-syslog-message-is-displayed.png"
+        alt="" width="550" height="52"
+        srcset="https://itexamanswers.net/wp-content/uploads/2021/05/Refer-to-the-exhibit.-What-type-of-syslog-message-is-displayed.png 550w, https://itexamanswers.net/wp-content/uploads/2021/05/Refer-to-the-exhibit.-What-type-of-syslog-message-is-displayed-300x28.png 300w"
+        sizes="auto" fetchpriority="low" />
+</p>
+<ul>
+    <li>warning</li>
+    <li><span style="color: #ff0000;"><strong>notification</strong></span></li>
+    <li>informational</li>
+    <li>debugging</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> The severity level is used to provide an explanation for the event or error that is occurring
+        within the Cisco IOS. The smaller the number of the severity level, the more critical the event. A Syslog
+        message with a level 5 is considered a notification message.</p>
+</div>
+<p><strong>14. What command must be issued on a Cisco router that will serve as an authoritative NTP server?</strong>
+</p>
+<ul>
+    <li><span style="color: #ff0000;"><strong>ntp master 1</strong></span></li>
+    <li>ntp server 172.16.0.1</li>
+    <li>ntp broadcast client</li>
+    <li>clock set 11:00:00 DEC 20 2010</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Routers that will serve as NTP masters must be configured with the ntp master command. A
+        client is configured with the ntp server command so that the client can locate the NTP master. The ntp broadcast
+        client command allows NTP to use to broadcast messages. The clock set command is used to set the time on a
+        router.</p>
+</div>
+<p><strong>15. A server log includes this entry: User student accessed host server ABC using Telnet yesterday for 10
+        minutes. What type of log entry is this?</strong></p>
+<ul>
+    <li>authentication</li>
+    <li>authorization</li>
+    <li><span style="color: #ff0000;"><strong>accounting</strong></span></li>
+    <li>accessing</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Accounting records what users do and when they do it, including what is accessed, the amount
+        of time the resource is accessed, and any changes that were made. Accounting keeps track of how network
+        resources are used.</p>
+</div>
+<p><strong>16. Which three types of views are available when configuring the role-based CLI access feature? (Choose
+        three.)</strong></p>
+<ul style="content-visibility: auto;contain-intrinsic-size: auto 156px;">
+    <li>superuser view</li>
+    <li><span style="color: #ff0000;"><strong>root view </strong></span></li>
+    <li><span style="color: #ff0000;"><strong>superview </strong></span></li>
+    <li><span style="color: #ff0000;"><strong>CLI view</strong></span></li>
+    <li>admin view</li>
+    <li>config view</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> There are three types of Role-based CLI views:<br />
+        1) root view<br />
+        2) CLI view<br />
+        3) superview</p>
+</div>
+<p><strong>17. What is the purpose of using the ip ospf message-digest-key key md5 password command and the area area-id
+        authentication message-digest command on a router?​</strong></p>
+<ul>
+    <li>to encrypt OSPF routing updates​</li>
+    <li>to enable OSPF MD5 authentication on a per-interface basis​</li>
+    <li><span style="color: #ff0000;"><strong>to configure OSPF MD5 authentication globally on the
+                router​</strong></span></li>
+    <li>to facilitate the establishment of neighbor adjacencies</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> To configure OSPF MD5 authentication globally, the ip ospf message-digest-key key md5
+        password interface configuration command and the area area-id authentication message-digest router configuration
+        command are issued. To configure OSPF MD5 authentication per interface, the ip ospf message-digest-key key md5
+        password interface configuration command and the ip ospf authentication message-digest interface configuration
+        command are issued. Authentication does not encrypt OSPF routing updates. The requirements to establish OSPF
+        router neighbor adjacencies are separate from authentication.​</p>
+</div>
+<p><strong>18. What is indicated by the use of the local-case keyword in a local AAA authentication configuration
+        command sequence?</strong></p>
+<ul>
+    <li>that user access is limited to vty terminal lines</li>
+    <li><span style="color: #ff0000;"><strong>that passwords and usernames are case-sensitive</strong></span></li>
+    <li>that AAA is enabled globally on the router</li>
+    <li>that a default local database AAA authentication is applied to all lines</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> The use of the local-case keyword means that the authentication is case-sensitive. It does
+        not enable or apply the AAA configuration to router interfaces or lines.​</p>
+</div>
+<p><strong>19. A network administrator is configuring an AAA server to manage RADIUS authentication. Which two features
+        are included in RADIUS authentication? (Choose two.)</strong></p>
+<ul>
+    <li>encryption for all communication</li>
+    <li><span style="color: #ff0000;"><strong>hidden passwords during transmission </strong></span></li>
+    <li><span style="color: #ff0000;"><strong>single process for authentication and authorization</strong></span></li>
+    <li>separate processes for authentication and authorization</li>
+    <li>encryption for only the data</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> RADIUS authentication supports the following features:RADIUS authentication and authorization
+        as one process<br />
+        Encrypts only the password<br />
+        Utilizes UDP<br />
+        Supports remote-access technologies, 802.1X, and Session Initiation Protocol (SIP)</p>
+</div>
+<p><strong>20. A network administrator is explaining to a junior colleague the use of the lt and gt keywords when
+        filtering packets using an extended ACL. Where would the lt or gt keywords be used?</strong></p>
+<ul>
+    <li>in an IPv6 extended ACL that stops packets going to one specific destination VLAN</li>
+    <li>in an IPv4 named standard ACL that has specific UDP protocols that are allowed to be used on a specific server
+    </li>
+    <li>in an IPv6 named ACL that permits FTP traffic from one particular LAN getting to another LAN</li>
+    <li><span style="color: #ff0000;"><strong>in an IPv4 extended ACL that allows packets from a range of TCP ports
+                destined for a specific network device</strong></span></li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> The lt and gt keywords are used for defining a range of port numbers that are less than a
+        particular port number or greater than a particular port number.</p>
+</div>
+<p><strong>21. Which feature is unique to IPv6 ACLs when compared to those of IPv4 ACLs?</strong></p>
+<ul>
+    <li>the use of wildcard masks</li>
+    <li>an implicit deny any any statement</li>
+    <li>the use of named ACL statements</li>
+    <li><span style="color: #ff0000;"><strong>an implicit permit of neighbor discovery packets</strong></span></li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> One of the major differences between IPv6 and IPv4 ACLs are two implicit permit statements at
+        the end of any IPv6 ACL. These two permit statements allow neighbor discovery operations to function on the
+        router interface.</p>
+</div>
+<p><strong>22. Refer to the exhibit. An extended access list has been created to prevent human resource users from
+        gaining access to the accounting server. All other network traffic is to be permitted. When following the ACL
+        configuration guidelines, on which router, interface, and direction should the access list be
+        applied?</strong><br />
+    <img loading="lazy" decoding="async" class="aligncenter size-full wp-image-62932"
+        src="https://itexamanswers.net/wp-content/uploads/2021/01/2021-01-06_214355.jpg" alt="" width="601" height="286"
+        srcset="https://itexamanswers.net/wp-content/uploads/2021/01/2021-01-06_214355.jpg 601w, https://itexamanswers.net/wp-content/uploads/2021/01/2021-01-06_214355-300x143.jpg 300w"
+        sizes="auto" fetchpriority="low" />
+</p>
+<ul>
+    <li>router R1, interface S0/1/0, outbound</li>
+    <li>router R2, interface Gi0/0/1, outbound</li>
+    <li>router R2, interface Gi0/0/1, inbound</li>
+    <li><span style="color: #ff0000;"><strong><strong>router R1, interface Gi0/0/0, inbound</strong></strong></span>
+    </li>
+    <li>router R2, interface S0/1/1, inbound</li>
+    <li>router R1, interface Gi0/0/0, outbound</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> The ACL configuration guidelines recommend placing extended access control lists as close to
+        the source of network traffic as possible and placing standard access control lists as close to the destination
+        of network traffic as possible.</p>
+</div>
+<p><strong>23. Which statement describes the characteristics of packet-filtering and stateful firewalls as they relate
+        to the OSI model?</strong></p>
+<ul>
+    <li>Both stateful and packet-filtering firewalls can filter at the application layer.</li>
+    <li>A stateful firewall can filter application layer information, whereas a packet-filtering firewall cannot filter
+        beyond the network layer.</li>
+    <li><span style="color: #ff0000;"><strong>A packet-filtering firewall typically can filter up to the transport
+                layer, whereas a stateful firewall can filter up to the session layer.</strong></span></li>
+    <li>A packet-filtering firewall uses session layer information to track the state of a connection, whereas a
+        stateful firewall uses application layer information to track the state of a connection.</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Packet filtering firewalls can always filter Layer 3 content and sometimes TCP and UDP-based
+        content. Stateful firewalls monitor connections and thus have to be able to support up to the session layer of
+        the OSI model.</p>
+</div>
+<p><strong>24. Which special hardware module, when integrated into ASA, provides advanced IPS features?</strong></p>
+<ul>
+    <li>Content Security and Control (CSC)</li>
+    <li><span style="color: #ff0000;"><strong>Advanced Inspection and Prevention (AIP)</strong></span></li>
+    <li>Advanced Inspection and Prevention Security Services Card (AIP-SSC)</li>
+    <li>Advanced Inspection and Prevention Security Services Module (AIP-SSM)</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> The advanced threat control and containment services of an ASA firewall are provided by
+        integrating special hardware modules with the ASA architecture. These special modules include:<br />
+        Advanced Inspection and Prevention (AIP) module – supports advanced IPS capability.<br />
+        Content Security and Control (CSC) module – supports antimalware capabilities.<br />
+        Cisco Advanced Inspection and Prevention Security Services Module (AIP-SSM) and Cisco Advanced Inspection and
+        Prevention Security Services Card (AIP-SSC) – support protection against tens of thousands of known exploits.
+    </p>
+</div>
+<p><strong>25. Refer to the exhibit. A network administrator is configuring the security level for the ASA. What is a
+        best practice for assigning the security level on the three interfaces?</strong><br />
+    <img loading="lazy" decoding="async" class="aligncenter size-full wp-image-19221"
+        src="https://itexamanswers.net/wp-content/uploads/2016/02/ccnasec4.png"
+        alt="A network administrator is configuring the security level for the ASA" width="554" height="376"
+        srcset="https://itexamanswers.net/wp-content/uploads/2016/02/ccnasec4.png 554w, https://itexamanswers.net/wp-content/uploads/2016/02/ccnasec4-300x204.png 300w"
+        sizes="auto" fetchpriority="low" />
+</p>
+<ul>
+    <li>Outside 0, Inside 35, DMZ 90</li>
+    <li>Outside 40, Inside 100, DMZ 0</li>
+    <li><span style="color: #ff0000;"><strong>Outside 0, Inside 100, DMZ 50</strong></span></li>
+    <li>Outside 100, Inside 10, DMZ 40</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> The Cisco ASA assigns security levels to distinguish among different networks it connects.
+        Security levels define the level of trustworthiness of an interface. The higher the level, the more trusted the
+        interface. The security level numbers range between 0 (untrustworthy) to 100 (very trustworthy). Therefore, the
+        interface connecting to the Internet should be assigned the lowest level. The interface connecting to the
+        internal network should be assigned the highest level. The interface connecting to the DMZ network should be
+        assigned a level between them.</p>
+</div>
+<p><strong>26. What is an advantage in using a packet filtering firewall versus a high-end firewall appliance?</strong>
+</p>
+<ul>
+    <li><span style="color: #ff0000;"><strong>Packet filters perform almost all the tasks of a high-end firewall at a
+                fraction of the cost.</strong></span></li>
+    <li>Packet filters represent a complete firewall solution.</li>
+    <li>Packet filters are not susceptible to IP spoofing.</li>
+    <li>Packet filters provide an initial degree of security at the data-link and network layer.</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> There are several advantages of using a packet filtering firewall:<br />
+        – ​allows for implementing simple permit or deny rule sets.<br />
+        – has a low impact on network performance<br />
+        – is easy to implement, and is supported by most routers<br />
+        – provides an initial degree of security at the network layer<br />
+        – performs almost all the tasks of a high-end firewall at a much lower cost</p>
+</div>
+<p><strong>27. Which type of firewall is commonly part of a router firewall and allows or blocks traffic based on Layer
+        3 and Layer 4 information?</strong></p>
+<ul>
+    <li><span style="color: #ff0000;"><strong>stateless firewall</strong></span></li>
+    <li>stateful firewall</li>
+    <li>proxy firewall</li>
+    <li>application gateway firewall</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> A stateless firewall uses a simple policy table look-up that filters traffic based on
+        specific criteria. These firewalls are usually part of a router firewall. They permit or deny traffic based on
+        Layer 3 and Layer 4 information.</p>
+</div>
+<p><strong>28. A company is deploying a new network design in which the border router has three interfaces. Interface
+        Serial0/0/0 connects to the ISP, GigabitEthernet0/0 connects to the DMZ, and GigabitEthernet/01 connects to the
+        internal private network. Which type of traffic would receive the least amount of inspection (have the most
+        freedom of travel)?</strong></p>
+<ul>
+    <li><span style="color: #ff0000;"><strong>traffic that is going from the private network to the DMZ</strong></span>
+    </li>
+    <li>traffic that originates from the public network and that is destined for the DMZ</li>
+    <li>traffic that is returning from the DMZ after originating from the private network</li>
+    <li>traffic that is returning from the public network after originating from the private network</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Most traffic within an organization originates from a private IP address. The amount of
+        inspection done to that traffic depends on its destination or whether traffic that is going to that private IP
+        address originated the connection. The demilitarized zone typically holds servers. Traffic that is destined to
+        those servers is filtered based on what services are being provided by the server (HTTP, HTTPS, DNS, etc.).</p>
+</div>
+<p><strong>29. What are two benefits offered by a zone-based policy firewall on a Cisco router? (Choose two.)</strong>
+</p>
+<ul>
+    <li>Policies are defined exclusively with ACLs.</li>
+    <li><span style="color: #ff0000;"><strong>Policies are applied to unidirectional traffic between zones.
+            </strong></span></li>
+    <li><span style="color: #ff0000;"><strong>Policies provide scalability because they are easy to read and
+                troubleshoot.</strong></span></li>
+    <li>Any interface can be configured with both a ZPF and an IOS Classic Firewall.</li>
+    <li>Virtual and physical interfaces are put in different zones to enhance security.</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> There are several benefits of a ZPF:<br />
+        It is not dependent on ACLs.<br />
+        The router security posture is to block unless explicitly allowed.<br />
+        Policies are easy to read and troubleshoot. This provides scalability because one policy affects any given
+        traffic, instead of needing multiple ACLs and inspection actions for different types of traffic.<br />
+        Virtual and physical interfaces can be grouped into zones.<br />
+        Policies are applied to unidirectional traffic between zones.<br />
+        Both IOS Classic Firewalls and ZPFs can be enabled concurrently on a Cisco router. However, the models cannot be
+        combined on a single interface.</p>
+</div>
+<p><strong>30. When a Cisco IOS Zone-Based Policy Firewall is being configured via CLI, which step must be taken after
+        zones have been created?</strong></p>
+<ul>
+    <li>Design the physical infrastructure.</li>
+    <li><span style="color: #ff0000;"><strong>Establish policies between zones.</strong></span></li>
+    <li>Identify subsets within zones.</li>
+    <li>Assign interfaces to zones.</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> The steps for configuring zones in a Zone-Based Policy Firewall are as follows:<br />
+        &#8211; Step 1. Determine the zones.<br />
+        &#8211; Step 2. Establish policies between zones.<br />
+        &#8211; Step 3. Design the physical infrastructure.<br />
+        &#8211; Step 4. Identify subsets within zones and merge traffic requirements.​</p>
+</div>
+<p><strong>31. What are two shared characteristics of the IDS and the IPS? (Choose two.)</strong></p>
+<div class="92f2483bb651eed307c93e619d752c78" data-index="1"
+    style="float: none; margin:10px 0 10px 0; text-align:center;">
+    <div id="adngin-incontent_auto-0"></div>
+</div>
+
+<ul>
+    <li><span style="color: #ff0000;"><strong>Both are deployed as sensors.</strong></span></li>
+    <li>Both analyze copies of network traffic.</li>
+    <li><span style="color: #ff0000;"><strong>Both use signatures to detect malicious traffic.</strong></span></li>
+    <li>Both have minimal impact on network performance.​</li>
+    <li>Both rely on an additional network device to respond to malicious traffic.</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Both the IDS and the IPS are deployed as sensors and use signatures to detect malicious
+        traffic. The IDS analyzes copies of network traffic, which results in minimal impact on network performance. The
+        IDS also relies on an IPS to stop malicious traffic. ​​</p>
+</div>
+<p><strong>32. When a Cisco IOS Zone-Based Policy Firewall is being configured, which two actions can be applied to a
+        traffic class? (Choose two.)</strong></p>
+<ul style="content-visibility: auto;contain-intrinsic-size: auto 156px;">
+    <li>log</li>
+    <li>hold</li>
+    <li><span style="color: #ff0000;"><strong>drop </strong></span></li>
+    <li><span style="color: #ff0000;"><strong>inspect</strong></span></li>
+    <li>copy</li>
+    <li>forward</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> The three actions that can be applied are inspect, drop,and pass.​<br />
+        Inspect – This action offers state-based traffic control.<br />
+        Drop – This is the default action for all traffic. Similar to the implicit deny any at the end of every ACL,
+        there is an explicit drop applied by the IOS to the end of every policy map.<br />
+        Pass – This action allows the router to forward traffic from one zone to another.</p>
+</div>
+<p><strong>33. Match the network security device type with the description.</strong><br />
+    <img loading="lazy" decoding="async" class="aligncenter size-full wp-image-56864"
+        src="https://itexamanswers.net/wp-content/uploads/2020/09/Match-the-network-security-device-type-with-the-description.jpg"
+        alt="" width="633" height="567"
+        srcset="https://itexamanswers.net/wp-content/uploads/2020/09/Match-the-network-security-device-type-with-the-description.jpg 633w, https://itexamanswers.net/wp-content/uploads/2020/09/Match-the-network-security-device-type-with-the-description-300x269.jpg 300w"
+        sizes="auto" fetchpriority="low" />
+</p>
+<p><strong>34. What is a characteristic of an IPS atomic signature?</strong></p>
+<ul>
+    <li>it can be slow and inefficient to analyze traffic</li>
+    <li>it requires several pieces of data to match an attack</li>
+    <li>it is a stateful signature</li>
+    <li><span style="color: #ff0000;"><strong>it is the simplest type of signature</strong></span></li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> There are two types of IPS signatures:<br />
+        Atomic – This is the simplest type of signature because it does not require the IPS to maintain state
+        information and it can identify an attack with a single packet, activity, or event.<br />
+        Composite – This is a stateful type of signature. It requires that the IPS maintain state information to match
+        an attack signature.</p>
+</div>
+<p><strong>35. Match each IPS signature trigger category with the description.</strong></p>
+<div id="attachment_71400" style="width: 733px" class="wp-caption aligncenter"><img loading="lazy" decoding="async"
+        aria-describedby="caption-attachment-71400" class="size-full wp-image-71400"
+        src="https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_102250.jpg"
+        alt="Match each IPS signature trigger category with the description." width="723" height="506"
+        srcset="https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_102250.jpg 723w, https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_102250-300x210.jpg 300w"
+        sizes="auto" fetchpriority="low" />
+    <p id="caption-attachment-71400" class="wp-caption-text">Match each IPS signature trigger category with the
+        description.</p>
+</div>
+<p><strong>36. A company is concerned about data theft if any of the corporate laptops are stolen. Which Windows tool
+        would the company use to protect the data on the laptops?</strong></p>
+<ul>
+    <li>AMP</li>
+    <li>802.1X</li>
+    <li>RADIUS</li>
+    <li><span style="color: #ff0000;"><strong>BitLocker</strong></span></li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Storage devices can be encrypted to protect data from unauthorized access. Windows BitLocker
+        provides drive encryption.</p>
+</div>
+<p><strong>37. What protocol is used to encapsulate the EAP data between the authenticator and authentication server
+        performing 802.1X authentication?</strong></p>
+<ul>
+    <li><span style="color: #ff0000;"><strong>RADIUS</strong></span></li>
+    <li>TACACS+</li>
+    <li>SSH</li>
+    <li>MD5</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Encapsulation of EAP data between the authenticator and the authentication server is
+        performed using RADIUS.</p>
+</div>
+<p><strong>38. A company requires the use of 802.1X security. What type of traffic can be sent if the authentication
+        port-control auto command is configured, but the client has not yet been authenticated?</strong></p>
+<ul>
+    <li>SNMP</li>
+    <li><span style="color: #ff0000;"><strong>EAPOL</strong></span></li>
+    <li>broadcasts such as ARP</li>
+    <li>any data encrypted with 3DES or AES</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> 802.1X prevents unauthorized devices from gaining access to the network. The authentication
+        port-control auto command turns on 802.1X access control. Until the client is authenticated, 802.1X only allows
+        Extensible Authentication Protocol over LAN (EAPOL), Cisco Discovery Protocol (CDP), and Spanning Tree Protocol
+        (STP) traffic to pass through the port. EAPOL messages are sent between the client and the authenticator such as
+        a switch. If authentication is successful, normal traffic can be sent and received through the port.</p>
+</div>
+<p><strong>39. Which two security features can cause a switch port to become error-disabled? (Choose two.)</strong></p>
+<ul>
+    <li>root guard</li>
+    <li><span style="color: #ff0000;"><strong>PortFast with BPDU guard enabled</strong></span></li>
+    <li>protected ports</li>
+    <li>storm control with the trap option</li>
+    <li><span style="color: #ff0000;"><strong>port security with the shutdown violation mode</strong></span></li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Error-disabled mode is a way for a switch to automatically shut down a port that is causing
+        problems, and usually requires manual intervention from an administrator to restore the port. When port security
+        is configured to use the shutdown violation mode, it will put the port into the error-disabled mode when the
+        maximum number of MAC addresses is exceeded. Likewise, BPDU guard will put the port into error-disabled mode if
+        a BPDU arrives on a PortFast enabled interface. Storm control will only put the port into the error-disabled
+        mode when configured with the shutdown option. The trap option will simply create an SNMP log message.</p>
+</div>
+<p><strong>40. What are three techniques for mitigating VLAN hopping attacks? (Choose three.)</strong></p>
+<ul style="content-visibility: auto;contain-intrinsic-size: auto 156px;">
+    <li><span style="color: #ff0000;"><strong>Disable DTP. </strong></span></li>
+    <li><span style="color: #ff0000;"><strong>Enable trunking manually. </strong></span></li>
+    <li><span style="color: #ff0000;"><strong>Set the native VLAN to an unused VLAN.</strong></span></li>
+    <li>Enable BPDU guard.</li>
+    <li>Enable Source Guard.</li>
+    <li>Use private VLANs.</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Mitigating a VLAN hopping attack can be done by disabling Dynamic Trunking Protocol (DTP),
+        manually setting ports to trunking mode, and by setting the native VLAN of trunk links to VLANs not in use.</p>
+</div>
+<p><strong>41. Refer to the exhibit. A network administrator is configuring DAI on switch SW1. What is the result of
+        entering the exhibited commands?</strong><br />
+    <img loading="lazy" decoding="async" class="aligncenter size-full wp-image-48075"
+        src="https://itexamanswers.net/wp-content/uploads/2020/06/What-is-the-result-of-entering-the-exhibited-commands.jpg"
+        alt="" width="506" height="122"
+        srcset="https://itexamanswers.net/wp-content/uploads/2020/06/What-is-the-result-of-entering-the-exhibited-commands.jpg 506w, https://itexamanswers.net/wp-content/uploads/2020/06/What-is-the-result-of-entering-the-exhibited-commands-300x72.jpg 300w"
+        sizes="auto" fetchpriority="low" />
+</p>
+<ul>
+    <li>DAI will validate both source and destination MAC addresses as well as the IP addresses in the order specified.
+        If all parameters are valid then the ARP packet is allowed to pass.</li>
+    <li>DAI will validate both source and destination MAC addresses as well as the IP addresses in the order specified.
+        When one set of parameters are valid, the ARP packet is allowed to pass.</li>
+    <li><span style="color: red;"><strong>DAI will validate only the destination MAC addresses.</strong></span></li>
+    <li>DAI will validate only the IP addresses.</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> DAI can be configured to check for destination MAC, source MAC, and IP addresses. However,
+        only one ip arp inspection validate command can be configured. Entering multiple ip arp inspection validate
+        commands overwrites the previous command.</p>
+</div>
+<p><strong>42. During a recent pandemic, employees from ABC company were allowed to work from home. What security
+        technology should be implemented to ensure that data communications between the employees and the ABC Head
+        Office network remain confidential?</strong></p>
+<ul>
+    <li><span style="color: #ff0000;"><strong>a symmetric or asymmetric encryption algorithm such as AES or
+                PKI</strong></span></li>
+    <li>a hashing algorithm such as MD5</li>
+    <li>a hash message authentication code such as HMAC</li>
+    <li>a hash-generating algorithm such as SHA</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> MD5 and SHA are hash-generating algorithms that guarantee that no one intercepted the message
+        and altered it. Advanced Encryption Standard (AES) is a popular symmetric encryption algorithm where each
+        communicating party needs to know the pre-shared key. Public key infrastructure (PKI) is an asymmetric
+        encryption algorithm based on the assumption that the two communicating parties have not previously shared a
+        secret key. HMAC is a hash message authentication code that guarantees that the message is not a forgery and
+        actually comes from the authentic source.</p>
+</div>
+<p><strong>43. Which cipher played a significant role in World War II?</strong></p>
+<ul>
+    <li>RC4</li>
+    <li>Caesar</li>
+    <li><span style="color: #ff0000;"><strong>Enigma</strong></span></li>
+    <li>One-time pad</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> The Enigma machine was an electromechanical encryption device that created the Enigma cipher
+        and was developed during World War II. The device depended on the distribution of pre-shared keys that were used
+        to encrypt and decrypt messages.</p>
+</div>
+<p><strong>44. One method used by Cryptanalysts to crack codes is based on the fact that some letters of the English
+        language are used more often than others. Which term is used to describe this method?</strong></p>
+<ul>
+    <li>cybertext</li>
+    <li>meet-in-the-middle</li>
+    <li><span style="color: #ff0000;"><strong>frequency analysis</strong></span></li>
+    <li>known-plaintext</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Frequency analysis uses the fact that some characters in the English alphabet are used more
+        often than others. The letters E, T, and A are the most popular letters and J, Q, X, and Z are the least
+        popular.</p>
+</div>
+<p><strong>45. Why are DES keys considered weak keys?</strong></p>
+<ul>
+    <li>They are more resource intensive.</li>
+    <li>DES weak keys are difficult to manage.</li>
+    <li><span style="color: #ff0000;"><strong>They produce identical subkeys.</strong></span></li>
+    <li>DES weak keys use very long key sizes.</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Weak keys, whether part of an existing encryption algorithm or manually generated, reveal
+        regularities in encryption. This creates a shortcut by which a hacker can break the encryption. DES has four
+        keys for which encryption is identical to decryption.</p>
+</div>
+<p><strong>46. Refer to the exhibit. A network administrator is configuring an object group on an ASA device. Which
+        configuration keyword should be used after the object group name SERVICE1 ?</strong><br />
+    <img loading="lazy" decoding="async" class="aligncenter size-full wp-image-67486"
+        src="https://itexamanswers.net/wp-content/uploads/2021/05/A-network-administrator-is-configuring-an-object-group-on-an-ASA-device.jpg"
+        alt="" width="529" height="117"
+        srcset="https://itexamanswers.net/wp-content/uploads/2021/05/A-network-administrator-is-configuring-an-object-group-on-an-ASA-device.jpg 529w, https://itexamanswers.net/wp-content/uploads/2021/05/A-network-administrator-is-configuring-an-object-group-on-an-ASA-device-300x66.jpg 300w"
+        sizes="auto" fetchpriority="low" />
+</p>
+<ul>
+    <li>ip</li>
+    <li><span style="color: #ff0000;"><strong>tcp</strong></span></li>
+    <li>udp</li>
+    <li>icmp</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Because this is a service object group, the keyword should indicate which protocol is used.
+        The options are tcp, udp, tcp-udp, icmp, and icmpv6. The subsequent commands indicate that the services in the
+        group are WWW, FTP, and SMTP. Because all of these protocols use TCP, the keyword in the service object group
+        should be tcp .</p>
+</div>
+<p><strong>47. In the implementation of network security, how does the deployment of a Cisco ASA firewall differ from a
+        Cisco IOS router?</strong></p>
+<ul>
+    <li>ASA devices use ACLs that are always numbered.</li>
+    <li>ASA devices do not support an implicit deny within ACLs.</li>
+    <li><span style="color: #ff0000;"><strong>ASA devices support interface security levels.</strong></span></li>
+    <li>ASA devices use ACLs configured with a wildcard mask.</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> The differences between ASA devices and Cisco IOS routers include the following:<br />
+        An ASA device configured with ACLs is configured with a subnet mask.<br />
+        An ASA device supports interface security levels.<br />
+        An ASA device configured with an ACL is always named.</p>
+    <p>ASA devices and Cisco IOS routers are similar in that they both support an implicit deny within an ACL.</p>
+</div>
+<p><strong>48. Refer to the exhibit. A network administrator is configuring PAT on an ASA device to enable internal
+        workstations to access the Internet. Which configuration command should be used next?</strong><br />
+    <img loading="lazy" decoding="async" class="aligncenter size-full wp-image-67487"
+        src="https://itexamanswers.net/wp-content/uploads/2021/05/Which-configuration-command-should-be-used-next.jpg"
+        alt="" width="699" height="141"
+        srcset="https://itexamanswers.net/wp-content/uploads/2021/05/Which-configuration-command-should-be-used-next.jpg 699w, https://itexamanswers.net/wp-content/uploads/2021/05/Which-configuration-command-should-be-used-next-300x61.jpg 300w"
+        sizes="auto" fetchpriority="low" />
+</p>
+<ul>
+    <li>nat (inside,outside) dynamic NET1</li>
+    <li>nat (outside,inside) dynamic NET1</li>
+    <li><span style="color: #ff0000;"><strong>nat (inside,outside) dynamic interface</strong></span></li>
+    <li>nat (outside,inside) dynamic interface</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> The nat (inside,outside) dynamic interface command indicates that inside hosts are
+        overloading the outside address of the mapped interface.</p>
+</div>
+<p><strong>49. What type of network security test uses simulated attacks to determine the feasibility of an attack as
+        well as the possible consequences if the attack occurs?</strong></p>
+<ul>
+    <li><span style="color: #ff0000;"><strong>penetration testing</strong></span></li>
+    <li>network scanning</li>
+    <li>integrity checking</li>
+    <li>vulnerability scanning</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> There are many tests that are used by security specialists to assess the status of a system.
+        They include the following:<br />
+        penetration testing to determine the feasibility of attacks<br />
+        network scanning to scan for and identify open TCP ports<br />
+        integrity checking to check for changes that have occurred in the system<br />
+        vulnerability scanning to detect potential weaknesses in systems</p>
+</div>
+<p><strong>50. What three tasks can a network administrator accomplish with the Nmap and Zenmap security testing tools?
+        (Choose three.)</strong></p>
+<ul style="content-visibility: auto;contain-intrinsic-size: auto 156px;">
+    <li><span style="color: #ff0000;"><strong>operating system fingerprinting </strong></span></li>
+    <li><span style="color: #ff0000;"><strong>assessment of Layer 3 protocol support on hosts </strong></span></li>
+    <li><span style="color: #ff0000;"><strong>open UDP and TCP port detection</strong></span></li>
+    <li>security event analysis and reporting</li>
+    <li>password recovery</li>
+    <li>development of IDS signatures</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Nmap is a low-level network scanner that is available to the public and that has the ability
+        to perform port scanning, to identify open TCP and UDP ports, and which can also perform system identification.
+        It can also be used to identify Layer 3 protocols that are running on a system. Zenmap is the GUI version of
+        Nmap.</p>
+</div>
+<p><strong>51. Match the network security testing tool with the correct function. (Not all options are used.)</strong>
+</p>
+<div id="attachment_71396" style="width: 735px" class="wp-caption aligncenter"><img loading="lazy" decoding="async"
+        aria-describedby="caption-attachment-71396" class="size-full wp-image-71396"
+        src="https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_100937.jpg"
+        alt="Match the network security testing tool with the correct function. (Not all options are used.)" width="725"
+        height="583"
+        srcset="https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_100937.jpg 725w, https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_100937-300x241.jpg 300w"
+        sizes="auto" fetchpriority="low" />
+    <p id="caption-attachment-71396" class="wp-caption-text">Match the network security testing tool with the correct
+        function. (Not all options are used.)</p>
+</div>
+<p><strong>52. Which two means can be used to try to bypass the management of mobile devices? (Choose two.)</strong></p>
+<ul>
+    <li>using a fuzzer</li>
+    <li><span style="color: #ff0000;"><strong>rooting </strong></span></li>
+    <li><span style="color: #ff0000;"><strong>jailbreaking</strong></span></li>
+    <li>packet sniffing</li>
+    <li>using a Trojan Horse</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Jailbreaking is a term used when breaking into an Apple iOS device, whereas rooting is the
+        term used for doing the same to an Android device. Both must be concerns in the corporate environment where so
+        many people bring their own devices and access the corporate networks.</p>
+</div>
+<p><strong>53. Match the type of cyberattackers to the description. (Not all options are used.)</strong></p>
+<div id="attachment_71399" style="width: 660px" class="wp-caption aligncenter"><img loading="lazy" decoding="async"
+        aria-describedby="caption-attachment-71399" class="size-full wp-image-71399"
+        src="https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_102053.jpg"
+        alt="Match the type of cyberattackers to the description. (Not all options are used.)" width="650" height="483"
+        srcset="https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_102053.jpg 650w, https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_102053-300x223.jpg 300w"
+        sizes="auto" fetchpriority="low" />
+    <p id="caption-attachment-71399" class="wp-caption-text">Match the type of cyberattackers to the description. (Not
+        all options are used.)</p>
+</div>
+<p><strong>54. What is a benefit of having users or remote employees use a VPN to connect to the existing network rather
+        than growing the network infrastructure?</strong></p>
+<ul>
+    <li>security</li>
+    <li><span style="color: #ff0000;"><strong>scalability </strong></span></li>
+    <li>cost savings</li>
+    <li>compatibility</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> A benefit of VPNs is scalability because organizations can use the Internet and easily add
+        new users without adding significant infrastructure. Security is provided by using encryption and authentication
+        protocols to protect data. Another benefit is compatibility because VPNs can be implemented across a wide
+        variety of WAN connections. Organizations also benefit from cost savings because VPNs reduce connectivity costs
+        while simultaneously increasing remote connection bandwidth.</p>
+</div>
+<p><strong>55. What is a difference between symmetric and asymmetric encryption algorithms?</strong></p>
+<ul>
+    <li>Symmetric algorithms are typically hundreds to thousands of times slower than asymmetric algorithms.</li>
+    <li>Symmetric encryption algorithms are used to authenticate secure communications. Asymmetric encryption algorithms
+        are used to repudiate messages.</li>
+    <li>Symmetric encryption algorithms are used to encrypt data. Asymmetric encryption algorithms are used to decrypt
+        data.</li>
+    <li><span style="color: #ff0000;"><strong>Symmetric encryption algorithms use pre-shared keys. Asymmetric encryption
+                algorithms use different keys to encrypt and decrypt data.</strong></span></li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Asymmetric algorithms can use very long key lengths in order to avoid being hacked. This
+        results in the use of significantly increased resources and time compared to symmetric algorithms.</p>
+</div>
+<p><strong>56. What technology allows users to verify the identity of a website and to trust code that is downloaded
+        from the Internet?</strong></p>
+<ul>
+    <li>asymmetric key algorithm</li>
+    <li><span style="color: #ff0000;"><strong>digital signature</strong></span></li>
+    <li>encryption</li>
+    <li>hash algorithm</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Digital signatures provide assurance of the authenticity and integrity of software codes.
+        They provide the ability to trust code that is downloaded from the Internet.</p>
+</div>
+<p><strong>57. Which two statements correctly describe certificate classes used in the PKI? (Choose two.)</strong></p>
+<ul>
+    <li><span style="color: #ff0000;"><strong>A class 0 certificate is for testing purposes.</strong></span></li>
+    <li>A class 0 certificate is more trusted than a class 1 certificate.</li>
+    <li>The lower the class number, the more trusted the certificate.</li>
+    <li>A class 5 certificate is for users with a focus on verification of email.</li>
+    <li><span style="color: #ff0000;"><strong>A class 4 certificate is for online business transactions between
+                companies.</strong></span></li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> A digital certificate class is identified by a number. The higher the number, the more
+        trusted the certificate. The classes include the following:Class 0 is for testing purposes in which no checks
+        have been performed.<br />
+        Class 1 is for individuals with a focus on verification of email.<br />
+        Class 2 is for organizations for which proof of identity is required.<br />
+        Class 3 is for servers and software signing for which independent verification and checking of identity and
+        authority is done by the issuing certificate authority.<br />
+        Class 4 is for online business transactions between companies.<br />
+        Class 5 is for private organizations or governmental security.</p>
+</div>
+<p><strong>58. What is the standard for a public key infrastructure to manage digital certificates?</strong></p>
+<ul>
+    <li>PKI</li>
+    <li>NIST-SP800</li>
+    <li>x.503</li>
+    <li><span style="color: #ff0000;"><strong>x.509</strong></span></li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> The x.509 standard is for a PKI infrastructure and x.500 if for directory structures.​</p>
+</div>
+<p><strong>59. Which two statements describe remote access VPNs? (Choose two.)</strong></p>
+<ul>
+    <li>Remote access VPNs are used to connect entire networks, such as a branch office to headquarters.</li>
+    <li>End users are not aware that VPNs exists.</li>
+    <li>A leased line is required to implement remote access VPNs.</li>
+    <li><span style="color: #ff0000;"><strong>Client software is usually required to be able to access the network.
+            </strong></span></li>
+    <li><span style="color: #ff0000;"><strong>Remote access VPNs support the needs of telecommuters and mobile
+                users.</strong></span></li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Remote access VPNs are designed to provide for the needs of telecommuters and mobile users
+        through the use of software that is installed on the client to encrypt and encapsulate the data. Remote access
+        VPNs can be used across a variety of WAN connections. Users must access the client software to initiate the VPN
+        connection.</p>
+</div>
+<p><strong>60. What are two hashing algorithms used with IPsec AH to guarantee authenticity? (Choose two.)</strong></p>
+<ul>
+    <li><span style="color: #ff0000;"><strong>MD5 </strong></span></li>
+    <li><span style="color: #ff0000;"><strong>SHA</strong></span></li>
+    <li>AES</li>
+    <li>DH</li>
+    <li>RSA</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> The IPsec framework uses various protocols and algorithms to provide data confidentiality,
+        data integrity, authentication, and secure key exchange. Two popular algorithms used to ensure that data is not
+        intercepted and modified (data integrity and authenticity) are MD5 and SHA.</p>
+</div>
+<p><strong>61. What is the purpose of configuring multiple crypto ACLs when building a VPN connection between remote
+        sites?</strong></p>
+<ul>
+    <li>By applying the ACL on a public interface, multiple crypto ACLs can be built to prevent public users from
+        connecting to the VPN-enabled router.</li>
+    <li>Multiple crypto ACLs can be configured to deny specific network traffic from crossing a VPN.</li>
+    <li><span style="color: #ff0000;"><strong>When multiple combinations of IPsec protection are being chosen, multiple
+                crypto ACLs can define different traffic types.</strong></span></li>
+    <li>Multiple crypto ACLs can define multiple remote peers for connecting with a VPN-enabled router across the
+        Internet or network.</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> A crypto ACL can define “interesting traffic” that is used to build a VPN, and forward that
+        “interesting traffic” across the VPN to another VPN-enabled router. Multiple crypto ACLs are used to define
+        multiple different types of traffic and utilize different IPsec protection corresponding to the different types
+        of traffic.</p>
+</div>
+<p><strong>62. Refer to the exhibit. An administrator creates three zones (A, B, and C) in an ASA that filters traffic.
+        Traffic originating from Zone A going to Zone C is denied, and traffic originating from Zone B going to Zone C
+        is denied. What is a possible scenario for Zones A, B, and C?</strong><br />
+    <img decoding="async" src="https://itexamanswers.net/wp-content/uploads/2016/02/CCNA-Security-Chapter-9-2.png"
+        width="678" height="376" loading="lazy" fetchpriority="low"
+        srcset="https://itexamanswers.net/wp-content/uploads/2016/02/CCNA-Security-Chapter-9-2.png 678w, https://itexamanswers.net/wp-content/uploads/2016/02/CCNA-Security-Chapter-9-2-300x166.png 300w"
+        sizes="auto" />
+</p>
+<ul>
+    <li>A – DMZ, B – Inside, C – Outside</li>
+    <li>A – Inside, B – DMZ, C – Outside</li>
+    <li>A – Outside, B – Inside, C – DMZ</li>
+    <li><span style="color: red;"><strong>A – DMZ, B – Outside, C – Inside</strong></span></li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> ASA protects Network/Zone C (Inside) from unauthorized access by users on a Network/Zone B
+        (Outside). It also denies traffic from Network/Zone A (DMZ) to access the Network/Zone C (Inside).</p>
+</div>
+<p><strong>63. What are two monitoring tools that capture network traffic and forward it to network monitoring devices?
+        (Choose two.)</strong></p>
+<ul>
+    <li>SIEM</li>
+    <li>Wireshark</li>
+    <li>SNMP</li>
+    <li><span style="color: #ff0000;"><strong>SPAN </strong></span></li>
+    <li><span style="color: #ff0000;"><strong>network tap</strong></span></li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> A network tap is used to capture traffic for monitoring the network. The tap is typically a
+        passive splitting device implemented inline on the network and forwards all traffic including physical layer
+        errors to an analysis device. SPAN is a port mirroring technology supported on Cisco switches that enables the
+        switch to copy frames and forward them to an analysis device.</p>
+</div>
+<p><strong>64. What is the IPS detection engine that is included in the SEC license for 4000 Series ISRs?</strong></p>
+<ul>
+    <li>Security Onion</li>
+    <li><span style="color: #ff0000;"><strong>Snort</strong></span></li>
+    <li>ASDM</li>
+    <li>AMP</li>
+</ul>
+<div class="message_box success">
+    <p><b>Explanation:</b> Snort is the IPS detection and enforcement engine that is included in the SEC license for
+        4000 Series ISRs.</p>
+</div>
