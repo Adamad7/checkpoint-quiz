@@ -4368,5 +4368,480 @@ const examsData = [
 
 
     ]
+  },
+  {
+    "id": "web-apps-exam",
+    "title": "Web Apps Exam",
+    "questions": [
+      {
+        "pytanie": "Why prepared statement helps to protect against SQL Injection attacks?",
+        "opcje": [
+          "It removes SQL tokens from data",
+          "It implements black lists",
+          "Sends query template and data in separate packages",
+          "Contasins mechanisms of data filtering"
+        ],
+        "poprawna": "Sends query template and data in separate packages",
+        "image": ""
+      },
+      {
+        "pytanie": "Should each microservice control user privileges?",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "poprawna": "Fałsz",
+        "image": ""
+      },
+      {
+        "pytanie": "Wchich type of attack is the best choice to steal session identifier?",
+        "opcje": [
+          "SQL Injection",
+          "XSS",
+          "social engineering attack",
+          "Brute force"
+        ],
+        "poprawna": "XSS",
+        "image": ""
+      },
+      {
+        "pytanie": "Is it possible to overhear a request sent by post method?",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "poprawna": "Prawda",
+        "image": ""
+      },
+      {
+        "pytanie": "In XSS attacks you can inject:",
+        "opcje": [
+          "PHP",
+          "SQL",
+          "Javascript",
+          "HTML"
+        ],
+        "poprawna": [
+          "Javascript",
+          "HTML"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "Is a random enumeration of resources a method of protection against unauthorized access to data?",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "poprawna": "Fałsz",
+        "image": ""
+      },
+      {
+        "pytanie": "Which of the below are the types of SQL Injection attacks.",
+        "opcje": [
+          "Cross-band",
+          "Inference",
+          "In-band",
+          "Direct",
+          "Out-of-band"
+        ],
+        "poprawna": [
+          "Inference",
+          "In-band",
+          "Out-of-band"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "Data filtering is a technique that can help to protect against:",
+        "opcje": [
+          "SQL Injection attackss",
+          "Brute force attacks",
+          "Unauthorised access to data",
+          "XSS attacks",
+          "Unauthorised access to functions"
+        ],
+        "poprawna": [
+          "SQL Injection attackss",
+          "XSS attacks"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "Lets assume that login form is susceptible to SQI attack. Can it be possible to verify what version of database is used in the application while attacking this form with SQLI? After login no data is displayed.",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "poprawna": "Prawda",
+        "image": ""
+      },
+      {
+        "pytanie": "Data from forms can be sent with \"get\" or \"post\" method. Does the \"post\" method ensure higher level of security?",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "poprawna": "Fałsz",
+        "image": ""
+      },
+      {
+        "pytanie": "We are processing user passwords as hashes. Should we filter passwords taken from login form?",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "poprawna": "Fałsz",
+        "image": ""
+      },
+      {
+        "pytanie": "Is it possible to create a trap to catch a request sent with post method and modify request and an answer to this request?",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "poprawna": "Prawda",
+        "image": ""
+      },
+      {
+        "pytanie": "Which expression is a tautology?",
+        "opcje": [
+          "'7' between '4' and '9'",
+          "7>5",
+          "'taut'",
+          "1=1",
+          "curdate()=floor(2.3)"
+        ],
+        "poprawna": [
+          "'7' between '4' and '9'",
+          "7>5",
+          "1=1"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "We have bcrypt hashing function having 14 rounds - its execution time is over 1 second. We are going to use this function to keep user passwords hashes in heavy duty system (about 100 logins per minute). Will we obtain a good level of security?",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "poprawna": "Fałsz",
+        "image": ""
+      },
+      {
+        "pytanie": "Which of the following assertions will you use to check if the object was not initialized?",
+        "opcje": [
+          "assertNull",
+          "assertEmpty",
+          "assertNotNull",
+          "assertObjectNull",
+          "AssertNotInitialized"
+        ],
+        "poprawna": "assertNull",
+        "image": ""
+      },
+      {
+        "pytanie": "What annotation should be placed before the JUnit test method to be run multiple times?",
+        "opcje": [
+          "@Repeat",
+          "@Arguments",
+          "@ExecuteMany",
+          "@Arg",
+          "@Parameters"
+        ],
+        "poprawna": "@Parameters",
+        "image": ""
+      },
+      {
+        "pytanie": "Which function is the most resistant to collisions?",
+        "opcje": [
+          "HMAC",
+          "bcrypt",
+          "MD5",
+          "SHA512",
+          "SHA256"
+        ],
+        "poprawna": "HMAC",
+        "image": ""
+      },
+      {
+        "pytanie": "To verify who shared copyrighted content to other users you can use:",
+        "opcje": [
+          "Public key cryptography",
+          "Watermarking",
+          "Steganography",
+          "Fingerprinting"
+        ],
+        "poprawna": "Fingerprinting",
+        "image": ""
+      },
+      {
+        "pytanie": "Indicate the false sentence about TDD (Test driven Development)",
+        "opcje": [
+          "One of the main TDD steps is refactoring",
+          "In this technique tests cannot be parameterized",
+          "It is a software development technique that involves writing tests before code implementation",
+          "The use of TDD is profitable in large projects"
+        ],
+        "poprawna": "In this technique tests cannot be parameterized",
+        "image": ""
+      },
+      {
+        "pytanie": "For a branch of the code to be considered checked during testing process:",
+        "opcje": [
+          "Mutation tests should be used",
+          "If statements must be executed at least twice (once for true and once for false)",
+          "Each if statement must be run at least once",
+          "Tests should be run only for tested branch",
+          "Each instruction has to be run at least twice"
+        ],
+        "poprawna": "If statements must be executed at least twice (once for true and once for false)",
+        "image": ""
+      },
+      {
+        "pytanie": "Can you be sure that the program code does not contain errors if you test it?",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "poprawna": "Fałsz",
+        "image": ""
+      },
+      {
+        "pytanie": "At which level user's privileges in IT system can be defined?",
+        "opcje": [
+          "User",
+          "Role",
+          "Basic",
+          "Advanced",
+          "Group"
+        ],
+        "poprawna": [
+          "User",
+          "Role",
+          "Group"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "Which type of tests checks methods in isolation?",
+        "opcje": [
+          "Isolation tests",
+          "Unit tests",
+          "Acceptance tests",
+          "Integration tests",
+          "System tests"
+        ],
+        "poprawna": "Unit tests",
+        "image": ""
+      },
+      {
+        "pytanie": "To log in to some service you have to give some number. This number is displayed in a mobile application - but it changes every two minutes (it is periodically generated). What is the name of solution used?",
+        "opcje": [
+          "Hash",
+          "Mobile token",
+          "One time password",
+          "Reversed HMAC"
+        ],
+        "poprawna": "One time password",
+        "image": ""
+      },
+      {
+        "pytanie": "An attacker tries to break into an IT system by guessing users passwords. He tries to log in to each user account only twice. He is using a program installed on his computer to automatically try to log in to various accounts. Which mechanism can block passwords guessing process?",
+        "opcje": [
+          "Granting users minimum privileges",
+          "Two factor authorisation usage",
+          "Blocking users accounts after working hours",
+          "Blocking an IP address from which many unsuccessful login trials were proceeded"
+        ],
+        "poprawna": "Blocking an IP address from which many unsuccessful login trials were proceeded",
+        "image": ""
+      },
+      {
+        "pytanie": "Software testing is:",
+        "opcje": [
+          "Software quality assurance process",
+          "All answers are correct",
+          "A trial of software bugs detection",
+          "A code execution for some combinations of input data and software states to detect errors",
+          "Software validation and verification technique"
+        ],
+        "poprawna": "All answers are correct",
+        "image": ""
+      },
+      {
+        "pytanie": "What is the goal of testing?",
+        "opcje": [
+          "Comparing system behaviour with its project",
+          "Production of reliable software",
+          "Errors identification in a ready software",
+          "Identification of all errors",
+          "Obtaining a certain level of system reliability"
+        ],
+        "poprawna": "Obtaining a certain level of system reliability",
+        "image": ""
+      },
+      {
+        "pytanie": "Which annotation from the jUnit library ensures that the method marked with this annotation will be executed only once before performing class testing methods?",
+        "opcje": [
+          "@BeforeTest",
+          "@Before",
+          "@Test",
+          "@BeforeClass",
+          "@AfterClass"
+        ],
+        "poprawna": "@BeforeClass",
+        "image": ""
+      },
+      {
+        "pytanie": "What kind of test rely on rerunning existing tests after making changes to the code?",
+        "opcje": [
+          "Regression test",
+          "Acceptance test",
+          "Repetitive test",
+          "Delayed test",
+          "Recursive test"
+        ],
+        "poprawna": "Regression test",
+        "image": ""
+      },
+      {
+        "pytanie": "You need a functionality of temporary user account blockade. After third subsequent unsuccessful login trial you want to block account for 3 minutes. All user data is kept only in \"user\" table. Which fields in the \"user\" table are necessary to realize this functionality?",
+        "opcje": [
+          "email - user e-mail address to send password reset link",
+          "blocked - if user is blocked or not",
+          "blockade_time - the end of the blockade period",
+          "unsuccessful_login_count - a number of subsequent unsuccessful logins since last correct login"
+        ],
+        "poprawna": [
+          "blockade_time - the end of the blockade period",
+          "unsuccessful_login_count - a number of subsequent unsuccessful logins since last correct login"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "You have to analyse a computer to protect digital evidence. Whose activities are important during this procedure?",
+        "opcje": [
+          "Duplicate investigated data",
+          "Create a new folder on analysed disc and copy all evidence in one place",
+          "Copy disc content using write blocker",
+          "Check the present IP address",
+          "Break user password"
+        ],
+        "poprawna": "Copy disc content using write blocker",
+        "image": ""
+      },
+      {
+        "pytanie": "How user can get one time password?",
+        "opcje": [
+          "It can be generated with public key usage",
+          "From hardware token",
+          "He can randomly generate it",
+          "It can be generated with private key usage",
+          "From public repository"
+        ],
+        "poprawna": "From hardware token",
+        "image": ""
+      },
+      {
+        "pytanie": "Testing can reveal the lack of errors",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "poprawna": "Fałsz",
+        "image": ""
+      },
+      {
+        "pytanie": "Please mark all steps of TDD.",
+        "opcje": [
+          "Refactor code",
+          "Write a piece of code that will let existing test to pass",
+          "Write a method for which a test will be created",
+          "Write a test that fails",
+          "Use stubs"
+        ],
+        "poprawna": [
+          "Write a test that fails",
+          "Write a piece of code that will let existing test to pass",
+          "Refactor code"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "If you want to send SQL querry template and data in separate packages to enable database server to clearly distinguish data from SQL command, you can use:",
+        "opcje": [
+          "Prepared Statement",
+          "SQL Injection",
+          "PDO",
+          "filter_var()",
+          "tautology"
+        ],
+        "poprawna": [
+          "Prepared Statement",
+          "PDO"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "What tests are done by client while he is assessing if a software meets his requirments and works properly?",
+        "opcje": [
+          "System tests",
+          "Acceptance tests",
+          "Unit tests",
+          "Integration tests",
+          "Client tests"
+        ],
+        "poprawna": "Acceptance tests",
+        "image": ""
+      },
+      {
+        "pytanie": "What solutions can be used to remove unwanted values from the data user can type in the form?",
+        "opcje": [
+          "White list",
+          "Prepared statement",
+          "filter_input()",
+          "filter_var()",
+          "Black list"
+        ],
+        "poprawna": [
+          "filter_var()",
+          "filter_input()",
+          "Black list"
+        ],
+        "image": ""
+      },
+      {
+        "pytanie": "What data do you have to give to the input of the function that calculate HMAC in PHP?",
+        "opcje": [
+          "Secret key, message, ipad, opad",
+          "Only message",
+          "Message, secret key, initialization vector",
+          "Message, secret key and hashing algorithm name"
+        ],
+        "poprawna": "Message, secret key and hashing algorithm name",
+        "image": ""
+      },
+      {
+        "pytanie": "Where should you implement the code to verify user privileges to be sure that user will not be able to omit them?",
+        "opcje": [
+          "In GUI (user interface)",
+          "In database",
+          "Inside a function that gives an access to data",
+          "Inside the session"
+        ],
+        "poprawna": "Inside a function that gives an access to data",
+        "image": ""
+      },
+      {
+        "pytanie": "Can software testing prove that tested software is free of errors?",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "poprawna": "Fałsz",
+        "image": ""
+      }
+    ]
   }
 ]
