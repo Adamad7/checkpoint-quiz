@@ -17,6 +17,7 @@ soup = BeautifulSoup(html_content, 'html.parser')
 
 questions = []
 for p in soup.find_all('p'):
+    print("QUESTION:\n", p)
     question_node = p.find('strong') or p.find('b')
     if question_node:
         question_text = p.get_text().strip()
@@ -28,15 +29,21 @@ for p in soup.find_all('p'):
              if len(parts) > 1:
                  question_text = parts[1].strip()
         
-        # Check for image div following the question
+        
+        # Check for image inside the question paragraph (p tag)
         img_src = ""
+        p_img = p.find('img')
+        if p_img:
+            img_src = p_img.get('src') or p_img.get('srcset', '').split(' ')[0]
+        
+        # Check for image div following the question (only if not found inside p)
         current_sibling = p.find_next_sibling()
         
         # Skip empty strings/newlines
         while current_sibling and (isinstance(current_sibling, str) or current_sibling.name == 'br'):
              current_sibling = current_sibling.find_next_sibling()
 
-        if current_sibling and current_sibling.name == 'div' and current_sibling.find('img'):
+        if not img_src and current_sibling and current_sibling.name == 'div' and current_sibling.find('img'):
              img_tag = current_sibling.find('img')
              if img_tag:
                  img_src = img_tag.get('src') or img_tag.get('srcset', '').split(' ')[0]
@@ -127,7 +134,14 @@ for p in soup.find_all('p'):
             
             q_obj["opcje"] = options
             questions.append(q_obj)
-            
+        
+        elif "match" in question_text.lower() and img_src:
+            # Handle image-based matching questions without a table
+            q_obj["type"] = "matching"
+            q_obj["match_pairs"] = []
+            q_obj["opcje"] = []
+            q_obj["poprawna"] = []
+            questions.append(q_obj)
         # --- Explanation Parsing ---
         explanation_text = ""
         explanation_search_node = None
