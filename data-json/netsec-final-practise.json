@@ -94,25 +94,34 @@
     "explanation": "The type of end user interaction required to launch a virus is typically opening an\n        application, opening a web page, or powering on the computer. Once activated, a virus may infect other files\n        located on the computer or other computers on the same network."
   },
   {
+    "pytanie": "Match the information security component with the description.",
+    "image": "https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_101208.jpg",
+    "type": "matching",
+    "match_pairs": [],
+    "opcje": [],
+    "poprawna": [],
+    "explanation": ""
+  },
+  {
     "pytanie": "Match the security policy with the description. (Not all options are used.)",
     "image": "https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_101455.jpg",
     "type": "matching",
     "match_pairs": [
       {
-        "left": "identifies network applications and uses that are acceptable to the organization",
-        "right": "acceptable use policy (AUP)"
+        "right": "identifies network applications and uses that are acceptable to the organization",
+        "left": "acceptable use policy (AUP)"
       },
       {
-        "left": "identifies how remote users can access a network and what is accessible via remote connectivity",
-        "right": "remote access policy"
+        "right": "identifies how remote users can access a network and what is accessible via remote connectivity",
+        "left": "remote access policy"
       },
       {
-        "left": "specifies authorized persons that can have access to network resources and identity verification\n                procedures",
-        "right": "identification and authentication policy"
+        "right": "specifies authorized persons that can have access to network resources and identity verification\n                procedures",
+        "left": "identification and authentication policy"
       },
       {
-        "left": "specifies network device operating systems and end user application update procedures",
-        "right": "network maintenance policy"
+        "right": "specifies network device operating systems and end user application update procedures",
+        "left": "network maintenance policy"
       }
     ],
     "opcje": [],
@@ -147,7 +156,7 @@
   },
   {
     "pytanie": "Refer to the exhibit. Which statement about the JR-Admin account is true?",
-    "image": "",
+    "image": "https://itexamanswers.net/wp-content/uploads/2021/05/Which-statement-about-the-JR-Admin-account-is-true.jpg",
     "type": "choice",
     "poprawna": "JR-Admin can issue ping and reload commands.",
     "opcje": [
@@ -175,7 +184,7 @@
   },
   {
     "pytanie": "Refer to the exhibit. What type of syslog message is displayed?",
-    "image": "",
+    "image": "https://itexamanswers.net/wp-content/uploads/2021/05/Refer-to-the-exhibit.-What-type-of-syslog-message-is-displayed.png",
     "type": "choice",
     "poprawna": "notification",
     "opcje": [
@@ -302,7 +311,7 @@
   },
   {
     "pytanie": "Refer to the exhibit. An extended access list has been created to prevent human resource users from\n        gaining access to the accounting server. All other network traffic is to be permitted. When following the ACL\n        configuration guidelines, on which router, interface, and direction should the access list be\n        applied?",
-    "image": "",
+    "image": "https://itexamanswers.net/wp-content/uploads/2021/01/2021-01-06_214355.jpg",
     "type": "choice",
     "poprawna": "router R1, interface Gi0/0/0, inbound",
     "opcje": [
@@ -343,7 +352,7 @@
   },
   {
     "pytanie": "Refer to the exhibit. A network administrator is configuring the security level for the ASA. What is a\n        best practice for assigning the security level on the three interfaces?",
-    "image": "",
+    "image": "https://itexamanswers.net/wp-content/uploads/2016/02/ccnasec4.png",
     "type": "choice",
     "poprawna": "Outside 0, Inside 100, DMZ 50",
     "opcje": [
@@ -459,6 +468,15 @@
     "explanation": "The three actions that can be applied are inspect, drop,and pass.​\n        Inspect – This action offers state-based traffic control.\n        Drop – This is the default action for all traffic. Similar to the implicit deny any at the end of every ACL,\n        there is an explicit drop applied by the IOS to the end of every policy map.\n        Pass – This action allows the router to forward traffic from one zone to another."
   },
   {
+    "pytanie": "Match the network security device type with the description.",
+    "image": "https://itexamanswers.net/wp-content/uploads/2020/09/Match-the-network-security-device-type-with-the-description.jpg",
+    "type": "matching",
+    "match_pairs": [],
+    "opcje": [],
+    "poprawna": [],
+    "explanation": ""
+  },
+  {
     "pytanie": "What is a characteristic of an IPS atomic signature?",
     "image": "",
     "type": "choice",
@@ -470,6 +488,15 @@
       "it is the simplest type of signature"
     ],
     "explanation": "There are two types of IPS signatures:\n        Atomic – This is the simplest type of signature because it does not require the IPS to maintain state\n        information and it can identify an attack with a single packet, activity, or event.\n        Composite – This is a stateful type of signature. It requires that the IPS maintain state information to match\n        an attack signature."
+  },
+  {
+    "pytanie": "Match each IPS signature trigger category with the description.",
+    "image": "https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_102250.jpg",
+    "type": "matching",
+    "match_pairs": [],
+    "opcje": [],
+    "poprawna": [],
+    "explanation": ""
   },
   {
     "pytanie": "A company is concerned about data theft if any of the corporate laptops are stolen. Which Windows tool\n        would the company use to protect the data on the laptops?",
@@ -548,7 +575,7 @@
   },
   {
     "pytanie": "Refer to the exhibit. A network administrator is configuring DAI on switch SW1. What is the result of\n        entering the exhibited commands?",
-    "image": "",
+    "image": "https://itexamanswers.net/wp-content/uploads/2020/06/What-is-the-result-of-entering-the-exhibited-commands.jpg",
     "type": "choice",
     "poprawna": "DAI will validate only the destination MAC addresses.",
     "opcje": [
@@ -613,7 +640,7 @@
   },
   {
     "pytanie": "Refer to the exhibit. A network administrator is configuring an object group on an ASA device. Which\n        configuration keyword should be used after the object group name SERVICE1 ?",
-    "image": "",
+    "image": "https://itexamanswers.net/wp-content/uploads/2021/05/A-network-administrator-is-configuring-an-object-group-on-an-ASA-device.jpg",
     "type": "choice",
     "poprawna": "tcp",
     "opcje": [
@@ -639,7 +666,7 @@
   },
   {
     "pytanie": "Refer to the exhibit. A network administrator is configuring PAT on an ASA device to enable internal\n        workstations to access the Internet. Which configuration command should be used next?",
-    "image": "",
+    "image": "https://itexamanswers.net/wp-content/uploads/2021/05/Which-configuration-command-should-be-used-next.jpg",
     "type": "choice",
     "poprawna": "nat (inside,outside) dynamic interface",
     "opcje": [
@@ -683,6 +710,15 @@
     "explanation": "Nmap is a low-level network scanner that is available to the public and that has the ability\n        to perform port scanning, to identify open TCP and UDP ports, and which can also perform system identification.\n        It can also be used to identify Layer 3 protocols that are running on a system. Zenmap is the GUI version of\n        Nmap."
   },
   {
+    "pytanie": "Match the network security testing tool with the correct function. (Not all options are used.)",
+    "image": "https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_100937.jpg",
+    "type": "matching",
+    "match_pairs": [],
+    "opcje": [],
+    "poprawna": [],
+    "explanation": ""
+  },
+  {
     "pytanie": "Which two means can be used to try to bypass the management of mobile devices? (Choose two.)",
     "image": "",
     "type": "multi-choice",
@@ -698,6 +734,15 @@
       "using a Trojan Horse"
     ],
     "explanation": "Jailbreaking is a term used when breaking into an Apple iOS device, whereas rooting is the\n        term used for doing the same to an Android device. Both must be concerns in the corporate environment where so\n        many people bring their own devices and access the corporate networks."
+  },
+  {
+    "pytanie": "Match the type of cyberattackers to the description. (Not all options are used.)",
+    "image": "https://itexamanswers.net/wp-content/uploads/2021/05/2021-10-28_102053.jpg",
+    "type": "matching",
+    "match_pairs": [],
+    "opcje": [],
+    "poprawna": [],
+    "explanation": ""
   },
   {
     "pytanie": "What is a benefit of having users or remote employees use a VPN to connect to the existing network rather\n        than growing the network infrastructure?",
@@ -817,7 +862,7 @@
   },
   {
     "pytanie": "Refer to the exhibit. An administrator creates three zones (A, B, and C) in an ASA that filters traffic.\n        Traffic originating from Zone A going to Zone C is denied, and traffic originating from Zone B going to Zone C\n        is denied. What is a possible scenario for Zones A, B, and C?",
-    "image": "",
+    "image": "https://itexamanswers.net/wp-content/uploads/2016/02/CCNA-Security-Chapter-9-2.png",
     "type": "choice",
     "poprawna": "A – DMZ, B – Outside, C – Inside",
     "opcje": [
