@@ -108,7 +108,7 @@ function showNextQuestion() {
     isAnswerChecked = false;
     submitBtn.textContent = "Sprawdź odpowiedź";
 
-    questionText.textContent = question.pytanie;
+    questionText.innerHTML = question.pytanie;
 
     // Aktualizacja licznika
     questionCounter.textContent = `Pytanie ${currentQuestionIndex + 1} z ${shuffledQuestions.length}`;
@@ -129,7 +129,7 @@ function showNextQuestion() {
     // --- OBSŁUGA WYJAŚNIENIA ---
     if (question.explanation && question.explanation.trim() !== "") {
         explanationContainer.classList.remove('hide');
-        explanationContent.textContent = question.explanation;
+        explanationContent.innerHTML = question.explanation;
         // Domyślnie ukryte
         explanationContent.classList.add('hide');
         explanationToggle.textContent = 'Pokaż wyjaśnienie ▼';
