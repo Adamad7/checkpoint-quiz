@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://www.netacad.com/favicon.ico">
+    <title>Cisco Networking Academy: Bezpieczeństwo sieci teleinformatycznych</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --bg-color: #f4f7f6;
+            --code-bg: #2d2d2d;
+            --code-text: #f8f8f2;
+            --device-header-bg: #e9ecef;
+            --device-header-text: #333;
+            --note-bg: #fff3cd;
+            --note-border: #ffeeba;
+            --note-text: #856404;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #444;
+            margin-top: 40px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #666;
+            margin-top: 25px;
+        }
+
+        .step-desc {
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .command-block {
+            background-color: var(--device-header-bg);
+            border-radius: 6px;
+            overflow: hidden;
+            margin: 15px 0;
+            border: 1px solid #d1d1d1;
+        }
+
+        .device-name {
+            background-color: #ddd;
+            color: var(--device-header-text);
+            padding: 8px 15px;
+            font-weight: bold;
+            font-family: monospace;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+        }
+
+        .device-name::before {
+            content: ">_";
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 15px;
+            margin: 0;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .note {
+            background-color: var(--note-bg);
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            color: var(--note-text);
+            border-radius: 4px;
+        }
+
+        .warning {
+            background-color: #f8d7da;
+            border-left: 5px solid #dc3545;
+            padding: 15px;
+            margin: 20px 0;
+            color: #721c24;
+            border-radius: 4px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Network Security PTSA</h1>
+
+        <h2>Part 1: Configure the ASA 5506-X</h2>
+
+        <h3>Step 1: Configure Basic Settings</h3>
+        <div class="step-desc">
+            Konfiguracja podstawowa urządzenia: hostname, domena oraz adresacja interfejsów (INSIDE, OUTSIDE, DMZ).
+            <br><strong>Hasło początkowe:</strong> <code>Thecar1Admin</code>
+        </div>
+
+        <div class="command-block">
+            <div class="device-name">HQ-ASA5506</div>
+            <pre>
+enable
+Thecar1Admin
+conf term
+domain-name thecar1.com
+hostname HQ-ASA5506
+
+interface g1/1
+nameif OUTSIDE
+security-level 1
+ip address 209.165.200.253 255.255.255.240
+no shutdown
+
+interface g1/2
+nameif INSIDE
+security-level 100
+ip address 192.168.10.1 255.255.255.0
+no shutdown
+
+interface g1/3
+nameif DMZ
+security-level 70
+ip address 192.168.20.1 255.255.255.0
+no shutdown
+exit
+</pre>
+        </div>
+
+        <div class="note">
+            <strong>NOTE:</strong> Po tym kroku sprawdź ponownie, czy interfejsy G1/1, G1/2, G1/3 mają poprawnie
+            skonfigurowane adresy IP. Jeśli nie, skonfiguruj je ponownie. Pamiętaj o zapisaniu konfiguracji.
+        </div>
+
+        <h3>Step 2: Configure DHCP Service</h3>
+        <div class="step-desc">
+            Konfiguracja serwera DHCP dla sieci wewnętrznej (INSIDE).
+        </div>
+
+        <div class="command-block">
+            <div class="device-name">HQ-ASA5506</div>
+            <pre>
+dhcpd address 192.168.10.25-192.168.10.35 INSIDE
+dhcpd dns 192.168.10.10 interface INSIDE
+dhcpd option 3 ip 192.168.10.1
+dhcpd enable INSIDE
+</pre>
+        </div>
+        <div class="note">
+            Upewnij się, że PC1, PC2 i PC3 otrzymały adresy IP z DHCP.
+        </div>
+
+        <h3>Step 3: Configure Routing</h3>
+        <div class="step-desc">
+            Konfiguracja trasy domyślnej wychodzącej przez interfejs OUTSIDE.
+        </div>
+
+        <div class="command-block">
+            <div class="device-name">HQ-ASA5506</div>
+            <pre>
+route OUTSIDE 0.0.0.0 0.0.0.0 209.165.200.254
+</pre>
+        </div>
+
+        <h3>Step 4: Secure Network Management (NTP, AAA, SSH)</h3>
+        <div class="step-desc">
+            Konfiguracja klienta NTP, uwierzytelniania AAA oraz dostępu SSH.
+        </div>
+
+        <div class="command-block">
+            <div class="device-name">HQ-ASA5506</div>
+            <pre>
+ntp authenticate
+ntp authentication-key 1 md5 corpkey
+ntp server 192.168.10.10
+ntp trusted-key 1
+
+username Car1Admin password adminpass01
+aaa authentication ssh console LOCAL
+crypto key generate rsa modulus 1024
+yes
+ssh 192.168.10.250 255.255.255.255 INSIDE
+ssh timeout 20
+</pre>
+        </div>
+
+        <h3>Step 5: Configure NAT Service</h3>
+        <div class="step-desc">
+            Konfiguracja dynamicznego NAT dla sieci INSIDE oraz statycznego NAT dla serwerów w DMZ.
+        </div>
+
+        <div class="command-block">
+            <div class="device-name">HQ-ASA5506</div>
+            <pre>
+object network INSIDE-nat
+subnet 192.168.10.0 255.255.255.0
+nat (inside,outside) dynamic interface
+exit
+
+configure terminal
+object network DMZ-web-server
+host 192.168.20.2
+nat (dmz,outside) static 209.165.200.241
+exit
+
+configure terminal
+object network DMZ-dns-server
+host 192.168.20.5
+nat (dmz,outside) static 209.165.200.242
+exit
+</pre>
+        </div>
+
+        <h3>Step 6: Configure ACL (Security Policy)</h3>
+        <div class="step-desc">
+            Tworzenie i aplikowanie list kontroli dostępu (ACL) dla ruchu wychodzącego (NAT) oraz przychodzącego do DMZ.
+        </div>
+
+        <div class="command-block">
+            <div class="device-name">HQ-ASA5506</div>
+            <pre>
+configure terminal
+access-list NAT-IP-ALL extended permit ip any any
+
+access-group NAT-IP-ALL in interface OUTSIDE
+access-group NAT-IP-ALL in interface DMZ
+
+access-list OUTSIDE-TO-DMZ extended permit tcp any host 209.165.200.241 eq 80
+access-list OUTSIDE-TO-DMZ extended permit tcp any host 209.165.200.242 eq 53
+access-list OUTSIDE-TO-DMZ extended permit udp any host 209.165.200.242 eq 53
+access-list OUTSIDE-TO-DMZ extended permit tcp host 198.133.219.35 host 209.165.200.241 eq ftp
+
+end
+copy running-config startup-config
+</pre>
+        </div>
+        <div class="note">
+            <strong>Uwaga:</strong> Zgodnie z poleceniem, listy OUTSIDE-TO-DMZ na tym etapie nie aplikujemy (do NOT
+            apply this ACL).
+        </div>
+
+        <h2>Part 2: Configure Layer 2 Security on a Switch</h2>
+
+        <h3>Step 1: Disable Unused Switch Ports</h3>
+        <div class="step-desc">
+            Wyłączenie nieużywanych portów i ustawienie ich w tryb access.
+        </div>
+
+        <div class="command-block">
+            <div class="device-name">Switch 1</div>
+            <pre>
+enable
+conf t
+interface range f0/2-4, f0/6-9, f0/11-22, g0/2
+shutdown
+switchport mode access
+switchport nonegotiate
+</pre>
+        </div>
+
+        <h3>Step 2: Implement Port Security</h3>
+        <div class="step-desc">
+            Konfiguracja Port Security na portach aktywnych (Max 2 MAC, Sticky, Violation Restrict).
+        </div>
+
+        <div class="command-block">
+            <div class="device-name">Switch 1</div>
+            <pre>
+interface range f0/1, f0/5, f0/10
+switchport mode access
+switchport port-security
+switchport port-security maximum 2
+switchport port-security mac-address sticky
+switchport port-security violation restrict
+switchport nonegotiate
+</pre>
+        </div>
+
+        <h3>Step 3: Implement STP Security</h3>
+        <div class="step-desc">
+            Włączenie BPDU Guard i PortFast na portach dostępowych.
+        </div>
+
+        <div class="command-block">
+            <div class="device-name">Switch 1</div>
+            <pre>
+interface range f0/1, f0/5, f0/10, g0/1
+spanning-tree bpduguard enable
+spanning-tree portfast
+
+end
+copy running-config startup-config
+</pre>
+        </div>
+
+        <h2>Part 3: Configure Site-to-Site IPsec VPN</h2>
+        <p>Konfiguracja tunelu VPN pomiędzy HQ a Branch Router.</p>
+
+        <div class="warning">
+            <strong>WAŻNE - LICENCJA SECURITY:</strong><br>
+            Jeśli polecenie <code>crypto isakmp policy 10</code> nie działa na routerze, należy aktywować licencję
+            security:<br>
+            <pre style="background: none; border: none; padding: 5px 0; color: #721c24;">
+en
+show license feature
+conf t
+license boot module c1900 technology-package securityk9
+Yes
+Reload </pre>
+        </div>
+
+        <h3>Konfiguracja HQ Router</h3>
+        <div class="step-desc">
+            <strong>Dane logowania:</strong> User: <code>CORPADMIN</code>, Pass: <code>NetSec-Admin1</code>, Enable
+            Secret: <code>RTR-AdminP@55</code>
+        </div>
+
+        <div class="command-block">
+            <div class="device-name">HQ Router</div>
+            <pre>
+enable
+Password: RTR-AdminP@55
+conf ter
+
+access-list 120 permit ip 209.165.200.240 0.0.0.15 198.133.219.32 0.0.0.31
+
+crypto isakmp policy 10
+encryption aes 256
+hash sha
+authentication pre-share
+group 2
+lifetime 1800
+exit
+
+crypto isakmp key Vpnpass101 address 198.133.219.2
+
+crypto ipsec transform-set VPN-SET esp-aes esp-sha-hmac
+
+crypto map VPN-MAP 10 ipsec-isakmp
+match address 120
+set transform-set VPN-SET
+set peer 198.133.219.2
+set pfs group2
+set security-association lifetime seconds 1800
+exit
+
+int s0/0/0
+crypto map VPN-MAP
+end
+copy running-config startup-config
+</pre>
+        </div>
+
+        <h3>Konfiguracja Branch Router</h3>
+        <div class="step-desc">
+            Symetryczna konfiguracja po stronie oddziału (zwróć uwagę na odwrócony ACL i adres peera).
+        </div>
+
+        <div class="command-block">
+            <div class="device-name">Branch Router</div>
+            <pre>
+enable
+Password: RTR-AdminP@55
+conf ter
+
+access-list 120 permit ip 198.133.219.32 0.0.0.31 209.165.200.240 0.0.0.15
+
+crypto isakmp policy 10
+encryption aes 256
+hash sha
+authentication pre-share
+group 2
+lifetime 1800
+exit
+
+crypto isakmp key Vpnpass101 address 209.165.200.226
+
+crypto ipsec transform-set VPN-SET esp-aes esp-sha-hmac
+
+crypto map VPN-MAP 10 ipsec-isakmp
+match address 120
+set transform-set VPN-SET
+set peer 209.165.200.226
+set pfs group2
+set security-association lifetime seconds 1800
+exit
+
+int s0/0/0
+crypto map VPN-MAP
+end
+copy running-config startup-config
+</pre>
+        </div>
+
+    </div>
+
+    <footer>
+        Generated based on user notes provided for Cisco Packet Tracer Assignment.
+    </footer>
+
+</body>
+
+</html>
