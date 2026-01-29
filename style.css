@@ -213,8 +213,8 @@ body {
 
 #menu-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    top: 20px;
+    left: 20px;
     padding: 12px 20px;
     font-size: 1rem;
     font-weight: bold;
@@ -553,7 +553,7 @@ html.dark-mode #explanation-content {
         position: static;
         width: 100%;
         max-width: 600px;
-        margin-top: 50px;
+        margin-bottom: 10px;
         transform: none;
         box-shadow: none;
         border-radius: 12px;
