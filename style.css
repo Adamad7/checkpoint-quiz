@@ -219,11 +219,13 @@ body {
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    background-color: var(--primary-color);
-    border: none;
+    border-color: var(--primary-color);
+    background-color: var(--card-bg-color);
+    /* border: none; */
     cursor: pointer;
     transition: background-color 0.2s, transform 0.2s;
     border-radius: 50px;
+    border-width: 2px;
     /* Pill shape */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
@@ -536,4 +538,29 @@ html.dark-mode #explanation-content {
     background-color: var(--secondary-color);
     border-color: var(--border-color);
     color: #ffffff;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 80px;
+        /* Space for fixed theme button */
+    }
+
+    #menu-btn {
+        position: static;
+        width: 100%;
+        max-width: 600px;
+        margin-top: 50px;
+        transform: none;
+        box-shadow: none;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    #menu-btn:hover {
+        transform: none;
+    }
 }
