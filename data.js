@@ -2,6 +2,7 @@ const examsData = [
   {
     "id": "test-exam",
     "title": "Test exam",
+    "hidden": true,
     "questions": [
       {
         "pytanie": "Which are two best practices<br> used to secure APIs? (Choose two.)",
@@ -24,6 +25,7 @@ const examsData = [
   {
     "id": "ethical-hacker-final",
     "title": "Ethical Hacker Final",
+    "hidden": true,
     "questions": [
       {
         "pytanie": "Which are two best practices used to secure APIs? (Choose two.)",
@@ -1385,6 +1387,7 @@ const examsData = [
   {
     "id": "web-apps-exam",
     "title": "Web Apps Exam",
+    "hidden": true,
     "questions": [
       {
         "pytanie": "Why prepared statement helps to protect against SQL Injection attacks?",
@@ -1860,6 +1863,7 @@ const examsData = [
   {
     "id": "netsec-final-practise",
     "title": "Netsec Final Practise",
+    "hidden": true,
     "questions": [
       {
         "pytanie": "Which two statements are true about ASA standard ACLs? (Choose two.)​",
@@ -2757,11 +2761,11 @@ const examsData = [
         "explanation": "Snort is the IPS detection and enforcement engine that is included in the SEC license for 4000 Series ISRs."
       }
     ]
-  }
-  ,
+  },
   {
     "id": "netsec-final",
     "title": "Network Security Final",
+    "hidden": true,
     "questions": [
       {
         "pytanie": "Match the type of ASA ACLs to the description. (Not all options are used.)",
@@ -5100,5 +5104,3889 @@ const examsData = [
         "explanation": "WANs span a wide area and commonly have connections from a main site to remote sites including a branch office, regional site, SOHO sites, and mobile workers. WANs typically connect over a public internet connection. Each site commonly has a firewall and VPNs used by remote workers between sites."
       }
     ]
-  }
+  },
+  {
+    "id": "bsiach",
+    "title": "BŚiACH",
+    "hidden": true,
+    "questions": [
+      {
+        "pytanie": "Który z poniższych modeli usług chmurowych zapewnia klientowi najmniejszą kontrolę, ale jednocześnie najmniejszą odpowiedzialność za bezpieczeństwo infrastruktury?",
+        "type": "choice",
+        "poprawna": "SaaS (Software as a Service)",
+        "opcje": [
+          "IaaS (Infrastructure as a Service)",
+          "PaaS (Platform as a Service)",
+          "SaaS (Software as a Service)",
+          "FaaS (Function as a Service)"
+        ],
+        "explanation": "W modelu SaaS dostawca odpowiada za większość aspektów bezpieczeństwa, a klient ma najmniejszą kontrolę nad infrastrukturą [1, 2]."
+      },
+      {
+        "pytanie": "Co charakteryzuje model wdrożenia chmury hybrydowej (Hybrid)?",
+        "type": "choice",
+        "poprawna": "Łączy chmurę publiczną i prywatną",
+        "opcje": [
+          "Jest dedykowany dla jednej organizacji",
+          "Jest dostępny dla ogółu użytkowników",
+          "Łączy chmurę publiczną i prywatną",
+          "Jest współdzielony przez organizacje o podobnych wymaganiach"
+        ],
+        "explanation": "Model hybrydowy łączy modele publiczne i prywatne, co wymaga spójnych polityk bezpieczeństwa między środowiskami [3]."
+      },
+      {
+        "pytanie": "Jakie są trzy główne części składowe tokenu JWT (JSON Web Token)?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Nagłówek (Header)",
+          "Zawartość/Roszczenia (Payload/Claims)",
+          "Podpis (Signature)"
+        ],
+        "opcje": [
+          "Nagłówek (Header)",
+          "Zawartość/Roszczenia (Payload/Claims)",
+          "Szyfr (Cipher)",
+          "Podpis (Signature)"
+        ],
+        "explanation": "JWT składa się z trzech części: nagłówka, zawartości (uprawnienia - claims) i podpisu elektronicznego [4]."
+      },
+      {
+        "pytanie": "Która technologia umożliwia przetwarzanie zaszyfrowanych danych w pamięci bez ich uprzedniego deszyfrowania (szyfrowanie w użyciu)?",
+        "type": "choice",
+        "poprawna": "Intel SGX lub AMD SEV",
+        "opcje": [
+          "TLS/SSL",
+          "Transparent Data Encryption (TDE)",
+          "Intel SGX lub AMD SEV",
+          "AES-256"
+        ],
+        "explanation": "Technologie takie jak Intel SGX i AMD SEV umożliwiają przetwarzanie zaszyfrowanych danych w pamięci [5]."
+      },
+      {
+        "pytanie": "Czym charakteryzuje się architektura REST?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Bezstanowością",
+          "Jednolitym interfejsem",
+          "Niezależnością reprezentacji"
+        ],
+        "opcje": [
+          "Bezstanowością",
+          "Utrzymywaniem stałego połączenia z bazą",
+          "Jednolitym interfejsem",
+          "Niezależnością reprezentacji"
+        ],
+        "explanation": "Zasady REST obejmują bezstanowość, jednolity interfejs, URL-e bazujące na zasobach oraz niezależność reprezentacji [6]."
+      },
+      {
+        "pytanie": "Jaki jest główny cel stosowania wzorca Circuit Breaker (bezpiecznika) w mikrousługach?",
+        "type": "choice",
+        "poprawna": "Zapobieganie kaskadowym awariom poprzez odcinanie niesprawnych zależności",
+        "opcje": [
+          "Szyfrowanie danych przesyłanych między usługami",
+          "Zapobieganie kaskadowym awariom poprzez odcinanie niesprawnych zależności",
+          "Automatyczne skalowanie aplikacji",
+          "Centralne zarządzanie konfiguracją"
+        ],
+        "explanation": "Circuit Breaker odcina niesprawne zależności, chroniąc wątki i użytkowników przed lawiną timeoutów oraz awariami kaskadowymi [7, 8]."
+      },
+      {
+        "pytanie": "W jaki sposób Spring Boot upraszcza konfigurację aplikacji?",
+        "type": "choice",
+        "poprawna": "Poprzez autokonfigurację na podstawie classpath i właściwości",
+        "opcje": [
+          "Wymagając ręcznego definiowania wszystkich beanów w XML",
+          "Poprzez autokonfigurację na podstawie classpath i właściwości",
+          "Eliminując całkowicie pliki konfiguracyjne",
+          "Używając wyłącznie zewnętrznych serwerów aplikacji"
+        ],
+        "explanation": "Autokonfiguracja Spring Boot automatycznie konfiguruje komponenty na podstawie classpath i właściwości, redukując kod szablonowy [9]."
+      },
+      {
+        "pytanie": "Które z poniższych narzędzi służą do statycznego testowania bezpieczeństwa aplikacji (SAST)?",
+        "type": "multi-choice",
+        "poprawna": [
+          "SonarQube",
+          "Semgrep"
+        ],
+        "opcje": [
+          "SonarQube",
+          "OWASP ZAP",
+          "Semgrep",
+          "Burp Suite"
+        ],
+        "explanation": "SonarQube i Semgrep są wymienione jako narzędzia SAST do analizy kodu źródłowego, podczas gdy OWASP ZAP i Burp Suite to narzędzia DAST [10-12]."
+      },
+      {
+        "pytanie": "Za co odpowiada Service Discovery (np. Eureka) w architekturze mikrousług?",
+        "type": "choice",
+        "poprawna": "Pozwala usługom na znajdowanie się i komunikowanie bez stałych adresów IP",
+        "opcje": [
+          "Szyfruje dane w spoczynku",
+          "Pozwala usługom na znajdowanie się i komunikowanie bez stałych adresów IP",
+          "Zarządza tożsamością użytkowników",
+          "Tworzy kopie zapasowe baz danych"
+        ],
+        "explanation": "Wykrywanie usług pozwala na komunikację bez konieczności zapisywania na stałe nazwy hosta i portu, bazując na rejestrze usług [13, 14]."
+      },
+      {
+        "pytanie": "Jakie funkcje bezpieczeństwa wspiera Spring Cloud Gateway?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Token relay (przekazywanie tokenów OAuth2)",
+          "Ograniczanie ruchu (Rate limiting)",
+          "Dodawanie nagłówków bezpieczeństwa (np. HSTS, CSP)"
+        ],
+        "opcje": [
+          "Token relay (przekazywanie tokenów OAuth2)",
+          "Szyfrowanie bazy danych",
+          "Ograniczanie ruchu (Rate limiting)",
+          "Dodawanie nagłówków bezpieczeństwa (np. HSTS, CSP)"
+        ],
+        "explanation": "Spring Cloud Gateway realizuje m.in. filtrowanie, autoryzację, token relay, rate limiting oraz dodawanie nagłówków bezpieczeństwa [15, 16]."
+      },
+      {
+        "pytanie": "Co oznacza zasada 'Privacy by design' w kontekście GDPR?",
+        "type": "choice",
+        "poprawna": "Ochrona prywatności powinna być uwzględniona na każdym etapie projektowania systemów",
+        "opcje": [
+          "Dane powinny być usuwane po 30 dniach",
+          "Ochrona prywatności powinna być uwzględniona na każdym etapie projektowania systemów",
+          "Użytkownik musi wyrazić zgodę na każdy plik cookie",
+          "Dane muszą być przechowywane tylko na terenie UE"
+        ],
+        "explanation": "Privacy by design oznacza, że ochrona prywatności jest uwzględniana na każdym etapie projektowania systemów [17]."
+      },
+      {
+        "pytanie": "Jaki mechanizm w Spring Boot służy do monitorowania i zarządzania aplikacją, dostarczając np. metryki?",
+        "type": "choice",
+        "poprawna": "Spring Boot Actuator",
+        "opcje": [
+          "Spring MVC",
+          "Spring Security",
+          "Spring Boot Actuator",
+          "Spring Data JPA"
+        ],
+        "explanation": "Actuator dostarcza endpointy do monitorowania i zarządzania aplikacją, w tym metryki i kontrolę kondycji [9, 18]."
+      },
+      {
+        "pytanie": "Jakie są kluczowe cechy Kubernetes NetworkPolicies?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Pozwalają zdefiniować dozwolony ruch na poziomie IP/portów",
+          "Wymagają odpowiedniego wtyczki CNI do działania",
+          "Bez polityk każdy Pod może łączyć się z każdym innym"
+        ],
+        "opcje": [
+          "Pozwalają zdefiniować dozwolony ruch na poziomie IP/portów",
+          "Działają automatycznie bez żadnej konfiguracji",
+          "Wymagają odpowiedniego wtyczki CNI do działania",
+          "Bez polityk każdy Pod może łączyć się z każdym innym"
+        ],
+        "explanation": "NetworkPolicies definiują ruch L3/L4, wymagają CNI (np. Calico) i domyślnie w K8s komunikacja jest otwarta ('any/any') [19, 20]."
+      },
+      {
+        "pytanie": "Który wzorzec zarządzania transakcjami jest zalecany w systemach rozproszonych mikrousług?",
+        "type": "choice",
+        "poprawna": "Saga pattern",
+        "opcje": [
+          "2-Phase Commit (2PC)",
+          "Saga pattern",
+          "Monolityczna transakcja w jednej bazie",
+          "Brak zarządzania transakcjami"
+        ],
+        "explanation": "Wzorzec Saga zarządza transakcjami rozproszonymi w architekturze mikrousług [21, 22]."
+      },
+      {
+        "pytanie": "Czym jest 'Token Relay' w kontekście Spring Cloud Gateway?",
+        "type": "choice",
+        "poprawna": "Przekazywaniem tokena Bearer JWT do usług wewnętrznych",
+        "opcje": [
+          "Generowaniem nowego tokena dla każdego żądania",
+          "Przekazywaniem tokena Bearer JWT do usług wewnętrznych",
+          "Zapisywaniem tokena w bazie danych",
+          "Blokowaniem tokenów wygasłych"
+        ],
+        "explanation": "Token relay polega na przekazywaniu Bearer JWT (lub kontekstu użytkownika) z gateway do usług wewnętrznych [16, 23]."
+      },
+      {
+        "pytanie": "Jakie zagrożenia bezpieczeństwa chmury są uważane za główne?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Utrata danych",
+          "Przejęcie konta",
+          "Ataki na interfejsy API",
+          "Nadużycie usług chmurowych"
+        ],
+        "opcje": [
+          "Utrata danych",
+          "Awaria zasilania w lokalnej serwerowni",
+          "Przejęcie konta",
+          "Ataki na interfejsy API",
+          "Nadużycie usług chmurowych"
+        ],
+        "explanation": "Do głównych zagrożeń należą utrata danych, przejęcie konta, ataki na API oraz nadużycie usług chmurowych [24]."
+      },
+      {
+        "pytanie": "Co zapewnia mechanizm mTLS (Mutual TLS)?",
+        "type": "choice",
+        "poprawna": "Dwukierunkowe uwierzytelnianie między usługami",
+        "opcje": [
+          "Szyfrowanie tylko od klienta do serwera",
+          "Dwukierunkowe uwierzytelnianie między usługami",
+          "Monitorowanie obciążenia sieci",
+          "Automatyczne skalowanie podów"
+        ],
+        "explanation": "Mutual TLS zapewnia dwukierunkowe uwierzytelnianie, powszechnie używane w komunikacji między usługami [25, 26]."
+      },
+      {
+        "pytanie": "W jaki sposób Spring Cloud Config i Vault zwiększają bezpieczeństwo aplikacji?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Oddzielają konfigurację od kodu",
+          "Zapewniają bezpieczne przechowywanie sekretów",
+          "Umożliwiają rotację kluczy"
+        ],
+        "opcje": [
+          "Oddzielają konfigurację od kodu",
+          "Automatycznie naprawiają błędy w kodzie Java",
+          "Zapewniają bezpieczne przechowywanie sekretów",
+          "Umożliwiają rotację kluczy"
+        ],
+        "explanation": "Celem tych narzędzi jest oddzielenie konfiguracji, bezpieczne przechowywanie sekretów oraz umożliwienie rotacji kluczy [27]."
+      },
+      {
+        "pytanie": "Co oznacza skrót CI/CD?",
+        "type": "choice",
+        "poprawna": "Continuous Integration / Continuous Deployment",
+        "opcje": [
+          "Cloud Integration / Cloud Development",
+          "Continuous Integration / Continuous Deployment",
+          "Code Inspection / Code Debugging",
+          "Container Implementation / Container Delivery"
+        ],
+        "explanation": "CI/CD (Ciągła integracja i wdrażanie) służy do szybkiego dostarczania i zapewniania jakości w aplikacjach [28]."
+      },
+      {
+        "pytanie": "Które z poniższych są cechami chmury obliczeniowej wg definicji NIST?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Samoobsługa (On-demand self-service)",
+          "Szeroki dostęp do sieci (Broad network access)",
+          "Elastyczność (Rapid elasticity)",
+          "Mierzalna usługa (Measured service)"
+        ],
+        "opcje": [
+          "Samoobsługa (On-demand self-service)",
+          "Szeroki dostęp do sieci (Broad network access)",
+          "Ręczne alokowanie zasobów",
+          "Elastyczność (Rapid elasticity)",
+          "Mierzalna usługa (Measured service)"
+        ],
+        "explanation": "Model NIST charakteryzuje się pięcioma cechami: samoobsługą, szerokim dostępem, pulą zasobów, elastycznością i mierzalnością [29]."
+      },
+      {
+        "pytanie": "Jakie zadanie spełnia Ingress Controller w Kubernetes?",
+        "type": "choice",
+        "poprawna": "Działa jako punkt wejścia do klastra, obsługując routing i TLS",
+        "opcje": [
+          "Szyfruje dyski twarde węzłów",
+          "Działa jako punkt wejścia do klastra, obsługując routing i TLS",
+          "Zarządza przydziałem pamięci RAM dla kontenerów",
+          "Automatycznie aktualizuje obrazy Docker"
+        ],
+        "explanation": "Ingress Controller to 'front door' klastra, konfigurujący TLS, routing i nagłówki bezpieczeństwa [30]."
+      },
+      {
+        "pytanie": "Co to jest 'Bill of Materials' (SBOM) w kontekście DevSecOps?",
+        "type": "choice",
+        "poprawna": "Spis wszystkich komponentów i bibliotek użytych w aplikacji",
+        "opcje": [
+          "Rachunek za usługi chmurowe",
+          "Spis wszystkich komponentów i bibliotek użytych w aplikacji",
+          "Lista pracowników mających dostęp do kodu",
+          "Harmonogram wdrożeń na produkcję"
+        ],
+        "explanation": "SBOM to spis komponentów, który służy do audytu i zapewnienia zgodności [12, 31]."
+      },
+      {
+        "pytanie": "Jakie elementy składają się na 'obserwowalność' (observability) systemu?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Metryki (Metrics)",
+          "Logi (Logs)",
+          "Ślady (Traces/Tracing)"
+        ],
+        "opcje": [
+          "Metryki (Metrics)",
+          "Logi (Logs)",
+          "Kopie zapasowe (Backups)",
+          "Ślady (Traces/Tracing)"
+        ],
+        "explanation": "Obserwowalność opiera się na zbieraniu metryk, logów i śladów (tracing) [31, 32]."
+      },
+      {
+        "pytanie": "Czym różni się RBAC od ABAC?",
+        "type": "choice",
+        "poprawna": "RBAC opiera się na rolach, a ABAC na atrybutach użytkownika/zasobu",
+        "opcje": [
+          "RBAC jest dla chmury, ABAC dla on-premise",
+          "RBAC opiera się na rolach, a ABAC na atrybutach użytkownika/zasobu",
+          "ABAC jest mniej elastyczny niż RBAC",
+          "RBAC nie wymaga definiowania użytkowników"
+        ],
+        "explanation": "RBAC przypisuje uprawnienia do ról, a ABAC używa atrybutów i jest bardziej elastyczny, ale bardziej złożony [33]."
+      },
+      {
+        "pytanie": "Jaki jest cel stosowania technologii 'Secrets Store CSI Driver' w Kubernetes?",
+        "type": "choice",
+        "poprawna": "Wstrzykiwanie sekretów z zewnętrznego magazynu (np. Vault) do systemu plików poda",
+        "opcje": [
+          "Szyfrowanie ruchu sieciowego między podami",
+          "Wstrzykiwanie sekretów z zewnętrznego magazynu (np. Vault) do systemu plików poda",
+          "Tworzenie kopii zapasowych wolumenów",
+          "Monitorowanie zużycia procesora przez sterowniki"
+        ],
+        "explanation": "CSI Secret Store pozwala na wstrzykiwanie sekretów z zewnętrznych systemów jak Vault, zamiast trzymania ich jako plaintext [14, 34]."
+      },
+      {
+        "pytanie": "Jakie są najlepsze praktyki bezpieczeństwa dla obrazów kontenerów?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Uruchamianie jako użytkownik inny niż root (non-root)",
+          "Skanowanie obrazów pod kątem podatności",
+          "Używanie minimalnych obrazów bazowych"
+        ],
+        "opcje": [
+          "Uruchamianie jako root dla łatwiejszej konfiguracji",
+          "Uruchamianie jako użytkownik inny niż root (non-root)",
+          "Skanowanie obrazów pod kątem podatności",
+          "Używanie minimalnych obrazów bazowych"
+        ],
+        "explanation": "Bezpieczeństwo kontenerów obejmuje uruchamianie jako non-root, skanowanie podatności i minimalne obrazy bazowe [35, 36]."
+      },
+      {
+        "pytanie": "Do czego służy adnotacja @PreAuthorize w Spring Security?",
+        "type": "choice",
+        "poprawna": "Do sprawdzania uprawnień przed wykonaniem metody",
+        "opcje": [
+          "Do automatycznego logowania użytkownika",
+          "Do sprawdzania uprawnień przed wykonaniem metody",
+          "Do szyfrowania danych zwracanych przez metodę",
+          "Do obsługi wyjątków w metodzie"
+        ],
+        "explanation": "Adnotacja @PreAuthorize (np. 'hasRole') służy do weryfikacji uprawnień przed wykonaniem danej metody [37, 38]."
+      },
+      {
+        "pytanie": "Jaka jest rola Spring Cloud Sleuth?",
+        "type": "choice",
+        "poprawna": "Dodaje identyfikatory śledzenia do logów w celu korelacji żądań",
+        "opcje": [
+          "Służy do szyfrowania haseł",
+          "Dodaje identyfikatory śledzenia do logów w celu korelacji żądań",
+          "Pełni rolę bramy API",
+          "Zarządza konfiguracją aplikacji"
+        ],
+        "explanation": "Spring Cloud Sleuth dodaje identyfikatory śledzenia (traceId) i rozpiętości do logów, umożliwiając korelację w systemach rozproszonych [21, 39]."
+      },
+      {
+        "pytanie": "Które nagłówki HTTP zwiększają bezpieczeństwo aplikacji webowej?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Strict-Transport-Security (HSTS)",
+          "Content-Security-Policy (CSP)",
+          "X-Frame-Options"
+        ],
+        "opcje": [
+          "Strict-Transport-Security (HSTS)",
+          "Server",
+          "Content-Security-Policy (CSP)",
+          "X-Frame-Options"
+        ],
+        "explanation": "HSTS, CSP i X-Frame-Options to nagłówki zwiększające bezpieczeństwo, np. wymuszając HTTPS czy chroniąc przed XSS/Clickjackingiem [16, 25]."
+      },
+      {
+        "pytanie": "Co to jest 'Blue-Green Deployment'?",
+        "type": "choice",
+        "poprawna": "Strategia wdrażania z dwoma identycznymi środowiskami (starym i nowym)",
+        "opcje": [
+          "Wdrażanie tylko w piątki",
+          "Strategia wdrażania z dwoma identycznymi środowiskami (starym i nowym)",
+          "Testowanie aplikacji na produkcji bez wiedzy użytkowników",
+          "Wdrażanie aplikacji w kolorach firmowych"
+        ],
+        "explanation": "Blue-green deployment to strategia z dwoma środowiskami, która zmniejsza ryzyko wdrożenia poprzez przełączanie ruchu [28]."
+      },
+      {
+        "pytanie": "Za co odpowiada adnotacja @SpringBootApplication w głównej klasie aplikacji?",
+        "type": "choice",
+        "poprawna": "Jest to punkt wejścia aplikacji, łączący konfigurację, autokonfigurację i skanowanie komponentów",
+        "opcje": [
+          "Służy wyłącznie do połączenia z bazą danych",
+          "Jest to punkt wejścia aplikacji, łączący konfigurację, autokonfigurację i skanowanie komponentów",
+          "Definiuje klasę jako kontroler REST",
+          "Służy do generowania dokumentacji Swagger"
+        ],
+        "explanation": "Adnotacja ta (widoczna w źródłach przy klasie głównej) uruchamia mechanizmy Spring Boot, w tym autokonfigurację [1, 2]."
+      },
+      {
+        "pytanie": "Adnotacja @Entity pochodząca z JPA służy do oznaczenia klasy jako encji, która będzie mapowana na tabelę w bazie danych.",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Kod źródłowy pokazuje użycie @Entity nad klasą Product w celu mapowania jej na tabelę bazy danych [3]."
+      },
+      {
+        "pytanie": "Do czego służy adnotacja @Data pochodząca z biblioteki Lombok?",
+        "type": "choice",
+        "poprawna": "Automatycznie generuje gettery, settery, metody toString, equals i hashCode, redukując boilerplate code",
+        "opcje": [
+          "Służy do połączenia z bazą danych Redis",
+          "Definiuje walidację danych wejściowych",
+          "Automatycznie generuje gettery, settery, metody toString, equals i hashCode, redukując boilerplate code",
+          "Oznacza klasę jako repozytorium Spring Data",
+          "Konfiguruje połączenie SSL"
+        ],
+        "explanation": "W materiale wskazano, że @Data z biblioteki Lombok służy do upraszczania kodu (redukcja boilerplate) [3]."
+      },
+      {
+        "pytanie": "Która adnotacja w Spring Boot służy do wstrzykiwania zależności przez konstruktor, co pozwala uniknąć ręcznego pisania konstruktora dla pól finalnych?",
+        "type": "choice",
+        "poprawna": "@RequiredArgsConstructor",
+        "opcje": [
+          "@Autowired",
+          "@Inject",
+          "@RequiredArgsConstructor",
+          "@NoArgsConstructor",
+          "@AllArgsConstructor"
+        ],
+        "explanation": "Adnotacja @RequiredArgsConstructor (z Lombok) jest używana w przykładach kontrolerów i serwisów do wstrzykiwania zależności [4, 5]."
+      },
+      {
+        "pytanie": "Adnotacja @RestController jest połączeniem których dwóch adnotacji?",
+        "type": "multi-choice",
+        "poprawna": [
+          "@Controller",
+          "@ResponseBody"
+        ],
+        "opcje": [
+          "@Controller",
+          "@Service",
+          "@ResponseBody",
+          "@Component",
+          "@Configuration"
+        ],
+        "explanation": "@RestController to specjalistyczna wersja kontrolera, która zakłada, że metody zwracają dane (np. JSON), a nie widoki, co jest standardem w REST API [5, 6]."
+      },
+      {
+        "pytanie": "W jaki sposób adnotacja @PreAuthorize(\"hasRole('ADMIN')\") wpływa na metodę kontrolera?",
+        "type": "choice",
+        "poprawna": "Sprawdza, czy zalogowany użytkownik posiada rolę ADMIN przed wykonaniem metody",
+        "opcje": [
+          "Automatycznie loguje użytkownika jako ADMIN",
+          "Sprawdza, czy zalogowany użytkownik posiada rolę ADMIN przed wykonaniem metody",
+          "Szyfruje odpowiedź dla użytkownika ADMIN",
+          "Pozwala na dostęp każdemu, ale loguje zdarzenie jako ADMIN"
+        ],
+        "explanation": "Adnotacja @PreAuthorize służy do autoryzacji metod, weryfikując rolę użytkownika (np. USER lub ADMIN) przed jej wywołaniem [5, 7]."
+      },
+      {
+        "pytanie": "Adnotacja @Transactional zapewnia, że operacje wewnątrz metody wykonają się w ramach jednej transakcji bazy danych (wszystko albo nic).",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Adnotacja @Transactional jest widoczna w klasie ProductService, co zapewnia spójność operacji na bazie danych [4]."
+      },
+      {
+        "pytanie": "Do czego służy adnotacja @Value(\"${jwt.secret}\") widoczna w klasie JwtService?",
+        "type": "choice",
+        "poprawna": "Do wstrzykiwania wartości z plików konfiguracyjnych (np. application.properties) do pól klasy",
+        "opcje": [
+          "Do walidacji, czy pole nie jest puste",
+          "Do oznaczenia pola jako klucz główny w bazie danych",
+          "Do wstrzykiwania wartości z plików konfiguracyjnych (np. application.properties) do pól klasy",
+          "Do formatowania daty i czasu"
+        ],
+        "explanation": "Adnotacja @Value służy do wstrzykiwania wartości konfiguracyjnych, takich jak sekret JWT, zdefiniowanych w plikach właściwości [8]."
+      },
+      {
+        "pytanie": "Jaka adnotacja jest używana w repozytorium Spring Data JPA do definiowania niestandardowych zapytań SQL lub JPQL?",
+        "type": "choice",
+        "poprawna": "@Query",
+        "opcje": [
+          "@SQL",
+          "@Query",
+          "@CustomQuery",
+          "@Select",
+          "@Database"
+        ],
+        "explanation": "Adnotacja @Query pozwala na zdefiniowanie własnego zapytania, np. 'SELECT p FROM Product p WHERE...', bezpośrednio w interfejsie repozytorium [9]."
+      },
+      {
+        "pytanie": "Adnotacja @Cacheable(\"products\") nad metodą getAllProducts() powoduje, że wynik metody jest zapisywany w cache i przy kolejnych wywołaniach pobierany z niego zamiast z bazy danych.",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Adnotacja @Cacheable służy do deklaratywnego cache'owania wyników metod w celu optymalizacji wydajności [9, 10]."
+      },
+      {
+        "pytanie": "Która adnotacja służy do usunięcia danych z cache, np. po aktualizacji lub usunięciu produktu?",
+        "type": "choice",
+        "poprawna": "@CacheEvict",
+        "opcje": [
+          "@CachePut",
+          "@CacheDelete",
+          "@CacheEvict",
+          "@CacheClear"
+        ],
+        "explanation": "@CacheEvict jest używana do usuwania wpisów z cache, np. w metodach createProduct czy deleteProduct, aby zachować spójność danych [10, 11]."
+      },
+      {
+        "pytanie": "Adnotacja @Configuration w Spring Boot oznacza, że:",
+        "type": "choice",
+        "poprawna": "Klasa zawiera definicje beanów tworzonych metodami z adnotacją @Bean",
+        "opcje": [
+          "Klasa służy do konfiguracji połączenia z bazą danych w pliku XML",
+          "Klasa zawiera definicje beanów tworzonych metodami z adnotacją @Bean",
+          "Klasa jest kontrolerem REST",
+          "Klasa jest filtrem bezpieczeństwa"
+        ],
+        "explanation": "@Configuration oznacza klasę konfiguracyjną, w której definiowane są beany (komponenty) Springa, np. SecurityFilterChain czy PasswordEncoder [12]."
+      },
+      {
+        "pytanie": "Do czego służy adnotacja @EnableWebSecurity?",
+        "type": "choice",
+        "poprawna": "Włącza obsługę bezpieczeństwa webowego w aplikacji Spring Security",
+        "opcje": [
+          "Włącza szyfrowanie bazy danych",
+          "Włącza protokół HTTPS w serwerze Tomcat",
+          "Włącza obsługę bezpieczeństwa webowego w aplikacji Spring Security",
+          "Włącza automatyczne skanowanie antywirusowe plików"
+        ],
+        "explanation": "Adnotacja ta jest używana w klasie konfiguracyjnej SecurityConfig do aktywacji mechanizmów Spring Security dla aplikacji webowej [12, 13]."
+      },
+      {
+        "pytanie": "Adnotacja @Scheduled(fixedRate = 30000) służy do:",
+        "type": "choice",
+        "poprawna": "Uruchamiania metody cyklicznie co określony czas (tu: 30 sekund)",
+        "opcje": [
+          "Ograniczenia czasu wykonania zapytania do bazy danych",
+          "Ustawienia timeoutu dla żądania HTTP",
+          "Uruchamiania metody cyklicznie co określony czas (tu: 30 sekund)",
+          "Opóźnienia startu aplikacji o 30 sekund"
+        ],
+        "explanation": "@Scheduled (wymagająca @EnableScheduling) służy do harmonogramowania zadań, np. monitorowania zasobów co 30 sekund [14, 15]."
+      },
+      {
+        "pytanie": "Jaka adnotacja z biblioteki Micrometer służy do zbierania metryk dotyczących czasu wykonania metody?",
+        "type": "choice",
+        "poprawna": "@Timed",
+        "opcje": [
+          "@Metric",
+          "@Measure",
+          "@Timed",
+          "@Counted",
+          "@Monitor"
+        ],
+        "explanation": "Adnotacja @Timed (np. value=\"api.requests.total\") służy do mierzenia czasu wykonania i zliczania wywołań metod dla celów monitoringu [16, 17]."
+      },
+      {
+        "pytanie": "Adnotacja @ControllerAdvice jest używana do definiowania globalnej obsługi wyjątków w aplikacji.",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "@ControllerAdvice (lub @RestControllerAdvice) pozwala na scentralizowaną obsługę błędów dla wszystkich kontrolerów [18, 19]."
+      },
+      {
+        "pytanie": "Która adnotacja służy do mapowania konkretnego wyjątku na metodę obsługującą ten błąd w klasie z @ControllerAdvice?",
+        "type": "choice",
+        "poprawna": "@ExceptionHandler",
+        "opcje": [
+          "@Catch",
+          "@HandleError",
+          "@ExceptionHandler",
+          "@OnException"
+        ],
+        "explanation": "@ExceptionHandler wskazuje, który typ wyjątku (np. ProductNotFoundException) ma zostać obsłużony przez daną metodę [18, 19]."
+      },
+      {
+        "pytanie": "Adnotacja @KafkaListener służy do:",
+        "type": "choice",
+        "poprawna": "Nasłuchiwania wiadomości z określonego tematu (topic) Kafki",
+        "opcje": [
+          "Wysłania wiadomości do Kafki",
+          "Konfiguracji połączenia z klastrem Kafka",
+          "Nasłuchiwania wiadomości z określonego tematu (topic) Kafki",
+          "Tworzenia nowego tematu w Kafce"
+        ],
+        "explanation": "@KafkaListener służy do oznaczania metody, która ma konsumować zdarzenia (eventy) przychodzące z brokera Kafka [20]."
+      },
+      {
+        "pytanie": "Adnotacja @EventListener w Springu służy do obsługi zdarzeń wewnątrz aplikacji (in-process event handling).",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "@EventListener służy do obsługi zdarzeń publikowanych przez ApplicationEventPublisher wewnątrz tej samej aplikacji [21]."
+      },
+      {
+        "pytanie": "Która adnotacja jest używana do włączenia serwera Eureka w aplikacji Spring Boot?",
+        "type": "choice",
+        "poprawna": "@EnableEurekaServer",
+        "opcje": [
+          "@EnableDiscoveryClient",
+          "@EnableEurekaClient",
+          "@EnableEurekaServer",
+          "@StartEureka"
+        ],
+        "explanation": "Aby uruchomić aplikację jako serwer rejestru usług (Eureka Server), należy użyć adnotacji @EnableEurekaServer [2]."
+      },
+      {
+        "pytanie": "Adnotacja @CircuitBreaker(name = \"inventory\", fallbackMethod = \"fallbackInventory\") pochodząca z Resilience4j służy do:",
+        "type": "choice",
+        "poprawna": "Zabezpieczenia przed awariami zewnętrznej usługi i wskazania metody zapasowej",
+        "opcje": [
+          "Szyfrowania połączenia z usługą inventory",
+          "Zwiększenia limitu zapytań do usługi inventory",
+          "Zabezpieczenia przed awariami zewnętrznej usługi i wskazania metody zapasowej",
+          "Logowania każdego wywołania usługi inventory",
+          "Automatycznego restartu usługi inventory w przypadku błędu"
+        ],
+        "explanation": "@CircuitBreaker implementuje wzorzec bezpiecznika, a parametr fallbackMethod wskazuje metodę, która zostanie wywołana w przypadku awarii [22]."
+      },
+      {
+        "pytanie": "W testach bezpieczeństwa (Spring Security Test), adnotacja @WithMockUser(roles = \"USER\") służy do:",
+        "type": "choice",
+        "poprawna": "Symulowania zalogowanego użytkownika z określoną rolą na potrzeby testu",
+        "opcje": [
+          "Tworzenia prawdziwego użytkownika w bazie danych",
+          "Symulowania zalogowanego użytkownika z określoną rolą na potrzeby testu",
+          "Wyłączenia zabezpieczeń dla danej metody testowej",
+          "Sprawdzenia, czy użytkownik istnieje w bazie danych"
+        ],
+        "explanation": "@WithMockUser pozwala na przeprowadzenie testu w kontekście uwierzytelnionego użytkownika bez konieczności faktycznego logowania [23]."
+      },
+      {
+        "pytanie": "Adnotacja @PathVariable w metodzie kontrolera służy do pobierania wartości ze ścieżki URL (np. /products/{id}).",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "@PathVariable mapuje zmienną ze ścieżki URL (np. {id}) na parametr metody kontrolera [5]."
+      },
+      {
+        "pytanie": "Która adnotacja służy do zmapowania ciała żądania HTTP (np. JSON) na obiekt Java w metodzie kontrolera?",
+        "type": "choice",
+        "poprawna": "@RequestBody",
+        "opcje": [
+          "@RequestParam",
+          "@PathVariable",
+          "@RequestBody",
+          "@RequestHeader"
+        ],
+        "explanation": "@RequestBody informuje Springa, że treść żądania HTTP powinna zostać zdeserializowana do obiektu Java (np. ProductRequest) [24]."
+      },
+      {
+        "pytanie": "Adnotacja @GeneratedValue(strategy = GenerationType.IDENTITY) przy polu ID encji oznacza, że:",
+        "type": "choice",
+        "poprawna": "Wartość klucza głównego jest generowana automatycznie przez bazę danych (np. auto-increment)",
+        "opcje": [
+          "Wartość klucza głównego musi być podana ręcznie",
+          "Wartość klucza głównego jest generowana losowo przez aplikację",
+          "Wartość klucza głównego jest generowana automatycznie przez bazę danych (np. auto-increment)",
+          "Wartość klucza głównego jest pobierana z sekwencji Hibernate",
+          "Pole nie jest kluczem głównym"
+        ],
+        "explanation": "@GeneratedValue z strategią IDENTITY zleca generowanie unikalnego ID bazie danych [3]."
+      },
+      {
+        "pytanie": "Aby adnotacje bezpieczeństwa takie jak @PreAuthorize działały, w klasie konfiguracyjnej musi znaleźć się adnotacja:",
+        "type": "choice",
+        "poprawna": "@EnableMethodSecurity",
+        "opcje": [
+          "@EnableSecurity",
+          "@EnableGlobalMethodSecurity",
+          "@EnableMethodSecurity",
+          "@ActivateSecurity"
+        ],
+        "explanation": "@EnableMethodSecurity (lub starsza @EnableGlobalMethodSecurity) jest wymagana do aktywacji sprawdzania uprawnień na poziomie metod [7, 12]."
+      },
+      {
+        "pytanie": "Adnotacja @Slf4j z projektu Lombok:",
+        "type": "choice",
+        "poprawna": "Automatycznie tworzy statyczne pole loggera w klasie",
+        "opcje": [
+          "Służy do konfiguracji logowania w pliku xml",
+          "Automatycznie tworzy statyczne pole loggera w klasie",
+          "Wyłącza logowanie dla danej klasy",
+          "Zmienia poziom logowania na DEBUG"
+        ],
+        "explanation": "@Slf4j automatycznie generuje pole 'log', umożliwiając logowanie zdarzeń bez ręcznej inicjalizacji loggera [4, 21]."
+      },
+      {
+        "pytanie": "Adnotacja @Param(\"category\") w interfejsie repozytorium jest używana do:",
+        "type": "choice",
+        "poprawna": "Powiązania parametru metody z nazwanym parametrem w zapytaniu @Query",
+        "opcje": [
+          "Walidacji parametru",
+          "Określenia typu danych w bazie",
+          "Powiązania parametru metody z nazwanym parametrem w zapytaniu @Query",
+          "Ustawienia wartości domyślnej parametru"
+        ],
+        "explanation": "@Param służy do wiązania parametrów metody z parametrami w zapytaniu JPQL zdefiniowanym w @Query [9]."
+      },
+      {
+        "pytanie": "Adnotacja @EnableScheduling jest konieczna, aby metody oznaczone @Scheduled były uruchamiane przez Springa.",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Bez dodania @EnableScheduling do klasy konfiguracyjnej, adnotacje @Scheduled nie będą przetwarzane [14]."
+      },
+      {
+        "pytanie": "Jaka adnotacja jest używana w metodzie obsługującej ponawianie operacji w przypadku błędu (z biblioteki Resilience4j)?",
+        "type": "choice",
+        "poprawna": "@Retry",
+        "opcje": [
+          "@Repeat",
+          "@Loop",
+          "@Retry",
+          "@TryAgain"
+        ],
+        "explanation": "@Retry służy do skonfigurowania mechanizmu ponawiania (retry) dla danej metody w przypadku wystąpienia wyjątków [22]."
+      }
+    ]
+  },
+  {
+    "id": "bsiach2",
+    "title": "BŚiACH2",
+    "hidden": true,
+    "questions": [
+      {
+
+        "pytanie": "Za co odpowiada adnotacja @SpringBootApplication w głównej klasie aplikacji?",
+        "type": "choice",
+        "poprawna": "Jest to punkt wejścia aplikacji, łączący konfigurację, autokonfigurację i skanowanie komponentów",
+        "opcje": [
+          "Służy wyłącznie do połączenia z bazą danych",
+          "Jest to punkt wejścia aplikacji, łączący konfigurację, autokonfigurację i skanowanie komponentów",
+          "Definiuje klasę jako kontroler REST",
+          "Służy do generowania dokumentacji Swagger"
+        ],
+        "explanation": "Adnotacja ta (widoczna w źródłach przy klasie głównej) uruchamia mechanizmy Spring Boot, w tym autokonfigurację [1, 2]."
+      },
+      {
+        "pytanie": "Adnotacja @Entity pochodząca z JPA służy do oznaczenia klasy jako encji, która będzie mapowana na tabelę w bazie danych.",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Kod źródłowy pokazuje użycie @Entity nad klasą Product w celu mapowania jej na tabelę bazy danych [3]."
+      },
+      {
+        "pytanie": "Do czego służy adnotacja @Data pochodząca z biblioteki Lombok?",
+        "type": "choice",
+        "poprawna": "Automatycznie generuje gettery, settery, metody toString, equals i hashCode, redukując boilerplate code",
+        "opcje": [
+          "Służy do połączenia z bazą danych Redis",
+          "Definiuje walidację danych wejściowych",
+          "Automatycznie generuje gettery, settery, metody toString, equals i hashCode, redukując boilerplate code",
+          "Oznacza klasę jako repozytorium Spring Data",
+          "Konfiguruje połączenie SSL"
+        ],
+        "explanation": "W materiale wskazano, że @Data z biblioteki Lombok służy do upraszczania kodu (redukcja boilerplate) [3]."
+      },
+      {
+        "pytanie": "Która adnotacja w Spring Boot służy do wstrzykiwania zależności przez konstruktor, co pozwala uniknąć ręcznego pisania konstruktora dla pól finalnych?",
+        "type": "choice",
+        "poprawna": "@RequiredArgsConstructor",
+        "opcje": [
+          "@Autowired",
+          "@Inject",
+          "@RequiredArgsConstructor",
+          "@NoArgsConstructor",
+          "@AllArgsConstructor"
+        ],
+        "explanation": "Adnotacja @RequiredArgsConstructor (z Lombok) jest używana w przykładach kontrolerów i serwisów do wstrzykiwania zależności [4, 5]."
+      },
+      {
+        "pytanie": "Adnotacja @RestController jest połączeniem których dwóch adnotacji?",
+        "type": "multi-choice",
+        "poprawna": [
+          "@Controller",
+          "@ResponseBody"
+        ],
+        "opcje": [
+          "@Controller",
+          "@Service",
+          "@ResponseBody",
+          "@Component",
+          "@Configuration"
+        ],
+        "explanation": "@RestController to specjalistyczna wersja kontrolera, która zakłada, że metody zwracają dane (np. JSON), a nie widoki, co jest standardem w REST API [5, 6]."
+      },
+      {
+        "pytanie": "W jaki sposób adnotacja @PreAuthorize(\"hasRole('ADMIN')\") wpływa na metodę kontrolera?",
+        "type": "choice",
+        "poprawna": "Sprawdza, czy zalogowany użytkownik posiada rolę ADMIN przed wykonaniem metody",
+        "opcje": [
+          "Automatycznie loguje użytkownika jako ADMIN",
+          "Sprawdza, czy zalogowany użytkownik posiada rolę ADMIN przed wykonaniem metody",
+          "Szyfruje odpowiedź dla użytkownika ADMIN",
+          "Pozwala na dostęp każdemu, ale loguje zdarzenie jako ADMIN"
+        ],
+        "explanation": "Adnotacja @PreAuthorize służy do autoryzacji metod, weryfikując rolę użytkownika (np. USER lub ADMIN) przed jej wywołaniem [5, 7]."
+      },
+      {
+        "pytanie": "Adnotacja @Transactional zapewnia, że operacje wewnątrz metody wykonają się w ramach jednej transakcji bazy danych (wszystko albo nic).",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Adnotacja @Transactional jest widoczna w klasie ProductService, co zapewnia spójność operacji na bazie danych [4]."
+      },
+      {
+        "pytanie": "Do czego służy adnotacja @Value(\"${jwt.secret}\") widoczna w klasie JwtService?",
+        "type": "choice",
+        "poprawna": "Do wstrzykiwania wartości z plików konfiguracyjnych (np. application.properties) do pól klasy",
+        "opcje": [
+          "Do walidacji, czy pole nie jest puste",
+          "Do oznaczenia pola jako klucz główny w bazie danych",
+          "Do wstrzykiwania wartości z plików konfiguracyjnych (np. application.properties) do pól klasy",
+          "Do formatowania daty i czasu"
+        ],
+        "explanation": "Adnotacja @Value służy do wstrzykiwania wartości konfiguracyjnych, takich jak sekret JWT, zdefiniowanych w plikach właściwości [8]."
+      },
+      {
+        "pytanie": "Jaka adnotacja jest używana w repozytorium Spring Data JPA do definiowania niestandardowych zapytań SQL lub JPQL?",
+        "type": "choice",
+        "poprawna": "@Query",
+        "opcje": [
+          "@SQL",
+          "@Query",
+          "@CustomQuery",
+          "@Select",
+          "@Database"
+        ],
+        "explanation": "Adnotacja @Query pozwala na zdefiniowanie własnego zapytania, np. 'SELECT p FROM Product p WHERE...', bezpośrednio w interfejsie repozytorium [9]."
+      },
+      {
+        "pytanie": "Adnotacja @Cacheable(\"products\") nad metodą getAllProducts() powoduje, że wynik metody jest zapisywany w cache i przy kolejnych wywołaniach pobierany z niego zamiast z bazy danych.",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Adnotacja @Cacheable służy do deklaratywnego cache'owania wyników metod w celu optymalizacji wydajności [9, 10]."
+      },
+      {
+        "pytanie": "Która adnotacja służy do usunięcia danych z cache, np. po aktualizacji lub usunięciu produktu?",
+        "type": "choice",
+        "poprawna": "@CacheEvict",
+        "opcje": [
+          "@CachePut",
+          "@CacheDelete",
+          "@CacheEvict",
+          "@CacheClear"
+        ],
+        "explanation": "@CacheEvict jest używana do usuwania wpisów z cache, np. w metodach createProduct czy deleteProduct, aby zachować spójność danych [10, 11]."
+      },
+      {
+        "pytanie": "Adnotacja @Configuration w Spring Boot oznacza, że:",
+        "type": "choice",
+        "poprawna": "Klasa zawiera definicje beanów tworzonych metodami z adnotacją @Bean",
+        "opcje": [
+          "Klasa służy do konfiguracji połączenia z bazą danych w pliku XML",
+          "Klasa zawiera definicje beanów tworzonych metodami z adnotacją @Bean",
+          "Klasa jest kontrolerem REST",
+          "Klasa jest filtrem bezpieczeństwa"
+        ],
+        "explanation": "@Configuration oznacza klasę konfiguracyjną, w której definiowane są beany (komponenty) Springa, np. SecurityFilterChain czy PasswordEncoder [12]."
+      },
+      {
+        "pytanie": "Do czego służy adnotacja @EnableWebSecurity?",
+        "type": "choice",
+        "poprawna": "Włącza obsługę bezpieczeństwa webowego w aplikacji Spring Security",
+        "opcje": [
+          "Włącza szyfrowanie bazy danych",
+          "Włącza protokół HTTPS w serwerze Tomcat",
+          "Włącza obsługę bezpieczeństwa webowego w aplikacji Spring Security",
+          "Włącza automatyczne skanowanie antywirusowe plików"
+        ],
+        "explanation": "Adnotacja ta jest używana w klasie konfiguracyjnej SecurityConfig do aktywacji mechanizmów Spring Security dla aplikacji webowej [12, 13]."
+      },
+      {
+        "pytanie": "Adnotacja @Scheduled(fixedRate = 30000) służy do:",
+        "type": "choice",
+        "poprawna": "Uruchamiania metody cyklicznie co określony czas (tu: 30 sekund)",
+        "opcje": [
+          "Ograniczenia czasu wykonania zapytania do bazy danych",
+          "Ustawienia timeoutu dla żądania HTTP",
+          "Uruchamiania metody cyklicznie co określony czas (tu: 30 sekund)",
+          "Opóźnienia startu aplikacji o 30 sekund"
+        ],
+        "explanation": "@Scheduled (wymagająca @EnableScheduling) służy do harmonogramowania zadań, np. monitorowania zasobów co 30 sekund [14, 15]."
+      },
+      {
+        "pytanie": "Jaka adnotacja z biblioteki Micrometer służy do zbierania metryk dotyczących czasu wykonania metody?",
+        "type": "choice",
+        "poprawna": "@Timed",
+        "opcje": [
+          "@Metric",
+          "@Measure",
+          "@Timed",
+          "@Counted",
+          "@Monitor"
+        ],
+        "explanation": "Adnotacja @Timed (np. value=\"api.requests.total\") służy do mierzenia czasu wykonania i zliczania wywołań metod dla celów monitoringu [16, 17]."
+      },
+      {
+        "pytanie": "Adnotacja @ControllerAdvice jest używana do definiowania globalnej obsługi wyjątków w aplikacji.",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "@ControllerAdvice (lub @RestControllerAdvice) pozwala na scentralizowaną obsługę błędów dla wszystkich kontrolerów [18, 19]."
+      },
+      {
+        "pytanie": "Która adnotacja służy do mapowania konkretnego wyjątku na metodę obsługującą ten błąd w klasie z @ControllerAdvice?",
+        "type": "choice",
+        "poprawna": "@ExceptionHandler",
+        "opcje": [
+          "@Catch",
+          "@HandleError",
+          "@ExceptionHandler",
+          "@OnException"
+        ],
+        "explanation": "@ExceptionHandler wskazuje, który typ wyjątku (np. ProductNotFoundException) ma zostać obsłużony przez daną metodę [18, 19]."
+      },
+      {
+        "pytanie": "Adnotacja @KafkaListener służy do:",
+        "type": "choice",
+        "poprawna": "Nasłuchiwania wiadomości z określonego tematu (topic) Kafki",
+        "opcje": [
+          "Wysłania wiadomości do Kafki",
+          "Konfiguracji połączenia z klastrem Kafka",
+          "Nasłuchiwania wiadomości z określonego tematu (topic) Kafki",
+          "Tworzenia nowego tematu w Kafce"
+        ],
+        "explanation": "@KafkaListener służy do oznaczania metody, która ma konsumować zdarzenia (eventy) przychodzące z brokera Kafka [20]."
+      },
+      {
+        "pytanie": "Adnotacja @EventListener w Springu służy do obsługi zdarzeń wewnątrz aplikacji (in-process event handling).",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "@EventListener służy do obsługi zdarzeń publikowanych przez ApplicationEventPublisher wewnątrz tej samej aplikacji [21]."
+      },
+      {
+        "pytanie": "Która adnotacja jest używana do włączenia serwera Eureka w aplikacji Spring Boot?",
+        "type": "choice",
+        "poprawna": "@EnableEurekaServer",
+        "opcje": [
+          "@EnableDiscoveryClient",
+          "@EnableEurekaClient",
+          "@EnableEurekaServer",
+          "@StartEureka"
+        ],
+        "explanation": "Aby uruchomić aplikację jako serwer rejestru usług (Eureka Server), należy użyć adnotacji @EnableEurekaServer [2]."
+      },
+      {
+        "pytanie": "Adnotacja @CircuitBreaker(name = \"inventory\", fallbackMethod = \"fallbackInventory\") pochodząca z Resilience4j służy do:",
+        "type": "choice",
+        "poprawna": "Zabezpieczenia przed awariami zewnętrznej usługi i wskazania metody zapasowej",
+        "opcje": [
+          "Szyfrowania połączenia z usługą inventory",
+          "Zwiększenia limitu zapytań do usługi inventory",
+          "Zabezpieczenia przed awariami zewnętrznej usługi i wskazania metody zapasowej",
+          "Logowania każdego wywołania usługi inventory",
+          "Automatycznego restartu usługi inventory w przypadku błędu"
+        ],
+        "explanation": "@CircuitBreaker implementuje wzorzec bezpiecznika, a parametr fallbackMethod wskazuje metodę, która zostanie wywołana w przypadku awarii [22]."
+      },
+      {
+        "pytanie": "W testach bezpieczeństwa (Spring Security Test), adnotacja @WithMockUser(roles = \"USER\") służy do:",
+        "type": "choice",
+        "poprawna": "Symulowania zalogowanego użytkownika z określoną rolą na potrzeby testu",
+        "opcje": [
+          "Tworzenia prawdziwego użytkownika w bazie danych",
+          "Symulowania zalogowanego użytkownika z określoną rolą na potrzeby testu",
+          "Wyłączenia zabezpieczeń dla danej metody testowej",
+          "Sprawdzenia, czy użytkownik istnieje w bazie danych"
+        ],
+        "explanation": "@WithMockUser pozwala na przeprowadzenie testu w kontekście uwierzytelnionego użytkownika bez konieczności faktycznego logowania [23]."
+      },
+      {
+        "pytanie": "Adnotacja @PathVariable w metodzie kontrolera służy do pobierania wartości ze ścieżki URL (np. /products/{id}).",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "@PathVariable mapuje zmienną ze ścieżki URL (np. {id}) na parametr metody kontrolera [5]."
+      },
+      {
+        "pytanie": "Która adnotacja służy do zmapowania ciała żądania HTTP (np. JSON) na obiekt Java w metodzie kontrolera?",
+        "type": "choice",
+        "poprawna": "@RequestBody",
+        "opcje": [
+          "@RequestParam",
+          "@PathVariable",
+          "@RequestBody",
+          "@RequestHeader"
+        ],
+        "explanation": "@RequestBody informuje Springa, że treść żądania HTTP powinna zostać zdeserializowana do obiektu Java (np. ProductRequest) [24]."
+      },
+      {
+        "pytanie": "Adnotacja @GeneratedValue(strategy = GenerationType.IDENTITY) przy polu ID encji oznacza, że:",
+        "type": "choice",
+        "poprawna": "Wartość klucza głównego jest generowana automatycznie przez bazę danych (np. auto-increment)",
+        "opcje": [
+          "Wartość klucza głównego musi być podana ręcznie",
+          "Wartość klucza głównego jest generowana losowo przez aplikację",
+          "Wartość klucza głównego jest generowana automatycznie przez bazę danych (np. auto-increment)",
+          "Wartość klucza głównego jest pobierana z sekwencji Hibernate",
+          "Pole nie jest kluczem głównym"
+        ],
+        "explanation": "@GeneratedValue z strategią IDENTITY zleca generowanie unikalnego ID bazie danych [3]."
+      },
+      {
+        "pytanie": "Aby adnotacje bezpieczeństwa takie jak @PreAuthorize działały, w klasie konfiguracyjnej musi znaleźć się adnotacja:",
+        "type": "choice",
+        "poprawna": "@EnableMethodSecurity",
+        "opcje": [
+          "@EnableSecurity",
+          "@EnableGlobalMethodSecurity",
+          "@EnableMethodSecurity",
+          "@ActivateSecurity"
+        ],
+        "explanation": "@EnableMethodSecurity (lub starsza @EnableGlobalMethodSecurity) jest wymagana do aktywacji sprawdzania uprawnień na poziomie metod [7, 12]."
+      },
+      {
+        "pytanie": "Adnotacja @Slf4j z projektu Lombok:",
+        "type": "choice",
+        "poprawna": "Automatycznie tworzy statyczne pole loggera w klasie",
+        "opcje": [
+          "Służy do konfiguracji logowania w pliku xml",
+          "Automatycznie tworzy statyczne pole loggera w klasie",
+          "Wyłącza logowanie dla danej klasy",
+          "Zmienia poziom logowania na DEBUG"
+        ],
+        "explanation": "@Slf4j automatycznie generuje pole 'log', umożliwiając logowanie zdarzeń bez ręcznej inicjalizacji loggera [4, 21]."
+      },
+      {
+        "pytanie": "Adnotacja @Param(\"category\") w interfejsie repozytorium jest używana do:",
+        "type": "choice",
+        "poprawna": "Powiązania parametru metody z nazwanym parametrem w zapytaniu @Query",
+        "opcje": [
+          "Walidacji parametru",
+          "Określenia typu danych w bazie",
+          "Powiązania parametru metody z nazwanym parametrem w zapytaniu @Query",
+          "Ustawienia wartości domyślnej parametru"
+        ],
+        "explanation": "@Param służy do wiązania parametrów metody z parametrami w zapytaniu JPQL zdefiniowanym w @Query [9]."
+      },
+      {
+        "pytanie": "Adnotacja @EnableScheduling jest konieczna, aby metody oznaczone @Scheduled były uruchamiane przez Springa.",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Bez dodania @EnableScheduling do klasy konfiguracyjnej, adnotacje @Scheduled nie będą przetwarzane [14]."
+      },
+      {
+        "pytanie": "Jaka adnotacja jest używana w metodzie obsługującej ponawianie operacji w przypadku błędu (z biblioteki Resilience4j)?",
+        "type": "choice",
+        "poprawna": "@Retry",
+        "opcje": [
+          "@Repeat",
+          "@Loop",
+          "@Retry",
+          "@TryAgain"
+        ],
+        "explanation": "@Retry służy do skonfigurowania mechanizmu ponawiania (retry) dla danej metody w przypadku wystąpienia wyjątków [22]."
+      }
+    ]
+  },
+  {
+    "id": "bsiach-1",
+    "title": "Chmury #1 - Fundamenty i teoria bezpieczeństwa chmury",
+    "questions": [
+      {
+        "pytanie": "Według definicji NIST, chmura obliczeniowa charakteryzuje się pięcioma istotnymi cechami. Które z poniższych do nich należą?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Samoobsługa (On-demand self-service)",
+          "Pula zasobów (Resource pooling)",
+          "Szybka elastyczność (Rapid elasticity)"
+        ],
+        "opcje": [
+          "Samoobsługa (On-demand self-service)",
+          "Pula zasobów (Resource pooling)",
+          "Szybka elastyczność (Rapid elasticity)",
+          "Ręczna konfiguracja sprzętu",
+          "Ograniczony dostęp do sieci"
+        ],
+        "explanation": "Model NIST charakteryzuje się samoobsługą, szerokim dostępem do sieci, pulą zasobów, szybką elastycznością oraz mierzalną usługą [1]."
+      },
+      {
+        "pytanie": "W którym modelu usług chmurowych klient ma kontrolę nad aplikacją i danymi, ale nie nad infrastrukturą (za której bezpieczeństwo odpowiada dostawca)?",
+        "type": "choice",
+        "poprawna": "PaaS (Platform as a Service)",
+        "opcje": [
+          "IaaS (Infrastructure as a Service)",
+          "PaaS (Platform as a Service)",
+          "SaaS (Software as a Service)"
+        ],
+        "explanation": "W modelu PaaS dostawca odpowiada za infrastrukturę i platformę, a klient za aplikacje i dane [2], [3]."
+      },
+      {
+        "pytanie": "Chmura hybrydowa (Hybrid) to model wdrożenia, który łączy chmurę publiczną i prywatną, co wymaga spójnych polityk bezpieczeństwa między środowiskami.",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Model hybrydowy łączy oba modele (publiczny i prywatny), co komplikuje zarządzanie tożsamością i wymaga spójnych polityk [4]."
+      },
+      {
+        "pytanie": "Które z wymienionych zagrożeń są uznawane za główne zagrożenia bezpieczeństwa chmury?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Przejęcie konta",
+          "Ataki na interfejsy API",
+          "Nadużycie usług chmurowych"
+        ],
+        "opcje": [
+          "Przejęcie konta",
+          "Awaria fizycznego dysku u klienta",
+          "Ataki na interfejsy API",
+          "Nadużycie usług chmurowych",
+          "Brak dostępu do prądu w biurze"
+        ],
+        "explanation": "Do głównych zagrożeń należą m.in. przejęcie konta, ataki na API oraz nadużycie usług chmurowych prowadzące do wysokich kosztów [5]."
+      },
+      {
+        "pytanie": "Zgodnie z modelem współdzielonej odpowiedzialności, za co w modelu IaaS odpowiada klient?",
+        "type": "choice",
+        "poprawna": "Za system operacyjny, aplikacje, dane i sieć",
+        "opcje": [
+          "Tylko za dane i zarządzanie dostępem",
+          "Za fizyczną infrastrukturę serwerowni",
+          "Za system operacyjny, aplikacje, dane i sieć",
+          "Za platformę uruchomieniową dostarczoną przez dostawcę"
+        ],
+        "explanation": "W modelu IaaS klient odpowiada za bezpieczeństwo systemu operacyjnego, aplikacji, danych i sieci [3]."
+      },
+      {
+        "pytanie": "Systemy IAM (Identity and Access Management) w chmurze muszą obsługiwać federację tożsamości, co pozwala na:",
+        "type": "choice",
+        "poprawna": "Używanie tych samych danych uwierzytelniających do różnych systemów",
+        "opcje": [
+          "Szyfrowanie danych w spoczynku",
+          "Używanie tych samych danych uwierzytelniających do różnych systemów",
+          "Automatyczne tworzenie kopii zapasowych",
+          "Ochronę przed atakami DDoS"
+        ],
+        "explanation": "Federacja tożsamości pozwala na współdzielenie informacji o użytkownikach między domenami i używanie tych samych danych do różnych systemów [6], [7]."
+      },
+      {
+        "pytanie": "Które z poniższych standardów służą do bezpiecznej wymiany danych uwierzytelniających lub autoryzacji?",
+        "type": "multi-choice",
+        "poprawna": [
+          "SAML",
+          "OAuth 2.0",
+          "OpenID Connect"
+        ],
+        "opcje": [
+          "SAML",
+          "HTML 5.0",
+          "OAuth 2.0",
+          "OpenID Connect",
+          "HTTP/2"
+        ],
+        "explanation": "Standardy wymiany danych uwierzytelniających to SAML, OAuth 2.0 (autoryzacja) oraz OpenID Connect [7]."
+      },
+      {
+        "pytanie": "Czym różni się model kontroli dostępu ABAC od RBAC?",
+        "type": "choice",
+        "poprawna": "ABAC używa atrybutów użytkownika, zasobu i środowiska, jest bardziej elastyczny niż RBAC",
+        "opcje": [
+          "RBAC jest bardziej złożony i elastyczny niż ABAC",
+          "ABAC przypisuje uprawnienia tylko do ról",
+          "ABAC używa atrybutów użytkownika, zasobu i środowiska, jest bardziej elastyczny niż RBAC",
+          "Nie ma żadnej różnicy, to to samo"
+        ],
+        "explanation": "ABAC (Attribute-Based Access Control) używa atrybutów i jest bardziej elastyczny, podczas gdy RBAC opiera się na rolach [8]."
+      },
+      {
+        "pytanie": "Hardware Security Modules (HSM) są wykorzystywane w chmurze do bezpiecznego przechowywania kluczy kryptograficznych.",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Bezpieczne przechowywanie kluczy zapewniają Hardware Security Modules (HSM) [9]."
+      },
+      {
+        "pytanie": "Co jest zadaniem narzędzi SIEM (Security Information and Event Management) w kontekście monitorowania?",
+        "type": "choice",
+        "poprawna": "Korelują dane z różnych źródeł dla lepszego zrozumienia zagrożeń",
+        "opcje": [
+          "Szyfrują dane przesyłane w sieci",
+          "Korelują dane z różnych źródeł dla lepszego zrozumienia zagrożeń",
+          "Tworzą automatyczne kopie zapasowe",
+          "Zarządzają tożsamością użytkowników"
+        ],
+        "explanation": "Narzędzia SIEM korelują dane z różnych źródeł (logów) dla lepszego zrozumienia zagrożeń [9]."
+      },
+      {
+        "pytanie": "Transparent Data Encryption (TDE) to technologia służąca do:",
+        "type": "choice",
+        "poprawna": "Automatycznego szyfrowania danych w spoczynku bez wpływu na aplikacje",
+        "opcje": [
+          "Szyfrowania połączeń sieciowych VPN",
+          "Automatycznego szyfrowania danych w spoczynku bez wpływu na aplikacje",
+          "Szyfrowania danych w pamięci RAM procesora",
+          "Weryfikacji tożsamości użytkowników"
+        ],
+        "explanation": "Transparent Data Encryption (TDE) automatycznie szyfruje dane w spoczynku bez wpływu na aplikacje [10]."
+      },
+      {
+        "pytanie": "Które technologie umożliwiają szyfrowanie danych w użyciu (przetwarzanie zaszyfrowanych danych w pamięci)?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Intel SGX",
+          "AMD SEV"
+        ],
+        "opcje": [
+          "TLS/SSL",
+          "Intel SGX",
+          "AES-256",
+          "AMD SEV",
+          "VPN"
+        ],
+        "explanation": "Technologie takie jak Intel SGX i AMD SEV umożliwiają przetwarzanie zaszyfrowanych danych (szyfrowanie w użyciu) [11]."
+      },
+      {
+        "pytanie": "Na czym polega zasada 'Privacy by design' w kontekście RODO (GDPR)?",
+        "type": "choice",
+        "poprawna": "Ochrona prywatności powinna być uwzględniona na każdym etapie projektowania systemów",
+        "opcje": [
+          "Dane powinny być usuwane natychmiast po użyciu",
+          "Ochrona prywatności powinna być uwzględniona na każdym etapie projektowania systemów",
+          "Użytkownik musi wyrazić zgodę na każdy plik cookie",
+          "Dane muszą być przechowywane tylko w zaszyfrowanej formie"
+        ],
+        "explanation": "Privacy by design oznacza, że ochrona prywatności jest uwzględniana na każdym etapie projektowania systemów [12]."
+      },
+      {
+        "pytanie": "Web Application Firewall (WAF) chroni aplikacje webowe głównie przed atakami takimi jak:",
+        "type": "multi-choice",
+        "poprawna": [
+          "SQL injection",
+          "XSS (Cross-Site Scripting)"
+        ],
+        "opcje": [
+          "Phishing mailowy",
+          "SQL injection",
+          "Ataki fizyczne na serwerownię",
+          "XSS (Cross-Site Scripting)",
+          "Przechwycenie transmisji radiowej"
+        ],
+        "explanation": "WAF chroni aplikacje webowe przed atakami takimi jak SQL injection i XSS [13]."
+      },
+      {
+        "pytanie": "Co to jest mikrosegmentacja w kontekście bezpieczeństwa sieci w chmurze?",
+        "type": "choice",
+        "poprawna": "Bardzo szczegółowa kontrola ruchu między aplikacjami/usługami",
+        "opcje": [
+          "Podział sieci na strefy geograficzne",
+          "Bardzo szczegółowa kontrola ruchu między aplikacjami/usługami",
+          "Używanie małych pakietów danych",
+          "Dzielenie dysku twardego na małe partycje"
+        ],
+        "explanation": "Mikrosegmentacja pozwala na bardzo szczegółową kontrolę ruchu między aplikacjami, co jest ważne w mikroserwisach [14]."
+      },
+      {
+        "pytanie": "RPO (Recovery Point Objective) i RTO (Recovery Time Objective) to parametry kluczowe dla:",
+        "type": "choice",
+        "poprawna": "Procedur backupu i odzyskiwania awaryjnego (Disaster Recovery)",
+        "opcje": [
+          "Szyfrowania danych w tranzycie",
+          "Zarządzania tożsamością",
+          "Procedur backupu i odzyskiwania awaryjnego (Disaster Recovery)",
+          "Konfiguracji Load Balancera"
+        ],
+        "explanation": "Istotne jest zrozumienie RPO i RTO dla różnych systemów w kontekście backupu i disaster recovery [15]."
+      },
+      {
+        "pytanie": "Jakie elementy obejmuje bezpieczeństwo API (API Security)?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Uwierzytelnianie i autoryzację",
+          "Ograniczanie ruchu (rate limiting)",
+          "Walidację danych"
+        ],
+        "opcje": [
+          "Uwierzytelnianie i autoryzację",
+          "Ograniczanie ruchu (rate limiting)",
+          "Szyfrowanie dysków twardych",
+          "Walidację danych"
+        ],
+        "explanation": "Zabezpieczenie API obejmuje uwierzytelnianie, autoryzację, rate limiting, walidację danych i monitorowanie [16]."
+      },
+      {
+        "pytanie": "W chmurze publicznej (Public Cloud) zasoby są dostępne dla ogółu, co wymaga słabszej izolacji między klientami niż w chmurze prywatnej.",
+        "type": "choice",
+        "poprawna": "Fałsz",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Chmury publiczne wymagają silnej izolacji między klientami i zwrócenia szczególnej uwagi na bezpieczeństwo danych [4]."
+      },
+      {
+        "pytanie": "Które z poniższych to ryzyka związane z zarządzaniem chmurą wg frameworków typu COBIT 5 / ISO 31000?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Zależność od dostawcy (Vendor lock-in)",
+          "Utrata kontroli nad danymi",
+          "Nieautoryzowany dostęp"
+        ],
+        "opcje": [
+          "Zależność od dostawcy (Vendor lock-in)",
+          "Zbyt wysoka wydajność",
+          "Utrata kontroli nad danymi",
+          "Nieautoryzowany dostęp"
+        ],
+        "explanation": "W chmurze szczególnie ważne ryzyka to zależność od dostawcy, utrata kontroli nad danymi i nieautoryzowany dostęp [17]."
+      },
+      {
+        "pytanie": "Czym jest DLP (Data Loss Prevention)?",
+        "type": "choice",
+        "poprawna": "Technologiami i procesami zapobiegającymi nieautoryzowanemu wyciekowi danych",
+        "opcje": [
+          "Protokołem szyfrowania danych",
+          "Technologiami i procesami zapobiegającymi nieautoryzowanemu wyciekowi danych",
+          "Systemem do zarządzania logami",
+          "Usługą load balancingu"
+        ],
+        "explanation": "DLP to technologie i procesy zapobiegające nieautoryzowanemu wyciekowi danych [18]."
+      },
+      {
+        "pytanie": "Która regulacja dotyczy ochrony danych posiadaczy kart płatniczych?",
+        "type": "choice",
+        "poprawna": "PCI DSS",
+        "opcje": [
+          "GDPR",
+          "HIPAA",
+          "PCI DSS",
+          "ISO 27001",
+          "SOC 2"
+        ],
+        "explanation": "PCI DSS to standard bezpieczeństwa danych kart płatniczych [19]."
+      },
+      {
+        "pytanie": "Audyt bezpieczeństwa chmury może być utrudniony ze względu na:",
+        "type": "choice",
+        "poprawna": "Ograniczony dostęp do fizycznej infrastruktury",
+        "opcje": [
+          "Brak standardów bezpieczeństwa",
+          "Ograniczony dostęp do fizycznej infrastruktury",
+          "Zbyt dużą ilość logów",
+          "Brak narzędzi do audytu"
+        ],
+        "explanation": "W chmurze audyt może być utrudniony przez ograniczony dostęp do infrastruktury [20]."
+      },
+      {
+        "pytanie": "Jakie są najlepsze praktyki dotyczące bezpieczeństwa obrazów kontenerów?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Skanowanie pod kątem podatności przed wdrożeniem",
+          "Używanie minimalnych obrazów bazowych",
+          "Regularna aktualizacja obrazów"
+        ],
+        "opcje": [
+          "Skanowanie pod kątem podatności przed wdrożeniem",
+          "Używanie obrazów z dużą liczbą narzędzi dla wygody",
+          "Używanie minimalnych obrazów bazowych",
+          "Regularna aktualizacja obrazów"
+        ],
+        "explanation": "Obrazy kontenerów powinny być skanowane, budowane z minimalnych obrazów bazowych i regularnie aktualizowane [21]."
+      },
+      {
+        "pytanie": "Co zapewnia Network Traffic Analysis (NTA) w ramach monitoringu sieci?",
+        "type": "choice",
+        "poprawna": "Analizę ruchu sieciowego w czasie rzeczywistym w celu wykrycia anomalii",
+        "opcje": [
+          "Blokowanie spamu w poczcie e-mail",
+          "Analizę ruchu sieciowego w czasie rzeczywistym w celu wykrycia anomalii",
+          "Zarządzanie kluczami SSH",
+          "Optymalizację bazy danych"
+        ],
+        "explanation": "Network Traffic Analysis (NTA) analizuje ruch sieciowy w czasie rzeczywistym, co pozwala wykryć anomalie [22]."
+      },
+      {
+        "pytanie": "Load balancing chroni aplikacje m.in. przed atakami typu DDoS (Distributed Denial of Service).",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Load balancing chroni przed atakami DDoS, a load balancery mogą ukrywać rzeczywistą architekturę [22]."
+      },
+      {
+        "pytanie": "W modelu SaaS (Software as a Service) klient ponosi największą odpowiedzialność za bezpieczeństwo infrastruktury.",
+        "type": "choice",
+        "poprawna": "Fałsz",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "W modelu SaaS dostawca odpowiada za większość aspektów bezpieczeństwa, a klient ma najmniejszą odpowiedzialność za infrastrukturę [2], [3]."
+      },
+      {
+        "pytanie": "Jaka jest rola Kubernetes Security Contexts?",
+        "type": "choice",
+        "poprawna": "Kontrolują uprawnienia kontenerów i ograniczają dostęp do zasobów hosta",
+        "opcje": [
+          "Szyfrują ruch sieciowy między podami",
+          "Kontrolują uprawnienia kontenerów i ograniczają dostęp do zasobów hosta",
+          "Zarządzają skalowaniem podów",
+          "Tworzą obrazy kontenerów"
+        ],
+        "explanation": "Kubernetes Security Contexts kontrolują uprawnienia kontenerów i ograniczają dostęp do zasobów hosta [21]."
+      },
+      {
+        "pytanie": "Certyfikaty SSL/TLS w chmurze powinny być:",
+        "type": "multi-choice",
+        "poprawna": [
+          "Zarządzane centralnie",
+          "Regularnie odnawiane"
+        ],
+        "opcje": [
+          "Generowane ręcznie przez każdego programistę",
+          "Zarządzane centralnie",
+          "Ważne bezterminowo",
+          "Regularnie odnawiane"
+        ],
+        "explanation": "Certyfikaty SSL/TLS powinny być zarządzane centralnie i regularnie odnawiane [9], [23]."
+      },
+      {
+        "pytanie": "Uwierzytelnianie wieloskładnikowe (MFA) wymaga użycia składników z przynajmniej dwóch różnych kategorii, takich jak:",
+        "type": "multi-choice",
+        "poprawna": [
+          "Coś co wiesz (hasło)",
+          "Coś co masz (token)",
+          "Coś czym jesteś (biometria)"
+        ],
+        "opcje": [
+          "Coś co wiesz (hasło)",
+          "Coś co lubisz (ulubiony kolor)",
+          "Coś co masz (token)",
+          "Coś czym jesteś (biometria)"
+        ],
+        "explanation": "MFA wymaga co najmniej dwóch różnych czynników: coś co wiesz, coś co masz lub coś czym jesteś [24]."
+      },
+      {
+        "pytanie": "Zarządzanie sesjami API jest szczególnie ważne, ponieważ tokeny mogą być używane do automatycznego dostępu do zasobów.",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Szczególnie ważne jest zarządzanie sesjami API i tokenami, które mogą być używane do automatycznego dostępu [25]."
+      }
+    ]
+  },
+  {
+    "id": "bsiach-2",
+    "title": "Chmury #2 - Budowa aplikacji w Spring Boot",
+    "questions": [
+      {
+        "pytanie": "Jaki jest główny cel mechanizmu autokonfiguracji w Spring Boot?",
+        "type": "choice",
+        "poprawna": "Automatyczne konfigurowanie beanów na podstawie classpath i właściwości, redukujące kod szablonowy",
+        "opcje": [
+          "Wymuszanie ręcznej konfiguracji XML dla każdego komponentu",
+          "Automatyczne konfigurowanie beanów na podstawie classpath i właściwości, redukujące kod szablonowy",
+          "Zarządzanie wyłącznie połączeniami z bazą danych",
+          "Automatyczne generowanie kodu frontendowego"
+        ],
+        "explanation": "Autokonfiguracja Spring Boot automatycznie konfiguruje komponenty aplikacji, eliminując konieczność pisania kodu szablonowego (boilerplate code) [1]."
+      },
+      {
+        "pytanie": "Które z poniższych są głównymi komponentami ekosystemu Spring wymienionymi w materiałach?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Spring MVC",
+          "Spring Data",
+          "Spring Security",
+          "Spring Cloud"
+        ],
+        "opcje": [
+          "Spring MVC",
+          "Hibernate Core",
+          "Spring Data",
+          "Spring Security",
+          "Spring Cloud"
+        ],
+        "explanation": "Główne komponenty to Spring Core, Spring MVC, Spring Data, Spring Security oraz Spring Cloud [2]."
+      },
+      {
+        "pytanie": "Wbudowane serwery, takie jak Tomcat, Jetty czy Undertow, pozwalają na uruchomienie aplikacji Spring Boot jako samodzielnego pliku JAR.",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Spring Boot umożliwia budowanie aplikacji jako samodzielnych tworów (standalone JAR) dzięki wbudowanym serwerom [1]."
+      },
+      {
+        "pytanie": "Jaka jest rola warstwy kontrolerów w architekturze omawianej aplikacji REST?",
+        "type": "choice",
+        "poprawna": "Odpowiada za walidację żądań HTTP, uwierzytelnianie i autoryzację",
+        "opcje": [
+          "Implementuje logikę biznesową aplikacji",
+          "Odpowiada za bezpośrednie operacje na bazie danych",
+          "Odpowiada za walidację żądań HTTP, uwierzytelnianie i autoryzację",
+          "Zarządzanie konfiguracją serwera Eureka"
+        ],
+        "explanation": "Warstwa kontrolerów (REST endpoints) zajmuje się obsługą żądań HTTP, walidacją oraz aspektami bezpieczeństwa na wejściu [3]."
+      },
+      {
+        "pytanie": "Które zasady charakteryzują styl architektoniczny REST?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Bezstanowość (statelessness)",
+          "Jednolity interfejs",
+          "URL-e bazujące na zasobach"
+        ],
+        "opcje": [
+          "Bezstanowość (statelessness)",
+          "Utrzymywanie stałej sesji po stronie serwera",
+          "Jednolity interfejs",
+          "Silne powiązanie klienta i serwera",
+          "URL-e bazujące na zasobach"
+        ],
+        "explanation": "Zasady REST obejmują bezstanowość, jednolity interfejs, URL-e oparte na zasobach oraz niezależność reprezentacji [4]."
+      },
+      {
+        "pytanie": "Co oznacza, że REST API jest bezstanowe (stateless)?",
+        "type": "choice",
+        "poprawna": "Każde żądanie zawiera wszystkie informacje potrzebne do jego przetworzenia",
+        "opcje": [
+          "Serwer przechowuje stan każdego klienta w pamięci RAM",
+          "Baza danych nie przechowuje żadnych danych",
+          "Każde żądanie zawiera wszystkie informacje potrzebne do jego przetworzenia",
+          "Aplikacja nie używa plików cookie"
+        ],
+        "explanation": "Bezstanowość oznacza, że każde żądanie (request) musi zawierać komplet informacji niezbędnych do jego obsługi, co sprzyja skalowalności [5]."
+      },
+      {
+        "pytanie": "W jaki sposób Spring Boot zarządza konfiguracją dla różnych środowisk (np. dev, staging, prod)?",
+        "type": "choice",
+        "poprawna": "Używając plików application.properties lub application.yml z profilami",
+        "opcje": [
+          "Wymagając rekompilacji kodu dla każdego środowiska",
+          "Używając plików application.properties lub application.yml z profilami",
+          "Tylko poprzez argumenty linii poleceń",
+          "Konfiguracja jest zawsze taka sama dla wszystkich środowisk"
+        ],
+        "explanation": "Spring Boot wykorzystuje pliki properties/yaml oraz profile do zarządzania konfiguracją specyficzną dla danego środowiska [6]."
+      },
+      {
+        "pytanie": "Jaki jest domyślny mechanizm puli połączeń (connection pool) w Spring Boot, zoptymalizowany pod kątem wydajności?",
+        "type": "choice",
+        "poprawna": "HikariCP",
+        "opcje": [
+          "C3P0",
+          "Dbcp2",
+          "HikariCP",
+          "Tomcat JDBC"
+        ],
+        "explanation": "HikariCP jest domyślnym i wydajnym mechanizmem connection pool stosowanym w Spring Boot [7]."
+      },
+      {
+        "pytanie": "Adnotacja @Transactional w Springu zapewnia, że operacje wewnątrz metody są wykonywane w ramach jednej transakcji bazy danych.",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Adnotacja @Transactional (widoczna w kodzie ProductService) gwarantuje spójność operacji w ramach transakcji [8, 9]."
+      },
+      {
+        "pytanie": "Które adnotacje służą do deklaratywnego cache'owania w Spring Boot?",
+        "type": "multi-choice",
+        "poprawna": [
+          "@Cacheable",
+          "@CacheEvict",
+          "@CachePut"
+        ],
+        "opcje": [
+          "@Cacheable",
+          "@CacheIt",
+          "@CacheEvict",
+          "@CachePut",
+          "@SaveCache"
+        ],
+        "explanation": "Do obsługi cache w Springu wykorzystuje się adnotacje takie jak @Cacheable, @CacheEvict oraz @CachePut [9]."
+      },
+      {
+        "pytanie": "Co robi adnotacja @CacheEvict(value = \"products\", allEntries = true)?",
+        "type": "choice",
+        "poprawna": "Usuwa wszystkie wpisy z cache o nazwie \"products\"",
+        "opcje": [
+          "Dodaje nowy wpis do cache",
+          "Pobiera dane z cache zamiast z bazy",
+          "Usuwa wszystkie wpisy z cache o nazwie \"products\"",
+          "Wyłącza cache dla danej metody"
+        ],
+        "explanation": "Parametr allEntries = true w @CacheEvict powoduje wyczyszczenie całego cache o wskazanej nazwie [10]."
+      },
+      {
+        "pytanie": "W Spring Security, jakie zadanie spełnia łańcuch filtrów (SecurityFilterChain)?",
+        "type": "choice",
+        "poprawna": "Konfiguruje zasady bezpieczeństwa HTTP, takie jak CSRF, autoryzacja żądań i zarządzanie sesją",
+        "opcje": [
+          "Szyfruje hasła w bazie danych",
+          "Konfiguruje zasady bezpieczeństwa HTTP, takie jak CSRF, autoryzacja żądań i zarządzanie sesją",
+          "Tworzy tokeny JWT",
+          "Zarządza połączeniem z bazą danych użytkowników"
+        ],
+        "explanation": "Bean SecurityFilterChain definiuje konfigurację bezpieczeństwa HTTP, w tym reguły CSRF, autoryzacji endpointów i sesji [11]."
+      },
+      {
+        "pytanie": "Z jakich trzech części składa się token JWT?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Nagłówek (Header)",
+          "Zawartość/Roszczenia (Payload/Claims)",
+          "Podpis (Signature)"
+        ],
+        "opcje": [
+          "Nagłówek (Header)",
+          "Metadane (Metadata)",
+          "Zawartość/Roszczenia (Payload/Claims)",
+          "Klucz prywatny",
+          "Podpis (Signature)"
+        ],
+        "explanation": "JWT składa się standardowo z nagłówka, zawartości (claims) i podpisu elektronicznego [12]."
+      },
+      {
+        "pytanie": "Adnotacja @PreAuthorize(\"hasRole('ADMIN')\") sprawdzi uprawnienia użytkownika po wykonaniu metody.",
+        "type": "choice",
+        "poprawna": "Fałsz",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "@PreAuthorize sprawdza uprawnienia przed wykonaniem metody, a nie po [6, 13]."
+      },
+      {
+        "pytanie": "Do czego służy mechanizm CORS (Cross-Origin Resource Sharing)?",
+        "type": "choice",
+        "poprawna": "Pozwala na kontrolowanie dostępu do zasobów dla stron pochodzących z innych domen",
+        "opcje": [
+          "Chroni przed atakami typu SQL Injection",
+          "Szyfruje dane przesyłane między mikroserwisami",
+          "Pozwala na kontrolowanie dostępu do zasobów dla stron pochodzących z innych domen",
+          "Automatycznie loguje użytkowników z różnych domen"
+        ],
+        "explanation": "CORS kontroluje dostęp do zasobów dla żądań pochodzących z innych domen (origins) [14]."
+      },
+      {
+        "pytanie": "Jakie adnotacje służą do walidacji danych wejściowych w Spring Boot (JSR-303)?",
+        "type": "multi-choice",
+        "poprawna": [
+          "@NotBlank",
+          "@Size",
+          "@DecimalMin"
+        ],
+        "opcje": [
+          "@NotBlank",
+          "@Entity",
+          "@Size",
+          "@DecimalMin",
+          "@Transactional"
+        ],
+        "explanation": "Do walidacji danych używa się adnotacji takich jak @NotBlank, @Size czy @DecimalMin (przykład w kodzie Product.java) [15, 16]."
+      },
+      {
+        "pytanie": "Co zapewnia adnotacja @ControllerAdvice w Spring Boot?",
+        "type": "choice",
+        "poprawna": "Scentralizowaną obsługę wyjątków dla wszystkich kontrolerów",
+        "opcje": [
+          "Logowanie wszystkich żądań HTTP",
+          "Scentralizowaną obsługę wyjątków dla wszystkich kontrolerów",
+          "Konfigurację połączenia z bazą danych",
+          "Automatyczne generowanie dokumentacji API"
+        ],
+        "explanation": "@ControllerAdvice pozwala na globalną obsługę błędów w jednym miejscu dla całej aplikacji [17]."
+      },
+      {
+        "pytanie": "W jaki sposób Spring Boot Actuator wspiera monitorowanie aplikacji?",
+        "type": "choice",
+        "poprawna": "Dostarcza wbudowane endpointy do kontroli kondycji, metryk i informacji o aplikacji",
+        "opcje": [
+          "Automatycznie restartuje aplikację w przypadku awarii",
+          "Dostarcza wbudowane endpointy do kontroli kondycji, metryk i informacji o aplikacji",
+          "Szyfruje logi aplikacji",
+          "Zarządza kontenerami Docker"
+        ],
+        "explanation": "Actuator udostępnia endpointy (np. /health, /metrics) do monitorowania stanu i metryk aplikacji [1, 18]."
+      },
+      {
+        "pytanie": "Która biblioteka w Spring Cloud służy do implementacji wzorca Circuit Breaker?",
+        "type": "choice",
+        "poprawna": "Resilience4j",
+        "opcje": [
+          "Hystrix (przestarzałe)",
+          "Resilience4j",
+          "Ribbon",
+          "Eureka"
+        ],
+        "explanation": "Resilience4j jest wykorzystywane do implementacji wzorca Circuit Breaker w nowoczesnym Spring Cloud [15, 19]."
+      },
+      {
+        "pytanie": "Jakie są korzyści z użycia Dockerfile w procesie budowania aplikacji?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Zapewnia spójność środowiska uruchomieniowego",
+          "Umożliwia wieloetapową budowę (multistage build) dla optymalizacji rozmiaru",
+          "Izoluje aplikację wraz z jej zależnościami"
+        ],
+        "opcje": [
+          "Zapewnia spójność środowiska uruchomieniowego",
+          "Automatycznie naprawia błędy w kodzie Java",
+          "Umożliwia wieloetapową budowę (multistage build) dla optymalizacji rozmiaru",
+          "Izoluje aplikację wraz z jej zależnościami",
+          "Zastępuje bazę danych"
+        ],
+        "explanation": "Dockerfile pozwala na spójność, izolację oraz optymalizację obrazu (multistage build) [20, 21]."
+      },
+      {
+        "pytanie": "Dlaczego w Dockerfile tworzy się użytkownika 'javauser' zamiast używać roota?",
+        "type": "choice",
+        "poprawna": "Ze względów bezpieczeństwa, aby ograniczyć uprawnienia procesu w kontenerze",
+        "opcje": [
+          "Aby przyspieszyć uruchamianie kontenera",
+          "Jest to wymagane przez język Java",
+          "Ze względów bezpieczeństwa, aby ograniczyć uprawnienia procesu w kontenerze",
+          "Aby zmniejszyć rozmiar obrazu"
+        ],
+        "explanation": "Uruchamianie jako non-root (np. javauser) jest praktyką bezpieczeństwa ograniczającą skutki potencjalnego ataku [21]."
+      },
+      {
+        "pytanie": "Czym jest 'Blue-Green Deployment'?",
+        "type": "choice",
+        "poprawna": "Strategią wdrażania wykorzystującą dwa identyczne środowiska, co pozwala na szybkie przełączanie ruchu",
+        "opcje": [
+          "Wdrażaniem aplikacji tylko na środowisko testowe",
+          "Strategią wdrażania wykorzystującą dwa identyczne środowiska, co pozwala na szybkie przełączanie ruchu",
+          "Stopniowym udostępnianiem nowej wersji małej grupie użytkowników",
+          "Kolorowaniem logów w konsoli"
+        ],
+        "explanation": "Blue-Green Deployment to strategia z dwoma środowiskami (starym i nowym) minimalizująca ryzyko i downtime [22]."
+      },
+      {
+        "pytanie": "Adnotacja @Timed z biblioteki Micrometer służy do:",
+        "type": "choice",
+        "poprawna": "Zbierania metryk dotyczących czasu wykonania metody",
+        "opcje": [
+          "Ustawienia timeoutu dla transakcji",
+          "Harmonogramowania zadań cyklicznych",
+          "Zbierania metryk dotyczących czasu wykonania metody",
+          "Opóźnienia startu aplikacji"
+        ],
+        "explanation": "@Timed służy do mierzenia czasu wykonania metod i zbierania metryk dla systemów monitorowania [23]."
+      },
+      {
+        "pytanie": "Co to jest MDC (Mapped Diagnostic Context) w logowaniu?",
+        "type": "choice",
+        "poprawna": "Mechanizm pozwalający na dodawanie informacji kontekstowych (np. ID użytkownika) do logów",
+        "opcje": [
+          "Format kompresji logów",
+          "Narzędzie do wizualizacji logów",
+          "Mechanizm pozwalający na dodawanie informacji kontekstowych (np. ID użytkownika) do logów",
+          "Typ bazy danych dla logów"
+        ],
+        "explanation": "MDC pozwala na wzbogacenie logów o kontekst, taki jak ID żądania czy użytkownika, co ułatwia śledzenie [24]."
+      },
+      {
+        "pytanie": "Jakie funkcje pełni Spring Cloud Gateway w architekturze mikrousług?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Routing żądań do odpowiednich usług",
+          "Ograniczanie ruchu (Rate limiting)",
+          "Dodawanie nagłówków bezpieczeństwa"
+        ],
+        "opcje": [
+          "Routing żądań do odpowiednich usług",
+          "Przechowywanie danych biznesowych",
+          "Ograniczanie ruchu (Rate limiting)",
+          "Dodawanie nagłówków bezpieczeństwa",
+          "Generowanie raportów PDF"
+        ],
+        "explanation": "Spring Cloud Gateway realizuje routing, rate limiting, autoryzację oraz manipulację nagłówkami [25, 26]."
+      },
+      {
+        "pytanie": "Service Discovery (np. Eureka) pozwala usługom na komunikację bez konieczności sztywnego wpisywania adresów IP i portów.",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Eureka umożliwia wykrywanie usług po nazwach, eliminując potrzebę hardcodowania adresów IP [27]."
+      },
+      {
+        "pytanie": "W jaki sposób Spring Cloud Config zwiększa bezpieczeństwo haseł i kluczy?",
+        "type": "choice",
+        "poprawna": "Umożliwia szyfrowanie wartości w repozytorium i ich odszyfrowywanie przez serwer konfiguracji",
+        "opcje": [
+          "Usuwa hasła z plików konfiguracyjnych",
+          "Umożliwia szyfrowanie wartości w repozytorium i ich odszyfrowywanie przez serwer konfiguracji",
+          "Automatycznie zmienia hasła co 24 godziny",
+          "Blokuje dostęp do plików properties"
+        ],
+        "explanation": "Spring Cloud Config wspiera szyfrowanie wartości (np. {cipher}...) i trzymanie ich w bezpieczny sposób w repozytorium [28]."
+      },
+      {
+        "pytanie": "Co zapewnia integracja z HashiCorp Vault w Spring Cloud?",
+        "type": "choice",
+        "poprawna": "Bezpieczne zarządzanie sekretami, dynamiczne sekrety i ich rotację",
+        "opcje": [
+          "Szybsze działanie bazy danych",
+          "Bezpieczne zarządzanie sekretami, dynamiczne sekrety i ich rotację",
+          "Automatyczne skalowanie kontenerów",
+          "Kompresję przesyłanych danych"
+        ],
+        "explanation": "Vault zapewnia zaawansowane zarządzanie sekretami, w tym ich dynamiczne generowanie i rotację [29]."
+      },
+      {
+        "pytanie": "Który wzorzec komunikacji jest zalecany dla usług luźno powiązanych (decoupled) w systemach rozproszonych?",
+        "type": "choice",
+        "poprawna": "Komunikacja asynchroniczna (kolejki komunikatów, zdarzenia)",
+        "opcje": [
+          "Komunikacja synchroniczna (REST)",
+          "Bezpośrednie połączenie z bazą danych innej usługi",
+          "Komunikacja asynchroniczna (kolejki komunikatów, zdarzenia)",
+          "Współdzielenie plików na dysku sieciowym"
+        ],
+        "explanation": "Komunikacja asynchroniczna (np. Kafka, RabbitMQ) jest odpowiednia dla usług rozdzielonych (decoupled) [30]."
+      },
+      {
+        "pytanie": "Czym jest 'Trace ID' w kontekście rozproszonego śledzenia (Distributed Tracing)?",
+        "type": "choice",
+        "poprawna": "Unikalnym identyfikatorem przypisanym do całego łańcucha żądań w systemie rozproszonym",
+        "opcje": [
+          "Identyfikatorem błędu w logach",
+          "Unikalnym identyfikatorem przypisanym do całego łańcucha żądań w systemie rozproszonym",
+          "Adresem IP klienta",
+          "Nazwą metody w kodzie Java"
+        ],
+        "explanation": "Trace ID (wspierany przez Spring Cloud Sleuth) umożliwia korelację logów i śledzenie przepływu żądania przez wiele usług [31]."
+      }
+    ]
+  },
+  {
+    "id": "bsiach-3",
+    "title": "Chmury #3 - Implementacja bezpieczeństwa w aplikacji",
+    "questions": [
+      {
+        "pytanie": "Jaki jest główny framework bezpieczeństwa używany w ekosystemie Spring do implementacji uwierzytelniania i autoryzacji?",
+        "type": "choice",
+        "poprawna": "Spring Security",
+        "opcje": [
+          "Spring Guard",
+          "Spring Security",
+          "Java Security API",
+          "Hibernate Security"
+        ],
+        "explanation": "Spring Security to framework bezpieczeństwa dla aplikacji Spring, dostarczający wszystkich niezbędnych funkcjonalności bezpieczeństwa [1]."
+      },
+      {
+        "pytanie": "Dlaczego w konfiguracji `SecurityFilterChain` dla aplikacji opartej na tokenach JWT ustawia się `SessionCreationPolicy.STATELESS`?",
+        "type": "choice",
+        "poprawna": "Ponieważ REST API powinno być bezstanowe, a każde żądanie zawiera komplet informacji (token)",
+        "opcje": [
+          "Aby zaoszczędzić pamięć RAM na serwerze",
+          "Ponieważ REST API powinno być bezstanowe, a każde żądanie zawiera komplet informacji (token)",
+          "Jest to wymagane przez bazę danych PostgreSQL",
+          "Aby umożliwić działanie protokołu HTTP/2"
+        ],
+        "explanation": "W architekturze REST/JWT nie utrzymuje się sesji po stronie serwera; każde żądanie jest uwierzytelniane niezależnie [2]."
+      },
+      {
+        "pytanie": "Która metoda w `SecurityFilterChain` służy do wyłączenia ochrony CSRF, co jest typowe dla bezstanowych API używających JWT?",
+        "type": "choice",
+        "poprawna": ".csrf(csrf -> csrf.disable())",
+        "opcje": [
+          ".csrf(csrf -> csrf.enable())",
+          ".cors(cors -> cors.disable())",
+          ".csrf(csrf -> csrf.disable())",
+          ".headers(headers -> headers.disable())"
+        ],
+        "explanation": "Zabezpieczenie CSRF może być wyłączone dla bezstanowego uwierzytelniania (JWT), ale powinno być włączone dla sesji [2, 3]."
+      },
+      {
+        "pytanie": "Jaki mechanizm (algorytm) jest używany w przykładowej konfiguracji do bezpiecznego haszowania haseł użytkowników?",
+        "type": "choice",
+        "poprawna": "BCryptPasswordEncoder",
+        "opcje": [
+          "MD5PasswordEncoder",
+          "SHA256PasswordEncoder",
+          "BCryptPasswordEncoder",
+          "PlaintextPasswordEncoder",
+          "SCryptPasswordEncoder"
+        ],
+        "explanation": "W konfiguracji beana PasswordEncoder używany jest BCryptPasswordEncoder [2]."
+      },
+      {
+        "pytanie": "Które z poniższych są standardami lub mechanizmami używanymi do implementacji uwierzytelniania wymienionymi w materiałach?",
+        "type": "multi-choice",
+        "poprawna": [
+          "OAuth 2.0",
+          "OpenID Connect",
+          "Tokeny JWT",
+          "Formularz do logowania (form-based)"
+        ],
+        "opcje": [
+          "OAuth 2.0",
+          "OpenID Connect",
+          "Tokeny JWT",
+          "SSH Key Exchange",
+          "Formularz do logowania (form-based)"
+        ],
+        "explanation": "Materiały wymieniają form-based, digest, OAuth 2.0, OpenID Connect oraz Tokeny JWT jako mechanizmy uwierzytelniania [4]."
+      },
+      {
+        "pytanie": "Z jakich trzech części składa się token JWT (JSON Web Token)?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Nagłówek (Header)",
+          "Zawartość/Roszczenia (Payload/Claims)",
+          "Podpis (Signature)"
+        ],
+        "opcje": [
+          "Nagłówek (Header)",
+          "Szyfr (Cipher)",
+          "Zawartość/Roszczenia (Payload/Claims)",
+          "Sesja (SessionID)",
+          "Podpis (Signature)"
+        ],
+        "explanation": "JWT składa się z nagłówka, zawartości (uprawnienia - claims) i podpisu elektronicznego [5]."
+      },
+      {
+        "pytanie": "W jaki sposób filtr `JwtAuthenticationFilter` jest dodawany do łańcucha filtrów bezpieczeństwa?",
+        "type": "choice",
+        "poprawna": "Przed filtrem UsernamePasswordAuthenticationFilter",
+        "opcje": [
+          "Po filtrze UsernamePasswordAuthenticationFilter",
+          "Zamiast filtra UsernamePasswordAuthenticationFilter",
+          "Przed filtrem UsernamePasswordAuthenticationFilter",
+          "Jako ostatni filtr w łańcuchu"
+        ],
+        "explanation": "W konfiguracji używa się metody `.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)` [2]."
+      },
+      {
+        "pytanie": "Co to jest CORS (Cross-Origin Resource Sharing)?",
+        "type": "choice",
+        "poprawna": "Mechanizm pozwalający na kontrolowanie dostępu do zasobów dla stron pochodzących z innych domen",
+        "opcje": [
+          "Mechanizm zapobiegający atakom SQL Injection",
+          "Sposób szyfrowania haseł w bazie danych",
+          "Mechanizm pozwalający na kontrolowanie dostępu do zasobów dla stron pochodzących z innych domen",
+          "Protokół wymiany kluczy SSL"
+        ],
+        "explanation": "CORS pozwala na kontrolowanie dostępu do zasobów stronom z innych domen, co jest ważne w mikrousługach [3]."
+      },
+      {
+        "pytanie": "Adnotacja @EnableMethodSecurity w klasie konfiguracyjnej jest wymagana, aby działały adnotacje autoryzacyjne takie jak @PreAuthorize.",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Adnotacja @EnableMethodSecurity włącza zabezpieczenia na poziomie metod [2]."
+      },
+      {
+        "pytanie": "Przed jakimi atakami chroni Content Security Policy (CSP)?",
+        "type": "choice",
+        "poprawna": "XSS (Cross-Site Scripting)",
+        "opcje": [
+          "SQL Injection",
+          "XSS (Cross-Site Scripting)",
+          "DDoS",
+          "Brute Force"
+        ],
+        "explanation": "Zabezpieczenie przed XSS wymaga m.in. Content Security Policy (CSP) [6]."
+      },
+      {
+        "pytanie": "Jakie adnotacje służą do walidacji danych wejściowych (Bean Validation / JSR-303)?",
+        "type": "multi-choice",
+        "poprawna": [
+          "@NotBlank",
+          "@Size",
+          "@DecimalMin",
+          "@Digits"
+        ],
+        "opcje": [
+          "@NotBlank",
+          "@Size",
+          "@Secure",
+          "@DecimalMin",
+          "@Digits"
+        ],
+        "explanation": "Materiały wymieniają @NotBlank, @Size, @DecimalMin, @Digits jako adnotacje walidacyjne [6, 7]."
+      },
+      {
+        "pytanie": "Co zapewnia 'sanityzacja wejściowa'?",
+        "type": "choice",
+        "poprawna": "Usuwa potencjalnie niebezpieczne znaki i zawartość z danych wejściowych",
+        "opcje": [
+          "Szyfruje dane przed zapisem do bazy",
+          "Usuwa potencjalnie niebezpieczne znaki i zawartość z danych wejściowych",
+          "Kompresuje dane wejściowe",
+          "Automatycznie tłumaczy dane na inny język"
+        ],
+        "explanation": "Sanityzacja wejściowa usuwa potencjalnie niebezpieczne znaki i niebezpieczną zawartość [6]."
+      },
+      {
+        "pytanie": "Frameworki ORM (jak JPA/Hibernate) pomagają zabezpieczyć aplikację przed atakami SQL Injection poprzez stosowanie zapytań parametryzowanych.",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Zabezpieczenie przed SQL injection zapewnia się przez zapytania parametryzowane i frameworki ORM [6]."
+      },
+      {
+        "pytanie": "Jaki nagłówek HTTP jest używany do wymuszenia bezpiecznego połączenia (HTTPS) przez przeglądarkę?",
+        "type": "choice",
+        "poprawna": "Strict-Transport-Security (HSTS)",
+        "opcje": [
+          "X-Frame-Options",
+          "Strict-Transport-Security (HSTS)",
+          "Content-Security-Policy",
+          "X-XSS-Protection"
+        ],
+        "explanation": "Nagłówek Strict-Transport-Security (HSTS) zwiększa bezpieczeństwo komunikacji wymuszając HTTPS [8]."
+      },
+      {
+        "pytanie": "Do czego służy interfejs `AuditorAware<T>` w Spring Data JPA?",
+        "type": "choice",
+        "poprawna": "Do dostarczania informacji o bieżącym użytkowniku (audytorze) dla mechanizmu audytu",
+        "opcje": [
+          "Do szyfrowania danych w bazie",
+          "Do dostarczania informacji o bieżącym użytkowniku (audytorze) dla mechanizmu audytu",
+          "Do monitorowania wydajności zapytań SQL",
+          "Do walidacji danych formularza"
+        ],
+        "explanation": "Implementacja AuditorAware zwraca bieżącego użytkownika (np. z SecurityContextHolder) na potrzeby audytu [9]."
+      },
+      {
+        "pytanie": "W jaki sposób można zrealizować logowanie audytowe zmian encji w Spring Data JPA?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Używając adnotacji @EntityListeners",
+          "Używając adnotacji cyklu życia jak @PrePersist i @PreUpdate"
+        ],
+        "opcje": [
+          "Używając adnotacji @EntityListeners",
+          "Używając adnotacji @SecureLog",
+          "Używając adnotacji cyklu życia jak @PrePersist i @PreUpdate",
+          "Konfigurując plik logback.xml"
+        ],
+        "explanation": "Spring Data JPA dostarcza @EntityListeners oraz @PrePersist/@PreUpdate do logowania audytowego zmian encji [7]."
+      },
+      {
+        "pytanie": "Co robi metoda `AuthenticationManager.authenticate()`?",
+        "type": "choice",
+        "poprawna": "Weryfikuje dane uwierzytelniające (np. login i hasło) i zwraca w pełni uwierzytelniony obiekt",
+        "opcje": [
+          "Tylko sprawdza format adresu email",
+          "Generuje nowy token JWT",
+          "Weryfikuje dane uwierzytelniające (np. login i hasło) i zwraca w pełni uwierzytelniony obiekt",
+          "Zapisuje nowego użytkownika w bazie danych"
+        ],
+        "explanation": "Metoda ta (użyta w AuthenticationService) uwierzytelnia użytkownika na podstawie przekazanego tokenu (np. UsernamePasswordAuthenticationToken) [3]."
+      },
+      {
+        "pytanie": "Jakie narzędzia lub systemy są wykorzystywane do scentralizowanego monitoringu bezpieczeństwa (SIEM)?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Splunk",
+          "Azure Sentinel",
+          "IBM QRadar",
+          "Microsoft Sentinel"
+        ],
+        "opcje": [
+          "Splunk",
+          "Azure Sentinel",
+          "PostgreSQL",
+          "IBM QRadar",
+          "Microsoft Sentinel"
+        ],
+        "explanation": "Wymienione przykłady SIEM to Splunk, Azure Sentinel, IBM QRadar, Energy LogServer i Microsoft Sentinel [10]."
+      },
+      {
+        "pytanie": "Strategie ograniczania przepustowości (rate limiting) obejmują:",
+        "type": "multi-choice",
+        "poprawna": [
+          "Algorytm stałego okna",
+          "Algorytm okna przesuwnego",
+          "Wiadro tokenów (token bucket)"
+        ],
+        "opcje": [
+          "Algorytm stałego okna",
+          "Algorytm okna przesuwnego",
+          "Szyfrowanie symetryczne",
+          "Wiadro tokenów (token bucket)",
+          "Round Robin"
+        ],
+        "explanation": "Strategie ograniczania przepustowości obejmują algorytmy stałego okna, okna przesuwnego i wiadra tokenów [9]."
+      },
+      {
+        "pytanie": "Jakie biblioteki zewnętrzne są wymienione jako służące do implementacji rate limitingu w Spring Boot?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Bucket4j",
+          "Resilience4j"
+        ],
+        "opcje": [
+          "Bucket4j",
+          "Hibernate",
+          "Resilience4j",
+          "JUnit"
+        ],
+        "explanation": "Rate limiting może być implementowany przez biblioteki zewnętrzne takie jak Bucket4j czy Resilience4j [9]."
+      },
+      {
+        "pytanie": "Wbudowane serwery Spring Boot (Tomcat, Jetty, Undertow) nie wspierają konfiguracji SSL/TLS i wymagają zewnętrznego serwera proxy.",
+        "type": "choice",
+        "poprawna": "Fałsz",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Wbudowane serwery Spring Boot wspierają konfigurację SSL/TLS przez plik konfiguracyjny aplikacji [11]."
+      },
+      {
+        "pytanie": "Co zapewnia protokół HTTP/2 w kontekście wydajności i bezpieczeństwa?",
+        "type": "choice",
+        "poprawna": "Poprawia wydajność poprzez multipleksowanie i mechanizm „push” serwera",
+        "opcje": [
+          "Szyfruje dane silniejszym algorytmem niż HTTPS",
+          "Poprawia wydajność poprzez multipleksowanie i mechanizm „push” serwera",
+          "Wymaga użycia zewnętrznych certyfikatów",
+          "Jest wolniejszy, ale bezpieczniejszy niż HTTP/1.1"
+        ],
+        "explanation": "HTTP/2 poprawia wydajność poprzez multipleksowanie i „push” serwera [11]."
+      },
+      {
+        "pytanie": "Mechanizm mTLS (Mutual TLS) zapewnia:",
+        "type": "choice",
+        "poprawna": "Dwukierunkowe uwierzytelnianie między usługami",
+        "opcje": [
+          "Jednokierunkowe szyfrowanie od klienta do serwera",
+          "Dwukierunkowe uwierzytelnianie między usługami",
+          "Automatyczne odnawianie certyfikatów",
+          "Logowanie wszystkich żądań HTTP"
+        ],
+        "explanation": "Mutual TLS (mTLS) zapewnia dwukierunkowe uwierzytelnianie, powszechnie używane w komunikacji między usługami [8]."
+      },
+      {
+        "pytanie": "W jakim celu stosuje się MDC (Mapped Diagnostic Context) w logowaniu?",
+        "type": "choice",
+        "poprawna": "Aby dodawać informacje kontekstowe (np. ID użytkownika, ID żądania) do logów",
+        "opcje": [
+          "Aby skompresować pliki logów",
+          "Aby szyfrować logi",
+          "Aby dodawać informacje kontekstowe (np. ID użytkownika, ID żądania) do logów",
+          "Aby wysyłać logi do bazy danych"
+        ],
+        "explanation": "MDC pozwala na dodawanie informacji kontekstowych (identyfikator użytkownika, żądania, sesji) do logów [12]."
+      },
+      {
+        "pytanie": "Rozproszone śledzenie (Distributed Tracing) przy użyciu Spring Cloud Sleuth dodaje do logów:",
+        "type": "multi-choice",
+        "poprawna": [
+          "Identyfikatory śledzenia (Trace ID)",
+          "Identyfikatory rozpiętości (Span ID)"
+        ],
+        "opcje": [
+          "Identyfikatory śledzenia (Trace ID)",
+          "Hasła użytkowników",
+          "Identyfikatory rozpiętości (Span ID)",
+          "Pełną zawartość bazy danych"
+        ],
+        "explanation": "Spring Cloud Sleuth dodaje identyfikatory śledzenia i identyfikatory rozpiętości do logów, umożliwiając korelację [13]."
+      },
+      {
+        "pytanie": "Jaka jest rola `WebSecurityCustomizer` (lub konfiguracji ignorowania) w Spring Security?",
+        "type": "choice",
+        "poprawna": "Pozwala na wyłączenie filtrów bezpieczeństwa dla określonych zasobów (np. Swagger UI, h2-console)",
+        "opcje": [
+          "Służy do konfiguracji połączenia z bazą danych",
+          "Pozwala na wyłączenie filtrów bezpieczeństwa dla określonych zasobów (np. Swagger UI, h2-console)",
+          "Definiuje niestandardowe strony logowania",
+          "Włącza szyfrowanie HTTPS"
+        ],
+        "explanation": "W kodzie konfiguracji widać użycie `requestMatchers` z `.permitAll()` dla zasobów takich jak Swagger UI czy endpointy Actuatora [2]."
+      },
+      {
+        "pytanie": "Token refresh (odświeżanie tokena) to mechanizm, który pozwala na:",
+        "type": "choice",
+        "poprawna": "Automatyczne odświeżanie wygasłych tokenów dostępu",
+        "opcje": [
+          "Zmianę hasła użytkownika",
+          "Automatyczne odświeżanie wygasłych tokenów dostępu",
+          "Usunięcie konta użytkownika",
+          "Wylogowanie wszystkich użytkowników"
+        ],
+        "explanation": "Token refresh to mechanizm, który pozwala na automatyczne odświeżanie wygasłych tokenów [5]."
+      },
+      {
+        "pytanie": "Gdzie w przykładowym kodzie konfiguracji bezpieczeństwa zdefiniowano politykę sesji jako STATELESS?",
+        "type": "choice",
+        "poprawna": "W metodzie `sessionManagement` wewnątrz łańcucha filtrów bezpieczeństwa",
+        "opcje": [
+          "W pliku application.properties",
+          "W metodzie `sessionManagement` wewnątrz łańcucha filtrów bezpieczeństwa",
+          "W adnotacji @RestController",
+          "W konfiguracji bazy danych"
+        ],
+        "explanation": "W klasie `SecurityConfig` użyto `.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))` [2]."
+      },
+      {
+        "pytanie": "Która biblioteka jest wykorzystywana do testowania bezpieczeństwa w Spring Boot (np. symulowanie użytkownika)?",
+        "type": "choice",
+        "poprawna": "Spring Security Test",
+        "opcje": [
+          "JUnit Security",
+          "Spring Security Test",
+          "Mockito Security",
+          "SecureTest"
+        ],
+        "explanation": "Adnotacja `@WithMockUser` pochodzi z biblioteki `spring-security-test`, używanej w testach integracyjnych [14]."
+      },
+      {
+        "pytanie": "W kontekście monitorowania, integracja z Micrometer pozwala na:",
+        "type": "choice",
+        "poprawna": "Tworzenie niestandardowych metryk i integrację z systemami takimi jak Prometheus",
+        "opcje": [
+          "Szyfrowanie logów",
+          "Tworzenie niestandardowych metryk i integrację z systemami takimi jak Prometheus",
+          "Automatyczne restartowanie aplikacji",
+          "Zarządzanie użytkownikami w bazie danych"
+        ],
+        "explanation": "Integracja z Micrometer pozwala na niestandardowe metryki i integrację z systemami monitorowania (Prometheus, Grafana) [15]."
+      }
+    ]
+  },
+  {
+    "id": "bsiach-4",
+    "title": "Chmury #4 - Narzędzia Spring Cloud i Architektura Mikrousług",
+    "questions": [
+      {
+        "pytanie": "Jaka jest główna rola Spring Cloud Gateway w architekturze mikrousług?",
+        "type": "choice",
+        "poprawna": "Działa jako centralny punkt wejścia, obsługując routing, filtrowanie i bezpieczeństwo na krawędzi",
+        "opcje": [
+          "Służy do przechowywania haseł w bazie danych",
+          "Działa jako centralny punkt wejścia, obsługując routing, filtrowanie i bezpieczeństwo na krawędzi",
+          "Jest serwerem rejestracji usług",
+          "Służy wyłącznie do generowania dokumentacji API"
+        ],
+        "explanation": "Spring Cloud Gateway to 'tarcza' systemu, realizująca routing, autoryzację i filtrowanie na wejściu [1, 2]."
+      },
+      {
+        "pytanie": "Co umożliwia mechanizm 'Token Relay' w Spring Cloud Gateway?",
+        "type": "choice",
+        "poprawna": "Przekazywanie tokena Bearer (np. JWT) z bramy do usług wewnętrznych",
+        "opcje": [
+          "Generowanie nowego tokena dla każdego żądania",
+          "Przekazywanie tokena Bearer (np. JWT) z bramy do usług wewnętrznych",
+          "Zapisywanie tokena w pliku tekstowym",
+          "Blokowanie wszystkich tokenów zewnętrznych"
+        ],
+        "explanation": "Token Relay polega na przekazywaniu uwierzytelnienia (OAuth2) do serwisów backendowych [1-3]."
+      },
+      {
+        "pytanie": "Jakie funkcje bezpieczeństwa wspiera Spring Cloud Gateway?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Ograniczanie ruchu (Rate limiting)",
+          "Dodawanie nagłówków bezpieczeństwa (np. HSTS, CSP)",
+          "Wymuszenie TLS"
+        ],
+        "opcje": [
+          "Ograniczanie ruchu (Rate limiting)",
+          "Szyfrowanie bazy danych",
+          "Dodawanie nagłówków bezpieczeństwa (np. HSTS, CSP)",
+          "Wymuszenie TLS",
+          "Skanowanie antywirusowe plików"
+        ],
+        "explanation": "Gateway wspiera m.in. rate limiting, terminowanie TLS oraz dodawanie nagłówków bezpieczeństwa [2, 4]."
+      },
+      {
+        "pytanie": "Do czego służy Spring Cloud Config?",
+        "type": "choice",
+        "poprawna": "Do centralnego zarządzania konfiguracją i separacji ustawień dla różnych środowisk",
+        "opcje": [
+          "Do monitorowania wydajności aplikacji",
+          "Do centralnego zarządzania konfiguracją i separacji ustawień dla różnych środowisk",
+          "Do routingu żądań HTTP",
+          "Do zarządzania kontenerami Docker"
+        ],
+        "explanation": "Spring Cloud Config zapewnia centralne zarządzanie konfiguracją i może integrować się z Git lub Vault [1, 5]."
+      },
+      {
+        "pytanie": "W jaki sposób Spring Cloud Vault zwiększa bezpieczeństwo aplikacji?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Zapewnia bezpieczne przechowywanie sekretów",
+          "Umożliwia rotację kluczy",
+          "Obsługuje dynamiczne sekrety"
+        ],
+        "opcje": [
+          "Zapewnia bezpieczne przechowywanie sekretów",
+          "Umożliwia rotację kluczy",
+          "Automatycznie naprawia błędy w kodzie",
+          "Obsługuje dynamiczne sekrety",
+          "Służy jako baza danych SQL"
+        ],
+        "explanation": "Vault służy do zarządzania sekretami, ich rotacji oraz kontroli dostępu do danych wrażliwych [6, 7]."
+      },
+      {
+        "pytanie": "Czym charakteryzuje się 'Client-side discovery' realizowane np. przez Netflix Eureka?",
+        "type": "choice",
+        "poprawna": "Klient pobiera listę dostępnych instancji z rejestru i sam decyduje, gdzie wysłać żądanie",
+        "opcje": [
+          "Cały ruch przechodzi przez fizyczny load balancer sprzętowy",
+          "Klient pobiera listę dostępnych instancji z rejestru i sam decyduje, gdzie wysłać żądanie",
+          "Adresy IP usług są wpisane na sztywno w kodzie klienta",
+          "Klient nie wie nic o innych usługach"
+        ],
+        "explanation": "W tym modelu klient łączy się z rejestrem, pobiera listę instancji i wykonuje load balancing po swojej stronie [8]."
+      },
+      {
+        "pytanie": "Która adnotacja włącza serwer Eureka w aplikacji Spring Boot?",
+        "type": "choice",
+        "poprawna": "@EnableEurekaServer",
+        "opcje": [
+          "@EnableDiscoveryClient",
+          "@EnableEurekaClient",
+          "@EnableEurekaServer",
+          "@StartEureka"
+        ],
+        "explanation": "Adnotacja @EnableEurekaServer jest używana w klasie głównej aplikacji pełniącej rolę rejestru usług [9]."
+      },
+      {
+        "pytanie": "Jakie są ryzyka związane z Service Discovery i jak je mitygować?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Ryzyko ekspozycji topologii sieci wewnętrznej",
+          "Należy uwierzytelniać dostęp do dashboardu Eureki",
+          "Nie należy rejestrować serwisów prywatnych w publicznym rejestrze"
+        ],
+        "opcje": [
+          "Ryzyko ekspozycji topologii sieci wewnętrznej",
+          "Należy uwierzytelniać dostęp do dashboardu Eureki",
+          "Ryzyko przepełnienia dysku twardego",
+          "Nie należy rejestrować serwisów prywatnych w publicznym rejestrze"
+        ],
+        "explanation": "Ochrona discovery wymaga ograniczenia ekspozycji, firewalli i uwierzytelniania dostępu [10, 11]."
+      },
+      {
+        "pytanie": "Co to jest wzorzec Circuit Breaker (Bezpiecznik) implementowany przez Resilience4j?",
+        "type": "choice",
+        "poprawna": "Mechanizm zapobiegający kaskadowym awariom poprzez odcinanie niesprawnych zależności",
+        "opcje": [
+          "Narzędzie do szyfrowania połączeń sieciowych",
+          "Mechanizm zapobiegający kaskadowym awariom poprzez odcinanie niesprawnych zależności",
+          "System do automatycznego wdrażania aplikacji",
+          "Sposób na zwiększenie przepustowości łącza"
+        ],
+        "explanation": "Circuit Breaker izoluje awarie, chroniąc system przed przeciążeniem i lawiną błędów [12, 13]."
+      },
+      {
+        "pytanie": "Jakie stany może przyjąć Circuit Breaker?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Zamknięty (Closed)",
+          "Otwarty (Open)",
+          "Półotwarty (Half-Open)"
+        ],
+        "opcje": [
+          "Zamknięty (Closed)",
+          "Otwarty (Open)",
+          "Zepsuty (Broken)",
+          "Półotwarty (Half-Open)",
+          "Oczekujący (Pending)"
+        ],
+        "explanation": "Bezpiecznik działa w trzech stanach: Zamknięty (normalny), Otwarty (awaria) i Półotwarty (testowanie powrotu) [12]."
+      },
+      {
+        "pytanie": "Wzorzec 'Bulkhead' (Grodzie) w Resilience4j służy do:",
+        "type": "choice",
+        "poprawna": "Izolacji puli wątków dla poszczególnych usług, aby awaria jednej nie zajęła wszystkich zasobów",
+        "opcje": [
+          "Fizycznego oddzielenia serwerów w serwerowni",
+          "Izolacji puli wątków dla poszczególnych usług, aby awaria jednej nie zajęła wszystkich zasobów",
+          "Szyfrowania danych na dysku",
+          "Blokowania ruchu z nieznanych adresów IP"
+        ],
+        "explanation": "Bulkhead izoluje zasoby (wątki) per funkcja/usługa, zapobiegając przenoszeniu się problemów [13-15]."
+      },
+      {
+        "pytanie": "Adnotacja @Retry(name = \"inventory\") służy do skonfigurowania mechanizmu:",
+        "type": "choice",
+        "poprawna": "Ponawiania operacji w przypadku wystąpienia przejściowego błędu",
+        "opcje": [
+          "Cache'owania wyniku operacji",
+          "Ponawiania operacji w przypadku wystąpienia przejściowego błędu",
+          "Logowania czasu wykonania operacji",
+          "Ograniczania liczby równoległych wywołań"
+        ],
+        "explanation": "Retry pozwala na kontrolowane ponawianie operacji, np. z rosnącymi opóźnieniami (backoff) [16, 17]."
+      },
+      {
+        "pytanie": "Które rozwiązanie w Spring Cloud Gateway oparte na Redis służy do ochrony przed atakami DoS i nadużyciami?",
+        "type": "choice",
+        "poprawna": "RequestRateLimiter",
+        "opcje": [
+          "CircuitBreaker",
+          "RequestRateLimiter",
+          "TokenRelay",
+          "RewritePath"
+        ],
+        "explanation": "RequestRateLimiter z backendem Redis implementuje algorytm token bucket do ograniczania ruchu [18, 19]."
+      },
+      {
+        "pytanie": "Czym jest 'KeyResolver' w konfiguracji Rate Limitera?",
+        "type": "choice",
+        "poprawna": "Mechanizmem identyfikującym użytkownika (np. po IP lub tokenie JWT) w celu nałożenia limitu",
+        "opcje": [
+          "Kluczem szyfrującym dane w bazie",
+          "Mechanizmem identyfikującym użytkownika (np. po IP lub tokenie JWT) w celu nałożenia limitu",
+          "Narzędziem do generowania kluczy SSH",
+          "Mapą mapującą nazwy usług na adresy IP"
+        ],
+        "explanation": "KeyResolver określa klucz (np. principalName lub IP), według którego zliczane są żądania dla limitu [20]."
+      },
+      {
+        "pytanie": "Jaka jest rola Resource Servera w architekturze opartej na OAuth2 i Spring Security?",
+        "type": "choice",
+        "poprawna": "Weryfikuje tokeny JWT i egzekwuje autoryzację dostępu do zasobów",
+        "opcje": [
+          "Wydaje tokeny użytkownikom",
+          "Przechowuje hasła użytkowników",
+          "Weryfikuje tokeny JWT i egzekwuje autoryzację dostępu do zasobów",
+          "Działa jako bramka API"
+        ],
+        "explanation": "Resource Server (usługa) weryfikuje podpis JWT i sprawdza uprawnienia (scopes/roles) [21]."
+      },
+      {
+        "pytanie": "Co zapewnia mTLS (Mutual TLS) w komunikacji między mikrousługami?",
+        "type": "choice",
+        "poprawna": "Dwukierunkowe uwierzytelnianie i szyfrowanie ruchu",
+        "opcje": [
+          "Szyfrowanie tylko od klienta do serwera",
+          "Dwukierunkowe uwierzytelnianie i szyfrowanie ruchu",
+          "Kompresję danych przesyłanych w sieci",
+          "Automatyczne skalowanie usług"
+        ],
+        "explanation": "mTLS zapewnia, że obie strony komunikacji (usługi) wzajemnie się uwierzytelniają i szyfrują ruch [10, 22]."
+      },
+      {
+        "pytanie": "Jakie narzędzia w Kubernetes służą do segmentacji ruchu sieciowego (ograniczania ruchu L3/L4)?",
+        "type": "choice",
+        "poprawna": "NetworkPolicies",
+        "opcje": [
+          "Ingress Controllers",
+          "NetworkPolicies",
+          "ConfigMaps",
+          "Deployments"
+        ],
+        "explanation": "NetworkPolicies pozwalają zdefiniować, które pody mogą się ze sobą komunikować na poziomie IP/portów [23]."
+      },
+      {
+        "pytanie": "Czego wymaga NetworkPolicy w Kubernetes, aby działać?",
+        "type": "choice",
+        "poprawna": "Wtyczki CNI (Container Network Interface) wspierającej polityki, np. Calico lub Cilium",
+        "opcje": [
+          "Nie wymaga niczego, działa domyślnie",
+          "Wtyczki CNI (Container Network Interface) wspierającej polityki, np. Calico lub Cilium",
+          "Specjalnej wersji jądra Linux",
+          "Zainstalowanego serwera Eureka"
+        ],
+        "explanation": "NetworkPolicies są tylko definicją; do ich egzekwowania potrzebny jest odpowiedni CNI (np. Calico) [24]."
+      },
+      {
+        "pytanie": "Co oznacza zasada 'Defense in Depth' w kontekście Gateway i Ingress?",
+        "type": "choice",
+        "poprawna": "Stosowanie wielu warstw zabezpieczeń, np. TLS na Ingress oraz Rate Limiting na Gateway",
+        "opcje": [
+          "Używanie tylko jednego, bardzo silnego hasła",
+          "Stosowanie wielu warstw zabezpieczeń, np. TLS na Ingress oraz Rate Limiting na Gateway",
+          "Szyfrowanie dysków twardych",
+          "Uruchamianie aplikacji w głębokiej sieci (Dark Web)"
+        ],
+        "explanation": "Współpraca Ingress (TLS, nagłówki) i Gateway (logika biznesowa, rate limit) tworzy obronę w głąb [25]."
+      },
+      {
+        "pytanie": "Jaki jest cel stosowania 'CSI Secret Store' w Kubernetes?",
+        "type": "choice",
+        "poprawna": "Wstrzykiwanie sekretów z zewnętrznego magazynu (np. Vault) jako wolumenów, zamiast trzymania ich w etcd",
+        "opcje": [
+          "Szyfrowanie ruchu sieciowego",
+          "Wstrzykiwanie sekretów z zewnętrznego magazynu (np. Vault) jako wolumenów, zamiast trzymania ich w etcd",
+          "Tworzenie kopii zapasowych baz danych",
+          "Zarządzanie certyfikatami SSL"
+        ],
+        "explanation": "CSI Secret Store pozwala na montowanie sekretów z zewnętrznych systemów (KMS/Vault) bezpośrednio do poda [7, 26]."
+      },
+      {
+        "pytanie": "Które z poniższych są zalecanymi praktykami bezpieczeństwa dla obrazów kontenerów w DevSecOps?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Uruchamianie jako użytkownik inny niż root (non-root)",
+          "Skanowanie obrazów pod kątem podatności (np. Trivy)",
+          "Podpisywanie obrazów (np. Cosign)"
+        ],
+        "opcje": [
+          "Uruchamianie jako root dla wygody",
+          "Uruchamianie jako użytkownik inny niż root (non-root)",
+          "Skanowanie obrazów pod kątem podatności (np. Trivy)",
+          "Instalowanie narzędzi debugujących w obrazach produkcyjnych",
+          "Podpisywanie obrazów (np. Cosign)"
+        ],
+        "explanation": "Bezpieczeństwo kontenerów obejmuje non-root, skanowanie podatności, podpisywanie i minimalne obrazy bazowe [27-29]."
+      },
+      {
+        "pytanie": "Co to jest SBOM (Software Bill of Materials)?",
+        "type": "choice",
+        "poprawna": "Spis wszystkich komponentów i bibliotek użytych w aplikacji, służący do audytu",
+        "opcje": [
+          "Rachunek za usługi chmurowe",
+          "Spis wszystkich komponentów i bibliotek użytych w aplikacji, służący do audytu",
+          "Lista pracowników mających dostęp do kodu",
+          "Harmonogram wdrożeń"
+        ],
+        "explanation": "SBOM to lista składników oprogramowania generowana np. przez Syft/CycloneDX, kluczowa dla bezpieczeństwa łańcucha dostaw [29]."
+      },
+      {
+        "pytanie": "Do czego służy Micrometer w ekosystemie Spring Boot?",
+        "type": "choice",
+        "poprawna": "Jest fasadą dla metryk, pozwalającą na integrację z różnymi systemami monitorowania (np. Prometheus)",
+        "opcje": [
+          "Służy do mikrosegmentacji sieci",
+          "Jest fasadą dla metryk, pozwalającą na integrację z różnymi systemami monitorowania (np. Prometheus)",
+          "Mierzy długość kodu w liniach",
+          "Zarządza mikroserwisami"
+        ],
+        "explanation": "Micrometer to biblioteka metryk działająca jako warstwa abstrakcji dla systemów takich jak Prometheus czy Datadog [30, 31]."
+      },
+      {
+        "pytanie": "Czym jest 'Trace ID' w kontekście rozproszonego śledzenia (Distributed Tracing)?",
+        "type": "choice",
+        "poprawna": "Unikalnym identyfikatorem korelującym logi z różnych usług dla jednego żądania",
+        "opcje": [
+          "Identyfikatorem błędu w bazie danych",
+          "Unikalnym identyfikatorem korelującym logi z różnych usług dla jednego żądania",
+          "Adresem IP klienta",
+          "Nazwą metody w kodzie"
+        ],
+        "explanation": "Trace ID pozwala na śledzenie przepływu pojedynczego żądania przez wiele mikrousług [32, 33]."
+      },
+      {
+        "pytanie": "Które narzędzia należą do kategorii SAST (Static Application Security Testing)?",
+        "type": "multi-choice",
+        "poprawna": [
+          "SonarQube",
+          "Semgrep"
+        ],
+        "opcje": [
+          "SonarQube",
+          "OWASP ZAP",
+          "Semgrep",
+          "Burp Suite"
+        ],
+        "explanation": "SonarQube i Semgrep to narzędzia do statycznej analizy kodu (SAST), w przeciwieństwie do ZAP (DAST) [34]."
+      },
+      {
+        "pytanie": "W jaki sposób można zabezpieczyć komunikację wewnątrz klastra Kubernetes (East-West traffic)?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Stosując mTLS (np. poprzez Istio)",
+          "Używając NetworkPolicies do segmentacji"
+        ],
+        "opcje": [
+          "Stosując mTLS (np. poprzez Istio)",
+          "Wyłączając firewall",
+          "Używając NetworkPolicies do segmentacji",
+          "Używając publicznych adresów IP dla podów"
+        ],
+        "explanation": "Ruch wewnętrzny zabezpiecza się poprzez wzajemne uwierzytelnianie (mTLS) oraz segmentację sieciową (NetworkPolicies) [23, 35]."
+      },
+      {
+        "pytanie": "Co to jest 'Blue-Green Deployment'?",
+        "type": "choice",
+        "poprawna": "Strategia wdrażania z dwoma identycznymi środowiskami, pozwalająca na szybkie przełączanie ruchu",
+        "opcje": [
+          "Wdrażanie aplikacji w kolorach firmowych",
+          "Strategia wdrażania z dwoma identycznymi środowiskami, pozwalająca na szybkie przełączanie ruchu",
+          "Testowanie na produkcji na losowej grupie użytkowników",
+          "Ręczne kopiowanie plików na serwer"
+        ],
+        "explanation": "Blue-Green Deployment minimalizuje ryzyko poprzez utrzymywanie dwóch środowisk i przełączanie ruchu [36]."
+      },
+      {
+        "pytanie": "Jaka jest rola Ingress Controller w Kubernetes?",
+        "type": "choice",
+        "poprawna": "Działa jako punkt wejścia (front door) do klastra, obsługując routing i terminację TLS",
+        "opcje": [
+          "Zarządza bazą danych",
+          "Działa jako punkt wejścia (front door) do klastra, obsługując routing i terminację TLS",
+          "Skanuje kontenery pod kątem wirusów",
+          "Automatycznie restartuje pody"
+        ],
+        "explanation": "Ingress Controller zarządza dostępem z zewnątrz do usług w klastrze, często obsługując SSL/TLS [37]."
+      },
+      {
+        "pytanie": "Co oznacza skrót CI/CD?",
+        "type": "choice",
+        "poprawna": "Continuous Integration / Continuous Deployment (Delivery)",
+        "opcje": [
+          "Cloud Integration / Cloud Development",
+          "Continuous Integration / Continuous Deployment (Delivery)",
+          "Code Inspection / Code Debugging",
+          "Container Implementation / Container Delivery"
+        ],
+        "explanation": "CI/CD to praktyki ciągłej integracji i ciągłego wdrażania/dostarczania oprogramowania [38]."
+      },
+      {
+        "pytanie": "Jakie zadanie spełnia 'Canary Deployment'?",
+        "type": "choice",
+        "poprawna": "Stopniowe udostępnianie nowej wersji aplikacji małej grupie użytkowników w celu weryfikacji",
+        "opcje": [
+          "Wdrażanie tylko w nocy",
+          "Stopniowe udostępnianie nowej wersji aplikacji małej grupie użytkowników w celu weryfikacji",
+          "Używanie ptaków do monitorowania serwerowni",
+          "Natychmiastowe zastąpienie starej wersji nową dla wszystkich"
+        ],
+        "explanation": "Canary Deployment polega na stopniowym wprowadzaniu zmian dla ograniczonej grupy użytkowników w celu wykrycia błędów [36]."
+      },
+      {
+        "pytanie": "Co to jest 'Sidecar pattern' w kontekście Service Mesh?",
+        "type": "choice",
+        "poprawna": "Uruchomienie dodatkowego kontenera (proxy) obok głównej aplikacji, który przejmuje obsługę ruchu sieciowego",
+        "opcje": [
+          "Używanie bocznego menu w aplikacji webowej",
+          "Uruchomienie dodatkowego kontenera (proxy) obok głównej aplikacji, który przejmuje obsługę ruchu sieciowego",
+          "Tworzenie kopii zapasowej na zewnętrznym dysku",
+          "Rodzaj ataku typu Man-in-the-Middle"
+        ],
+        "explanation": "Wzorce Service Mesh (np. Istio) wykorzystują proxy typu sidecar do zarządzania ruchem, mTLS i telemetrią [10, 11]."
+      },
+      {
+        "pytanie": "Jakie są korzyści ze stosowania architektury sterowanej zdarzeniami (Event-driven)?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Luźne powiązanie usług (Decoupling)",
+          "Skalowalność",
+          "Asynchroniczność"
+        ],
+        "opcje": [
+          "Luźne powiązanie usług (Decoupling)",
+          "Ścisła zależność czasowa między usługami",
+          "Skalowalność",
+          "Asynchroniczność",
+          "Brak konieczności stosowania brokera wiadomości"
+        ],
+        "explanation": "Komunikacja asynchroniczna przez zdarzenia pozwala na decoupling i lepszą skalowalność systemów rozproszonych [39, 40]."
+      },
+      {
+        "pytanie": "Co to jest Saga Pattern?",
+        "type": "choice",
+        "poprawna": "Wzorzec zarządzania transakcjami rozproszonymi w mikrousługach",
+        "opcje": [
+          "Rodzaj bazy danych",
+          "Wzorzec zarządzania transakcjami rozproszonymi w mikrousługach",
+          "Nazwa frameworka do testowania",
+          "Metoda szyfrowania haseł"
+        ],
+        "explanation": "Saga zarządza spójnością danych w systemach rozproszonych poprzez sekwencję lokalnych transakcji [41, 42]."
+      },
+      {
+        "pytanie": "Do czego służy adnotacja @PreAuthorize(\"hasRole('ADMIN')\")?",
+        "type": "choice",
+        "poprawna": "Do weryfikacji uprawnień użytkownika przed wykonaniem metody",
+        "opcje": [
+          "Do logowania użytkownika",
+          "Do weryfikacji uprawnień użytkownika przed wykonaniem metody",
+          "Do szyfrowania odpowiedzi",
+          "Do walidacji danych wejściowych"
+        ],
+        "explanation": "Adnotacja @PreAuthorize w Spring Security służy do autoryzacji na poziomie metod [43, 44]."
+      },
+      {
+        "pytanie": "Co oznacza skrót RBAC w kontekście Kubernetes?",
+        "type": "choice",
+        "poprawna": "Role-Based Access Control",
+        "opcje": [
+          "Rule-Based Access Control",
+          "Role-Based Access Control",
+          "Remote Backup and Control",
+          "Routing Based Access Configuration"
+        ],
+        "explanation": "RBAC (Role-Based Access Control) to model kontroli dostępu oparty na rolach, stosowany m.in. w K8s [28, 45]."
+      },
+      {
+        "pytanie": "Jaki jest cel stosowania kontenerów 'distroless' lub minimalnych obrazów bazowych?",
+        "type": "choice",
+        "poprawna": "Zmniejszenie powierzchni ataku poprzez usunięcie zbędnych narzędzi i bibliotek",
+        "opcje": [
+          "Zwiększenie rozmiaru obrazu dla lepszej wydajności",
+          "Zmniejszenie powierzchni ataku poprzez usunięcie zbędnych narzędzi i bibliotek",
+          "Ułatwienie debugowania na produkcji",
+          "Automatyczna instalacja aktualizacji"
+        ],
+        "explanation": "Minimalne obrazy (np. distroless, alpine) zawierają mniej komponentów, co redukuje liczbę potencjalnych podatności [27, 46]."
+      },
+      {
+        "pytanie": "Co to jest 'Database per Service' pattern?",
+        "type": "choice",
+        "poprawna": "Każda mikrousługa posiada własną, odizolowaną bazę danych",
+        "opcje": [
+          "Wszystkie usługi korzystają z jednej, centralnej bazy danych",
+          "Każda mikrousługa posiada własną, odizolowaną bazę danych",
+          "Baza danych jest współdzielona tylko przez usługi frontendowe",
+          "Dane są przechowywane wyłącznie w pamięci RAM"
+        ],
+        "explanation": "Wzorzec Database per Service zapewnia izolację danych i niezależność mikrousług [42, 47]."
+      },
+      {
+        "pytanie": "Jakie są główne komponenty observability (obserwowalności)?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Metryki (Metrics)",
+          "Logi (Logs)",
+          "Ślady (Traces)"
+        ],
+        "opcje": [
+          "Metryki (Metrics)",
+          "Kopie zapasowe (Backups)",
+          "Logi (Logs)",
+          "Dokumentacja (Docs)",
+          "Ślady (Traces)"
+        ],
+        "explanation": "Obserwowalność opiera się na trzech filarach: metrykach, logach i śladach (distributed tracing) [31]."
+      },
+      {
+        "pytanie": "Co robi adnotacja @EnableMethodSecurity?",
+        "type": "choice",
+        "poprawna": "Włącza obsługę zabezpieczeń na poziomie metod (np. @PreAuthorize)",
+        "opcje": [
+          "Włącza szyfrowanie metod",
+          "Włącza obsługę zabezpieczeń na poziomie metod (np. @PreAuthorize)",
+          "Blokuje dostęp do wszystkich metod publicznych",
+          "Loguje wywołania wszystkich metod"
+        ],
+        "explanation": "Adnotacja ta aktywuje mechanizmy sprawdzania uprawnień (AOP) dla metod adnotowanych np. @PreAuthorize [48, 49]."
+      },
+      {
+        "pytanie": "Jaki jest cel stosowania 'Health Checks' (Liveness/Readiness probes) w Kubernetes?",
+        "type": "choice",
+        "poprawna": "Monitorowanie stanu aplikacji w celu automatycznego restartu (Liveness) lub kierowania ruchu (Readiness)",
+        "opcje": [
+          "Skanowanie bezpieczeństwa kodu",
+          "Monitorowanie stanu aplikacji w celu automatycznego restartu (Liveness) lub kierowania ruchu (Readiness)",
+          "Mierzenie zużycia procesora",
+          "Logowanie błędów do pliku"
+        ],
+        "explanation": "Sondy żywotności i gotowości pozwalają Kubernetesowi zarządzać cyklem życia podów i routingiem ruchu [50, 51]."
+      }
+    ]
+  },
+  {
+    "id": "bsiach-5",
+    "title": "Chmury #5 - DevOps, Wdrożenie i Konteneryzacja",
+    "questions": [
+      {
+        "pytanie": "Co zapewnia wieloetapowa budowa (multistage build) w pliku Dockerfile?",
+        "type": "choice",
+        "poprawna": "Optymalizację rozmiaru obrazu poprzez oddzielenie środowiska budowania od uruchomieniowego",
+        "opcje": [
+          "Szybsze uruchamianie kontenera",
+          "Optymalizację rozmiaru obrazu poprzez oddzielenie środowiska budowania od uruchomieniowego",
+          "Automatyczne skanowanie podatności",
+          "Zwiększenie uprawnień użytkownika w kontenerze"
+        ],
+        "explanation": "Multistage build pozwala skopiować tylko wynik kompilacji (np. plik JAR) do finalnego obrazu, pomijając narzędzia budujące (Maven/Gradle)."
+      },
+      {
+        "pytanie": "Dlaczego w pliku Dockerfile tworzy się i wykorzystuje użytkownika 'javauser' zamiast roota?",
+        "type": "choice",
+        "poprawna": "Aby ograniczyć uprawnienia procesu w kontenerze i zwiększyć bezpieczeństwo",
+        "opcje": [
+          "Jest to wymóg języka Java",
+          "Aby przyspieszyć dostęp do plików",
+          "Aby ograniczyć uprawnienia procesu w kontenerze i zwiększyć bezpieczeństwo",
+          "Aby umożliwić debugowanie aplikacji"
+        ],
+        "explanation": "Uruchamianie aplikacji jako root w kontenerze jest praktyką niebezpieczną; non-root user ogranicza skutki ewentualnego przełamania zabezpieczeń."
+      },
+      {
+        "pytanie": "Jakie są kluczowe koncepcje w orkiestracji Kubernetes?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Pody (Pods)",
+          "Wdrażanie (Deployments)",
+          "Usługi (Services)",
+          "Mapy konfiguracji (ConfigMaps)"
+        ],
+        "opcje": [
+          "Pody (Pods)",
+          "Wdrażanie (Deployments)",
+          "Wirtualne Maszyny (VMs)",
+          "Usługi (Services)",
+          "Mapy konfiguracji (ConfigMaps)"
+        ],
+        "explanation": "Materiały wymieniają Pody, Usługi, Deployments oraz ConfigMaps/Secrets jako najważniejsze koncepcje Kubernetes."
+      },
+      {
+        "pytanie": "Co to jest HPA (Horizontal Pod Autoscaler) w Kubernetes?",
+        "type": "choice",
+        "poprawna": "Mechanizm automatycznie skalujący liczbę podów w oparciu o użycie procesora lub pamięci",
+        "opcje": [
+          "Narzędzie do monitorowania sieci",
+          "Mechanizm automatycznie skalujący liczbę podów w oparciu o użycie procesora lub pamięci",
+          "System do zarządzania hasłami",
+          "Protokół komunikacji między serwisami"
+        ],
+        "explanation": "HPA automatycznie dostosowuje liczbę replik aplikacji w zależności od obciążenia zasobów (CPU/RAM)."
+      },
+      {
+        "pytanie": "Co to jest 'Blue-Green Deployment'?",
+        "type": "choice",
+        "poprawna": "Strategia wdrażania utrzymująca dwa identyczne środowiska (produkcyjne i nowe), przełączająca ruch po weryfikacji",
+        "opcje": [
+          "Wdrażanie aplikacji w dwóch kolorach interfejsu",
+          "Strategia wdrażania utrzymująca dwa identyczne środowiska (produkcyjne i nowe), przełączająca ruch po weryfikacji",
+          "Testowanie aplikacji na produkcji na losowej próbce użytkowników",
+          "Ręczne kopiowanie plików na serwer FTP"
+        ],
+        "explanation": "Blue-Green Deployment minimalizuje ryzyko poprzez utrzymywanie starej i nowej wersji obok siebie i szybkie przełączanie load balancera."
+      },
+      {
+        "pytanie": "Na czym polega strategia 'Canary Deployment'?",
+        "type": "choice",
+        "poprawna": "Na stopniowym udostępnianiu nowej wersji aplikacji małej grupie użytkowników przed pełnym wdrożeniem",
+        "opcje": [
+          "Na wdrażaniu aplikacji tylko w nocy",
+          "Na stopniowym udostępnianiu nowej wersji aplikacji małej grupie użytkowników przed pełnym wdrożeniem",
+          "Na używaniu ptaków do monitorowania serwerowni",
+          "Na całkowitym wyłączeniu starej wersji przed włączeniem nowej"
+        ],
+        "explanation": "Canary Deployment polega na skierowaniu niewielkiej części ruchu do nowej wersji w celu weryfikacji stabilności."
+      },
+      {
+        "pytanie": "Które narzędzia służą do statycznej analizy bezpieczeństwa kodu (SAST) w potoku CI/CD?",
+        "type": "multi-choice",
+        "poprawna": [
+          "SonarQube",
+          "Semgrep"
+        ],
+        "opcje": [
+          "SonarQube",
+          "OWASP ZAP",
+          "Semgrep",
+          "Prometheus"
+        ],
+        "explanation": "SonarQube i Semgrep są wymienione jako narzędzia SAST do analizy kodu źródłowego i wykrywania anty-wzorców."
+      },
+      {
+        "pytanie": "Do czego służą narzędzia takie jak Trivy lub Grype w procesie DevSecOps?",
+        "type": "choice",
+        "poprawna": "Do skanowania obrazów kontenerów i systemów plików pod kątem znanych podatności (CVE)",
+        "opcje": [
+          "Do monitorowania wydajności aplikacji",
+          "Do skanowania obrazów kontenerów i systemów plików pod kątem znanych podatności (CVE)",
+          "Do zarządzania klastrem Kubernetes",
+          "Do generowania dokumentacji API"
+        ],
+        "explanation": "Trivy i Grype to skanery bezpieczeństwa kontenerów, identyfikujące podatności w warstwach obrazu i zależnościach."
+      },
+      {
+        "pytanie": "Co to jest SBOM (Software Bill of Materials) generowany np. przez narzędzie Syft?",
+        "type": "choice",
+        "poprawna": "Spis wszystkich komponentów, bibliotek i zależności użytych w aplikacji, służący do audytu",
+        "opcje": [
+          "Rachunek za usługi chmurowe",
+          "Spis wszystkich komponentów, bibliotek i zależności użytych w aplikacji, służący do audytu",
+          "Lista pracowników mających dostęp do kodu",
+          "Harmonogram wdrożeń na produkcję"
+        ],
+        "explanation": "SBOM to lista składników oprogramowania, kluczowa dla bezpieczeństwa łańcucha dostaw i zgodności."
+      },
+      {
+        "pytanie": "Do czego służy narzędzie Cosign w kontekście bezpieczeństwa kontenerów?",
+        "type": "choice",
+        "poprawna": "Do podpisywania i weryfikacji obrazów kontenerów",
+        "opcje": [
+          "Do kompresji obrazów",
+          "Do podpisywania i weryfikacji obrazów kontenerów",
+          "Do uruchamiania kontenerów",
+          "Do monitorowania logów"
+        ],
+        "explanation": "Cosign służy do kryptograficznego podpisywania obrazów, co pozwala upewnić się, że uruchamiany jest tylko zaufany kod."
+      },
+      {
+        "pytanie": "Jakie elementy składają się na 'obserwowalność' (observability) systemu?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Metryki (Metrics)",
+          "Logi (Logs)",
+          "Ślady (Traces/Tracing)"
+        ],
+        "opcje": [
+          "Metryki (Metrics)",
+          "Logi (Logs)",
+          "Kopie zapasowe (Backups)",
+          "Ślady (Traces/Tracing)",
+          "Dokumentacja (Docs)"
+        ],
+        "explanation": "Trzy filary obserwowalności to metryki (np. Prometheus), logi (np. ELK) i ślady (np. Zipkin/Jaeger)."
+      },
+      {
+        "pytanie": "Co zapewnia Spring Cloud Sleuth w kontekście monitorowania?",
+        "type": "choice",
+        "poprawna": "Dodaje identyfikatory śledzenia (Trace ID, Span ID) do logów, umożliwiając korelację żądań",
+        "opcje": [
+          "Szyfruje logi",
+          "Dodaje identyfikatory śledzenia (Trace ID, Span ID) do logów, umożliwiając korelację żądań",
+          "Wysyła alerty SMS",
+          "Automatycznie naprawia błędy w aplikacji"
+        ],
+        "explanation": "Sleuth dodaje unikalne ID do logów, co pozwala śledzić przepływ żądania przez wiele mikroserwisów."
+      },
+      {
+        "pytanie": "Jaka jest rola Ingress Controller (np. NGINX) w klastrze Kubernetes?",
+        "type": "choice",
+        "poprawna": "Działa jako punkt wejścia (front door) do klastra, obsługując routing i terminację TLS",
+        "opcje": [
+          "Zarządza bazą danych wewnątrz klastra",
+          "Działa jako punkt wejścia (front door) do klastra, obsługując routing i terminację TLS",
+          "Skanuje obrazy pod kątem wirusów",
+          "Zarządza uprawnieniami użytkowników (RBAC)"
+        ],
+        "explanation": "Ingress Controller zarządza ruchem przychodzącym do klastra, często zajmując się SSL/TLS i routingiem HTTP."
+      },
+      {
+        "pytanie": "Co robią NetworkPolicies w Kubernetes?",
+        "type": "choice",
+        "poprawna": "Definiują zasady komunikacji sieciowej między podami (segmentacja ruchu L3/L4)",
+        "opcje": [
+          "Zarządzają dostępem użytkowników do API Kubernetes",
+          "Definiują zasady komunikacji sieciowej między podami (segmentacja ruchu L3/L4)",
+          "Konfigurują DNS w klastrze",
+          "Szyfrują dyski twarde węzłów"
+        ],
+        "explanation": "NetworkPolicies pozwalają na mikrosegmentację, określając, które pody mogą się ze sobą komunikować."
+      },
+      {
+        "pytanie": "Aby NetworkPolicies działały w Kubernetes, wymagane jest użycie odpowiedniej wtyczki CNI (np. Calico, Cilium).",
+        "type": "choice",
+        "poprawna": "Prawda",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "NetworkPolicies są tylko definicją API; do ich egzekwowania niezbędny jest plugin CNI wspierający te polityki."
+      },
+      {
+        "pytanie": "Jaki jest cel stosowania 'CSI Secret Store' w Kubernetes?",
+        "type": "choice",
+        "poprawna": "Wstrzykiwanie sekretów z zewnętrznego magazynu (np. Vault) do systemu plików poda",
+        "opcje": [
+          "Szyfrowanie ruchu sieciowego",
+          "Wstrzykiwanie sekretów z zewnętrznego magazynu (np. Vault) do systemu plików poda",
+          "Tworzenie kopii zapasowych wolumenów",
+          "Monitorowanie zużycia zasobów"
+        ],
+        "explanation": "CSI Secret Store pozwala na montowanie sekretów z systemów takich jak Vault bezpośrednio jako wolumeny, bez trzymania ich w etcd."
+      },
+      {
+        "pytanie": "Jakie są zalecane praktyki dotyczące bezpieczeństwa obrazów kontenerów?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Używanie minimalnych obrazów bazowych (distroless)",
+          "Regularne skanowanie pod kątem podatności",
+          "Podpisywanie obrazów"
+        ],
+        "opcje": [
+          "Używanie minimalnych obrazów bazowych (distroless)",
+          "Instalowanie narzędzi debugujących (curl, bash) na produkcji",
+          "Regularne skanowanie pod kątem podatności",
+          "Podpisywanie obrazów",
+          "Uruchamianie kontenerów jako root"
+        ],
+        "explanation": "Bezpieczeństwo kontenerów opiera się na minimalizmie, skanowaniu, podpisywaniu i unikaniu roota."
+      },
+      {
+        "pytanie": "W jaki sposób można zoptymalizować koszty w środowisku chmurowym?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Używając instancji spot (spot instances)",
+          "Stosując automatyczne skalowanie (autoscaling)",
+          "Rezerwując instancje (reserved instances)"
+        ],
+        "opcje": [
+          "Używając instancji spot (spot instances)",
+          "Ręcznie przydzielając maksymalne zasoby 'na zapas'",
+          "Stosując automatyczne skalowanie (autoscaling)",
+          "Rezerwując instancje (reserved instances)",
+          "Wyłączając monitoring"
+        ],
+        "explanation": "Optymalizacja kosztów obejmuje autoscaling, instancje spot, rezerwacje oraz właściwy dobór rozmiaru zasobów (rightsizing)."
+      },
+      {
+        "pytanie": "Co to jest 'Infrastructure as Code' (IaC)?",
+        "type": "choice",
+        "poprawna": "Zarządzanie i udostępnianie infrastruktury poprzez pliki definicji kodu (np. Terraform)",
+        "opcje": [
+          "Pisanie kodu aplikacji w chmurze",
+          "Zarządzanie i udostępnianie infrastruktury poprzez pliki definicji kodu (np. Terraform)",
+          "Ręczne klikanie w konsoli chmurowej",
+          "Rodzaj bazy danych"
+        ],
+        "explanation": "IaC (np. Terraform, CloudFormation) automatyzuje tworzenie infrastruktury za pomocą kodu."
+      },
+      {
+        "pytanie": "Narzędzia DAST (Dynamic Application Security Testing), takie jak OWASP ZAP, testują bezpieczeństwo aplikacji poprzez:",
+        "type": "choice",
+        "poprawna": "Symulowanie ataków na działającą aplikację z zewnątrz",
+        "opcje": [
+          "Analizę statyczną kodu źródłowego",
+          "Symulowanie ataków na działającą aplikację z zewnątrz",
+          "Skanowanie zależności w pliku pom.xml",
+          "Sprawdzanie konfiguracji serwera"
+        ],
+        "explanation": "DAST testuje działającą aplikację 'z zewnątrz' (black-box), w przeciwieństwie do SAST analizującego kod."
+      },
+      {
+        "pytanie": "Jakie funkcje pełni 'Service Mesh' (np. Istio) w klastrze Kubernetes?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Zarządzanie ruchem (Traffic Management)",
+          "Zapewnienie mTLS między usługami",
+          "Obserwowalność (Observability)"
+        ],
+        "opcje": [
+          "Zarządzanie ruchem (Traffic Management)",
+          "Kompilacja kodu Java",
+          "Zapewnienie mTLS między usługami",
+          "Tworzenie kopii zapasowych baz danych",
+          "Obserwowalność (Observability)"
+        ],
+        "explanation": "Service Mesh zapewnia zaawansowane funkcje sieciowe, takie jak mTLS, routing, retries i telemetria, bez zmian w kodzie aplikacji."
+      },
+      {
+        "pytanie": "W kontekście Kubernetes, co to jest 'SecurityContext'?",
+        "type": "choice",
+        "poprawna": "Konfiguracja definiująca uprawnienia i kontrolę dostępu dla poda lub kontenera (np. runAsNonRoot)",
+        "opcje": [
+          "Plik z hasłami użytkowników",
+          "Konfiguracja definiująca uprawnienia i kontrolę dostępu dla poda lub kontenera (np. runAsNonRoot)",
+          "Rodzaj certyfikatu SSL",
+          "Logi bezpieczeństwa"
+        ],
+        "explanation": "SecurityContext w manifeście poda/deploymentu określa uprawnienia, np. czy kontener może działać jako root."
+      },
+      {
+        "pytanie": "Co zapewnia mechanizm 'Liveness Probe' w Kubernetes?",
+        "type": "choice",
+        "poprawna": "Sprawdza, czy aplikacja żyje; jeśli nie, Kubernetes zrestartuje kontener",
+        "opcje": [
+          "Sprawdza, czy aplikacja jest gotowa do przyjmowania ruchu",
+          "Sprawdza, czy aplikacja żyje; jeśli nie, Kubernetes zrestartuje kontener",
+          "Mierzy zużycie pamięci RAM",
+          "Skanuje kod pod kątem błędów"
+        ],
+        "explanation": "Liveness Probe służy do wykrywania zawieszonych aplikacji i ich automatycznego restartowania."
+      },
+      {
+        "pytanie": "Czym różni się 'Readiness Probe' od 'Liveness Probe'?",
+        "type": "choice",
+        "poprawna": "Readiness decyduje o kierowaniu ruchu do poda, Liveness o restarcie poda",
+        "opcje": [
+          "Nie ma różnicy, to to samo",
+          "Readiness restartuje poda, Liveness kieruje ruch",
+          "Readiness decyduje o kierowaniu ruchu do poda, Liveness o restarcie poda",
+          "Readiness jest tylko dla baz danych"
+        ],
+        "explanation": "Readiness Probe sprawdza, czy aplikacja jest gotowa obsłużyć żądanie (np. po starcie); jeśli nie, jest usuwana z load balancera."
+      },
+      {
+        "pytanie": "Jaki jest cel stosowania narzędzia Micrometer w aplikacjach Spring Boot?",
+        "type": "choice",
+        "poprawna": "Dostarcza fasadę dla metryk, umożliwiając integrację z różnymi systemami monitoringu (np. Prometheus)",
+        "opcje": [
+          "Służy do mikrosegmentacji sieci",
+          "Dostarcza fasadę dla metryk, umożliwiając integrację z różnymi systemami monitoringu (np. Prometheus)",
+          "Mierzy czas pracy programistów",
+          "Zarządza mikroserwisami"
+        ],
+        "explanation": "Micrometer to 'SLF4J dla metryk', pozwalający na wysyłanie metryk do różnych backendów bez zmiany kodu."
+      },
+      {
+        "pytanie": "W jaki sposób Spring Boot Actuator integruje się z Prometheusem?",
+        "type": "choice",
+        "poprawna": "Udostępnia endpoint /actuator/prometheus, który jest odpytywany (scraped) przez Prometheusa",
+        "opcje": [
+          "Wysyła dane bezpośrednio do bazy danych Prometheusa",
+          "Udostępnia endpoint /actuator/prometheus, który jest odpytywany (scraped) przez Prometheusa",
+          "Wymaga ręcznego przesyłania plików logów",
+          "Nie integruje się, wymagane są zewnętrzne agenty"
+        ],
+        "explanation": "Actuator wystawia dane w formacie zrozumiałym dla Prometheusa pod dedykowanym endpointem."
+      },
+      {
+        "pytanie": "Co oznacza skrót CI w CI/CD?",
+        "type": "choice",
+        "poprawna": "Continuous Integration (Ciągła Integracja)",
+        "opcje": [
+          "Cloud Infrastructure",
+          "Continuous Integration (Ciągła Integracja)",
+          "Container Implementation",
+          "Code Inspection"
+        ],
+        "explanation": "CI to proces automatycznego budowania i testowania kodu po każdym commicie."
+      },
+      {
+        "pytanie": "Jakie korzyści daje stosowanie ustrukturyzowanych logów (np. w formacie JSON)?",
+        "type": "choice",
+        "poprawna": "Ułatwia maszynowe parsowanie, indeksowanie i analizę logów w systemach takich jak ELK",
+        "opcje": [
+          "Zmniejsza rozmiar plików logów",
+          "Ułatwia maszynowe parsowanie, indeksowanie i analizę logów w systemach takich jak ELK",
+          "Sprawia, że logi są bardziej czytelne dla człowieka w notatniku",
+          "Automatycznie szyfruje logi"
+        ],
+        "explanation": "Format JSON pozwala systemom logowania na łatwe wyciąganie pól i filtrowanie danych."
+      },
+      {
+        "pytanie": "W modelu Zero Trust zakładamy, że sieć wewnętrzna jest zaufana i nie wymaga dodatkowych zabezpieczeń.",
+        "type": "choice",
+        "poprawna": "Fałsz",
+        "opcje": [
+          "Prawda",
+          "Fałsz"
+        ],
+        "explanation": "Model Zero Trust zakłada brak zaufania („never trust, always verify”) nawet wewnątrz sieci prywatnej."
+      },
+      {
+        "pytanie": "Które z poniższych jest narzędziem do skanowania infrastruktury jako kodu (IaC) pod kątem błędów konfiguracji?",
+        "type": "choice",
+        "poprawna": "Checkov",
+        "opcje": [
+          "Jenkins",
+          "Checkov",
+          "Postman",
+          "Grafana"
+        ],
+        "explanation": "Checkov i Terraform Compliance to narzędzia do skanowania plików IaC (np. Terraform, Kubernetes manifests) pod kątem bezpieczeństwa."
+      },
+      {
+        "pytanie": "W jaki sposób 'Time Limiter' (np. z Resilience4j) wspiera stabilność systemu?",
+        "type": "choice",
+        "poprawna": "Nakłada twarde limity czasu na operacje, zapobiegając blokowaniu zasobów przez zawieszone żądania",
+        "opcje": [
+          "Synchronizuje zegary serwerowe",
+          "Nakłada twarde limity czasu na operacje, zapobiegając blokowaniu zasobów przez zawieszone żądania",
+          "Opóźnia wykonanie każdego żądania o 1 sekundę",
+          "Mierzy czas pracy procesora"
+        ],
+        "explanation": "Time Limiter przerywa operacje trwające zbyt długo, zwalniając wątki i zasoby."
+      },
+      {
+        "pytanie": "Co to jest 'Saga Pattern' w architekturze mikrousług?",
+        "type": "choice",
+        "poprawna": "Wzorzec zarządzania transakcjami rozproszonymi poprzez sekwencję lokalnych transakcji",
+        "opcje": [
+          "Rodzaj bazy danych NoSQL",
+          "Wzorzec zarządzania transakcjami rozproszonymi poprzez sekwencję lokalnych transakcji",
+          "Metoda szyfrowania danych",
+          "Narzędzie do testowania interfejsu użytkownika"
+        ],
+        "explanation": "Saga zarządza spójnością danych w systemach rozproszonych, gdzie nie można użyć klasycznych transakcji ACID."
+      },
+      {
+        "pytanie": "Dlaczego nie należy montować całego katalogu /var/run/secrets w podach Kubernetes, jeśli nie jest to konieczne?",
+        "type": "choice",
+        "poprawna": "Aby zminimalizować ryzyko wycieku tokenów serwisowych w przypadku kompromitacji poda",
+        "opcje": [
+          "Aby zaoszczędzić miejsce na dysku",
+          "Aby zminimalizować ryzyko wycieku tokenów serwisowych w przypadku kompromitacji poda",
+          "Jest to wymagane przez Docker",
+          "Aby przyspieszyć start poda"
+        ],
+        "explanation": "Ograniczenie montowania sekretów (automountServiceAccountToken: false) to element utwardzania (hardeningu) bezpieczeństwa."
+      },
+      {
+        "pytanie": "Jakie zadanie spełnia 'Bulkhead pattern' (grodzie) w Resilience4j?",
+        "type": "choice",
+        "poprawna": "Izoluje pulę wątków dla poszczególnych usług, aby awaria jednej nie wyczerpała wszystkich zasobów aplikacji",
+        "opcje": [
+          "Blokuje ruch sieciowy z zewnątrz",
+          "Izoluje pulę wątków dla poszczególnych usług, aby awaria jednej nie wyczerpała wszystkich zasobów aplikacji",
+          "Szyfruje dane w bazie",
+          "Kopiuje dane do zapasowego centrum danych"
+        ],
+        "explanation": "Bulkhead izoluje awarie, zapobiegając ich rozprzestrzenianiu się na cały system (np. wyczerpaniu wszystkich wątków przez jeden wolny serwis)."
+      },
+      {
+        "pytanie": "Co umożliwia 'Token Relay' w Spring Cloud Gateway?",
+        "type": "choice",
+        "poprawna": "Przekazywanie tokena uwierzytelniającego (np. JWT) z bramy do usług wewnętrznych",
+        "opcje": [
+          "Generowanie nowego hasła dla użytkownika",
+          "Przekazywanie tokena uwierzytelniającego (np. JWT) z bramy do usług wewnętrznych",
+          "Blokowanie dostępu do API",
+          "Logowanie tokenów w pliku tekstowym"
+        ],
+        "explanation": "Token Relay przekazuje kontekst bezpieczeństwa (OAuth2 Access Token) do mikroserwisów downstream."
+      },
+      {
+        "pytanie": "W jaki sposób można zabezpieczyć ruch 'east-west' (wewnątrz klastra) w Kubernetes?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Stosując mTLS (np. poprzez Istio)",
+          "Używając NetworkPolicies do segmentacji"
+        ],
+        "opcje": [
+          "Stosując mTLS (np. poprzez Istio)",
+          "Używając NetworkPolicies do segmentacji",
+          "Wyłączając firewall",
+          "Udostępniając wszystkie porty publicznie"
+        ],
+        "explanation": "Bezpieczeństwo wewnętrzne opiera się na szyfrowaniu/uwierzytelnianiu (mTLS) oraz kontroli dostępu sieciowego (NetworkPolicies)."
+      },
+      {
+        "pytanie": "Co to jest 'GitOps'?",
+        "type": "choice",
+        "poprawna": "Model operacyjny, w którym repozytorium Git jest jedynym źródłem prawdy dla infrastruktury i aplikacji",
+        "opcje": [
+          "Narzędzie do pisania kodu w Javie",
+          "Model operacyjny, w którym repozytorium Git jest jedynym źródłem prawdy dla infrastruktury i aplikacji",
+          "Serwis społecznościowy dla programistów",
+          "Baza danych oparta na plikach tekstowych"
+        ],
+        "explanation": "GitOps wykorzystuje Git jako źródło prawdy, a narzędzia (np. ArgoCD) synchronizują stan klastra z repozytorium."
+      },
+      {
+        "pytanie": "Co oznacza zasada 'Defense in Depth' (Obrona w głąb)?",
+        "type": "choice",
+        "poprawna": "Stosowanie wielu niezależnych warstw zabezpieczeń, aby przełamanie jednej nie oznaczało kompromitacji całego systemu",
+        "opcje": [
+          "Używanie najdroższego dostępnego oprogramowania antywirusowego",
+          "Stosowanie wielu niezależnych warstw zabezpieczeń, aby przełamanie jednej nie oznaczało kompromitacji całego systemu",
+          "Chowanie serwerów głęboko pod ziemią",
+          "Poleganie wyłącznie na firewallu brzegowym"
+        ],
+        "explanation": "Obrona w głąb to łączenie zabezpieczeń na wielu poziomach: kod, kontener, sieć, gateway, tożsamość."
+      },
+      {
+        "pytanie": "Jakie narzędzie w ekosystemie Spring Cloud służy do centralnego zarządzania konfiguracją?",
+        "type": "choice",
+        "poprawna": "Spring Cloud Config",
+        "opcje": [
+          "Spring Data JPA",
+          "Spring Cloud Config",
+          "Spring Security",
+          "Spring Boot Actuator"
+        ],
+        "explanation": "Spring Cloud Config Server centralizuje konfigurację dla wielu mikroserwisów, pobierając ją np. z Git."
+      },
+      {
+        "pytanie": "Adnotacja @Retry(name = \"inventory\") służy do:",
+        "type": "choice",
+        "poprawna": "Skonfigurowania mechanizmu ponawiania operacji w przypadku wystąpienia błędu",
+        "opcje": [
+          "Zapisania danych w cache",
+          "Skonfigurowania mechanizmu ponawiania operacji w przypadku wystąpienia błędu",
+          "Zmierzenia czasu wykonania metody",
+          "Zablokowania dostępu do metody"
+        ],
+        "explanation": "Adnotacja @Retry z Resilience4j pozwala na automatyczne ponowienie nieudanej operacji według zdefiniowanej polityki."
+      }
+    ]
+  },
+  {
+    "id": "bsiach-6",
+    "title": "Chmury #6 - Odporność i Optymalizacja",
+    "questions": [
+      {
+        "pytanie": "Jaki jest główny cel stosowania wzorca Circuit Breaker (bezpiecznik) w systemach rozproszonych?",
+        "type": "choice",
+        "poprawna": "Zapobieganie kaskadowym awariom poprzez odcinanie niesprawnych zależności",
+        "opcje": [
+          "Zwiększenie przepustowości sieci",
+          "Zapobieganie kaskadowym awariom poprzez odcinanie niesprawnych zależności",
+          "Szyfrowanie danych w tranzycie",
+          "Automatyczne skalowanie bazy danych"
+        ],
+        "explanation": "Circuit Breaker izoluje awarie, chroniąc resztę systemu przed kaskadowymi błędami i przeciążeniem [1, 2]."
+      },
+      {
+        "pytanie": "Jakie stany może przyjmować mechanizm Circuit Breaker?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Zamknięty (Closed)",
+          "Otwarty (Open)",
+          "Półotwarty (Half-Open)"
+        ],
+        "opcje": [
+          "Zamknięty (Closed)",
+          "Otwarty (Open)",
+          "Zablokowany (Blocked)",
+          "Półotwarty (Half-Open)",
+          "Restartujący (Restarting)"
+        ],
+        "explanation": "Bezpiecznik działa w trzech stanach: Zamknięty (normalna praca), Otwarty (odrzucanie żądań) i Półotwarty (testowanie powrotu) [1]."
+      },
+      {
+        "pytanie": "Co dzieje się, gdy Circuit Breaker znajduje się w stanie 'Otwarty' (Open)?",
+        "type": "choice",
+        "poprawna": "Żądania są natychmiast odrzucane bez wywoływania niesprawnej usługi",
+        "opcje": [
+          "Żądania są kolejkowane",
+          "Żądania są natychmiast odrzucane bez wywoływania niesprawnej usługi",
+          "Żądania są przekierowywane do innego klastra",
+          "System automatycznie restartuje serwer"
+        ],
+        "explanation": "W stanie otwartym bezpiecznik natychmiast odrzuca żądania, aby zapobiec przeciążeniu usługi [1]."
+      },
+      {
+        "pytanie": "Na czym polega mechanizm 'Exponential Backoff' w kontekście wzorca Retry?",
+        "type": "choice",
+        "poprawna": "Na ponawianiu prób z rosnącymi opóźnieniami czasowymi",
+        "opcje": [
+          "Na ponawianiu prób w nieskończoność bez opóźnień",
+          "Na ponawianiu prób z rosnącymi opóźnieniami czasowymi",
+          "Na natychmiastowym przerwaniu połączenia",
+          "Na losowym wyborze czasu ponowienia"
+        ],
+        "explanation": "Exponential backoff polega na ponawianiu operacji z coraz dłuższymi przerwami, aby nie obciążać systemu [3]."
+      },
+      {
+        "pytanie": "Wzorzec 'Bulkhead' (Grodzie) służy do:",
+        "type": "choice",
+        "poprawna": "Izolacji puli wątków dla poszczególnych usług, aby awaria jednej nie zajęła wszystkich zasobów",
+        "opcje": [
+          "Fizycznego oddzielenia serwerów w serwerowni",
+          "Izolacji puli wątków dla poszczególnych usług, aby awaria jednej nie zajęła wszystkich zasobów",
+          "Szyfrowania danych na dysku",
+          "Blokowania ruchu z nieznanych adresów IP"
+        ],
+        "explanation": "Bulkhead izoluje awarie określonych części systemu, np. poprzez wydzielone pule wątków [2, 4]."
+      },
+      {
+        "pytanie": "Co to jest 'Fallback Mechanism' (mechanizm awaryjny)?",
+        "type": "choice",
+        "poprawna": "Alternatywna ścieżka działania (np. zwrócenie domyślnej wartości), gdy usługa podstawowa zawiedzie",
+        "opcje": [
+          "System tworzenia kopii zapasowych",
+          "Alternatywna ścieżka działania (np. zwrócenie domyślnej wartości), gdy usługa podstawowa zawiedzie",
+          "Protokół wymiany kluczy",
+          "Narzędzie do monitorowania logów"
+        ],
+        "explanation": "Fallback zapewnia alternatywną reakcję, np. zwrócenie bezpiecznej wartości domyślnej w przypadku błędu [3]."
+      },
+      {
+        "pytanie": "Jakie funkcje pełni biblioteka Resilience4j w ekosystemie Spring Cloud?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Circuit Breaker",
+          "Rate Limiter",
+          "Bulkhead",
+          "Retry"
+        ],
+        "opcje": [
+          "Circuit Breaker",
+          "Service Discovery",
+          "Rate Limiter",
+          "Bulkhead",
+          "Retry"
+        ],
+        "explanation": "Resilience4j dostarcza implementacje wzorców takich jak Circuit Breaker, Retry, Bulkhead, TimeLimiter i RateLimiter [2]."
+      },
+      {
+        "pytanie": "Dlaczego dla operacji zapisu (write) należy ostrożniej stosować mechanizm Retry niż dla odczytu?",
+        "type": "choice",
+        "poprawna": "Aby uniknąć niepożądanych skutków ubocznych w przypadku braku idempotencji operacji",
+        "opcje": [
+          "Ponieważ zapis jest szybszy niż odczyt",
+          "Aby uniknąć niepożądanych skutków ubocznych w przypadku braku idempotencji operacji",
+          "Ponieważ Resilience4j nie obsługuje retry dla zapisu",
+          "Nie ma różnicy, retry stosuje się tak samo"
+        ],
+        "explanation": "Zaleca się inne polityki dla odczytu i zapisu; wielokrotne ponawianie zapisu może być ryzykowne [5]."
+      },
+      {
+        "pytanie": "Co robi 'Time Limiter' w Resilience4j?",
+        "type": "choice",
+        "poprawna": "Nakłada twarde limity czasu na operacje, zapobiegając blokowaniu zasobów przez zawieszone żądania",
+        "opcje": [
+          "Zmienia strefę czasową serwera",
+          "Nakłada twarde limity czasu na operacje, zapobiegając blokowaniu zasobów przez zawieszone żądania",
+          "Mierzy czas pracy procesora",
+          "Opóźnia start aplikacji"
+        ],
+        "explanation": "Time Limiter przerywa operacje trwające zbyt długo (timeout), zwalniając zasoby [2]."
+      },
+      {
+        "pytanie": "Jaka adnotacja służy do zastosowania wzorca Circuit Breaker w kodzie Spring Boot?",
+        "type": "choice",
+        "poprawna": "@CircuitBreaker",
+        "opcje": [
+          "@BreakCircuit",
+          "@CircuitBreaker",
+          "@Resilience",
+          "@SafeCall"
+        ],
+        "explanation": "Adnotacja @CircuitBreaker (wraz z nazwą instancji i metodą fallback) służy do deklaratywnego użycia wzorca [6]."
+      },
+      {
+        "pytanie": "W jaki sposób 'Spot Instances' (instancje punktowe) pomagają w optymalizacji kosztów?",
+        "type": "choice",
+        "poprawna": "Pozwalają korzystać z niewykorzystanych mocy obliczeniowych chmury po znacznie niższej cenie, ale mogą być przerwane",
+        "opcje": [
+          "Są zawsze dostępne i mają najwyższy priorytet",
+          "Pozwalają korzystać z niewykorzystanych mocy obliczeniowych chmury po znacznie niższej cenie, ale mogą być przerwane",
+          "Służą tylko do przechowywania danych",
+          "Automatycznie naprawiają błędy w kodzie"
+        ],
+        "explanation": "Instancje spot redukują koszty, wykorzystując nadmiarowe zasoby dostawcy, ale z ryzykiem odebrania zasobu [7]."
+      },
+      {
+        "pytanie": "Które z poniższych strategii służą do optymalizacji kosztów w chmurze?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Stosowanie automatycznego skalowania (Autoscaling)",
+          "Używanie zarezerwowanych instancji (Reserved Instances)",
+          "Dobór odpowiedniego rozmiaru zasobów (Rightsizing)"
+        ],
+        "opcje": [
+          "Stosowanie automatycznego skalowania (Autoscaling)",
+          "Ręczne alokowanie największych dostępnych serwerów",
+          "Używanie zarezerwowanych instancji (Reserved Instances)",
+          "Dobór odpowiedniego rozmiaru zasobów (Rightsizing)",
+          "Wyłączenie monitoringu kosztów"
+        ],
+        "explanation": "Optymalizacja kosztów obejmuje autoscaling, rezerwacje instancji oraz odpowiedni dobór zasobów [7]."
+      },
+      {
+        "pytanie": "Horizontal Pod Autoscaler (HPA) w Kubernetes skaluje aplikacje w oparciu o:",
+        "type": "choice",
+        "poprawna": "Użycie procesora (CPU) lub pamięci (RAM)",
+        "opcje": [
+          "Liczbę błędów w logach",
+          "Użycie procesora (CPU) lub pamięci (RAM)",
+          "Liczbę plików na dysku",
+          "Czas uruchomienia kontenera"
+        ],
+        "explanation": "HPA automatycznie skaluje liczbę podów w oparciu o metryki takie jak użycie procesora lub pamięci [8]."
+      },
+      {
+        "pytanie": "W jaki sposób 'Request Rate Limiter' w Spring Cloud Gateway przechowuje stan limitów (token bucket)?",
+        "type": "choice",
+        "poprawna": "Zazwyczaj wykorzystuje backend Redis",
+        "opcje": [
+          "W pliku tekstowym na dysku",
+          "Zazwyczaj wykorzystuje backend Redis",
+          "W bazie danych SQL",
+          "W pamięci podręcznej przeglądarki"
+        ],
+        "explanation": "Rate Limiter w Spring Cloud Gateway używa Redisa do przechowywania stanu algorytmu token bucket [5]."
+      },
+      {
+        "pytanie": "Co to jest RPO (Recovery Point Objective)?",
+        "type": "choice",
+        "poprawna": "Maksymalny akceptowalny okres utraty danych wstecz od momentu awarii",
+        "opcje": [
+          "Czas potrzebny na przywrócenie systemu do działania",
+          "Maksymalny akceptowalny okres utraty danych wstecz od momentu awarii",
+          "Liczba serwerów potrzebnych do odzyskania danych",
+          "Koszt odzyskania danych"
+        ],
+        "explanation": "RPO to parametr określający, jak dużo danych (wstecz) możemy stracić w przypadku awarii [9]."
+      },
+      {
+        "pytanie": "Co to jest RTO (Recovery Time Objective)?",
+        "type": "choice",
+        "poprawna": "Maksymalny akceptowalny czas, w jakim system musi zostać przywrócony do działania po awarii",
+        "opcje": [
+          "Maksymalna ilość utraconych danych",
+          "Maksymalny akceptowalny czas, w jakim system musi zostać przywrócony do działania po awarii",
+          "Czas wykonywania backupu",
+          "Liczba osób potrzebnych do naprawy awarii"
+        ],
+        "explanation": "RTO określa czas, w którym usługa musi zostać przywrócona po wystąpieniu incydentu [9]."
+      },
+      {
+        "pytanie": "Testy 'Chaos Engineering' (np. przy użyciu Toxiproxy) służą do:",
+        "type": "choice",
+        "poprawna": "Weryfikacji zachowania systemu poprzez celowe wstrzykiwanie awarii",
+        "opcje": [
+          "Skanowania kodu pod kątem błędów składniowych",
+          "Weryfikacji zachowania systemu poprzez celowe wstrzykiwanie awarii",
+          "Optymalizacji kosztów chmury",
+          "Automatycznego generowania dokumentacji"
+        ],
+        "explanation": "Chaos Engineering polega na testowaniu odporności poprzez symulowanie awarii [5]."
+      },
+      {
+        "pytanie": "Do czego służy adnotacja @Timed z biblioteki Micrometer?",
+        "type": "choice",
+        "poprawna": "Do zbierania metryk czasu wykonania metody (np. histogramów)",
+        "opcje": [
+          "Do ustawienia timeoutu dla metody",
+          "Do harmonogramowania zadań (scheduling)",
+          "Do zbierania metryk czasu wykonania metody (np. histogramów)",
+          "Do opóźnienia wykonania metody"
+        ],
+        "explanation": "Adnotacja @Timed rejestruje czas trwania metody i generuje metryki dla systemów monitorowania [10, 11]."
+      },
+      {
+        "pytanie": "Jaka jest rola narzędzi APM (Application Performance Monitoring) takich jak Datadog czy New Relic?",
+        "type": "choice",
+        "poprawna": "Zapewniają szczegółowy wgląd w wydajność aplikacji, śledzenie transakcji i błędy",
+        "opcje": [
+          "Służą do pisania kodu aplikacji",
+          "Zapewniają szczegółowy wgląd w wydajność aplikacji, śledzenie transakcji i błędy",
+          "Automatycznie naprawiają błędy w bazie danych",
+          "Zarządzają dostępem fizycznym do serwerowni"
+        ],
+        "explanation": "Narzędzia APM monitorują wydajność aplikacji, czas reakcji i wskaźniki błędów [12]."
+      },
+      {
+        "pytanie": "Alerting w systemie monitorowania powinien być skonfigurowany dla:",
+        "type": "multi-choice",
+        "poprawna": [
+          "Krytycznych metryk (np. wskaźniki błędów)",
+          "Czasów reakcji przekraczających SLA",
+          "Wysokiego wykorzystania zasobów (CPU/RAM)"
+        ],
+        "opcje": [
+          "Krytycznych metryk (np. wskaźniki błędów)",
+          "Każdego logu typu INFO",
+          "Czasów reakcji przekraczających SLA",
+          "Wysokiego wykorzystania zasobów (CPU/RAM)",
+          "Uruchomienia aplikacji w środowisku dev"
+        ],
+        "explanation": "Alerty powinny dotyczyć krytycznych metryk, naruszeń SLA i wyczerpania zasobów [12]."
+      },
+      {
+        "pytanie": "W jaki sposób Spring Boot Actuator udostępnia metryki dla Prometheusa?",
+        "type": "choice",
+        "poprawna": "Poprzez endpoint /actuator/prometheus, który jest odpytywany (scraped) przez serwer Prometheus",
+        "opcje": [
+          "Wysyła je mailem",
+          "Poprzez endpoint /actuator/prometheus, który jest odpytywany (scraped) przez serwer Prometheus",
+          "Zapisuje je bezpośrednio w bazie danych aplikacji",
+          "Wysyła je protokołem FTP"
+        ],
+        "explanation": "Actuator wystawia metryki w formacie zgodnym z Prometheus pod dedykowanym endpointem [13]."
+      },
+      {
+        "pytanie": "Jaki jest cel stosowania 'Health Checks' (sondy żywotności i gotowości) w Kubernetes?",
+        "type": "choice",
+        "poprawna": "Automatyczne restartowanie zawieszonych aplikacji i kierowanie ruchu tylko do gotowych instancji",
+        "opcje": [
+          "Skanowanie bezpieczeństwa obrazów",
+          "Automatyczne restartowanie zawieszonych aplikacji i kierowanie ruchu tylko do gotowych instancji",
+          "Mierzenie kosztów zużycia energii",
+          "Logowanie każdego żądania HTTP"
+        ],
+        "explanation": "Sondy liveness i readiness pozwalają Kubernetesowi zarządzać cyklem życia podów i ruchem sieciowym [8]."
+      },
+      {
+        "pytanie": "Co to jest 'Fail-fast' w kontekście wzorca Circuit Breaker?",
+        "type": "choice",
+        "poprawna": "Szybkie odrzucenie żądania gdy usługa jest niesprawna, zamiast oczekiwania na timeout",
+        "opcje": [
+          "Szybkie naprawienie błędu przez system",
+          "Szybkie odrzucenie żądania gdy usługa jest niesprawna, zamiast oczekiwania na timeout",
+          "Przyspieszenie działania procesora",
+          "Pominięcie walidacji danych dla szybkości"
+        ],
+        "explanation": "Fail-fast pozwala zaoszczędzić zasoby (wątki), nie czekając na timeout niesprawnej usługi [14]."
+      },
+      {
+        "pytanie": "W jaki sposób 'KeyResolver' w Spring Cloud Gateway wspiera Rate Limiting?",
+        "type": "choice",
+        "poprawna": "Pozwala zdefiniować klucz (np. użytkownika z tokena JWT), według którego zliczane są żądania",
+        "opcje": [
+          "Szyfruje klucze dostępu",
+          "Pozwala zdefiniować klucz (np. użytkownika z tokena JWT), według którego zliczane są żądania",
+          "Rozwiązuje nazwy domenowe na adresy IP",
+          "Generuje klucze SSH"
+        ],
+        "explanation": "KeyResolver identyfikuje klienta (np. po principalName), co pozwala na spersonalizowane limity [5]."
+      },
+      {
+        "pytanie": "Jakie są zalety stosowania 'Database per Service' w kontekście odporności?",
+        "type": "choice",
+        "poprawna": "Zapewnia izolację awarii – problemy z bazą jednej usługi nie wpływają bezpośrednio na inne",
+        "opcje": [
+          "Zmniejsza koszt infrastruktury",
+          "Zapewnia izolację awarii – problemy z bazą jednej usługi nie wpływają bezpośrednio na inne",
+          "Ułatwia robienie joinów między tabelami różnych usług",
+          "Wymaga tylko jednej instancji bazy danych"
+        ],
+        "explanation": "Wzorzec Database per Service izoluje dane, co zwiększa niezależność i odporność usług [15, 16]."
+      },
+      {
+        "pytanie": "Co to jest 'Distributed Tracing' (np. Spring Cloud Sleuth)?",
+        "type": "choice",
+        "poprawna": "Technika śledzenia żądania przechodzącego przez wiele mikrousług za pomocą unikalnych identyfikatorów (Trace ID)",
+        "opcje": [
+          "Rozproszona baza danych",
+          "Technika śledzenia żądania przechodzącego przez wiele mikrousług za pomocą unikalnych identyfikatorów (Trace ID)",
+          "System do wykrywania wirusów",
+          "Metoda kompresji logów"
+        ],
+        "explanation": "Distributed Tracing dodaje traceId/spanId do logów, umożliwiając korelację zdarzeń w systemie rozproszonym [17]."
+      },
+      {
+        "pytanie": "Aby ograniczyć ryzyko nadużyć API (DoS), należy stosować:",
+        "type": "multi-choice",
+        "poprawna": [
+          "Rate Limiting (ograniczanie ruchu)",
+          "Timeouts (limity czasu)",
+          "Circuit Breakers"
+        ],
+        "opcje": [
+          "Rate Limiting (ograniczanie ruchu)",
+          "Zwiększanie timeoutów do nieskończoności",
+          "Timeouts (limity czasu)",
+          "Circuit Breakers",
+          "Wyłączenie autoryzacji"
+        ],
+        "explanation": "Ochrona przed nadużyciami obejmuje rate limiting, timeouty oraz circuit breakery [4, 18]."
+      },
+      {
+        "pytanie": "Na czym polega zasada 'Defense in Depth' (Obrona w głąb)?",
+        "type": "choice",
+        "poprawna": "Na stosowaniu wielu niezależnych warstw zabezpieczeń (np. Ingress + Gateway + Service Mesh)",
+        "opcje": [
+          "Na ukrywaniu serwerów w głębokich bunkrach",
+          "Na stosowaniu wielu niezależnych warstw zabezpieczeń (np. Ingress + Gateway + Service Mesh)",
+          "Na poleganiu wyłącznie na firewallu",
+          "Na szyfrowaniu tylko najważniejszych plików"
+        ],
+        "explanation": "Obrona w głąb łączy zabezpieczenia na różnych poziomach (sieć, aplikacja, gateway) dla lepszej ochrony [19]."
+      },
+      {
+        "pytanie": "Co zapewnia 'Load Balancing' w kontekście odporności?",
+        "type": "choice",
+        "poprawna": "Rozdziela ruch między instancjami, zwiększając dostępność i chroniąc przed przeciążeniem pojedynczego serwera",
+        "opcje": [
+          "Szyfruje dane użytkowników",
+          "Rozdziela ruch między instancjami, zwiększając dostępność i chroniąc przed przeciążeniem pojedynczego serwera",
+          "Tworzy kopie zapasowe danych",
+          "Zarządza logowaniem użytkowników"
+        ],
+        "explanation": "Load balancing rozkłada obciążenie, co jest kluczowe dla wydajności i dostępności (HA) [20]."
+      },
+      {
+        "pytanie": "Czym różni się 'Liveness Probe' od 'Readiness Probe' w Kubernetes?",
+        "type": "choice",
+        "poprawna": "Liveness restartuje kontener gdy nie działa, Readiness odcina ruch gdy aplikacja nie jest gotowa",
+        "opcje": [
+          "To to samo",
+          "Liveness restartuje kontener gdy nie działa, Readiness odcina ruch gdy aplikacja nie jest gotowa",
+          "Readiness służy do monitorowania bazy danych",
+          "Liveness jest tylko dla środowiska testowego"
+        ],
+        "explanation": "Liveness decyduje o restarcie (czy żyje), Readiness o routingu (czy gotowa do pracy) [8]."
+      },
+      {
+        "pytanie": "Jakie narzędzia w chmurze (np. AWS, Azure) wspierają optymalizację kosztów?",
+        "type": "multi-choice",
+        "poprawna": [
+          "AWS Cost Explorer",
+          "Azure Cost Management",
+          "Google Cloud Billing"
+        ],
+        "opcje": [
+          "AWS Cost Explorer",
+          "Spring Security",
+          "Azure Cost Management",
+          "Google Cloud Billing",
+          "Hibernate"
+        ],
+        "explanation": "Dostawcy chmury oferują dedykowane narzędzia do analizy i zarządzania kosztami [7]."
+      },
+      {
+        "pytanie": "Co to jest 'Zero Trust' w kontekście bezpieczeństwa i odporności?",
+        "type": "choice",
+        "poprawna": "Model zakładający brak zaufania nawet wewnątrz sieci prywatnej, wymagający weryfikacji każdego żądania",
+        "opcje": [
+          "Model ufający wszystkim urządzeniom w sieci lokalnej",
+          "Model zakładający brak zaufania nawet wewnątrz sieci prywatnej, wymagający weryfikacji każdego żądania",
+          "Brak jakichkolwiek zabezpieczeń",
+          "Zaufanie tylko do administratorów"
+        ],
+        "explanation": "Zero Trust zakłada 'never trust, always verify', co zwiększa odporność na ataki wewnętrzne i lateral movement [19, 21]."
+      },
+      {
+        "pytanie": "Do czego służy adnotacja @EnableScheduling w Spring Boot w kontekście monitorowania?",
+        "type": "choice",
+        "poprawna": "Włącza obsługę harmonogramowania zadań, np. cyklicznego zbierania metryk zasobów",
+        "opcje": [
+          "Włącza zabezpieczenia schedulera",
+          "Włącza obsługę harmonogramowania zadań, np. cyklicznego zbierania metryk zasobów",
+          "Automatycznie restartuje aplikację",
+          "Służy do planowania spotkań"
+        ],
+        "explanation": "Adnotacja ta jest wymagana do działania metod adnotowanych @Scheduled, np. w monitorze zużycia zasobów [22]."
+      },
+      {
+        "pytanie": "Jaki jest cel stosowania 'Consumer-driven Contract Testing' (np. Spring Cloud Contract)?",
+        "type": "choice",
+        "poprawna": "Zapewnienie, że zmiany w API producenta nie zepsują integracji z konsumentami",
+        "opcje": [
+          "Testowanie wydajności kontraktów prawnych",
+          "Zapewnienie, że zmiany w API producenta nie zepsują integracji z konsumentami",
+          "Szyfrowanie kontraktów",
+          "Automatyczne generowanie kodu frontendu"
+        ],
+        "explanation": "Choć nie wprost w sekcji resilience, testy kontraktowe zwiększają odporność procesu wdrażania zmian w mikrousługach (wspomniane w kontekście testowania integracyjnego) [23]."
+      },
+      {
+        "pytanie": "Co oznacza skrót SLA?",
+        "type": "choice",
+        "poprawna": "Service Level Agreement - umowa gwarantująca określony poziom dostępności i wydajności usług",
+        "opcje": [
+          "Service Local Area",
+          "Service Level Agreement - umowa gwarantująca określony poziom dostępności i wydajności usług",
+          "Secure Login Access",
+          "Simple Log Analysis"
+        ],
+        "explanation": "SLA definiuje oczekiwane parametry usługi, których monitorowanie jest kluczowe dla resilience [24]."
+      },
+      {
+        "pytanie": "W jaki sposób konteneryzacja (Docker) wspiera odporność aplikacji?",
+        "type": "choice",
+        "poprawna": "Zapewnia spójność środowiska uruchomieniowego i izolację procesów",
+        "opcje": [
+          "Automatycznie naprawia błędy w kodzie",
+          "Zapewnia spójność środowiska uruchomieniowego i izolację procesów",
+          "Zastępuje bazy danych",
+          "Gwarantuje 100% uptime"
+        ],
+        "explanation": "Konteneryzacja zapewnia powtarzalność i izolację, co jest fundamentem stabilnych wdrożeń chmurowych [25]."
+      },
+      {
+        "pytanie": "Jakie narzędzie jest rekomendowane do skanowania obrazów kontenerów pod kątem podatności (bezpieczeństwo łańcucha dostaw)?",
+        "type": "choice",
+        "poprawna": "Trivy",
+        "opcje": [
+          "Postman",
+          "Trivy",
+          "JUnit",
+          "Maven"
+        ],
+        "explanation": "Trivy służy do skanowania obrazów kontenerów w poszukiwaniu znanych podatności (CVE) [26, 27]."
+      },
+      {
+        "pytanie": "Co to jest SBOM (Software Bill of Materials)?",
+        "type": "choice",
+        "poprawna": "Spis wszystkich komponentów i bibliotek użytych w oprogramowaniu, ułatwiający zarządzanie podatnościami",
+        "opcje": [
+          "Rachunek za usługi chmurowe",
+          "Spis wszystkich komponentów i bibliotek użytych w oprogramowaniu, ułatwiający zarządzanie podatnościami",
+          "Lista pracowników projektu",
+          "Schemat bazy danych"
+        ],
+        "explanation": "SBOM to lista składników oprogramowania, kluczowa dla audytu bezpieczeństwa i zarządzania ryzykiem [26]."
+      },
+      {
+        "pytanie": "W architekturze mikrousług, co zapewnia 'Service Mesh' (np. Istio)?",
+        "type": "multi-choice",
+        "poprawna": [
+          "Zarządzanie ruchem (Traffic Management)",
+          "Bezpieczeństwo (mTLS)",
+          "Obserwowalność (Observability)"
+        ],
+        "opcje": [
+          "Zarządzanie ruchem (Traffic Management)",
+          "Kompilację kodu Java",
+          "Bezpieczeństwo (mTLS)",
+          "Obserwowalność (Observability)",
+          "Tworzenie backupów bazy danych"
+        ],
+        "explanation": "Service Mesh zdejmuje z aplikacji ciężar zarządzania siecią, zapewniając m.in. mTLS i routing [28, 29]."
+      },
+      {
+        "pytanie": "Co oznacza 'Rightsizing' w kontekście optymalizacji kosztów?",
+        "type": "choice",
+        "poprawna": "Dopasowanie wielkości zasobów (CPU/RAM) do rzeczywistych potrzeb aplikacji",
+        "opcje": [
+          "Używanie zawsze największych dostępnych serwerów",
+          "Dopasowanie wielkości zasobów (CPU/RAM) do rzeczywistych potrzeb aplikacji",
+          "Zmiana czcionki w edytorze kodu",
+          "Kupowanie instancji na zapas"
+        ],
+        "explanation": "Rightsizing to proces doboru zasobów tak, aby nie płacić za niewykorzystaną moc [7]."
+      }
+    ]
+  },
 ]
