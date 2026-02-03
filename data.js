@@ -8470,6 +8470,7 @@ const examsData = [
   {
     "id": "bsiach-6",
     "title": "Chmury #6 - Odporność i Optymalizacja",
+    "hidden": false,
     "questions": [
       {
         "pytanie": "Jaki jest główny cel stosowania wzorca Circuit Breaker (bezpiecznik) w systemach rozproszonych?",
