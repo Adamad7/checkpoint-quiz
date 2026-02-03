@@ -52,6 +52,7 @@ function shuffleArray(array) {
 function initExamSelection() {
     examList.innerHTML = '';
     examsData.forEach(exam => {
+        if (exam.hidden) return;
         const btn = document.createElement('button');
         btn.textContent = exam.title;
         btn.className = 'exam-btn'; // Możesz dodać style w CSS
