@@ -8990,4 +8990,500 @@ const examsData = [
       }
     ]
   },
+  {
+    "id": "bsiach-hard",
+    "title": "⚠️Chmury - Uwaga, trudne! ⚠️",
+    "hidden": false,
+    "questions": [
+      {
+        "pytanie": "W kontekście modelu współdzielonej odpowiedzialności w chmurze, jak dokładnie rozkłada się odpowiedzialność za bezpieczeństwo w modelu PaaS (Platform as a Service)?",
+        "type": "choice",
+        "poprawna": "Dostawca odpowiada za infrastrukturę i platformę (runtime), a klient odpowiada za aplikacje i dane.",
+        "opcje": [
+          "Dostawca odpowiada za infrastrukturę i aplikacje, a klient odpowiada za platformę (runtime) i dane.",
+          "Dostawca odpowiada za infrastrukturę i platformę (runtime), a klient odpowiada za aplikacje i dane.",
+          "Dostawca odpowiada za infrastrukturę fizyczną, a klient odpowiada za system operacyjny, aplikacje i dane.",
+          "Dostawca odpowiada za całą infrastrukturę i oprogramowanie, a klient tylko za zarządzanie dostępem."
+        ],
+        "explanation": "Zgodnie z materiałami [1, 2], w PaaS dostawca zarządza infrastrukturą i platformą, a klient ma kontrolę nad aplikacją i danymi, ale nie nad systemem operacyjnym."
+      },
+      {
+        "pytanie": "Czym charakteryzuje się technologia 'szyfrowania danych w użyciu' (Encryption in Use) w odróżnieniu od szyfrowania w spoczynku i w tranzycie?",
+        "type": "choice",
+        "poprawna": "Umożliwia przetwarzanie danych w pamięci bez ich deszyfrowania, wykorzystując np. enklawy Intel SGX lub AMD SEV.",
+        "opcje": [
+          "Umożliwia przesyłanie danych w sieci bez ich deszyfrowania, wykorzystując np. tunele TLS lub VPN.",
+          "Umożliwia przetwarzanie danych w pamięci bez ich deszyfrowania, wykorzystując np. enklawy Intel SGX lub AMD SEV.",
+          "Umożliwia przechowywanie danych na dysku bez ich deszyfrowania, wykorzystując np. Transparent Data Encryption (TDE).",
+          "Umożliwia archiwizację danych w chmurze bez ich deszyfrowania, wykorzystując np. Hardware Security Modules (HSM)."
+        ],
+        "explanation": "Szyfrowanie w użyciu (np. Intel SGX) chroni dane podczas przetwarzania w pamięci RAM, w przeciwieństwie do ochrony dysku (TDE) czy sieci (TLS) [3]."
+      },
+      {
+        "pytanie": "Jaka jest kluczowa różnica między modelami kontroli dostępu RBAC (Role-Based Access Control) a ABAC (Attribute-Based Access Control) w środowisku chmurowym?",
+        "type": "choice",
+        "poprawna": "RBAC przypisuje statyczne uprawnienia do ról użytkowników, podczas gdy ABAC podejmuje dynamiczne decyzje oparte na atrybutach użytkownika, zasobu i środowiska.",
+        "opcje": [
+          "RBAC przypisuje dynamiczne uprawnienia do ról użytkowników, podczas gdy ABAC podejmuje statyczne decyzje oparte na atrybutach sieci i lokalizacji.",
+          "RBAC przypisuje statyczne uprawnienia do ról użytkowników, podczas gdy ABAC podejmuje dynamiczne decyzje oparte na atrybutach użytkownika, zasobu i środowiska.",
+          "RBAC jest zalecany dla środowisk o dynamicznej naturze zasobów, podczas gdy ABAC sprawdza się najlepiej w prostych systemach zdefiniowanych rolami.",
+          "RBAC wymaga definicji polityk dla każdego atrybutu użytkownika, podczas gdy ABAC upraszcza zarządzanie poprzez grupowanie użytkowników w role."
+        ],
+        "explanation": "RBAC opiera się na rolach (prostszy, mniej elastyczny), a ABAC na atrybutach i kontekście (bardziej złożony, elastyczny dla środowisk cloud-native) [4]."
+      },
+      {
+        "pytanie": "W jaki sposób mechanizm 'Token Relay' w Spring Cloud Gateway współpracuje z usługami wewnętrznymi w architekturze opartej na OAuth2?",
+        "type": "choice",
+        "poprawna": "Przekazuje token dostępu (Access Token) otrzymany od klienta do usług podrzędnych, umożliwiając im weryfikację tożsamości użytkownika.",
+        "opcje": [
+          "Generuje nowy token JWT na bramie i przekazuje go do usług podrzędnych, zastępując oryginalny token klienta.",
+          "Przekazuje token dostępu (Access Token) otrzymany od klienta do usług podrzędnych, umożliwiając im weryfikację tożsamości użytkownika.",
+          "Weryfikuje token na bramie, usuwa go z żądania i przekazuje do usług podrzędnych tylko jawne dane użytkownika w nagłówkach.",
+          "Wymienia token dostępu na token odświeżania (Refresh Token) i przekazuje go do usług podrzędnych w celu utrzymania sesji."
+        ],
+        "explanation": "Token Relay polega na przekazywaniu (relay) tokena OAuth2 z Gateway do mikroserwisów, co pozwala im działać jako Resource Server [5, 6]."
+      },
+      {
+        "pytanie": "Jaka jest rola i działanie wzorca 'Bulkhead' (Grodzie) implementowanego przez bibliotekę Resilience4j?",
+        "type": "choice",
+        "poprawna": "Izoluje pule wątków dla poszczególnych usług, aby awaria lub przeciążenie jednej z nich nie wyczerpała wszystkich zasobów systemowych.",
+        "opcje": [
+          "Izoluje pule połączeń do bazy danych, aby awaria jednej tabeli nie zablokowała dostępu do pozostałych danych w systemie.",
+          "Izoluje pule wątków dla poszczególnych usług, aby awaria lub przeciążenie jednej z nich nie wyczerpała wszystkich zasobów systemowych.",
+          "Izoluje ruch sieciowy przychodzący do aplikacji, odrzucając żądania przekraczające zdefiniowany limit zapytań na sekundę.",
+          "Izoluje procesy w kontenerach Docker, zapobiegając dostępowi aplikacji do plików systemowych hosta i innych kontenerów."
+        ],
+        "explanation": "Bulkhead izoluje zasoby (wątki) per funkcja/usługa, zapobiegając przenoszeniu się awarii na cały system [7-9]."
+      },
+      {
+        "pytanie": "W jaki sposób należy skonfigurować NetworkPolicies w Kubernetes, aby skutecznie realizować model Zero Trust (segmentację)?",
+        "type": "choice",
+        "poprawna": "Należy przyjąć strategię 'default deny' dla ruchu przychodzącego i wychodzącego, a następnie selektywnie zezwalać na wymagany ruch.",
+        "opcje": [
+          "Należy przyjąć strategię 'default allow' dla ruchu przychodzącego i wychodzącego, a następnie selektywnie blokować podejrzany ruch.",
+          "Należy przyjąć strategię 'default deny' dla ruchu przychodzącego i wychodzącego, a następnie selektywnie zezwalać na wymagany ruch.",
+          "Należy skonfigurować polityki tylko dla ruchu przychodzącego (Ingress), ponieważ ruch wychodzący (Egress) jest zawsze bezpieczny wewnątrz klastra.",
+          "Należy polegać na domyślnej izolacji namespace'ów w Kubernetes, która automatycznie blokuje ruch między różnymi przestrzeniami nazw."
+        ],
+        "explanation": "Domyślnie K8s pozwala na wszystko (any/any). Skuteczna segmentacja wymaga polityki blokującej wszystko (deny-all) i dodawania wyjątków [10]."
+      },
+      {
+        "pytanie": "Na czym polega różnica w obsłudze zabezpieczenia CSRF (Cross-Site Request Forgery) między architekturą opartą na sesjach a architekturą bezstanową (JWT)?",
+        "type": "choice",
+        "poprawna": "Dla uwierzytelniania opartego na sesjach CSRF powinno być włączone, natomiast dla bezstanowego JWT można je bezpiecznie wyłączyć.",
+        "opcje": [
+          "Dla uwierzytelniania opartego na sesjach CSRF można bezpiecznie wyłączyć, natomiast dla bezstanowego JWT powinno być ono bezwzględnie włączone.",
+          "Dla uwierzytelniania opartego na sesjach CSRF powinno być włączone, natomiast dla bezstanowego JWT można je bezpiecznie wyłączyć.",
+          "Zarówno dla uwierzytelniania opartego na sesjach, jak i dla JWT, mechanizm CSRF jest zbędny, jeśli używamy protokołu HTTPS.",
+          "Zarówno dla uwierzytelniania opartego na sesjach, jak i dla JWT, mechanizm CSRF musi być włączony, aby chronić przed atakami XSS."
+        ],
+        "explanation": "W REST API używającym JWT (stateless) CSRF jest zazwyczaj wyłączane, podczas gdy przy sesjach (browser-based) jest wymagane [11]."
+      },
+      {
+        "pytanie": "W kontekście zarządzania sekretami w Kubernetes, jakie jest zadanie sterownika 'Secrets Store CSI Driver'?",
+        "type": "choice",
+        "poprawna": "Umożliwia montowanie sekretów z zewnętrznych systemów (np. Vault) jako wolumenów w podach, zamiast przechowywania ich w etcd.",
+        "opcje": [
+          "Umożliwia szyfrowanie sekretów przechowywanych w etcd przy użyciu zewnętrznych kluczy zarządzanych przez dostawcę chmury (KMS).",
+          "Umożliwia montowanie sekretów z zewnętrznych systemów (np. Vault) jako wolumenów w podach, zamiast przechowywania ich w etcd.",
+          "Umożliwia automatyczną rotację haseł bazodanowych bezpośrednio w plikach konfiguracyjnych ConfigMap podłączonych do poda.",
+          "Umożliwia bezpieczne przesyłanie sekretów między różnymi klastrami Kubernetes za pomocą szyfrowanych tuneli sieciowych."
+        ],
+        "explanation": "CSI Secret Store pozwala wstrzykiwać sekrety z zewnętrznego magazynu (np. Vault) bezpośrednio do systemu plików poda [12, 13]."
+      },
+      {
+        "pytanie": "Co oznacza zasada 'Privacy by design' w kontekście regulacji RODO (GDPR) przy projektowaniu systemów chmurowych?",
+        "type": "choice",
+        "poprawna": "Ochrona prywatności i danych osobowych musi być uwzględniona jako integralny element na każdym etapie projektowania systemu.",
+        "opcje": [
+          "Ochrona prywatności i danych osobowych musi być wdrażana jako dodatkowa warstwa zabezpieczeń po zakończeniu etapu projektowania systemu.",
+          "Ochrona prywatności i danych osobowych musi być uwzględniona jako integralny element na każdym etapie projektowania systemu.",
+          "Ochrona prywatności polega na anonimizacji wszystkich danych w bazie, niezależnie od ich klasyfikacji i przeznaczenia biznesowego.",
+          "Ochrona prywatności wymaga, aby dane osobowe były przechowywane wyłącznie na serwerach zlokalizowanych fizycznie w siedzibie firmy."
+        ],
+        "explanation": "Zasada 'Privacy by design' nakazuje uwzględnianie ochrony prywatności od samego początku procesu projektowania [14]."
+      },
+      {
+        "pytanie": "Jaka jest rola 'KeyResolver' w konfiguracji Rate Limitera opartego na Redis w Spring Cloud Gateway?",
+        "type": "choice",
+        "poprawna": "Identyfikuje klienta (np. na podstawie adresu IP lub tokena użytkownika) w celu przypisania licznika żądań do konkretnego podmiotu.",
+        "opcje": [
+          "Szyfruje klucze dostępu do bazy Redis, zapewniając bezpieczeństwo przechowywanych liczników i tokenów limitujących ruch.",
+          "Identyfikuje klienta (np. na podstawie adresu IP lub tokena użytkownika) w celu przypisania licznika żądań do konkretnego podmiotu.",
+          "Rozwiązuje nazwy domenowe usług na adresy IP, umożliwiając dynamiczne kierowanie ruchu do odpowiednich instancji mikroserwisów.",
+          "Generuje unikalne klucze kryptograficzne dla każdego żądania w celu podpisania nagłówków i zapobiegania atakom typu replay."
+        ],
+        "explanation": "KeyResolver determinuje klucz (np. principalName, IP), według którego zliczane są żądania dla limitu [15, 16]."
+      },
+      {
+        "pytanie": "Czym różni się sonda 'Liveness Probe' od sondy 'Readiness Probe' w konfiguracji Kubernetes?",
+        "type": "choice",
+        "poprawna": "Liveness Probe restartuje kontener, jeśli aplikacja nie działa (deadlock), a Readiness Probe odcina ruch, jeśli aplikacja nie jest gotowa.",
+        "opcje": [
+          "Liveness Probe odcina ruch, jeśli aplikacja jest przeciążona, a Readiness Probe restartuje kontener, jeśli aplikacja nie odpowiada na żądania.",
+          "Liveness Probe restartuje kontener, jeśli aplikacja nie działa (deadlock), a Readiness Probe odcina ruch, jeśli aplikacja nie jest gotowa.",
+          "Liveness Probe sprawdza poprawność konfiguracji przy starcie, a Readiness Probe monitoruje zużycie zasobów w trakcie działania aplikacji.",
+          "Liveness Probe jest używana tylko przy wdrażaniu nowej wersji, a Readiness Probe działa w sposób ciągły przez cały cykl życia poda."
+        ],
+        "explanation": "Liveness decyduje o restarcie (czy żyje), a Readiness o routingu ruchu (czy gotowa do pracy) [17]."
+      },
+      {
+        "pytanie": "W jaki sposób Spring Cloud Sleuth wspiera 'Distributed Tracing' (śledzenie rozproszone) w systemie mikrousług?",
+        "type": "choice",
+        "poprawna": "Automatycznie dodaje identyfikatory śledzenia (Trace ID) i rozpiętości (Span ID) do logów, umożliwiając korelację żądań między usługami.",
+        "opcje": [
+          "Automatycznie agreguje logi z wszystkich usług w centralnej bazie danych, umożliwiając ich przeszukiwanie w czasie rzeczywistym.",
+          "Automatycznie dodaje identyfikatory śledzenia (Trace ID) i rozpiętości (Span ID) do logów, umożliwiając korelację żądań między usługami.",
+          "Automatycznie analizuje metryki wydajności usług i generuje alerty w przypadku wykrycia anomalii lub przekroczenia czasu odpowiedzi.",
+          "Automatycznie szyfruje logi przesyłane między usługami, zapewniając poufność danych wrażliwych zawartych w komunikatach błędów."
+        ],
+        "explanation": "Sleuth dodaje Trace ID i Span ID do logów, co jest kluczowe dla korelacji zdarzeń w systemach rozproszonych [18, 19]."
+      },
+      {
+        "pytanie": "Jakie działanie podejmuje Circuit Breaker w stanie 'Open' (Otwarty) w bibliotece Resilience4j?",
+        "type": "choice",
+        "poprawna": "Natychmiast odrzuca przychodzące żądania bez próby wywołania niesprawnej usługi, aby zapobiec jej dalszemu przeciążeniu.",
+        "opcje": [
+          "Kolejkuje przychodzące żądania i próbuje je zrealizować, gdy usługa odzyska sprawność, aby nie utracić żadnych danych.",
+          "Natychmiast odrzuca przychodzące żądania bez próby wywołania niesprawnej usługi, aby zapobiec jej dalszemu przeciążeniu.",
+          "Przekierowuje przychodzące żądania do zapasowej instancji usługi działającej w innym regionie geograficznym.",
+          "Przepuszcza ograniczoną liczbę żądań testowych, aby sprawdzić, czy niesprawna usługa powróciła do poprawnego działania."
+        ],
+        "explanation": "W stanie Open bezpiecznik natychmiast odrzuca żądania (fail-fast), nie obciążając uszkodzonego serwisu [7]."
+      },
+      {
+        "pytanie": "Co jest głównym celem stosowania zasady 'Defense in Depth' (Obrona w głąb) w architekturze bezpieczeństwa?",
+        "type": "choice",
+        "poprawna": "Stosowanie wielu niezależnych warstw zabezpieczeń, aby przełamanie jednej bariery nie oznaczało automatycznej kompromitacji całego systemu.",
+        "opcje": [
+          "Stosowanie najsilniejszych dostępnych algorytmów szyfrowania na poziomie bazy danych, aby dane były bezpieczne nawet w przypadku wycieku.",
+          "Stosowanie wielu niezależnych warstw zabezpieczeń, aby przełamanie jednej bariery nie oznaczało automatycznej kompromitacji całego systemu.",
+          "Stosowanie fizycznej izolacji serwerów w bezpiecznych bunkrach podziemnych, aby chronić infrastrukturę przed atakami fizycznymi.",
+          "Stosowanie wyłącznie jednego, scentralizowanego punktu kontroli dostępu, aby uprościć zarządzanie politykami bezpieczeństwa."
+        ],
+        "explanation": "Obrona w głąb polega na warstwowym zabezpieczaniu (sieć, aplikacja, dane), aby awaria jednego elementu nie była krytyczna [10]."
+      },
+      {
+        "pytanie": "Dlaczego w plikach Dockerfile zaleca się tworzenie i używanie dedykowanego użytkownika (np. 'javauser') zamiast domyślnego roota?",
+        "type": "choice",
+        "poprawna": "Aby zminimalizować ryzyko eskalacji uprawnień w przypadku przełamania zabezpieczeń aplikacji uruchomionej w kontenerze.",
+        "opcje": [
+          "Aby zminimalizować rozmiar obrazu kontenera poprzez usunięcie zbędnych plików systemowych wymaganych tylko dla użytkownika root.",
+          "Aby zminimalizować ryzyko eskalacji uprawnień w przypadku przełamania zabezpieczeń aplikacji uruchomionej w kontenerze.",
+          "Aby przyspieszyć proces uruchamiania kontenera, ponieważ użytkownik non-root wymaga mniej zasobów systemowych do inicjalizacji.",
+          "Aby umożliwić łatwiejsze debugowanie aplikacji, ponieważ narzędzia diagnostyczne działają lepiej z poziomu zwykłego użytkownika."
+        ],
+        "explanation": "Uruchamianie jako non-root ogranicza skutki ataku (np. container breakout), co jest kluczową praktyką DevSecOps [17, 20]."
+      },
+      {
+        "pytanie": "Jaki jest cel stosowania mechanizmu 'Exponential Backoff' w konfiguracji strategii ponawiania (Retry)?",
+        "type": "choice",
+        "poprawna": "Stopniowe wydłużanie czasu oczekiwania między kolejnymi próbami, aby uniknąć przeciążenia już niesprawnego systemu.",
+        "opcje": [
+          "Stopniowe skracanie czasu oczekiwania między kolejnymi próbami, aby jak najszybciej uzyskać poprawną odpowiedź od systemu.",
+          "Stopniowe wydłużanie czasu oczekiwania między kolejnymi próbami, aby uniknąć przeciążenia już niesprawnego systemu.",
+          "Losowy dobór czasu oczekiwania między próbami, aby zapobiec synchronizacji żądań pochodzących od wielu klientów.",
+          "Stałe utrzymywanie tego samego czasu oczekiwania, aby zapewnić przewidywalność zachowania systemu w przypadku awarii."
+        ],
+        "explanation": "Exponential backoff zwiększa odstępy czasu między próbami, dając systemowi czas na 'oddech' i powrót do stabilności [21, 22]."
+      },
+      {
+        "pytanie": "Na czym polega różnica między skanowaniem SAST (Static Application Security Testing) a DAST (Dynamic Application Security Testing)?",
+        "type": "choice",
+        "poprawna": "SAST analizuje kod źródłowy pod kątem błędów bez uruchamiania aplikacji, a DAST testuje działającą aplikację z zewnątrz, symulując ataki.",
+        "opcje": [
+          "SAST analizuje konfigurację serwera i sieci, a DAST testuje kod źródłowy aplikacji pod kątem błędów logicznych i podatności.",
+          "SAST analizuje kod źródłowy pod kątem błędów bez uruchamiania aplikacji, a DAST testuje działającą aplikację z zewnątrz, symulując ataki.",
+          "SAST testuje aplikację w czasie rzeczywistym podczas jej działania na produkcji, a DAST analizuje kod źródłowy w repozytorium.",
+          "SAST służy do skanowania zależności i bibliotek zewnętrznych, a DAST służy do statycznej analizy własnego kodu źródłowego."
+        ],
+        "explanation": "SAST (np. SonarQube) bada kod statycznie, DAST (np. OWASP ZAP) atakuje działającą aplikację (black-box) [23, 24]."
+      },
+      {
+        "pytanie": "Jaka jest funkcja nagłówka 'Content-Security-Policy' (CSP) w kontekście bezpieczeństwa aplikacji webowej?",
+        "type": "choice",
+        "poprawna": "Definiuje zaufane źródła treści (skrypty, style, obrazy), chroniąc przed atakami typu Cross-Site Scripting (XSS).",
+        "opcje": [
+          "Definiuje zaufane domeny, które mogą osadzać aplikację w ramkach, chroniąc przed atakami typu Clickjacking.",
+          "Definiuje zaufane źródła treści (skrypty, style, obrazy), chroniąc przed atakami typu Cross-Site Scripting (XSS).",
+          "Wymusza korzystanie z bezpiecznego połączenia HTTPS, chroniąc przed atakami typu Man-in-the-Middle.",
+          "Zapobiega przesyłaniu plików cookie w żądaniach typu cross-site, chroniąc przed atakami typu CSRF."
+        ],
+        "explanation": "CSP ogranicza źródła, z których przeglądarka może ładować zasoby, co jest główną obroną przed XSS [25, 26]."
+      },
+      {
+        "pytanie": "W jaki sposób Spring Boot Actuator integruje się z systemem monitorowania Prometheus?",
+        "type": "choice",
+        "poprawna": "Wystawia dedykowany endpoint HTTP, z którego serwer Prometheus cyklicznie pobiera (scrape) dane metryczne.",
+        "opcje": [
+          "Wysyła metryki bezpośrednio do bazy danych Prometheus przy użyciu protokołu push, omijając potrzebę odpytywania.",
+          "Wystawia dedykowany endpoint HTTP, z którego serwer Prometheus cyklicznie pobiera (scrape) dane metryczne.",
+          "Zapisuje metryki w plikach logów w formacie JSON, które są następnie parsowane przez agenta Prometheus.",
+          "Wykorzystuje protokół JMX do udostępniania metryk, które Prometheus pobiera za pomocą specjalnego eksportera."
+        ],
+        "explanation": "Actuator udostępnia endpoint `/actuator/prometheus`, który jest 'zdrapywany' (scraped) przez Prometheusa [27, 28]."
+      },
+      {
+        "pytanie": "Jaki jest cel stosowania 'Bill of Materials' (SBOM) w procesie DevSecOps?",
+        "type": "choice",
+        "poprawna": "Dostarczenie kompletnego spisu wszystkich komponentów i bibliotek użytych w oprogramowaniu w celu zarządzania podatnościami.",
+        "opcje": [
+          "Dostarczenie szczegółowego raportu z testów wydajnościowych aplikacji w celu optymalizacji zużycia zasobów w chmurze.",
+          "Dostarczenie kompletnego spisu wszystkich komponentów i bibliotek użytych w oprogramowaniu w celu zarządzania podatnościami.",
+          "Dostarczenie listy wszystkich użytkowników i ról w systemie w celu audytu uprawnień i zgodności z politykami bezpieczeństwa.",
+          "Dostarczenie harmonogramu wdrożeń na środowiska produkcyjne w celu koordynacji prac zespołów developerskich."
+        ],
+        "explanation": "SBOM (np. generowany przez Syft) to lista składników oprogramowania, kluczowa dla audytu bezpieczeństwa łańcucha dostaw [29, 30]."
+      },
+      {
+        "pytanie": "W kontekście konfiguracji bezpieczeństwa, jakie jest dokładne znaczenie adnotacji @EnableMethodSecurity w połączeniu z adnotacjami takimi jak @PreAuthorize?",
+        "type": "choice",
+        "poprawna": "Aktywuje ona przetwarzanie adnotacji bezpieczeństwa na poziomie metod przy użyciu AOP (Aspect Oriented Programming), zastępując starszą adnotację @EnableGlobalMethodSecurity.",
+        "opcje": [
+          "Aktywuje ona globalne filtry bezpieczeństwa w łańcuchu SecurityFilterChain, wymuszając uwierzytelnianie dla wszystkich żądań HTTP przychodzących do kontrolerów.",
+          "Aktywuje ona przetwarzanie adnotacji bezpieczeństwa na poziomie metod przy użyciu AOP (Aspect Oriented Programming), zastępując starszą adnotację @EnableGlobalMethodSecurity.",
+          "Automatycznie konfiguruje mechanizm CORS i CSRF dla metod oznaczonych adnotacjami @PostMapping oraz @PutMapping w celu ochrony przed atakami.",
+          "Umożliwia wstrzykiwanie kontekstu bezpieczeństwa (SecurityContext) bezpośrednio do argumentów metod kontrolera bez konieczności używania SecurityContextHolder."
+        ],
+        "explanation": "@EnableMethodSecurity (następca @EnableGlobalMethodSecurity) włącza wsparcie dla adnotacji takich jak @PreAuthorize, działając poprzez proxy AOP wokół metod."
+      },
+      {
+        "pytanie": "Analizując kod w klasie `ProductController`, w jaki sposób adnotacja @RequiredArgsConstructor z biblioteki Lombok wpływa na wstrzykiwanie zależności `ProductService`?",
+        "type": "choice",
+        "poprawna": "Generuje konstruktor zawierający parametry dla wszystkich pól oznaczonych jako `final` lub `@NonNull`, co umożliwia Springowi wstrzyknięcie zależności przez konstruktor.",
+        "opcje": [
+          "Generuje konstruktor domyślny (bezargumentowy), a Spring wstrzykuje zależność `ProductService` wykorzystując mechanizm refleksji na polu prywatnym po utworzeniu obiektu.",
+          "Generuje konstruktor dla wszystkich pól w klasie niezależnie od modyfikatorów, a następnie oznacza go adnotacją @Autowired, aby wymusić wstrzykiwanie przez Springa.",
+          "Generuje konstruktor zawierający parametry dla wszystkich pól oznaczonych jako `final` lub `@NonNull`, co umożliwia Springowi wstrzyknięcie zależności przez konstruktor.",
+          "Automatycznie inicjalizuje pole `ProductService` jako singleton przy użyciu wzorca Lazy Loading, aby zapobiec problemom z cyklicznymi zależnościami."
+        ],
+        "explanation": "@RequiredArgsConstructor tworzy konstruktor tylko dla pól wymaganych (final). Spring Boot (od wersji 4.3) automatycznie używa takiego konstruktora do wstrzykiwania (Constructor Injection)."
+      },
+      {
+        "pytanie": "W kodzie `GlobalExceptionHandler`, co dokładnie definiuje adnotacja @RestControllerAdvice w porównaniu do zwykłego @ControllerAdvice?",
+        "type": "choice",
+        "poprawna": "Jest to adnotacja kompozytowa łącząca @ControllerAdvice i @ResponseBody, co oznacza, że metody obsługi wyjątków automatycznie serializują zwracane obiekty do ciała odpowiedzi (np. JSON).",
+        "opcje": [
+          "Jest to nowsza wersja adnotacji @ControllerAdvice, która automatycznie loguje wszystkie nieobsłużone wyjątki do systemu monitorowania, takiego jak Prometheus lub ELK.",
+          "Oznacza, że klasa obsługuje wyjątki tylko dla kontrolerów oznaczonych jako @RestController, ignorując te z tradycyjnym @Controller zwracającym widoki HTML.",
+          "Jest to adnotacja kompozytowa łącząca @ControllerAdvice i @ResponseBody, co oznacza, że metody obsługi wyjątków automatycznie serializują zwracane obiekty do ciała odpowiedzi (np. JSON).",
+          "Wymusza, aby wszystkie metody wewnątrz klasy zwracały obiekt `ResponseEntity`, podczas gdy @ControllerAdvice pozwala na zwracanie nazwy widoku (String)."
+        ],
+        "explanation": "Podobnie jak @RestController, @RestControllerAdvice dodaje @ResponseBody, dzięki czemu wynik metody (np. ErrorResponse) jest serializowany do JSON, a nie traktowany jako nazwa widoku."
+      },
+      {
+        "pytanie": "Rozważając mechanizm `fallbackMethod` w adnotacji @CircuitBreaker, jakie wymagania musi spełniać sygnatura metody zapasowej `fallbackInventory`?",
+        "type": "choice",
+        "poprawna": "Musi mieć ten sam typ zwracany co metoda oryginalna oraz przyjmować te same parametry, plus dodatkowy parametr typu `Throwable` na końcu.",
+        "opcje": [
+          "Musi mieć ten sam typ zwracany co metoda oryginalna, ale nie może przyjmować żadnych parametrów, aby zapewnić szybkie i bezbłędne wykonanie w sytuacji awaryjnej.",
+          "Musi zwracać typ `void` lub `Optional`, a jej nazwa musi być identyczna jak nazwa metody oryginalnej z dopiskiem 'Fallback' na końcu.",
+          "Musi mieć ten sam typ zwracany co metoda oryginalna oraz przyjmować te same parametry, plus dodatkowy parametr typu `Throwable` na końcu.",
+          "Musi być metodą publiczną z adnotacją @Fallback, a jej typ zwracany może być dowolny, ponieważ Spring automatycznie owinie go w odpowiedni obiekt ResponseEntity."
+        ],
+        "explanation": "Biblioteka Resilience4j wymaga, aby metoda fallback miała taką samą sygnaturę parametrów jak metoda chroniona plus wyjątek (Throwable) oraz zgodny typ zwracany."
+      },
+      {
+        "pytanie": "W kontekście adnotacji @Timed z biblioteki Micrometer, co powoduje ustawienie atrybutu `histogram = true`?",
+        "type": "choice",
+        "poprawna": "Powoduje generowanie dodatkowych metryk rozkładu czasu (buckets), co pozwala na obliczanie percentyli (np. P95, P99) w systemach monitorowania takich jak Prometheus.",
+        "opcje": [
+          "Powoduje wizualizację danych w postaci wykresu słupkowego bezpośrednio w logach aplikacji, sformatowanych jako tekst ASCII dla łatwiejszego debugowania.",
+          "Powoduje generowanie dodatkowych metryk rozkładu czasu (buckets), co pozwala na obliczanie percentyli (np. P95, P99) w systemach monitorowania takich jak Prometheus.",
+          "Zmienia sposób przechowywania metryk z liczników (counters) na histogramy, co zmniejsza zużycie pamięci, ale uniemożliwia śledzenie całkowitej liczby wywołań.",
+          "Włącza śledzenie historii wywołań metody w bazie danych aplikacji w celu późniejszej analizy trendów wydajnościowych w długim okresie czasu."
+        ],
+        "explanation": "`histogram = true` instruuje Micrometer, aby publikował histogramy (buckets), co jest niezbędne do obliczania kwantyli po stronie Prometheusa (np. `histogram_quantile`)."
+      },
+      {
+        "pytanie": "Jak działa adnotacja @CacheEvict(value = \"products\", allEntries = true) zastosowana w metodzie `createProduct`?",
+        "type": "choice",
+        "poprawna": "Usuwa wszystkie wpisy z cache o nazwie 'products' natychmiast po pomyślnym wykonaniu metody, niezależnie od kluczy poszczególnych wpisów.",
+        "opcje": [
+          "Usuwa wpis z cache o nazwie 'products' tylko dla klucza odpowiadającego nowo utworzonemu produktowi, jeśli metoda zwróciła obiekt z ustawionym ID.",
+          "Usuwa wszystkie wpisy z cache o nazwie 'products' przed wykonaniem metody, aby zapewnić, że w przypadku błędu zapisu cache pozostanie pusty.",
+          "Usuwa wszystkie wpisy z cache o nazwie 'products' natychmiast po pomyślnym wykonaniu metody, niezależnie od kluczy poszczególnych wpisów.",
+          "Oznacza wszystkie wpisy w cache 'products' jako przestarzałe (stale), pozwalając na ich odświeżenie przy następnym odczycie, zamiast fizycznego usuwania."
+        ],
+        "explanation": "Parametr `allEntries = true` powoduje wyczyszczenie całego regionu pamięci podręcznej, co jest używane, gdy operacja (np. dodanie produktu) wpływa na listę wszystkich zasobów."
+      },
+      {
+        "pytanie": "W klasie `Product`, jakie jest znaczenie adnotacji @Column(nullable = false) w kontraście do adnotacji walidacyjnej @NotBlank?",
+        "type": "choice",
+        "poprawna": "@Column wpływa na schemat bazy danych (DDL) wymuszając ograniczenie `NOT NULL`, podczas gdy @NotBlank wykonuje walidację logiczną w warstwie aplikacji przed zapisem.",
+        "opcje": [
+          "Obie adnotacje pełnią tę samą funkcję i są stosowane nadmiarowo; @Column jest częścią standardu JPA, a @NotBlank standardu Hibernate Validator.",
+          "@Column służy tylko do celów dokumentacyjnych i nie ma wpływu na działanie aplikacji, podczas gdy @NotBlank generuje kod SQL z ograniczeniami w bazie danych.",
+          "@Column wpływa na schemat bazy danych (DDL) wymuszając ograniczenie `NOT NULL`, podczas gdy @NotBlank wykonuje walidację logiczną w warstwie aplikacji przed zapisem.",
+          "@Column(nullable = false) sprawdza, czy łańcuch znaków nie jest pusty ani nie składa się z białych znaków, podczas gdy @NotBlank sprawdza tylko, czy referencja nie jest nullem."
+        ],
+        "explanation": "@Column to metadane JPA dla bazy danych (constraint), a @NotBlank to Bean Validation (JSR-303) sprawdzająca dane w Javie (nie null i nie pusty string)."
+      },
+      {
+        "pytanie": "Co jest wymagane, aby metoda oznaczona adnotacją @Scheduled była poprawnie uruchamiana cyklicznie przez Springa?",
+        "type": "choice",
+        "poprawna": "W klasie konfiguracyjnej (lub głównej) musi znajdować się adnotacja @EnableScheduling, a sama metoda nie może przyjmować żadnych argumentów.",
+        "opcje": [
+          "Metoda musi być oznaczona jako `public static`, a w klasie konfiguracyjnej musi znajdować się adnotacja @EnableAsync dla obsługi wątków tła.",
+          "W pliku application.properties musi być zdefiniowana właściwość `spring.task.scheduling.enabled=true`, a metoda musi zwracać typ `void`.",
+          "W klasie konfiguracyjnej (lub głównej) musi znajdować się adnotacja @EnableScheduling, a sama metoda nie może przyjmować żadnych argumentów.",
+          "Klasa zawierająca metodę musi implementować interfejs `SchedulingConfigurer`, a metoda musi być oznaczona adnotacją @Transactional."
+        ],
+        "explanation": "Bez `@EnableScheduling` w konfiguracji, procesor adnotacji `@Scheduled` nie zostanie uruchomiony. Metody te muszą być bezargumentowe."
+      },
+      {
+        "pytanie": "W kodzie `ProductEventPublisher`, dlaczego użyto `KafkaTemplate<String, ProductEvent>` zamiast generycznego `KafkaTemplate` bez typów?",
+        "type": "choice",
+        "poprawna": "Zapewnia to bezpieczeństwo typów podczas kompilacji i pozwala Springowi na automatyczną serializację obiektu `ProductEvent` do JSON (przy odpowiedniej konfiguracji serriazlierów).",
+        "opcje": [
+          "Wymusza to na brokerze Kafka utworzenie osobnego tematu (topic) dedykowanego wyłącznie dla typu `ProductEvent`, izolując go od innych zdarzeń.",
+          "Zapewnia to bezpieczeństwo typów podczas kompilacji i pozwala Springowi na automatyczną serializację obiektu `ProductEvent` do JSON (przy odpowiedniej konfiguracji serriazlierów).",
+          "Jest to wymagane przez adnotację @Transactional, aby transakcja Kafka mogła zostać poprawnie zrollbackowana w przypadku błędu serializacji.",
+          "Pozwala na automatyczne generowanie kluczy partycjonowania na podstawie pól klasy `ProductEvent` bez konieczności ręcznego podawania klucza w metodzie `send`."
+        ],
+        "explanation": "Typowanie KafkaTemplate ułatwia serializację (np. przez Jackson) i zapobiega błędom wysyłania niepoprawnych obiektów w kodzie."
+      },
+      {
+        "pytanie": "W klasie `JwtService` użyto adnotacji @Value(\"${jwt.secret}\"). Co się stanie, jeśli właściwość `jwt.secret` nie zostanie zdefiniowana w żadnym pliku konfiguracyjnym?",
+        "type": "choice",
+        "poprawna": "Aplikacja nie uruchomi się, rzucając wyjątek `IllegalArgumentException` lub `BeanCreationException` z komunikatem o braku możliwości rozwiązania placeholderu.",
+        "opcje": [
+          "Pole `secret` przyjmie wartość `null`, co doprowadzi do `NullPointerException` dopiero w momencie pierwszej próby generowania tokena.",
+          "Pole `secret` przyjmie domyślną pustą wartość (empty string), co pozwoli na uruchomienie aplikacji, ale tokeny będą podpisywane pustym kluczem.",
+          "Aplikacja uruchomi się poprawnie, ale Spring wygeneruje losowy sekret tymczasowy i wypisze go w logach startowych.",
+          "Aplikacja nie uruchomi się, rzucając wyjątek `IllegalArgumentException` lub `BeanCreationException` z komunikatem o braku możliwości rozwiązania placeholderu."
+        ],
+        "explanation": "Spring domyślnie rzuca wyjątek przy starcie, jeśli nie znajdzie wartości dla `@Value`, chyba że zdefiniowano wartość domyślną (np. `${key:default}`)."
+      },
+      {
+        "pytanie": "Adnotacja @Transactional nad klasą `ProductService` oznacza, że transakcyjne są:",
+        "type": "choice",
+        "poprawna": "Wszystkie metody publiczne tej klasy (oraz jej podklas, jeśli dziedziczą), chyba że zostaną nadpisane inną adnotacją @Transactional.",
+        "opcje": [
+          "Tylko te metody, które wykonują operacje modyfikujące dane (INSERT, UPDATE, DELETE), metody odczytujące (SELECT) są automatycznie wyłączone z transakcji.",
+          "Wszystkie metody (publiczne, prywatne, chronione) tej klasy, zapewniając atomowość nawet przy wywołaniach wewnętrznych w obrębie tej samej instancji.",
+          "Wszystkie metody publiczne tej klasy (oraz jej podklas, jeśli dziedziczą), chyba że zostaną nadpisane inną adnotacją @Transactional.",
+          "Tylko metody wywoływane bezpośrednio przez kontroler REST, metody wywoływane przez inne serwisy nie są objęte kontekstem transakcyjnym."
+        ],
+        "explanation": "@Transactional na poziomie klasy aplikuje się do wszystkich metod publicznych. Metody prywatne nie są przechwytywane przez proxy Springa."
+      },
+      {
+        "pytanie": "W kodzie `SecurityConfig`, metoda `filterChain` jest oznaczona adnotacją @Bean. Jakie jest domyślne zachowanie Springa (scope) dla obiektu zwracanego przez tę metodę?",
+        "type": "choice",
+        "poprawna": "Singleton – Spring kontener utworzy tylko jedną instancję `SecurityFilterChain` i będzie jej używał w całej aplikacji.",
+        "opcje": [
+          "Prototype – Spring utworzy nową instancję łańcucha filtrów dla każdego przychodzącego żądania HTTP, aby zapewnić izolację sesji.",
+          "Request – Instancja jest tworzona na czas trwania jednego żądania HTTP i niszczona po wysłaniu odpowiedzi.",
+          "Singleton – Spring kontener utworzy tylko jedną instancję `SecurityFilterChain` i będzie jej używał w całej aplikacji.",
+          "Session – Instancja jest powiązana z sesją użytkownika i przechowywana tak długo, jak długo użytkownik jest zalogowany."
+        ],
+        "explanation": "Domyślnym zakresem (scope) dla beanów w Springu, w tym tych tworzonych przez @Bean w @Configuration, jest Singleton."
+      },
+      {
+        "pytanie": "W kontekście adnotacji @PreAuthorize(\"hasRole('ADMIN')\"), co jest kluczowym warunkiem, aby sprawdzenie `hasRole` zadziałało poprawnie, biorąc pod uwagę konfigurację `JwtAuthenticationConverter`?",
+        "type": "choice",
+        "poprawna": "Uprawnienia w obiekcie Authentication muszą posiadać prefiks 'ROLE_', ponieważ metoda `hasRole` automatycznie dodaje ten prefiks podczas weryfikacji.",
+        "opcje": [
+          "W tokenie JWT musi znajdować się pole 'isAdmin' ustawione na true, a konwerter musi mapować je bezpośrednio na obiekt GrantedAuthority.",
+          "Uprawnienia w obiekcie Authentication muszą posiadać prefiks 'ROLE_', ponieważ metoda `hasRole` automatycznie dodaje ten prefiks podczas weryfikacji.",
+          "Adnotacja musi brzmieć @PreAuthorize(\"hasAuthority('ADMIN')\"), ponieważ `hasRole` jest przestarzałe i nie współpracuje z JWT.",
+          "Użytkownik musi być zapisany w bazie danych w tabeli `roles` z nazwą 'ADMIN', niezależnie od tego, co znajduje się w tokenie JWT."
+        ],
+        "explanation": "`hasRole('ADMIN')` sprawdza obecność uprawnienia `ROLE_ADMIN`. Konwerter JWT musi więc dodać prefiks `ROLE_` do ról wyciągniętych z tokena."
+      },
+      {
+        "pytanie": "W klasie `ProductEventsConsumer` zastosowano adnotację @Header(name = \"kafka_receivedMessageKey\", required = false). Jaki jest cel parametru `required = false`?",
+        "type": "choice",
+        "poprawna": "Zapobiega rzuceniu wyjątku przez listener w przypadku, gdy wiadomość Kafka nie posiada klucza (key jest nullem), przekazując null do argumentu metody.",
+        "opcje": [
+          "Powoduje, że Spring automatycznie wygeneruje losowy klucz UUID, jeśli wiadomość przyszła bez klucza, aby zapewnić unikalność przetwarzania.",
+          "Oznacza, że nagłówek jest opcjonalny tylko podczas testów jednostkowych, ale na produkcji Kafka zawsze wymusi jego obecność.",
+          "Zapobiega rzuceniu wyjątku przez listener w przypadku, gdy wiadomość Kafka nie posiada klucza (key jest nullem), przekazując null do argumentu metody.",
+          "Informuje brokera Kafka, aby odrzucił i nie dostarczał do tej metody wiadomości, które nie posiadają ustawionego klucza partycjonowania."
+        ],
+        "explanation": "Jeśli nagłówek nie istnieje, a `required` jest domyślne (true), Spring rzuci wyjątek. Ustawienie na false pozwala obsłużyć wiadomości bez klucza."
+      },
+      {
+        "pytanie": "Adnotacja @Data z biblioteki Lombok generuje kilka metod. Która z poniższych kombinacji jest poprawna i kompletna dla tej adnotacji?",
+        "type": "multi-choice",
+        "poprawna": [
+          "@Getter",
+          "@Setter",
+          "@RequiredArgsConstructor",
+          "@ToString",
+          "@EqualsAndHashCode"
+        ],
+        "opcje": [
+          "@Getter",
+          "@Setter",
+          "@NoArgsConstructor",
+          "@AllArgsConstructor",
+          "@ToString",
+          "@RequiredArgsConstructor",
+          "@EqualsAndHashCode"
+        ],
+        "explanation": "@Data to skrót dla: @ToString, @EqualsAndHashCode, @Getter, @Setter oraz @RequiredArgsConstructor. Nie generuje @NoArgsConstructor ani @AllArgsConstructor."
+      },
+      {
+        "pytanie": "W interfejsie `ProductRepository` użyto adnotacji @Param(\"category\"). W jakim konkretnie celu się ją stosuje w połączeniu z @Query?",
+        "type": "choice",
+        "poprawna": "Aby powiązać parametr metody z nazwanym parametrem (np. `:category`) w zapytaniu JPQL, co jest niezbędne, gdy nazwy zmiennych nie są zachowane w kodzie bajtowym.",
+        "opcje": [
+          "Aby wymusić walidację parametru przed wykonaniem zapytania, sprawdzając, czy kategoria istnieje w bazie danych.",
+          "Aby powiązać parametr metody z nazwanym parametrem (np. `:category`) w zapytaniu JPQL, co jest niezbędne, gdy nazwy zmiennych nie są zachowane w kodzie bajtowym.",
+          "Aby określić typ danych kolumny w bazie danych, do której parametr będzie mapowany, np. VARCHAR(255).",
+          "Aby zabezpieczyć zapytanie przed SQL Injection poprzez automatyczne escapowanie znaków specjalnych w parametrze."
+        ],
+        "explanation": "@Param wiąże argument metody z placeholderem w zapytaniu (np. `:category`). Jest to kluczowe, gdy kompilator nie zachowuje nazw parametrów."
+      },
+      {
+        "pytanie": "Adnotacja @EventListener w klasie `ProductEventListener` służy do obsługi zdarzeń. Czy obsługa ta jest domyślnie synchroniczna czy asynchroniczna?",
+        "type": "choice",
+        "poprawna": "Synchroniczna – kod listenera wykonuje się w tym samym wątku co kod publikujący zdarzenie, chyba że metoda zostanie dodatkowo oznaczona adnotacją @Async.",
+        "opcje": [
+          "Asynchroniczna – Spring domyślnie uruchamia każdy listener w nowym wątku z puli `TaskExecutor`, aby nie blokować głównego wątku.",
+          "Synchroniczna – kod listenera wykonuje się w tym samym wątku co kod publikujący zdarzenie, chyba że metoda zostanie dodatkowo oznaczona adnotacją @Async.",
+          "Zależy to od konfiguracji `application.properties`; domyślnie jest asynchroniczna w profilu `prod` i synchroniczna w profilu `dev`.",
+          "Jest zawsze asynchroniczna, jeśli zdarzenie dziedziczy po klasie `ApplicationEvent`, a synchroniczna dla dowolnych obiektów POJO."
+        ],
+        "explanation": "Domyślnie `ApplicationEventPublisher` działa synchronicznie. Aby uzyskać asynchroniczność, należy użyć `@Async` na listenerze i włączyć `@EnableAsync`."
+      },
+      {
+        "pytanie": "W klasie `Product` pole `id` jest oznaczone `@GeneratedValue(strategy = GenerationType.IDENTITY)`. Co dokładnie oznacza strategia `IDENTITY`?",
+        "type": "choice",
+        "poprawna": "Deleguje generowanie klucza głównego do bazy danych (np. kolumny auto-increment w MySQL/PostgreSQL), co zazwyczaj wymaga wykonania insertu, aby poznać ID.",
+        "opcje": [
+          "Używa globalnej sekwencji Hibernate (`hibernate_sequence`) do generowania unikalnych ID dla wszystkich tabel w bazie danych.",
+          "Generuje UUID po stronie aplikacji przed wysłaniem zapytania INSERT do bazy danych, co pozwala na poznanie ID bez komunikacji z DB.",
+          "Tworzy osobną tabelę w bazie danych do przechowywania liczników ID, co zapewnia przenośność między różnymi silnikami bazodanowymi.",
+          "Deleguje generowanie klucza głównego do bazy danych (np. kolumny auto-increment w MySQL/PostgreSQL), co zazwyczaj wymaga wykonania insertu, aby poznać ID."
+        ],
+        "explanation": "Strategia IDENTITY polega na wykorzystaniu natywnego mechanizmu auto-inkrementacji bazy danych."
+      },
+      {
+        "pytanie": "W konfiguracji `ResourceUsageMonitor`, metoda oznaczona @Scheduled(fixedRate = 30000) jest uruchamiana co 30 sekund. Jak liczony jest czas `fixedRate`?",
+        "type": "choice",
+        "poprawna": "Jest to czas mierzony od momentu rozpoczęcia jednego wywołania do momentu rozpoczęcia kolejnego, niezależnie od tego, ile czasu trwało wykonanie metody.",
+        "opcje": [
+          "Jest to czas mierzony od momentu zakończenia jednego wywołania do momentu rozpoczęcia kolejnego (czas przerwy między wywołaniami).",
+          "Jest to czas mierzony od momentu rozpoczęcia jednego wywołania do momentu rozpoczęcia kolejnego, niezależnie od tego, ile czasu trwało wykonanie metody.",
+          "Jest to gwarantowany czas wykonania metody; jeśli metoda trwa dłużej niż 30 sekund, zostanie przerwana przez Springa.",
+          "Jest to czas, po którym metoda zostanie uruchomiona jednorazowo po starcie aplikacji, a następnie nie będzie już ponawiana."
+        ],
+        "explanation": "`fixedRate` określa interwał między startami kolejnych wywołań. Jeśli metoda trwa dłużej niż interwał, kolejne wywołanie może się opóźnić (chyba że użyto `@Async`). `fixedDelay` liczy czas od zakończenia."
+      },
+      {
+        "pytanie": "W klasie `GatewayConfig`, w jaki sposób adnotacja @Bean wpływa na metodę `customRouteLocator`?",
+        "type": "choice",
+        "poprawna": "Rejestruje zwracany obiekt `RouteLocator` w kontenerze Springa, co pozwala Spring Cloud Gateway na użycie zdefiniowanych tras routingu.",
+        "opcje": [
+          "Oznacza metodę jako punkt końcowy REST, który zwraca konfigurację tras w formacie JSON dla zewnętrznych klientów.",
+          "Powoduje, że metoda jest uruchamiana przy każdym żądaniu HTTP, dynamicznie przeliczając trasy w oparciu o aktualne obciążenie sieci.",
+          "Rejestruje zwracany obiekt `RouteLocator` w kontenerze Springa, co pozwala Spring Cloud Gateway na użycie zdefiniowanych tras routingu.",
+          "Automatycznie generuje dokumentację Swagger dla zdefiniowanych tras, ale nie wpływa na rzeczywiste działanie routingu w aplikacji."
+        ],
+        "explanation": "@Bean informuje Springa, że metoda zwraca obiekt, który ma być zarządzany jako bean w kontekście aplikacji. Tutaj definiuje programowo trasy gatewaya."
+      }
+    ]
+  },
 ]
