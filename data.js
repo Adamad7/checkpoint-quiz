@@ -25,7 +25,7 @@ const examsData = [
   {
     "id": "ethical-hacker-final",
     "title": "Ethical Hacker Final",
-    "hidden": true,
+    "hidden": false,
     "questions": [
       {
         "pytanie": "Which are two best practices used to secure APIs? (Choose two.)",
@@ -1863,7 +1863,7 @@ const examsData = [
   {
     "id": "netsec-final-practise",
     "title": "Netsec Final Practise",
-    "hidden": true,
+    "hidden": false,
     "questions": [
       {
         "pytanie": "Which two statements are true about ASA standard ACLs? (Choose two.)​",
@@ -2765,7 +2765,7 @@ const examsData = [
   {
     "id": "netsec-final",
     "title": "Network Security Final",
-    "hidden": true,
+    "hidden": false,
     "questions": [
       {
         "pytanie": "Match the type of ASA ACLs to the description. (Not all options are used.)",
@@ -6242,6 +6242,8 @@ const examsData = [
   {
     "id": "bsiach-1",
     "title": "Chmury #1 - Fundamenty i teoria bezpieczeństwa chmury",
+    "hidden": true,
+
     "questions": [
       {
         "pytanie": "Według definicji NIST, chmura obliczeniowa charakteryzuje się pięcioma istotnymi cechami. Które z poniższych do nich należą?",
@@ -6638,6 +6640,7 @@ const examsData = [
   {
     "id": "bsiach-2",
     "title": "Chmury #2 - Budowa aplikacji w Spring Boot",
+    "hidden": true,
     "questions": [
       {
         "pytanie": "Jaki jest główny cel mechanizmu autokonfiguracji w Spring Boot?",
@@ -7032,6 +7035,7 @@ const examsData = [
   {
     "id": "bsiach-3",
     "title": "Chmury #3 - Implementacja bezpieczeństwa w aplikacji",
+    "hidden": true,
     "questions": [
       {
         "pytanie": "Jaki jest główny framework bezpieczeństwa używany w ekosystemie Spring do implementacji uwierzytelniania i autoryzacji?",
@@ -7430,6 +7434,7 @@ const examsData = [
   {
     "id": "bsiach-4",
     "title": "Chmury #4 - Narzędzia Spring Cloud i Architektura Mikrousług",
+    "hidden": true,
     "questions": [
       {
         "pytanie": "Jaka jest główna rola Spring Cloud Gateway w architekturze mikrousług?",
@@ -7956,6 +7961,7 @@ const examsData = [
   {
     "id": "bsiach-5",
     "title": "Chmury #5 - DevOps, Wdrożenie i Konteneryzacja",
+    "hidden": true,
     "questions": [
       {
         "pytanie": "Co zapewnia wieloetapowa budowa (multistage build) w pliku Dockerfile?",
@@ -8470,7 +8476,7 @@ const examsData = [
   {
     "id": "bsiach-6",
     "title": "Chmury #6 - Odporność i Optymalizacja",
-    "hidden": false,
+    "hidden": true,
     "questions": [
       {
         "pytanie": "Jaki jest główny cel stosowania wzorca Circuit Breaker (bezpiecznik) w systemach rozproszonych?",
@@ -8993,7 +8999,7 @@ const examsData = [
   {
     "id": "bsiach-hard",
     "title": "⚠️Chmury - Uwaga, trudne! ⚠️",
-    "hidden": false,
+    "hidden": true,
     "questions": [
       {
         "pytanie": "W kontekście modelu współdzielonej odpowiedzialności w chmurze, jak dokładnie rozkłada się odpowiedzialność za bezpieczeństwo w modelu PaaS (Platform as a Service)?",
